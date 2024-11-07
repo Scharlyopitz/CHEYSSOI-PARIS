@@ -83,6 +83,7 @@ header .menu .burger {
 #About section .txtContainer .txt {
   display: flex;
   justify-content: space-between;
+  color: #583e26;
 }
 #About section .txtContainer h1 {
   font-family: "Instrument Serif", serif;
