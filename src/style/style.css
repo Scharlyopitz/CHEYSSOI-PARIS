@@ -78,6 +78,7 @@ header .menu .burger {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   height: 40%;
 }
 #About section .txtContainer .txt {
