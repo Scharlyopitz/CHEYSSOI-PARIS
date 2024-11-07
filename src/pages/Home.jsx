@@ -13,6 +13,7 @@ function Image() {
   return (
     <div className="image">
       <img src={Image1} alt="Image1" />
+      <p>Cheyssoi Paris</p>
     </div>
   );
 }
