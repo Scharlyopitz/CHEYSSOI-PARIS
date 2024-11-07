@@ -10,19 +10,36 @@
       align-items: center;
       height: 40%;
 
-      .txt {
-        display: flex;
-        justify-content: space-between;
-        color: $Brown;
-      }
-
       h1 {
+        position: relative;
         font-family: "Instrument Serif", serif;
         font-weight: 100;
         text-transform: uppercase;
         font-size: 100px;
         letter-spacing: 2vw;
         color: $Orange;
+
+        &::before,
+        &::after {
+          position: absolute;
+          font-weight: 300;
+          top: -2vh;
+          color: $Brown;
+          font-size: 20px;
+          letter-spacing: normal;
+          font-family: "Roboto", sans-serif;
+          text-transform: none;
+        }
+
+        &::before {
+          content: "Architecte d'intérieur";
+          left: 0.5vw;
+        }
+
+        &::after {
+          content: "cheyssoiparis@gmail.com";
+          right: 2.5vw;
+        }
       }
     }
 
