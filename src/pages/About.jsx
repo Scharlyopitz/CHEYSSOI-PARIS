@@ -15,7 +15,7 @@ function FirstSection() {
       <div className="txtContainer">
         <div className="txt">
           <span>Architecte d'intérieur</span>
-          <span>mail : cheyssoiparis@gmail.com</span>
+          <span>cheyssoiparis@gmail.com</span>
         </div>
         <h1>Cheyssoi Paris</h1>
       </div>
