@@ -67,4 +67,17 @@ header .menu .burger {
 #Home .image p {
   margin-top: 1vh;
   text-transform: uppercase;
+}
+
+#About section {
+  height: 80vh;
+  overflow: hidden;
+}
+#About section img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  height: 50%;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */

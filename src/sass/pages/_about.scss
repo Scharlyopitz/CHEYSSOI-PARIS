@@ -1,0 +1,13 @@
+#About {
+  section {
+    height: 80vh;
+    overflow: hidden;
+
+    img {
+      object-fit: cover;
+      object-position: top;
+      height: 50%;
+      width: 100%;
+    }
+  }
+}
