@@ -34,9 +34,11 @@ function SecondeSection() {
       <h2>Vous ne voudrez plus quitter votre Intérieur</h2>
       <div className="divContainer">
         <div className="container">
-          {textes.map((texte, i) => {
-            return <p key={i}>{texte}</p>;
-          })}
+          <div>
+            {textes.map((texte, i) => {
+              return <p key={i}>{texte}</p>;
+            })}
+          </div>
         </div>
         <div className="imgContainer">
           <img src={Image2} alt="Image2" />
