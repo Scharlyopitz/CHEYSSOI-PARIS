@@ -39,6 +39,9 @@ header .menu .burger {
 
 #Home {
   height: 90vh;
+  width: 100%;
   background-color: red;
-  overflow: hidden;
+}
+#Home .image img {
+  height: 50vh;
 }/*# sourceMappingURL=style.css.map */
