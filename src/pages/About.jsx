@@ -13,10 +13,6 @@ function FirstSection() {
   return (
     <section>
       <div className="txtContainer">
-        <div className="txt">
-          <span>Architecte d'intérieur</span>
-          <span>cheyssoiparis@gmail.com</span>
-        </div>
         <h1>Cheyssoi Paris</h1>
       </div>
       <img src={Image1} alt="Image1" />
