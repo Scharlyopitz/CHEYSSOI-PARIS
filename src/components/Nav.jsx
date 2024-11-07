@@ -44,7 +44,7 @@ function Menu() {
     <>
       <p onClick={() => setOpen(!open)}>Menu</p>
       {open && (
-        <div>
+        <div className="burger">
           {links.map((link, i) => {
             return (
               <NavLink key={i} to={link.to}>
