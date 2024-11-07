@@ -5,6 +5,7 @@ export default function About() {
   return (
     <main id="About">
       <FirstSection />
+      <SecondeSection />
     </main>
   );
 }
@@ -16,6 +17,14 @@ function FirstSection() {
         <h1>Cheyssoi Paris</h1>
       </div>
       <img src={Image1} alt="Image1" />
+    </section>
+  );
+}
+
+function SecondeSection() {
+  return (
+    <section className="secondSection">
+      <p>coucou</p>
     </section>
   );
 }
