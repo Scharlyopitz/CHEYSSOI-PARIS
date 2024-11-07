@@ -74,12 +74,12 @@ header .menu .burger {
   height: 80vh;
   overflow: hidden;
 }
-#About section .txt {
+#About section .txtContainer {
   display: flex;
   justify-content: center;
   height: 40%;
 }
-#About section .txt h1 {
+#About section .txtContainer h1 {
   font-family: "Instrument Serif", serif;
   font-weight: 100;
   text-transform: uppercase;
