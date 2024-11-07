@@ -5,8 +5,14 @@
 
     .txtContainer {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       height: 40%;
+
+      .txt {
+        display: flex;
+        justify-content: space-between;
+      }
 
       h1 {
         font-family: "Instrument Serif", serif;

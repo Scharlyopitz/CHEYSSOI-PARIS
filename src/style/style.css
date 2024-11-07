@@ -76,8 +76,13 @@ header .menu .burger {
 }
 #About section .txtContainer {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   height: 40%;
+}
+#About section .txtContainer .txt {
+  display: flex;
+  justify-content: space-between;
 }
 #About section .txtContainer h1 {
   font-family: "Instrument Serif", serif;
