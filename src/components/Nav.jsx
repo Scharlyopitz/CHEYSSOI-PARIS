@@ -1,7 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
 
 export default function Nav() {
+  return (
+    <header>
+      <Logo />
+      <Menu />
+    </header>
+  );
+}
+
+function Logo() {
+  return (
+    <>
+      <p>Logo</p>
+    </>
+  );
+}
+
+function Menu() {
   const links = [
     {
       name: "About",
@@ -21,15 +38,22 @@ export default function Nav() {
     },
   ];
 
+  const [open, setOpen] = useState(false);
+
   return (
-    <div>
-      {links.map((link, i) => {
-        return (
-          <NavLink key={i} to={link.to}>
-            {link.name}
-          </NavLink>
-        );
-      })}
-    </div>
+    <>
+      <p onClick={() => setOpen(!open)}>Menu</p>
+      {open && (
+        <div>
+          {links.map((link, i) => {
+            return (
+              <NavLink key={i} to={link.to}>
+                {link.name}
+              </NavLink>
+            );
+          })}
+        </div>
+      )}
+    </>
   );
 }
