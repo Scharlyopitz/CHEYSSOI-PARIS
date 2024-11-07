@@ -7,4 +7,13 @@
 
 body {
   font-family: "Roboto", sans-serif;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+  height: 5vh;
+  background-color: red;
 }/*# sourceMappingURL=style.css.map */
