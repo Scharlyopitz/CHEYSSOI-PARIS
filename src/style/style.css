@@ -93,7 +93,7 @@ header .menu .burger {
 }
 #About section .txtContainer h1::before, #About section .txtContainer h1::after {
   position: absolute;
-  font-weight: 300;
+  font-weight: 400;
   top: -2vh;
   color: #583e26;
   font-size: 20px;
@@ -103,11 +103,11 @@ header .menu .burger {
 }
 #About section .txtContainer h1::before {
   content: "Architecte d'intérieur";
-  left: 0.5vw;
+  left: 4.5vw;
 }
 #About section .txtContainer h1::after {
   content: "cheyssoiparis@gmail.com";
-  right: 2.5vw;
+  right: 5.5vw;
 }
 #About section img {
   -o-object-fit: cover;

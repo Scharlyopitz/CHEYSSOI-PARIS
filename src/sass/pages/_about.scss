@@ -22,7 +22,7 @@
         &::before,
         &::after {
           position: absolute;
-          font-weight: 300;
+          font-weight: 400;
           top: -2vh;
           color: $Brown;
           font-size: 20px;
@@ -33,12 +33,12 @@
 
         &::before {
           content: "Architecte d'intérieur";
-          left: 0.5vw;
+          left: 4.5vw;
         }
 
         &::after {
           content: "cheyssoiparis@gmail.com";
-          right: 2.5vw;
+          right: 5.5vw;
         }
       }
     }
