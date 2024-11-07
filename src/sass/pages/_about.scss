@@ -8,7 +8,7 @@
       flex-direction: column;
       justify-content: end;
       align-items: center;
-      height: 30%;
+      height: 35%;
       padding: 0 0 3vh;
 
       h1 {
@@ -26,7 +26,7 @@
           font-weight: 500;
           top: -3vh;
           color: $Brown;
-          font-size: 20px;
+          font-size: 15px;
           letter-spacing: normal;
           font-family: "Roboto", sans-serif;
           text-transform: none;
@@ -34,12 +34,12 @@
 
         &::before {
           content: "Architecte d'intérieur";
-          left: 4.5vw;
+          left: 0.5vw;
         }
 
         &::after {
           content: "cheyssoiparis@gmail.com";
-          right: 5.5vw;
+          right: 2.5vw;
         }
       }
     }
@@ -47,7 +47,7 @@
     img {
       object-fit: cover;
       object-position: top;
-      height: 70%;
+      height: 65%;
       width: 100%;
     }
   }

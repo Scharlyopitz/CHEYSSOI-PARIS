@@ -80,7 +80,7 @@ header .menu .burger {
   flex-direction: column;
   justify-content: end;
   align-items: center;
-  height: 30%;
+  height: 35%;
   padding: 0 0 3vh;
 }
 #About section .txtContainer h1 {
@@ -97,24 +97,24 @@ header .menu .burger {
   font-weight: 500;
   top: -3vh;
   color: #583e26;
-  font-size: 20px;
+  font-size: 15px;
   letter-spacing: normal;
   font-family: "Roboto", sans-serif;
   text-transform: none;
 }
 #About section .txtContainer h1::before {
   content: "Architecte d'intérieur";
-  left: 4.5vw;
+  left: 0.5vw;
 }
 #About section .txtContainer h1::after {
   content: "cheyssoiparis@gmail.com";
-  right: 5.5vw;
+  right: 2.5vw;
 }
 #About section img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
-  height: 70%;
+  height: 65%;
   width: 100%;
 }/*# sourceMappingURL=style.css.map */
