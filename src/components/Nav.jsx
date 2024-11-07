@@ -42,20 +42,20 @@ function Menu() {
 
   return (
     <>
-      <p onClick={() => setOpen(!open)} className="menu">
-        Menu
-      </p>
-      {open && (
-        <div className="burger">
-          {links.map((link, i) => {
-            return (
-              <NavLink key={i} to={link.to}>
-                {link.name}
-              </NavLink>
-            );
-          })}
-        </div>
-      )}
+      <div onClick={() => setOpen(!open)} className="menu">
+        <p>Menu</p>
+        {open && (
+          <div className="burger">
+            {links.map((link, i) => {
+              return (
+                <NavLink key={i} to={link.to}>
+                  {link.name}
+                </NavLink>
+              );
+            })}
+          </div>
+        )}
+      </div>
     </>
   );
 }
