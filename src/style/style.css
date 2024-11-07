@@ -34,4 +34,14 @@ header .menu .burger {
   gap: 1vh;
   flex-direction: column;
   text-align: right;
+}
+
+#Home {
+  height: 90vh;
+  width: 100vw;
+  background-color: red;
+  overflow: hidden;
+}
+#Home .image img {
+  height: 50vh;
 }/*# sourceMappingURL=style.css.map */

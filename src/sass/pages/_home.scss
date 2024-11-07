@@ -1,0 +1,12 @@
+#Home {
+  height: 90vh;
+  width: 100vw;
+  background-color: red;
+  overflow: hidden;
+
+  .image {
+    img {
+      height: 50vh;
+    }
+  }
+}

@@ -3,7 +3,7 @@ import Image1 from "/Image1.webp";
 
 export default function Home() {
   return (
-    <main className="Home">
+    <main id="Home">
       <Image />
     </main>
   );
