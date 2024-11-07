@@ -5,4 +5,10 @@ header {
   width: 100vw;
   height: 5vh;
   background-color: red;
+
+  .burger {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
 }

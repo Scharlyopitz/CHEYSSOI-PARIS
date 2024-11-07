@@ -16,4 +16,9 @@ header {
   width: 100vw;
   height: 5vh;
   background-color: red;
+}
+header .burger {
+  position: absolute;
+  top: 0;
+  right: 0;
 }/*# sourceMappingURL=style.css.map */
