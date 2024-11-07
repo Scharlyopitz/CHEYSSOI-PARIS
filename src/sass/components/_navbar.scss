@@ -4,16 +4,19 @@ header {
   justify-content: space-between;
   height: 20vh;
   padding: 0 10vw;
-  color: $Orange;
+
+  &,
+  a {
+    color: $Orange;
+  }
 
   .menu {
     position: relative;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 20px;
 
     p {
-      text-transform: uppercase;
-      font-weight: 500;
-      font-size: 20px;
-
       &:hover {
         cursor: pointer;
       }

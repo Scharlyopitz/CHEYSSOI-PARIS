@@ -20,12 +20,13 @@ header {
   justify-content: space-between;
   height: 20vh;
   padding: 0 10vw;
+}
+header,
+header a {
   color: #d1902a;
 }
 header .menu {
   position: relative;
-}
-header .menu p {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 20px;
