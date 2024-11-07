@@ -119,5 +119,7 @@ header .menu .burger {
   width: 100%;
 }
 #About .secondSection {
+  display: flex;
+  flex-direction: column;
   height: 100vh;
 }/*# sourceMappingURL=style.css.map */
