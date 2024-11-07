@@ -58,8 +58,33 @@
     align-items: center;
     height: 100vh;
 
-    .container {
+    .divContainer {
       display: flex;
+      flex-direction: row;
+      height: 100%;
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        width: 50%;
+      }
+
+      .imgContainer {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 50%;
+        height: 100%;
+
+        img {
+          object-fit: cover;
+          object-position: center;
+          width: 60%;
+          height: 70%;
+        }
+      }
     }
   }
 }

@@ -38,7 +38,7 @@ function SecondeSection() {
             return <p key={i}>{texte}</p>;
           })}
         </div>
-        <div className="image">
+        <div className="imgContainer">
           <img src={Image2} alt="Image2" />
         </div>
       </div>

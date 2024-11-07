@@ -124,6 +124,30 @@ header .menu .burger {
   align-items: center;
   height: 100vh;
 }
-#About .secondSection .container {
+#About .secondSection .divContainer {
   display: flex;
+  flex-direction: row;
+  height: 100%;
+}
+#About .secondSection .divContainer .container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  width: 50%;
+}
+#About .secondSection .divContainer .imgContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+}
+#About .secondSection .divContainer .imgContainer img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  width: 60%;
+  height: 70%;
 }/*# sourceMappingURL=style.css.map */
