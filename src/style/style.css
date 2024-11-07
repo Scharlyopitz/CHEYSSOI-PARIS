@@ -17,7 +17,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 10vh;
+  height: 15vh;
   padding: 0 10vw;
 }
 header .menu {
@@ -42,10 +42,21 @@ header .menu .burger {
 }
 
 #Home {
-  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 85vh;
   width: 100%;
-  background-color: red;
+}
+#Home .image {
+  width: 30vw;
+  height: 30vw;
 }
 #Home .image img {
-  height: 50vh;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  height: 100%;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
