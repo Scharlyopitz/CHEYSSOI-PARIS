@@ -73,11 +73,21 @@ header .menu .burger {
   height: 80vh;
   overflow: hidden;
 }
+#About section .txt {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 40%;
+}
+#About section .txt h1 {
+  text-transform: uppercase;
+  font-size: 50px;
+}
 #About section img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
-  height: 50%;
+  height: 60%;
   width: 100%;
 }/*# sourceMappingURL=style.css.map */
