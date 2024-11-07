@@ -6,9 +6,10 @@
     .txtContainer {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: end;
       align-items: center;
-      height: 40%;
+      height: 30%;
+      padding: 0 0 3vh;
 
       h1 {
         position: relative;
@@ -22,8 +23,8 @@
         &::before,
         &::after {
           position: absolute;
-          font-weight: 400;
-          top: -2vh;
+          font-weight: 500;
+          top: -3vh;
           color: $Brown;
           font-size: 20px;
           letter-spacing: normal;
@@ -46,7 +47,7 @@
     img {
       object-fit: cover;
       object-position: top;
-      height: 60%;
+      height: 70%;
       width: 100%;
     }
   }

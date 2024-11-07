@@ -78,9 +78,10 @@ header .menu .burger {
 #About section .txtContainer {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
-  height: 40%;
+  height: 30%;
+  padding: 0 0 3vh;
 }
 #About section .txtContainer h1 {
   position: relative;
@@ -93,8 +94,8 @@ header .menu .burger {
 }
 #About section .txtContainer h1::before, #About section .txtContainer h1::after {
   position: absolute;
-  font-weight: 400;
-  top: -2vh;
+  font-weight: 500;
+  top: -3vh;
   color: #583e26;
   font-size: 20px;
   letter-spacing: normal;
@@ -114,6 +115,6 @@ header .menu .burger {
      object-fit: cover;
   -o-object-position: top;
      object-position: top;
-  height: 60%;
+  height: 70%;
   width: 100%;
 }/*# sourceMappingURL=style.css.map */
