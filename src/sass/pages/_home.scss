@@ -1,13 +1,13 @@
 #Home {
   display: flex;
-  align-items: center;
   justify-content: center;
-  height: 85vh;
+  height: 80vh;
   width: 100%;
 
   .image {
-    width: 30vw;
-    height: 30vw;
+    margin: 5vh 0;
+    width: 30%;
+    height: 70%;
 
     img {
       object-fit: cover;
