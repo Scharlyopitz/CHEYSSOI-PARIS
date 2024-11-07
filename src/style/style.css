@@ -121,5 +121,9 @@ header .menu .burger {
 #About .secondSection {
   display: flex;
   flex-direction: column;
+  align-items: center;
   height: 100vh;
+}
+#About .secondSection .container {
+  display: flex;
 }/*# sourceMappingURL=style.css.map */

@@ -33,7 +33,7 @@ function SecondeSection() {
     <section className="secondSection">
       <h2>Vous ne voudrez plus quitter votre Intérieur</h2>
       <div className="divContainer">
-        <div className="Container">
+        <div className="container">
           {textes.map((texte, i) => {
             return <p key={i}>{texte}</p>;
           })}
