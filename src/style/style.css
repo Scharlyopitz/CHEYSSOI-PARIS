@@ -120,9 +120,7 @@ header .menu .burger {
 }
 #About .secondSection {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: space-evenly;
   height: 100vh;
   padding: 0 5vw;
 }
@@ -133,12 +131,18 @@ header .menu .burger {
 }
 #About .secondSection .divContainer .container {
   display: flex;
+  flex-direction: column;
   width: 50%;
+}
+#About .secondSection .divContainer .container h2 {
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
 }
 #About .secondSection .divContainer .container div {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: space-evenly;
   height: 100%;
 }
 #About .secondSection .divContainer .container div p {
