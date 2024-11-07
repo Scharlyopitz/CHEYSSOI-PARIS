@@ -42,7 +42,9 @@ function Menu() {
 
   return (
     <>
-      <p onClick={() => setOpen(!open)}>Menu</p>
+      <p onClick={() => setOpen(!open)} className="menu">
+        Menu
+      </p>
       {open && (
         <div className="burger">
           {links.map((link, i) => {
