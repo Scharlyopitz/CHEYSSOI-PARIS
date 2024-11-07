@@ -5,7 +5,9 @@ export default function About() {
   return (
     <main id="About">
       <section>
-        <h1>Cheyssoi Paris</h1>
+        <div className="txt">
+          <h1>Cheyssoi Paris</h1>
+        </div>
         <img src={Image1} alt="Image1" />
       </section>
     </main>
