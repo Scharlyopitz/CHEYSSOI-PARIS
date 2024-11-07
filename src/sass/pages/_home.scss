@@ -3,17 +3,23 @@
   justify-content: center;
   height: 80vh;
   width: 100%;
+  color: $Yellow;
 
   .image {
     margin: 5vh 0;
     width: 30%;
-    height: 70%;
+    height: 75%;
 
     img {
       object-fit: cover;
       object-position: center;
       height: 100%;
       width: 100%;
+    }
+
+    p {
+      margin-top: 1vh;
+      text-transform: uppercase;
     }
   }
 }

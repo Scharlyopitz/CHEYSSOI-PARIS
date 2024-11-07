@@ -19,6 +19,7 @@ header {
   justify-content: space-between;
   height: 20vh;
   padding: 0 10vw;
+  color: #ffbd59;
 }
 header .menu {
   position: relative;
@@ -46,11 +47,12 @@ header .menu .burger {
   justify-content: center;
   height: 80vh;
   width: 100%;
+  color: #ffbd59;
 }
 #Home .image {
   margin: 5vh 0;
   width: 30%;
-  height: 70%;
+  height: 75%;
 }
 #Home .image img {
   -o-object-fit: cover;
@@ -59,4 +61,8 @@ header .menu .burger {
      object-position: center;
   height: 100%;
   width: 100%;
+}
+#Home .image p {
+  margin-top: 1vh;
+  text-transform: uppercase;
 }/*# sourceMappingURL=style.css.map */
