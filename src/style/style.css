@@ -22,14 +22,18 @@ header {
 }
 header .menu {
   position: relative;
+}
+header .menu p {
   text-transform: uppercase;
   font-weight: 500;
   font-size: 20px;
 }
+header .menu p:hover {
+  cursor: pointer;
+}
 header .menu .burger {
   position: absolute;
-  padding: 40px 0 0 0;
-  top: 0;
+  top: 40px;
   right: 0;
   display: flex;
   gap: 1vh;
