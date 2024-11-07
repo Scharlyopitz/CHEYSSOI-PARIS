@@ -17,6 +17,7 @@ header {
 }
 header .menu {
   position: relative;
+  text-transform: uppercase;
 }
 header .menu .burger {
   position: absolute;
