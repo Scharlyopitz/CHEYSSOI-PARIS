@@ -18,11 +18,12 @@ header {
 header .menu {
   position: relative;
   text-transform: uppercase;
+  font-weight: 500;
+  font-size: 20px;
 }
 header .menu .burger {
   position: absolute;
-  padding: 25px 0 0 0;
-  background-color: rgba(0, 0, 255, 0.244);
+  padding: 40px 0 0 0;
   top: 0;
   right: 0;
   display: flex;
