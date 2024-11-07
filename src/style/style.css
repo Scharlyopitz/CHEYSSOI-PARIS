@@ -17,7 +17,10 @@ header {
   height: 5vh;
   background-color: red;
 }
-header .burger {
+header .menu {
+  position: relative;
+}
+header .menu .burger {
   position: absolute;
   top: 0;
   right: 0;

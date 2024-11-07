@@ -6,9 +6,13 @@ header {
   height: 5vh;
   background-color: red;
 
-  .burger {
-    position: absolute;
-    top: 0;
-    right: 0;
+  .menu {
+    position: relative;
+
+    .burger {
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
   }
 }
