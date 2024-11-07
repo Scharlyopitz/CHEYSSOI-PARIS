@@ -15,9 +15,10 @@ a {
 
 header {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  width: 100vw;
-  padding: 5vh 10vh;
+  height: 10vh;
+  padding: 0 10vw;
 }
 header .menu {
   position: relative;
@@ -38,10 +39,6 @@ header .menu .burger {
 
 #Home {
   height: 90vh;
-  width: 100vw;
   background-color: red;
   overflow: hidden;
-}
-#Home .image img {
-  height: 50vh;
 }/*# sourceMappingURL=style.css.map */
