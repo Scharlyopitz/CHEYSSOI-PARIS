@@ -7,6 +7,7 @@
 
 body {
   font-family: "Roboto", sans-serif;
+  background: #eadbcc;
 }
 
 a {
@@ -19,7 +20,7 @@ header {
   justify-content: space-between;
   height: 20vh;
   padding: 0 10vw;
-  color: #ffbd59;
+  color: #d1902a;
 }
 header .menu {
   position: relative;
@@ -47,7 +48,7 @@ header .menu .burger {
   justify-content: center;
   height: 80vh;
   width: 100%;
-  color: #ffbd59;
+  color: #d1902a;
 }
 #Home .image {
   margin: 5vh 0;
