@@ -117,4 +117,7 @@ header .menu .burger {
      object-position: top;
   height: 65%;
   width: 100%;
+}
+#About .secondSection {
+  height: 100vh;
 }/*# sourceMappingURL=style.css.map */
