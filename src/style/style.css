@@ -224,4 +224,8 @@ header .menu .burger a::after {
      object-position: center;
   width: 70%;
   height: 100%;
+}
+#About .thirdSection {
+  background-color: #583e26;
+  color: #eadbcc;
 }/*# sourceMappingURL=style.css.map */
