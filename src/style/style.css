@@ -12,6 +12,10 @@ body {
   background: #eadbcc;
 }
 
+section {
+  height: 100vh;
+}
+
 a {
   text-decoration: none;
 }
@@ -128,7 +132,6 @@ header .menu .burger a::after {
 }
 
 #About section {
-  height: 80vh;
   overflow: hidden;
 }
 #About section .txtContainer {
@@ -176,7 +179,6 @@ header .menu .burger a::after {
 #About .secondSection {
   display: flex;
   align-items: center;
-  height: 100vh;
   padding: 0 5vw;
 }
 #About .secondSection .divContainer {
