@@ -132,6 +132,18 @@ header .menu .burger a::after {
   font-weight: 500;
 }
 
+#About h2 {
+  text-align: center;
+  font-size: 35px;
+  text-transform: uppercase;
+  font-family: "Instrument Serif", serif;
+  letter-spacing: 0.5vw;
+  font-weight: 600;
+}
+#About .secondSection,
+#About .thirdSection {
+  padding: 0 5vw;
+}
 #About .firstSection {
   height: 80vh;
 }
@@ -180,7 +192,6 @@ header .menu .burger a::after {
 #About .secondSection {
   display: flex;
   align-items: center;
-  padding: 0 5vw;
 }
 #About .secondSection .divContainer {
   display: flex;
@@ -193,13 +204,7 @@ header .menu .burger a::after {
   width: 50%;
 }
 #About .secondSection .divContainer .container h2 {
-  text-align: center;
-  font-size: 35px;
-  text-transform: uppercase;
   color: #d1902a;
-  font-family: "Instrument Serif", serif;
-  letter-spacing: 0.5vw;
-  font-weight: 600;
 }
 #About .secondSection .divContainer .container div {
   display: flex;
@@ -240,4 +245,10 @@ header .menu .burger a::after {
   top: 0;
   left: 0;
   width: 100%;
+}
+#About .thirdSection h2 {
+  font-size: 45px;
+}
+#About .thirdSection p {
+  font-size: 25px;
 }/*# sourceMappingURL=style.css.map */
