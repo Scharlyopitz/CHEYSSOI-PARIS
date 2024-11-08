@@ -13,7 +13,7 @@ export default function Navbar() {
 
 function Logo() {
   return (
-    <NavLink to={"/"}>
+    <NavLink to={"/"} className="LogoContainer">
       <img src={LogoCheyssoi} alt="LogoCheyssoi" />
     </NavLink>
   );
