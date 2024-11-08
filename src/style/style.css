@@ -238,6 +238,8 @@ header .menu .burger a::after {
   position: relative;
   background-color: #583e26;
   color: #eadbcc;
+  padding-top: 10vh;
+  gap: 4vh;
 }
 #About .thirdSection svg {
   height: 180px;
@@ -248,7 +250,18 @@ header .menu .burger a::after {
 }
 #About .thirdSection h2 {
   font-size: 45px;
+  color: #d1902a;
 }
-#About .thirdSection p {
-  font-size: 25px;
+#About .thirdSection .container img {
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+  float: right;
+  shape-outside: margin-box;
+  margin: 3vw;
+}
+#About .thirdSection .container p {
+  font-size: 22px;
+  text-align: justify;
+  margin: 3vh;
 }/*# sourceMappingURL=style.css.map */

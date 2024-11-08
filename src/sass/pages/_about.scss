@@ -122,6 +122,8 @@
     position: relative;
     background-color: $Brown;
     color: $Beige;
+    padding-top: 10vh;
+    gap: 4vh;
 
     svg {
       height: 180px;
@@ -133,10 +135,24 @@
 
     h2 {
       font-size: 45px;
+      color: $Orange;
     }
 
-    p {
-      font-size: 25px;
+    .container {
+      img {
+        width: 350px;
+        height: 350px;
+        border-radius: 50%;
+        float: right;
+        shape-outside: margin-box;
+        margin: 3vw;
+      }
+
+      p {
+        font-size: 22px;
+        text-align: justify;
+        margin: 3vh;
+      }
     }
   }
 }
