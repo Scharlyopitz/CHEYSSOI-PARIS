@@ -108,7 +108,16 @@
   }
 
   .thirdSection {
+    position: relative;
     background-color: $Brown;
     color: $Beige;
+
+    svg {
+      height: 180px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+    }
   }
 }

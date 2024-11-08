@@ -226,6 +226,14 @@ header .menu .burger a::after {
   height: 100%;
 }
 #About .thirdSection {
+  position: relative;
   background-color: #583e26;
   color: #eadbcc;
+}
+#About .thirdSection svg {
+  height: 180px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
 }/*# sourceMappingURL=style.css.map */
