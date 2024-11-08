@@ -124,6 +124,7 @@ header .menu .burger a::after {
 #Home .image p {
   margin-top: 1vh;
   text-transform: uppercase;
+  font-weight: 500;
 }
 
 #About section {
