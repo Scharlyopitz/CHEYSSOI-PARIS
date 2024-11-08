@@ -226,6 +226,10 @@ header .menu .burger a::after {
   height: 100%;
 }
 #About .thirdSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   position: relative;
   background-color: #583e26;
   color: #eadbcc;
