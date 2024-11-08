@@ -69,10 +69,12 @@ function ThirdSection() {
       </svg>
 
       <h2>Notre Fondatrice</h2>
-      {textes.map((texte, i) => {
-        return <p key={i}>{texte}</p>;
-      })}
-      <img src={Tania} alt="Tania" />
+      <div className="container">
+        {textes.map((texte, i) => {
+          return <p key={i}>{texte}</p>;
+        })}
+        <img src={Tania} alt="Tania" />
+      </div>
     </section>
   );
 }
