@@ -14,6 +14,7 @@ body {
 
 section {
   height: 100vh;
+  overflow: hidden;
 }
 
 a {
@@ -131,10 +132,10 @@ header .menu .burger a::after {
   font-weight: 500;
 }
 
-#About section {
-  overflow: hidden;
+#About .firstSection {
+  height: 80vh;
 }
-#About section .txtContainer {
+#About .firstSection .txtContainer {
   display: flex;
   flex-direction: column;
   justify-content: end;
@@ -142,7 +143,7 @@ header .menu .burger a::after {
   height: 35%;
   padding: 0 0 3vh;
 }
-#About section .txtContainer h1 {
+#About .firstSection .txtContainer h1 {
   position: relative;
   font-family: "Instrument Serif", serif;
   font-weight: 600;
@@ -151,7 +152,7 @@ header .menu .burger a::after {
   letter-spacing: 2vw;
   color: #d1902a;
 }
-#About section .txtContainer h1::before, #About section .txtContainer h1::after {
+#About .firstSection .txtContainer h1::before, #About .firstSection .txtContainer h1::after {
   position: absolute;
   font-weight: 800;
   top: -3vh;
@@ -160,15 +161,15 @@ header .menu .burger a::after {
   letter-spacing: 0.2vw;
   font-family: "Instrument Serif", serif;
 }
-#About section .txtContainer h1::before {
+#About .firstSection .txtContainer h1::before {
   content: "Architecte d'intérieur";
   left: 0.5vw;
 }
-#About section .txtContainer h1::after {
+#About .firstSection .txtContainer h1::after {
   content: "cheyssoiparis@gmail.com";
   right: 2vw;
 }
-#About section img {
+#About .firstSection img {
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: top;

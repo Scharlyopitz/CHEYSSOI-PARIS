@@ -7,14 +7,14 @@ export default function About() {
     <main id="About">
       <FirstSection />
       <SecondeSection />
-      <ThirdSection />
+      {/* <ThirdSection /> */}
     </main>
   );
 }
 
 function FirstSection() {
   return (
-    <section>
+    <section className="firstSection">
       <div className="txtContainer">
         <h1>Cheyssoi Paris</h1>
       </div>
