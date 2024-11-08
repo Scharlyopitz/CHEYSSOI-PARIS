@@ -10,7 +10,7 @@
 
   .secondSection,
   .thirdSection {
-    padding: 0 5vw;
+    padding: 0 7vw;
   }
 
   .firstSection {
@@ -73,7 +73,8 @@
 
     .divContainer {
       display: flex;
-      flex-direction: row-reverse;
+      justify-content: space-between;
+      flex-direction: row;
       height: 70%;
 
       .container {
@@ -99,16 +100,13 @@
       }
 
       .imgContainer {
-        display: flex;
-        justify-content: center;
-        width: 50%;
         height: 100%;
 
         img {
           object-fit: cover;
           object-position: center;
-          width: 70%;
           height: 100%;
+          border: 3px solid $Brown;
         }
       }
     }
@@ -139,19 +137,27 @@
     }
 
     .container {
+      display: flex;
+      align-items: center;
+
       img {
-        width: 350px;
-        height: 350px;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        object-position: center;
         border-radius: 50%;
-        float: right;
-        shape-outside: margin-box;
-        margin: 3vw;
+        border: 3px solid $Beige;
+        // float: left;
+        // shape-outside: margin-box;
+        margin: 2vw;
       }
 
-      p {
-        font-size: 22px;
-        text-align: justify;
-        margin: 3vh;
+      .txt {
+        p {
+          font-size: 22px;
+          text-align: justify;
+          margin: 3vh;
+        }
       }
     }
   }

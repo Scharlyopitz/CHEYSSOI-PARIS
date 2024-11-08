@@ -11,6 +11,7 @@
 body {
   font-family: "Roboto Flex", sans-serif;
   background: #eadbcc;
+  color: #583e26;
 }
 
 section {
@@ -143,7 +144,7 @@ header .menu .burger a::after {
 }
 #About .secondSection,
 #About .thirdSection {
-  padding: 0 5vw;
+  padding: 0 7vw;
 }
 #About .firstSection {
   height: 80vh;
@@ -196,7 +197,8 @@ header .menu .burger a::after {
 }
 #About .secondSection .divContainer {
   display: flex;
-  flex-direction: row-reverse;
+  justify-content: space-between;
+  flex-direction: row;
   height: 70%;
 }
 #About .secondSection .divContainer .container {
@@ -218,9 +220,6 @@ header .menu .burger a::after {
   text-align: justify;
 }
 #About .secondSection .divContainer .imgContainer {
-  display: flex;
-  justify-content: center;
-  width: 50%;
   height: 100%;
 }
 #About .secondSection .divContainer .imgContainer img {
@@ -228,8 +227,8 @@ header .menu .burger a::after {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  width: 70%;
   height: 100%;
+  border: 3px solid #583e26;
 }
 #About .thirdSection {
   display: flex;
@@ -253,15 +252,22 @@ header .menu .burger a::after {
   font-size: 45px;
   color: #d1902a;
 }
-#About .thirdSection .container img {
-  width: 350px;
-  height: 350px;
-  border-radius: 50%;
-  float: right;
-  shape-outside: margin-box;
-  margin: 3vw;
+#About .thirdSection .container {
+  display: flex;
+  align-items: center;
 }
-#About .thirdSection .container p {
+#About .thirdSection .container img {
+  width: 300px;
+  height: 300px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50%;
+  border: 3px solid #eadbcc;
+  margin: 2vw;
+}
+#About .thirdSection .container .txt p {
   font-size: 22px;
   text-align: justify;
   margin: 3vh;

@@ -71,9 +71,11 @@ function ThirdSection() {
       <h2>Notre Fondatrice</h2>
       <div className="container">
         <img src={Tania} alt="Tania" />
-        {textes.map((texte, i) => {
-          return <p key={i}>{texte}</p>;
-        })}
+        <div className="txt">
+          {textes.map((texte, i) => {
+            return <p key={i}>{texte}</p>;
+          })}
+        </div>
       </div>
     </section>
   );
