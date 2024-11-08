@@ -163,7 +163,7 @@ header .menu .burger a::after {
 }
 #About section .txtContainer h1::after {
   content: "cheyssoiparis@gmail.com";
-  right: 2.5vw;
+  right: 2vw;
 }
 #About section img {
   -o-object-fit: cover;
