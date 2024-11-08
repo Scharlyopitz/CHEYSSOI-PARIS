@@ -7,6 +7,7 @@ export default function About() {
     <main id="About">
       <FirstSection />
       <SecondeSection />
+      <ThirdSection />
     </main>
   );
 }
@@ -46,4 +47,8 @@ function SecondeSection() {
       </div>
     </section>
   );
+}
+
+function ThirdSection() {
+  return <section className="thirdSection"></section>;
 }
