@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import { NavLink } from "react-router-dom";
+import LogoCheyssoi from "/Logo.png";
 
 export default function Navbar() {
   return (
@@ -12,11 +13,9 @@ export default function Navbar() {
 
 function Logo() {
   return (
-    <>
-      <NavLink to={"/"}>
-        <p>Logo</p>
-      </NavLink>
-    </>
+    <NavLink to={"/"}>
+      <img src={LogoCheyssoi} alt="LogoCheyssoi" />
+    </NavLink>
   );
 }
 
