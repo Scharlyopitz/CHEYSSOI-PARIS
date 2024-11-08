@@ -13,7 +13,9 @@ export default function Navbar() {
 function Logo() {
   return (
     <>
-      <p>Logo</p>
+      <NavLink to={"/"}>
+        <p>Logo</p>
+      </NavLink>
     </>
   );
 }
