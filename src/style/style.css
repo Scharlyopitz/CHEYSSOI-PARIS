@@ -154,9 +154,8 @@ header .menu .burger a::after {
   top: -3vh;
   color: #583e26;
   font-size: 15px;
-  letter-spacing: normal;
-  font-family: "Roboto", sans-serif;
-  text-transform: none;
+  letter-spacing: 0.2vw;
+  font-family: "Instrument Serif", serif;
 }
 #About section .txtContainer h1::before {
   content: "Architecte d'intérieur";
@@ -192,8 +191,12 @@ header .menu .burger a::after {
 }
 #About .secondSection .divContainer .container h2 {
   text-align: center;
-  font-size: 30px;
+  font-size: 35px;
   text-transform: uppercase;
+  color: #d1902a;
+  font-family: "Instrument Serif", serif;
+  letter-spacing: 0.5vw;
+  font-weight: 600;
 }
 #About .secondSection .divContainer .container div {
   display: flex;
