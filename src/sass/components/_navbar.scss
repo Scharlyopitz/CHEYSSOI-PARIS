@@ -35,31 +35,32 @@ header {
     font-weight: 500;
     font-size: 20px;
 
-    &:hover::after {
-      transform: scaleX(1);
-      transform-origin: left;
-    }
-
-    &::after {
-      content: "";
-      position: absolute;
-      transform: scaleX(0);
-      transform-origin: right;
-      bottom: -3px;
-      left: 0;
-      width: 100%;
-      height: 2px;
-      background-color: $Orange;
-      transition: transform 0.3s;
-    }
-
     p {
+      &:hover::after {
+        transform: scaleX(1);
+        transform-origin: left;
+      }
+
+      &::after {
+        content: "";
+        position: absolute;
+        transform: scaleX(0);
+        transform-origin: right;
+        bottom: -3px;
+        left: 0;
+        width: 100%;
+        height: 2px;
+        background-color: $Orange;
+        transition: transform 0.3s;
+      }
+
       &:hover {
         cursor: pointer;
       }
     }
 
     .burger {
+      overflow: hidden;
       position: absolute;
       top: 40px;
       right: 0;
@@ -67,6 +68,28 @@ header {
       gap: 1vh;
       flex-direction: column;
       text-align: right;
+
+      a {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        position: relative;
+        transform: translateX(26px);
+        transition: 0.3s;
+
+        &:hover {
+          transform: translateX(0);
+        }
+
+        &::after {
+          content: "";
+          margin-left: 0.2vw;
+          display: block;
+          width: 25px;
+          height: 3px;
+          background-color: $Orange;
+        }
+      }
     }
   }
 }
