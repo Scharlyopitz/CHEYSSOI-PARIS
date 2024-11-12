@@ -12,8 +12,10 @@ export default function Home() {
 function Image() {
   return (
     <div className="image">
+      <div className="logo">
+        <p>Cheyssoi Paris</p>
+      </div>
       <img src={Image1} alt="Image1" />
-      <p>Cheyssoi Paris</p>
     </div>
   );
 }
