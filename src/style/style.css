@@ -141,6 +141,10 @@ header .menu .burger a::after {
   letter-spacing: 0.5vw;
   font-weight: 600;
 }
+#About p {
+  font-size: 24px;
+  text-align: justify;
+}
 #About .secondSection,
 #About .thirdSection {
   padding: 0 7vw;
@@ -214,10 +218,6 @@ header .menu .burger a::after {
   justify-content: space-evenly;
   height: 100%;
 }
-#About .secondSection .divContainer .container div p {
-  font-size: 25px;
-  text-align: justify;
-}
 #About .secondSection .divContainer .imgContainer {
   height: 100%;
 }
@@ -260,7 +260,5 @@ header .menu .burger a::after {
   margin: 2vw;
 }
 #About .thirdSection .container .txt p {
-  font-size: 22px;
-  text-align: justify;
   margin: 3vh;
 }/*# sourceMappingURL=style.css.map */

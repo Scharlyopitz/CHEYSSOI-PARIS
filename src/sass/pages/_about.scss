@@ -9,6 +9,11 @@
     font-weight: 600;
   }
 
+  p {
+    font-size: 24px;
+    text-align: justify;
+  }
+
   .secondSection,
   .thirdSection {
     padding: 0 7vw;
@@ -93,11 +98,6 @@
           flex-direction: column;
           justify-content: space-evenly;
           height: 100%;
-
-          p {
-            font-size: 25px;
-            text-align: justify;
-          }
         }
       }
 
@@ -148,8 +148,6 @@
 
       .txt {
         p {
-          font-size: 22px;
-          text-align: justify;
           margin: 3vh;
         }
       }
