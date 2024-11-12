@@ -2,14 +2,18 @@ import React from "react";
 import Image1 from "/Image1.webp";
 import Image2 from "/Image2.webp";
 import Tania from "/Tania.webp";
+import Navbar from "../components/Navbar";
 
 export default function About() {
   return (
-    <main id="About">
-      <FirstSection />
-      <SecondeSection />
-      <ThirdSection />
-    </main>
+    <>
+      <Navbar />
+      <main id="About">
+        <FirstSection />
+        <SecondeSection />
+        <ThirdSection />
+      </main>
+    </>
   );
 }
 
