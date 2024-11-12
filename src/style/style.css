@@ -115,6 +115,7 @@ header .menu .burger a::after {
   width: 100%;
 }
 #Home .logo {
+  pointer-events: none;
   overflow: hidden;
   position: absolute;
   top: 50%;
