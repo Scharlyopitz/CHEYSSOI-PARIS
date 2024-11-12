@@ -23,10 +23,12 @@ a {
 }
 
 header {
+  position: absolute;
   display: flex;
   align-items: center;
   justify-content: space-between;
   height: 20vh;
+  width: 100%;
   padding: 0 10vw;
 }
 header .LogoContainer {
@@ -167,7 +169,7 @@ header .menu .burger a::after {
   padding: 0 7vw;
 }
 #About .firstSection {
-  height: 80vh;
+  padding-top: 20vh;
 }
 #About .firstSection .txtContainer {
   display: flex;
@@ -179,12 +181,12 @@ header .menu .burger a::after {
 }
 #About .firstSection .txtContainer h1 {
   position: relative;
-  font-family: "Instrument Serif", serif;
-  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
   text-transform: uppercase;
-  font-size: 100px;
+  font-size: 70px;
   letter-spacing: 2vw;
-  color: #d1902a;
+  color: #000000;
 }
 #About .firstSection .txtContainer h1::before, #About .firstSection .txtContainer h1::after {
   position: absolute;
