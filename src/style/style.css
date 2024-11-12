@@ -55,58 +55,28 @@ header a {
   color: #d1902a;
 }
 header .menu {
+  display: flex;
+  flex-direction: row;
+  gap: 5vw;
+}
+header .menu a {
   position: relative;
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 20px;
+  padding: 0.5vh 1vw;
 }
-header .menu p:hover::after {
-  transform: scaleX(1);
-  transform-origin: left;
+header .menu a:hover::after {
+  opacity: 1;
 }
-header .menu p::after {
+header .menu a::after {
   content: "";
   position: absolute;
-  transform: scaleX(0);
-  transform-origin: right;
-  bottom: -3px;
+  border-radius: 20px;
+  z-index: -1;
+  top: 0;
   left: 0;
   width: 100%;
-  height: 2px;
-  background-color: #d1902a;
-  transition: transform 0.3s;
-}
-header .menu p:hover {
-  cursor: pointer;
-}
-header .menu .burger {
-  overflow: hidden;
-  position: absolute;
-  top: 40px;
-  right: 0;
-  display: flex;
-  gap: 1vh;
-  flex-direction: column;
-  text-align: right;
-}
-header .menu .burger a {
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  position: relative;
-  transform: translateX(26px);
-  transition: 0.3s;
-}
-header .menu .burger a:hover {
-  transform: translateX(0);
-}
-header .menu .burger a::after {
-  content: "";
-  margin-left: 0.2vw;
-  display: block;
-  width: 25px;
-  height: 3px;
-  background-color: #d1902a;
+  height: 100%;
+  opacity: 0;
+  border: 1.5px solid #d1902a;
 }
 
 #Home {
