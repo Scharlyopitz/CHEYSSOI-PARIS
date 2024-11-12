@@ -1,5 +1,6 @@
 import React from "react";
 import Image1 from "/Image1.webp";
+import { NavLink } from "react-router-dom";
 
 export default function Home() {
   return (
@@ -20,8 +21,8 @@ function Texte() {
 
 function Image() {
   return (
-    <div className="image">
+    <NavLink to={"/about"} className="image">
       <img src={Image1} alt="Image1" />
-    </div>
+    </NavLink>
   );
 }
