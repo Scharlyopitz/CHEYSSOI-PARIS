@@ -241,13 +241,6 @@ header .menu .burger a::after {
   padding-top: 10vh;
   gap: 4vh;
 }
-#About .thirdSection svg {
-  height: 180px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
 #About .thirdSection h2 {
   font-size: 45px;
   color: #d1902a;
