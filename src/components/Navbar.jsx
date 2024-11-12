@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import LogoCheyssoi from "/Logo.png";
+import { motion as m } from "framer-motion";
 
 export default function Navbar() {
   return (
@@ -35,12 +36,15 @@ function Menu() {
     },
   ];
 
+  const ref = useRef(null);
+  console.log(ref.current);
+
   return (
     <>
       <div className="menu">
         {links.map((link, i) => {
           return (
-            <NavLink key={i} to={link.to}>
+            <NavLink ref={ref} key={i} to={link.to}>
               {link.name}
             </NavLink>
           );
