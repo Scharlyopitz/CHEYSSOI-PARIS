@@ -22,16 +22,12 @@ function Logo() {
 function Menu() {
   const links = [
     {
-      name: "About",
-      to: "/about",
+      name: "Home",
+      to: "/",
     },
     {
-      name: "Team",
-      to: "/team",
-    },
-    {
-      name: "Services",
-      to: "/services",
+      name: "Works",
+      to: "/works",
     },
     {
       name: "Contact",
@@ -39,23 +35,16 @@ function Menu() {
     },
   ];
 
-  const [open, setOpen] = useState(false);
-
   return (
     <>
-      <div onClick={() => setOpen(!open)} className="menu">
-        <p>Menu</p>
-        {open && (
-          <div className="burger">
-            {links.map((link, i) => {
-              return (
-                <NavLink key={i} to={link.to}>
-                  {link.name}
-                </NavLink>
-              );
-            })}
-          </div>
-        )}
+      <div className="menu">
+        {links.map((link, i) => {
+          return (
+            <NavLink key={i} to={link.to}>
+              {link.name}
+            </NavLink>
+          );
+        })}
       </div>
     </>
   );
