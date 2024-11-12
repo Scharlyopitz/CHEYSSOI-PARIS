@@ -128,7 +128,6 @@ header .menu .burger a::after {
   width: 100%;
 }
 #Home .image p {
-  margin-top: 1vh;
   text-transform: uppercase;
   font-weight: 500;
 }
