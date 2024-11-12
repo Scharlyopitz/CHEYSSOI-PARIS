@@ -46,17 +46,13 @@ function Menu() {
   return (
     <>
       <div className="menu">
-        <BackGround position={position} />
+        <m.div animate={position} className="background"></m.div>
         {links.map((link, i) => {
           return <Link key={i} link={link} setPosition={setPosition} />;
         })}
       </div>
     </>
   );
-}
-
-function BackGround({ position }) {
-  return <m.div animate={position} className="background"></m.div>;
 }
 
 function Link({ link, setPosition }) {
