@@ -36,20 +36,51 @@ function Menu() {
     },
   ];
 
-  const ref = useRef(null);
-  console.log(ref.current);
+  const [position, setPosition] = useState({
+    left: 0,
+    width: 0,
+    height: 0,
+    opacity: 0,
+  });
 
   return (
     <>
       <div className="menu">
+        <BackGround position={position} />
         {links.map((link, i) => {
-          return (
-            <NavLink ref={ref} key={i} to={link.to}>
-              {link.name}
-            </NavLink>
-          );
+          return <Link key={i} link={link} setPosition={setPosition} />;
         })}
       </div>
     </>
+  );
+}
+
+function BackGround({ position }) {
+  return <m.div animate={position} className="background"></m.div>;
+}
+
+function Link({ link, setPosition }) {
+  const ref = useRef(null);
+
+  return (
+    <NavLink
+      ref={ref}
+      onMouseLeave={() => {
+        setPosition((prec) => ({
+          ...prec,
+          opacity: 0,
+        }));
+      }}
+      onMouseEnter={() => {
+        const width = ref.current.clientWidth;
+        const height = ref.current.clientHeight;
+        const left = ref.current.offsetLeft;
+
+        setPosition({ left, width, height, opacity: 1 });
+      }}
+      to={link.to}
+    >
+      {link.name}
+    </NavLink>
   );
 }

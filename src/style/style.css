@@ -58,25 +58,17 @@ header .menu {
   display: flex;
   flex-direction: row;
   gap: 5vw;
+  position: relative;
 }
 header .menu a {
-  position: relative;
-  padding: 0.5vh 1vw;
+  padding: 10px 30px;
 }
-header .menu a:hover::after {
-  opacity: 1;
-}
-header .menu a::after {
-  content: "";
+header .menu .background {
+  opacity: 0;
+  pointer-events: none;
   position: absolute;
   border-radius: 20px;
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 0;
-  border: 1.5px solid #d1902a;
+  border: 1px solid #d1902a;
 }
 
 #Home {
