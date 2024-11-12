@@ -130,7 +130,6 @@ header .menu .burger a::after {
   letter-spacing: 2vw;
   color: #ffffff;
   text-transform: uppercase;
-  font-weight: 500;
 }
 #Home .image {
   margin: 5vh 0;
