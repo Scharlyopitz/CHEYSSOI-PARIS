@@ -110,9 +110,26 @@ header .menu .burger a::after {
 #Home {
   display: flex;
   justify-content: center;
-  height: 80vh;
+  align-items: center;
+  height: 100vh;
   width: 100%;
   color: #d1902a;
+}
+#Home .logo {
+  overflow: hidden;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+#Home .logo p {
+  font-size: 7vw;
+  white-space: nowrap;
+  letter-spacing: 2vw;
+  color: #000000;
+  mix-blend-mode: difference;
+  text-transform: uppercase;
+  font-weight: 500;
 }
 #Home .image {
   margin: 5vh 0;
@@ -126,10 +143,6 @@ header .menu .burger a::after {
      object-position: center;
   height: 100%;
   width: 100%;
-}
-#Home .image p {
-  text-transform: uppercase;
-  font-weight: 500;
 }
 
 #About h2 {

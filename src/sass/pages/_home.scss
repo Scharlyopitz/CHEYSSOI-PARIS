@@ -1,9 +1,28 @@
 #Home {
   display: flex;
   justify-content: center;
-  height: 80vh;
+  align-items: center;
+  height: 100vh;
   width: 100%;
   color: $Orange;
+
+  .logo {
+    overflow: hidden;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    p {
+      font-size: 7vw;
+      white-space: nowrap;
+      letter-spacing: 2vw;
+      color: $Black;
+      mix-blend-mode: difference;
+      text-transform: uppercase;
+      font-weight: 500;
+    }
+  }
 
   .image {
     margin: 5vh 0;
@@ -15,11 +34,6 @@
       object-position: center;
       height: 100%;
       width: 100%;
-    }
-
-    p {
-      text-transform: uppercase;
-      font-weight: 500;
     }
   }
 }
