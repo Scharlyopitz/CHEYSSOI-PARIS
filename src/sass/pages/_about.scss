@@ -34,22 +34,23 @@
         position: relative;
         font-family: "Poppins", sans-serif;
         // font-family: "Instrument Serif", serif;
-        font-weight: 400;
+        font-weight: 300;
         text-transform: uppercase;
-        font-size: 70px;
-        letter-spacing: 2vw;
+        font-size: 100px;
+        letter-spacing: 1vw;
         // color: $Orange;
         color: $Black;
 
         &::before,
         &::after {
           position: absolute;
-          font-weight: 800;
-          top: -3vh;
+          // font-weight: 800;
+          top: -2vh;
           color: $Brown;
-          font-size: 15px;
-          letter-spacing: 0.2vw;
-          font-family: "Instrument Serif", serif;
+          font-size: 12px;
+          letter-spacing: normal;
+          font-family: "Poppins", sans-serif;
+          // font-family: "Instrument Serif", serif;
           // font-family: "Roboto", sans-serif;
           // text-transform: none;
           // letter-spacing: normal;
@@ -72,86 +73,6 @@
       object-position: top;
       height: 65%;
       width: 100%;
-    }
-  }
-
-  .secondSection {
-    display: flex;
-    align-items: center;
-
-    .divContainer {
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-      height: 70%;
-
-      .container {
-        display: flex;
-        flex-direction: column;
-        width: 50%;
-
-        h2 {
-          color: $Orange;
-        }
-
-        div {
-          display: flex;
-          flex-direction: column;
-          justify-content: space-evenly;
-          height: 100%;
-        }
-      }
-
-      .imgContainer {
-        height: 100%;
-
-        img {
-          object-fit: cover;
-          object-position: center;
-          height: 100%;
-          border: 3px solid $Brown;
-        }
-      }
-    }
-  }
-
-  .thirdSection {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    background-color: $Brown;
-    color: $Beige;
-    padding-top: 10vh;
-    gap: 4vh;
-
-    h2 {
-      font-size: 45px;
-      color: $Orange;
-    }
-
-    .container {
-      display: flex;
-      align-items: center;
-
-      img {
-        width: 300px;
-        height: 300px;
-        object-fit: cover;
-        object-position: center;
-        border-radius: 50%;
-        border: 3px solid $Beige;
-        // float: left;
-        // shape-outside: margin-box;
-        margin: 2vw;
-      }
-
-      .txt {
-        p {
-          margin: 3vh;
-        }
-      }
     }
   }
 }
