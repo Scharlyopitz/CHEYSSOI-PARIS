@@ -259,15 +259,27 @@ nav .menu .background {
   width: 60%;
 }
 #About .thirdSection .contenu .left .namesContainer {
+  height: 10%;
   margin-top: 4vh;
+  position: relative;
 }
 #About .thirdSection .contenu .left .namesContainer p {
+  position: absolute;
+  top: 0;
+  left: 0;
   font-size: 30px;
   font-weight: 200;
   font-weight: 300;
 }
 #About .thirdSection .contenu .left .descriptionsContainer {
+  position: relative;
   display: flex;
   align-items: center;
-  flex-grow: 1;
+  height: 90%;
+}
+#About .thirdSection .contenu .left .descriptionsContainer p {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
 }/*# sourceMappingURL=style.css.map */

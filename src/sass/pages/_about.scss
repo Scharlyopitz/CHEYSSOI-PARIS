@@ -155,9 +155,14 @@
         width: 60%;
 
         .namesContainer {
+          height: 10%;
           margin-top: 4vh;
+          position: relative;
 
           p {
+            position: absolute;
+            top: 0;
+            left: 0;
             font-size: 30px;
             font-weight: 200;
             font-weight: 300;
@@ -165,9 +170,17 @@
         }
 
         .descriptionsContainer {
+          position: relative;
           display: flex;
           align-items: center;
-          flex-grow: 1;
+          height: 90%;
+
+          p {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+          }
         }
       }
     }
