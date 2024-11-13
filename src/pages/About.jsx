@@ -87,7 +87,7 @@ function ThirdSection() {
 
   return (
     <section className="thirdSection">
-      <h2>L'équipe</h2>
+      <h2>Membres de l'équipe</h2>
       <div className="contenu">
         <Carousel length={persons.length} />
         <div className="imagesContainer">

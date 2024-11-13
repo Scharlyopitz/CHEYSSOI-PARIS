@@ -86,18 +86,23 @@
   }
 
   .thirdSection {
+    padding-top: 20vh;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     position: relative;
     background-color: $Black;
     color: $White;
-    gap: 10vh;
+    gap: 7vh;
+
+    h2 {
+      text-align: left;
+      padding-left: 5vw;
+    }
 
     .contenu {
       display: flex;
       justify-content: end;
-      height: 60%;
+      height: 70%;
       gap: 3vw;
 
       .carousel {

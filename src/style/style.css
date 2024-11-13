@@ -196,18 +196,22 @@ nav .menu .background {
   gap: 3vh;
 }
 #About .thirdSection {
+  padding-top: 20vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   position: relative;
   background-color: #000000;
   color: #ffffff;
-  gap: 10vh;
+  gap: 7vh;
+}
+#About .thirdSection h2 {
+  text-align: left;
+  padding-left: 5vw;
 }
 #About .thirdSection .contenu {
   display: flex;
   justify-content: end;
-  height: 60%;
+  height: 70%;
   gap: 3vw;
 }
 #About .thirdSection .contenu .carousel {
