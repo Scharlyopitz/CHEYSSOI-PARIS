@@ -155,7 +155,7 @@ function ThirdSection() {
               {currentMember === i && (
                 <span
                   style={{
-                    background: `conic-gradient(${white} 50%, ${black} 0%)`,
+                    background: `conic-gradient(${white} 100%, ${black} 0%)`,
                   }}
                   className="progress"
                 ></span>

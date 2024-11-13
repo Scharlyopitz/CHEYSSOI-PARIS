@@ -121,6 +121,7 @@
 
           &::after {
             content: "";
+            pointer-events: none;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -162,6 +163,7 @@
         position: relative;
 
         img {
+          transition: 0.5s;
           position: absolute;
           top: 0;
           left: 0;
@@ -184,6 +186,7 @@
           position: relative;
 
           p {
+            transition: 0.5s;
             position: absolute;
             top: 0;
             left: 0;
@@ -200,6 +203,7 @@
           height: 90%;
 
           p {
+            transition: 0.5s;
             position: absolute;
             top: 50%;
             left: 0;

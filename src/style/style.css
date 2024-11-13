@@ -230,6 +230,7 @@ nav .menu .background {
 }
 #About .thirdSection .contenu .carousel .pointContainer::after {
   content: "";
+  pointer-events: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -265,6 +266,7 @@ nav .menu .background {
   position: relative;
 }
 #About .thirdSection .contenu .imagesContainer img {
+  transition: 0.5s;
   position: absolute;
   top: 0;
   left: 0;
@@ -287,6 +289,7 @@ nav .menu .background {
   position: relative;
 }
 #About .thirdSection .contenu .left .namesContainer p {
+  transition: 0.5s;
   position: absolute;
   top: 0;
   left: 0;
@@ -301,6 +304,7 @@ nav .menu .background {
   height: 90%;
 }
 #About .thirdSection .contenu .left .descriptionsContainer p {
+  transition: 0.5s;
   position: absolute;
   top: 50%;
   left: 0;
