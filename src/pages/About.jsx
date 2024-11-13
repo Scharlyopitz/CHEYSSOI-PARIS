@@ -89,7 +89,7 @@ function ThirdSection() {
     },
   ];
 
-  const currentMember = 1;
+  const currentMember = 4;
 
   return (
     <section className="thirdSection">
