@@ -23,16 +23,16 @@ function Logo() {
 function Menu() {
   const links = [
     {
-      name: "Home",
-      to: "/",
+      name: "About",
+      to: "#about",
     },
     {
       name: "Works",
-      to: "/works",
+      to: "#works",
     },
     {
       name: "Contact",
-      to: "/contact",
+      to: "#contact",
     },
   ];
 
