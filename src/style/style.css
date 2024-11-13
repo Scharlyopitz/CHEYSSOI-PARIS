@@ -145,8 +145,8 @@ header .menu .background {
 #About .firstSection .txtContainer h1::before, #About .firstSection .txtContainer h1::after {
   position: absolute;
   text-transform: none;
-  top: -1vh;
-  font-size: 12px;
+  top: 0;
+  font-size: 15px;
   letter-spacing: normal;
   font-family: "Poppins", sans-serif;
 }
