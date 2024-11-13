@@ -33,7 +33,7 @@
         font-size: 110px;
         letter-spacing: 1vw;
         // color: $Orange;
-        color: $Black;
+        // color: $Black;
 
         &::before,
         &::after {
@@ -41,7 +41,6 @@
           // font-weight: 800;
           text-transform: none;
           top: -1vh;
-          color: $Black;
           font-size: 12px;
           letter-spacing: normal;
           font-family: "Poppins", sans-serif;
