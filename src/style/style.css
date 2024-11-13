@@ -227,8 +227,11 @@ nav .menu .background {
   justify-content: center;
   align-items: center;
   border-radius: 50%;
-  width: 20px;
-  height: 20px;
+  width: 30px;
+  height: 30px;
+}
+#About .thirdSection .contenu .carousel .pointContainer:hover {
+  cursor: pointer;
 }
 #About .thirdSection .contenu .carousel .pointContainer,
 #About .thirdSection .contenu .carousel .pointContainer .point {
