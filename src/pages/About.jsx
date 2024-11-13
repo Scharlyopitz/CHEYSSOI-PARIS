@@ -11,6 +11,7 @@ export default function About() {
         <Navbar />
         <FirstSection />
         <SecondSection />
+        <ThirdSection />
       </main>
     </>
   );
@@ -43,4 +44,8 @@ function SecondSection() {
       </div>
     </section>
   );
+}
+
+function ThirdSection() {
+  return <section className="thirdSection"></section>;
 }
