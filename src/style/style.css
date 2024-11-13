@@ -217,10 +217,10 @@ nav .menu .background {
 #About .thirdSection .contenu .carousel {
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   position: absolute;
   left: 7vw;
-  height: 60%;
+  height: 55%;
 }
 #About .thirdSection .contenu .carousel .pointContainer {
   display: flex;
