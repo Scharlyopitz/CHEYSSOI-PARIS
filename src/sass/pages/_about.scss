@@ -14,15 +14,12 @@
   }
 
   .firstSection {
-    padding-top: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     .txtContainer {
       display: flex;
-      flex-direction: column;
-      justify-content: end;
-      align-items: center;
-      height: 35%;
-      padding: 0 0 3vh;
 
       h1 {
         position: relative;
@@ -30,7 +27,7 @@
         // font-family: "Instrument Serif", serif;
         font-weight: 300;
         text-transform: uppercase;
-        font-size: 110px;
+        font-size: 120px;
         letter-spacing: 1vw;
         // color: $Orange;
         // color: $Black;
@@ -63,9 +60,14 @@
     }
 
     img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
       object-fit: cover;
       object-position: top;
-      height: 65%;
+      filter: brightness(0.5);
+      height: 100%;
       width: 100%;
     }
   }
