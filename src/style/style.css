@@ -192,4 +192,7 @@ nav .menu .background {
   display: flex;
   flex-direction: column;
   gap: 3vh;
+}
+#About .thirdSection {
+  background-color: antiquewhite;
 }/*# sourceMappingURL=style.css.map */
