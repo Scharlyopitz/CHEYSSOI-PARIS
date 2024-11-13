@@ -95,7 +95,7 @@ function ThirdSection() {
     <section className="thirdSection">
       <h2>Membres de l'équipe</h2>
       <div className="contenu">
-        <Carousel length={persons.length} />
+        <Carousel persons={persons} />
         <div className="imagesContainer">
           {persons.map((person, i) => {
             return (
@@ -138,13 +138,14 @@ function ThirdSection() {
     </section>
   );
 
-  function Carousel({ length }) {
+  function Carousel({ persons }) {
     return (
       <div className="carousel">
-        {[...Array(length)].map((_, i) => {
+        {persons.map((_, i) => {
           return (
             <div key={i} className="pointContainer">
               <span className="point"></span>
+              <span className="progress"></span>
             </div>
           );
         })}
