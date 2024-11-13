@@ -224,13 +224,28 @@ nav .menu .background {
 }
 #About .thirdSection .contenu .carousel .pointContainer {
   position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#About .thirdSection .contenu .carousel .pointContainer::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background-color: #ffffff;
 }
-#About .thirdSection .contenu .carousel .pointContainer::before {
-  content: "";
+#About .thirdSection .contenu .carousel .pointContainer .progress {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+#About .thirdSection .contenu .carousel .pointContainer .point {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -238,7 +253,10 @@ nav .menu .background {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: rgba(255, 0, 0, 0.16);
+  background-color: #000000;
+}
+#About .thirdSection .contenu .carousel .pointContainer .point:hover {
+  cursor: pointer;
 }
 #About .thirdSection .contenu .imagesContainer {
   width: 30%;

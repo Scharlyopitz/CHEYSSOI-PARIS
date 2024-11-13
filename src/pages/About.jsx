@@ -3,6 +3,7 @@ import Image1 from "/Image1.webp";
 import Image2 from "/Image2.webp";
 import Tania from "/Tania.webp";
 import Navbar from "../components/Navbar";
+import { col } from "framer-motion/client";
 
 export default function About() {
   return (
@@ -89,7 +90,7 @@ function ThirdSection() {
     },
   ];
 
-  const [currentMember, setCurrentMember] = useState(1);
+  const [currentMember, setCurrentMember] = useState(0);
 
   return (
     <section className="thirdSection">
@@ -139,13 +140,27 @@ function ThirdSection() {
   );
 
   function Carousel({ persons }) {
+    const white = "#ffffff";
+    const black = "#000000";
+
     return (
       <div className="carousel">
         {persons.map((_, i) => {
           return (
-            <div key={i} className="pointContainer">
+            <div
+              key={i}
+              onClick={() => setCurrentMember(i)}
+              className="pointContainer"
+            >
+              {currentMember === i && (
+                <span
+                  style={{
+                    background: `conic-gradient(${white} 50%, ${black} 0%)`,
+                  }}
+                  className="progress"
+                ></span>
+              )}
               <span className="point"></span>
-              <span className="progress"></span>
             </div>
           );
         })}
