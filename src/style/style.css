@@ -194,5 +194,19 @@ nav .menu .background {
   gap: 3vh;
 }
 #About .thirdSection {
+  color: #000000;
   background-color: antiquewhite;
+}
+#About .thirdSection .imagesContainer {
+  width: 100px;
+  height: 100px;
+  overflow: hidden;
+}
+#About .thirdSection .imagesContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }/*# sourceMappingURL=style.css.map */
