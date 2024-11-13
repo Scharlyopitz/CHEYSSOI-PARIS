@@ -50,8 +50,7 @@ function ThirdSection() {
   const persons = [
     {
       id: 0,
-      image:
-        "https://studiolecarre.com/wp-content/uploads/2020/07/190422-1905-SrcSet.jpg",
+      image: Tania,
       name: "Tania",
       job: "CEO",
       description: `La Javaness m'a accueillie au sein d'une équipe extraordinaire et inclusive qui m'a permis de me développer professionnellement et aussi sur le plan personnel. Je travaille sur des sujets très intéressants, je relève de nouveaux défis chaque jour, j'apprends toujours de nouvelles choses.`,
@@ -140,18 +139,15 @@ function ThirdSection() {
   );
 
   function Carousel({ length }) {
-    console.log(length);
     return (
       <div className="carousel">
-        <div className="pointContainer">
-          <span className="point"></span>
-        </div>
-        <div className="pointContainer">
-          <span className="point"></span>
-        </div>
-        <div className="pointContainer">
-          <span className="point"></span>
-        </div>
+        {[...Array(length)].map((_, i) => {
+          return (
+            <div key={i} className="pointContainer">
+              <span className="point"></span>
+            </div>
+          );
+        })}
       </div>
     );
   }
