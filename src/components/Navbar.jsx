@@ -5,10 +5,10 @@ import { motion as m } from "framer-motion";
 
 export default function Navbar() {
   return (
-    <header>
+    <nav>
       <Logo />
       <Menu />
-    </header>
+    </nav>
   );
 }
 
@@ -74,7 +74,7 @@ function Link({ link, setPosition }) {
 
         setPosition({ left, width, height, opacity: 1 });
       }}
-      to={link.to}
+      to={"#contact"}
     >
       {link.name}
     </NavLink>

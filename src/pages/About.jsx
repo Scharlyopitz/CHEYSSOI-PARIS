@@ -7,8 +7,8 @@ import Navbar from "../components/Navbar";
 export default function About() {
   return (
     <>
-      <Navbar />
       <main id="About">
+        <Navbar />
         <FirstSection />
         <SecondSection />
       </main>
@@ -34,7 +34,7 @@ function SecondSection() {
     `En privilégiant l'artisanat local, la réuitilisation et une approche réfléchie, nos services offrent une élégance qui résiste à l'épreuve du temps.`,
   ];
   return (
-    <section className="secondSection">
+    <section id="contact" className="secondSection">
       <h2>Vous ne voudrez plus quitter votre interieur!</h2>
       <div className="txtContainer">
         {texts.map((txt, i) => {
