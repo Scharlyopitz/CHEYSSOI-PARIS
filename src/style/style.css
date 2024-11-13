@@ -7,6 +7,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: "Poppins", sans-serif;
   background: #ffffff;
@@ -61,7 +65,7 @@ nav .menu {
   gap: 5vw;
   position: relative;
 }
-nav .menu a {
+nav .menu span {
   padding: 10px 30px;
 }
 nav .menu .background {

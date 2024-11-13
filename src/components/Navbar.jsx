@@ -59,8 +59,9 @@ function Link({ link, setPosition }) {
   const ref = useRef(null);
 
   return (
-    <NavLink
+    <span
       ref={ref}
+      onClick={() => (window.location.href = link.to)}
       onMouseLeave={() => {
         setPosition((prec) => ({
           ...prec,
@@ -74,9 +75,8 @@ function Link({ link, setPosition }) {
 
         setPosition({ left, width, height, opacity: 1 });
       }}
-      to={"#contact"}
     >
       {link.name}
-    </NavLink>
+    </span>
   );
 }
