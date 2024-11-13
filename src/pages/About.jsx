@@ -87,7 +87,7 @@ function ThirdSection() {
 
   return (
     <section className="thirdSection">
-      <Carousel />
+      <Carousel length={persons.length} />
       <div className="imagesContainer">
         {persons.map((person, i) => {
           return (
@@ -114,7 +114,8 @@ function ThirdSection() {
     </section>
   );
 
-  function Carousel() {
+  function Carousel({ length }) {
+    console.log(length);
     return (
       <div className="carousel">
         <div className="pointContainer">
