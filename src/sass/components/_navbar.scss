@@ -26,11 +26,6 @@ nav {
     }
   }
 
-  &,
-  a {
-    color: $White;
-  }
-
   .menu {
     display: flex;
     flex-direction: row;
@@ -39,6 +34,10 @@ nav {
 
     span {
       padding: 10px 30px;
+
+      &:hover {
+        cursor: pointer;
+      }
     }
 
     .background {
