@@ -223,25 +223,22 @@ nav .menu .background {
   height: 55%;
 }
 #About .thirdSection .contenu .carousel .pointContainer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-}
-#About .thirdSection .contenu .carousel .pointContainer:hover {
-  cursor: pointer;
-}
-#About .thirdSection .contenu .carousel .pointContainer,
-#About .thirdSection .contenu .carousel .pointContainer .point {
-  border-radius: 50%;
-}
-#About .thirdSection .contenu .carousel .pointContainer .point {
-  display: block;
+  position: relative;
   width: 5px;
   height: 5px;
+  border-radius: 50%;
   background-color: #ffffff;
+}
+#About .thirdSection .contenu .carousel .pointContainer::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: rgba(255, 0, 0, 0.16);
 }
 #About .thirdSection .contenu .imagesContainer {
   width: 30%;

@@ -115,27 +115,25 @@
 
         .pointContainer {
           // background: conic-gradient($White 50%, $Black 0%);
-          display: flex;
-          justify-content: center;
-          align-items: center;
+          // top: 50%;
+          // left: 50%;
+          // transform: translate(-50%, -50%);
+          position: relative;
+          width: 5px;
+          height: 5px;
           border-radius: 50%;
-          width: 30px;
-          height: 30px;
+          background-color: $White;
 
-          &:hover {
-            cursor: pointer;
-          }
-
-          &,
-          .point {
+          &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 30px;
+            height: 30px;
             border-radius: 50%;
-          }
-
-          .point {
-            display: block;
-            width: 5px;
-            height: 5px;
-            background-color: $White;
+            background-color: rgba(255, 0, 0, 0.16);
           }
         }
       }
