@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import Image1 from "/Image1.webp";
 import Image2 from "/Image2.webp";
 import Tania from "/Tania.webp";
@@ -89,7 +89,7 @@ function ThirdSection() {
     },
   ];
 
-  const currentMember = 1;
+  const [currentMember, setCurrentMember] = useState(1);
 
   return (
     <section className="thirdSection">
