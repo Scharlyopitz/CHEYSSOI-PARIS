@@ -259,6 +259,7 @@ nav .menu .background {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+  filter: grayscale(1);
 }
 #About .thirdSection .contenu .left {
   display: flex;
