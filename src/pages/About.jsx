@@ -104,7 +104,7 @@ function ThirdSection() {
       </div>
       <div className="descriptionsContainer">
         {persons.map((person, i) => {
-          return <span key={i}>{person.description}</span>;
+          return <p key={i}>{person.description}</p>;
         })}
       </div>
     </section>
