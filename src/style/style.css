@@ -194,6 +194,7 @@ nav .menu .background {
   gap: 3vh;
 }
 #About .thirdSection {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: end;
@@ -201,8 +202,35 @@ nav .menu .background {
   color: #000000;
 }
 #About .thirdSection .imagesContainer,
-#About .thirdSection .left {
+#About .thirdSection .left,
+#About .thirdSection .carousel {
   height: 60%;
+}
+#About .thirdSection .carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  position: absolute;
+  left: 10vw;
+  width: 2px;
+}
+#About .thirdSection .carousel .pointContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+}
+#About .thirdSection .carousel .pointContainer,
+#About .thirdSection .carousel .pointContainer .point {
+  border-radius: 50%;
+}
+#About .thirdSection .carousel .pointContainer .point {
+  display: block;
+  width: 7px;
+  height: 7px;
+  background-color: #000000;
 }
 #About .thirdSection .imagesContainer {
   position: relative;

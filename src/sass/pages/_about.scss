@@ -85,6 +85,7 @@
   }
 
   .thirdSection {
+    position: relative;
     display: flex;
     align-items: center;
     justify-content: end;
@@ -92,8 +93,39 @@
     color: $Black;
 
     .imagesContainer,
-    .left {
+    .left,
+    .carousel {
       height: 60%;
+    }
+
+    .carousel {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      position: absolute;
+      left: 10vw;
+      width: 2px;
+
+      .pointContainer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 50%;
+        width: 20px;
+        height: 20px;
+
+        &,
+        .point {
+          border-radius: 50%;
+        }
+
+        .point {
+          display: block;
+          width: 7px;
+          height: 7px;
+          background-color: $Black;
+        }
+      }
     }
 
     .imagesContainer {

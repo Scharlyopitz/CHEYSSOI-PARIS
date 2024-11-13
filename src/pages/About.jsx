@@ -84,8 +84,10 @@ function ThirdSection() {
     //   description: `En tant que Project Manager, j’ai l’opportunité de collaborer avec des équipes multidisciplinaires (IT, DevOps, Data, Design) et de travailler avec les clients au quotidien pour répondre à des besoins variés dans une diversité de secteurs. La Javaness nous permet de monter en compétences et de réaliser un impact concret dans nos projets tout en gardant un équilibre pro-perso.`,
     // },
   ];
+
   return (
     <section className="thirdSection">
+      <Carousel />
       <div className="imagesContainer">
         {persons.map((person, i) => {
           return (
@@ -111,4 +113,20 @@ function ThirdSection() {
       </div>
     </section>
   );
+
+  function Carousel() {
+    return (
+      <div className="carousel">
+        <div className="pointContainer">
+          <span className="point"></span>
+        </div>
+        <div className="pointContainer">
+          <span className="point"></span>
+        </div>
+        <div className="pointContainer">
+          <span className="point"></span>
+        </div>
+      </div>
+    );
+  }
 }
