@@ -87,28 +87,31 @@ function ThirdSection() {
 
   return (
     <section className="thirdSection">
-      <Carousel length={persons.length} />
-      <div className="imagesContainer">
-        {persons.map((person, i) => {
-          return (
-            <img key={i} src={person.image} alt={`photo ${person.name}`} />
-          );
-        })}
-      </div>
-      <div className="left">
-        <div className="namesContainer">
+      <h2>L'équipe</h2>
+      <div className="contenu">
+        <Carousel length={persons.length} />
+        <div className="imagesContainer">
           {persons.map((person, i) => {
             return (
-              <h2 key={i}>
-                {person.name} | {person.job}
-              </h2>
+              <img key={i} src={person.image} alt={`photo ${person.name}`} />
             );
           })}
         </div>
-        <div className="descriptionsContainer">
-          {persons.map((person, i) => {
-            return <p key={i}>{person.description}</p>;
-          })}
+        <div className="left">
+          <div className="namesContainer">
+            {persons.map((person, i) => {
+              return (
+                <p key={i}>
+                  {person.name} | {person.job}
+                </p>
+              );
+            })}
+          </div>
+          <div className="descriptionsContainer">
+            {persons.map((person, i) => {
+              return <p key={i}>{person.description}</p>;
+            })}
+          </div>
         </div>
       </div>
     </section>

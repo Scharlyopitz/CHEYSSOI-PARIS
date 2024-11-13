@@ -124,6 +124,7 @@ nav .menu .background {
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
+  text-align: center;
 }
 #About p {
   font-size: 18px;
@@ -194,27 +195,29 @@ nav .menu .background {
   gap: 3vh;
 }
 #About .thirdSection {
-  position: relative;
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  background-color: #000000;
+  color: #ffffff;
+  gap: 10vh;
+}
+#About .thirdSection .contenu {
+  display: flex;
   justify-content: end;
-  gap: 3vw;
-  color: #000000;
-}
-#About .thirdSection .imagesContainer,
-#About .thirdSection .left,
-#About .thirdSection .carousel {
   height: 60%;
+  gap: 3vw;
 }
-#About .thirdSection .carousel {
+#About .thirdSection .contenu .carousel {
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
   position: absolute;
-  left: 10vw;
-  width: 2px;
+  left: 7vw;
+  height: 60%;
 }
-#About .thirdSection .carousel .pointContainer {
+#About .thirdSection .contenu .carousel .pointContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -222,25 +225,22 @@ nav .menu .background {
   width: 20px;
   height: 20px;
 }
-#About .thirdSection .carousel .pointContainer,
-#About .thirdSection .carousel .pointContainer .point {
+#About .thirdSection .contenu .carousel .pointContainer,
+#About .thirdSection .contenu .carousel .pointContainer .point {
   border-radius: 50%;
 }
-#About .thirdSection .carousel .pointContainer .point {
+#About .thirdSection .contenu .carousel .pointContainer .point {
   display: block;
   width: 5px;
   height: 5px;
-  background-color: #000000;
+  background-color: #ffffff;
 }
-#About .thirdSection .imagesContainer {
-  position: relative;
+#About .thirdSection .contenu .imagesContainer {
   width: 30%;
+  height: 100%;
   overflow: hidden;
 }
-#About .thirdSection .imagesContainer img {
-  position: absolute;
-  top: 0;
-  left: 0;
+#About .thirdSection .contenu .imagesContainer img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -248,16 +248,21 @@ nav .menu .background {
   -o-object-position: center;
      object-position: center;
 }
-#About .thirdSection .left {
+#About .thirdSection .contenu .left {
   display: flex;
   flex-direction: column;
   width: 60%;
 }
-#About .thirdSection .left .namesContainer {
-  margin-top: 3vh;
+#About .thirdSection .contenu .left .namesContainer {
+  margin-top: 4vh;
 }
-#About .thirdSection .left .descriptionsContainer {
-  flex-grow: 1;
+#About .thirdSection .contenu .left .namesContainer p {
+  font-size: 30px;
+  font-weight: 200;
+  font-weight: 300;
+}
+#About .thirdSection .contenu .left .descriptionsContainer {
   display: flex;
   align-items: center;
+  flex-grow: 1;
 }/*# sourceMappingURL=style.css.map */
