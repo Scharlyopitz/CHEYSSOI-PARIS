@@ -49,6 +49,7 @@ function SecondSection() {
 function ThirdSection() {
   const persons = [
     {
+      id: 0,
       image:
         "https://studiolecarre.com/wp-content/uploads/2020/07/190422-1905-SrcSet.jpg",
       name: "Tania",
@@ -56,6 +57,7 @@ function ThirdSection() {
       description: `La Javaness m'a accueillie au sein d'une équipe extraordinaire et inclusive qui m'a permis de me développer professionnellement et aussi sur le plan personnel. Je travaille sur des sujets très intéressants, je relève de nouveaux défis chaque jour, j'apprends toujours de nouvelles choses.`,
     },
     {
+      id: 1,
       image:
         "https://studiolecarre.com/wp-content/uploads/2020/07/190422-1905-SrcSet.jpg",
       name: "Scharly",
@@ -63,6 +65,7 @@ function ThirdSection() {
       description: `J'ai rejoint La Javaness pour mon stage de fin d'études. 6 mois plus tard, sans hésiter, j'ai décidé de rester. Je suis tombé amoureux de notre ambiance conviviale. Je reviens dans nos bureaux à chaque fois avec la certitude de me réjouir et monter en compétences en AI auprès de vrais experts dans le domaine.`,
     },
     {
+      id: 2,
       image:
         "https://studiolecarre.com/wp-content/uploads/2020/07/190422-1905-SrcSet.jpg",
       name: "Mones",
@@ -70,6 +73,7 @@ function ThirdSection() {
       description: `Il y a un esprit d’équipe qui nous permet de partager nos connaissances et d’en apprendre tous les jours un peu plus avec des personnes bienveillantes. Cette collaboration nous permet d’être soudés et de nous épanouir dans le travail que nous fournissons au quotidien.`,
     },
     {
+      id: 3,
       image:
         "https://studiolecarre.com/wp-content/uploads/2020/07/190422-1905-SrcSet.jpg",
       name: "Adrien",
@@ -77,6 +81,7 @@ function ThirdSection() {
       description: `L’équipe Data et IA de La Javaness est une équipe jeune et dynamique. Au-delà du potentiel et de la diversité des expériences professionnelles, l’environnement ouvert et uni entre des équipes de La Javaness nous permet de faire évoluer nos compétences, nos savoir-faire et d’avoir une vision Fullstackerie de l’intelligence artificielle.`,
     },
     {
+      id: 4,
       image:
         "https://studiolecarre.com/wp-content/uploads/2020/07/190422-1905-SrcSet.jpg",
       name: "Léa",
@@ -84,6 +89,8 @@ function ThirdSection() {
       description: `En tant que Project Manager, j’ai l’opportunité de collaborer avec des équipes multidisciplinaires (IT, DevOps, Data, Design) et de travailler avec les clients au quotidien pour répondre à des besoins variés dans une diversité de secteurs. La Javaness nous permet de monter en compétences et de réaliser un impact concret dans nos projets tout en gardant un équilibre pro-perso.`,
     },
   ];
+
+  const currentMember = 1;
 
   return (
     <section className="thirdSection">
@@ -93,7 +100,12 @@ function ThirdSection() {
         <div className="imagesContainer">
           {persons.map((person, i) => {
             return (
-              <img key={i} src={person.image} alt={`photo ${person.name}`} />
+              <img
+                key={i}
+                style={{ opacity: currentMember === person.id ? 1 : 0 }}
+                src={person.image}
+                alt={`photo ${person.name}`}
+              />
             );
           })}
         </div>
@@ -101,7 +113,10 @@ function ThirdSection() {
           <div className="namesContainer">
             {persons.map((person, i) => {
               return (
-                <p key={i}>
+                <p
+                  key={i}
+                  style={{ opacity: currentMember === person.id ? 1 : 0 }}
+                >
                   {person.name} | {person.job}
                 </p>
               );
@@ -109,7 +124,14 @@ function ThirdSection() {
           </div>
           <div className="descriptionsContainer">
             {persons.map((person, i) => {
-              return <p key={i}>{person.description}</p>;
+              return (
+                <p
+                  key={i}
+                  style={{ opacity: currentMember === person.id ? 1 : 0 }}
+                >
+                  {person.description}
+                </p>
+              );
             })}
           </div>
         </div>
