@@ -142,6 +142,7 @@ header .menu .background {
   text-transform: uppercase;
   font-size: 120px;
   letter-spacing: 1vw;
+  white-space: nowrap;
 }
 #About .firstSection .txtContainer h1::before, #About .firstSection .txtContainer h1::after {
   position: absolute;
