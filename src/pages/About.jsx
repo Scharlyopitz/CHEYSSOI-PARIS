@@ -36,7 +36,7 @@ function SecondSection() {
   ];
   return (
     <section id="about" className="secondSection">
-      <h2>Vous ne voudrez plus quitter votre interieur!</h2>
+      <h2>Vous ne voudrez plus quitter votre interieur</h2>
       <div className="txtContainer">
         {texts.map((txt, i) => {
           return <p key={i}>{txt}</p>;
