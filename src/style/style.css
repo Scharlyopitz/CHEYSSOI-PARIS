@@ -194,19 +194,42 @@ nav .menu .background {
   gap: 3vh;
 }
 #About .thirdSection {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 3vw;
   color: #000000;
-  background-color: antiquewhite;
+}
+#About .thirdSection .imagesContainer,
+#About .thirdSection .left {
+  height: 60%;
 }
 #About .thirdSection .imagesContainer {
-  width: 100px;
-  height: 100px;
+  position: relative;
+  width: 30%;
   overflow: hidden;
 }
 #About .thirdSection .imagesContainer img {
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
+}
+#About .thirdSection .left {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+}
+#About .thirdSection .left .namesContainer {
+  margin-top: 3vh;
+}
+#About .thirdSection .left .descriptionsContainer {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }/*# sourceMappingURL=style.css.map */
