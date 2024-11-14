@@ -109,20 +109,6 @@ function ThirdSection() {
 
   const easeInOutCubic = [0.65, 0, 0.35, 1];
 
-  const imagesTransition = {
-    initial: {
-      opcity: 0,
-    },
-    animate: {
-      opacity: 1,
-      transition: { duration: 0.6, delay: 0.5, ease: easeInOutCubic },
-    },
-    exit: {
-      opacity: 0,
-      transition: { duration: 0.6, ease: easeInOutCubic },
-    },
-  };
-
   return (
     <m.section
       initial="initial"
@@ -137,7 +123,15 @@ function ThirdSection() {
           <AnimatePresence>
             <m.img
               key={currentMember}
-              variants={imagesTransition}
+              initial={{ opacity: 0 }}
+              animate={{
+                opacity: 1,
+                transition: { duration: 0.6, delay: 0.5, ease: easeInOutCubic },
+              }}
+              exit={{
+                opacity: 0,
+                transition: { duration: 0.6, ease: easeInOutCubic },
+              }}
               src={persons[currentMember]?.image}
               alt={`photo ${persons[currentMember]?.name}`}
             />
