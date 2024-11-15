@@ -3,7 +3,7 @@ import Image1 from "/Image1.webp";
 import Image2 from "/Image2.webp";
 import Tania from "/Tania.webp";
 import Navbar from "../components/Navbar";
-import { easeInOut, motion as m } from "framer-motion";
+import { motion as m } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 
 export default function About() {
@@ -93,118 +93,185 @@ function ThirdSection() {
 
   const [currentMember, setCurrentMember] = useState(0);
 
-  const [timer, setTimer] = useState(5000);
+  const timer = 5000;
 
   useEffect(() => {
     if (currentMember === persons.length) {
       setCurrentMember(0);
     }
 
-    // const interval = setInterval(() => {
-    //   setCurrentMember(currentMember + 1);
-    // }, timer);
+    const interval = setInterval(() => {
+      setCurrentMember(currentMember + 1);
+    }, timer);
 
-    // return () => clearInterval(interval);
+    return () => clearInterval(interval);
   }, [currentMember]);
 
-  const easeInOutCubic = [0.65, 0, 0.35, 1];
+  const easeOutQuad = [0.5, 1, 0.89, 1];
+
+  const carrouselTransi = {
+    initial: { opacity: 0 },
+    animate: {
+      opacity: 1,
+      transition: { duration: 1, delay: 0.2, ease: easeOutQuad },
+    },
+    exit: {
+      opacity: 0,
+      transition: { duration: 0.2, ease: easeOutQuad },
+    },
+  };
 
   return (
-    <m.section
-      initial="initial"
-      animate="animate"
-      exit="exit"
-      className="thirdSection"
-    >
+    <section className="thirdSection">
       <h2>Membres de l'équipe</h2>
       <div className="contenu">
-        <Carousel persons={persons} />
-        <div className="imagesContainer">
-          <AnimatePresence>
-            <m.img
-              key={currentMember}
-              initial={{ opacity: 0 }}
-              animate={{
-                opacity: 1,
-                transition: { duration: 0.6, delay: 0.5, ease: easeInOutCubic },
-              }}
-              exit={{
-                opacity: 0,
-                transition: { duration: 0.6, ease: easeInOutCubic },
-              }}
-              src={persons[currentMember]?.image}
-              alt={`photo ${persons[currentMember]?.name}`}
-            />
-          </AnimatePresence>
-        </div>
+        <Carousel
+          persons={persons}
+          currentMember={currentMember}
+          setCurrentMember={setCurrentMember}
+          timer={timer}
+        />
+        <ImageContainer
+          persons={persons}
+          currentMember={currentMember}
+          carrouselTransi={carrouselTransi}
+        />
         <div className="left">
-          <div className="namesContainer">
-            {persons.map((person, i) => {
-              return (
-                <p
-                  key={i}
-                  style={{ opacity: currentMember === person.id ? 1 : 0 }}
-                >
-                  {person.name} | {person.job}
-                </p>
-              );
-            })}
-          </div>
-          <div className="descriptionsContainer">
-            {persons.map((person, i) => {
-              return (
-                <p
-                  key={i}
-                  style={{ opacity: currentMember === person.id ? 1 : 0 }}
-                >
-                  {person.description}
-                </p>
-              );
-            })}
-          </div>
+          <NamesContainer
+            currentMember={currentMember}
+            carrouselTransi={carrouselTransi}
+            persons={persons}
+          />
+          <DescriptionContainer
+            currentMember={currentMember}
+            carrouselTransi={carrouselTransi}
+            persons={persons}
+          />
         </div>
       </div>
-    </m.section>
+    </section>
+  );
+}
+
+function Carousel({ persons, currentMember, setCurrentMember, timer }) {
+  return (
+    <div className="carousel">
+      {persons.map((_, i) => {
+        return (
+          <div
+            key={i}
+            onClick={() => setCurrentMember(i)}
+            className="pointContainer"
+          >
+            <AnimatePresence>
+              {currentMember === i && (
+                <Progress key={currentMember} timer={timer} />
+              )}
+            </AnimatePresence>
+            <span className="point"></span>
+          </div>
+        );
+      })}
+    </div>
   );
 
-  function Carousel({ persons }) {
+  function Progress({ timer }) {
+    const exitTransi = 1;
+
+    const easeOutCubic = [0.33, 1, 0.68, 1];
+
+    const animeProgress = {
+      initial: {
+        background: `conic-gradient(#ffffff 0%, #000000 0%)`,
+      },
+      animate: {
+        background: `conic-gradient(#ffffff 100%, #000000 0%)`,
+        transition: { duration: timer / 1000, ease: "linear" },
+      },
+      exit: {
+        background: `conic-gradient(#ffffff 100%, #000000 0%)`,
+        transition: { duration: exitTransi, ease: easeOutCubic },
+      },
+    };
+
+    const animeProgressOut = {
+      initial: { background: `conic-gradient(#000000 0%, transparent 0%)` },
+      exit: {
+        background: `conic-gradient(#000000 100%, transparent 0%)`,
+        transition: { duration: exitTransi, ease: easeOutCubic },
+      },
+    };
+
     return (
-      <div className="carousel">
-        {persons.map((_, i) => {
-          return (
-            <div
-              key={i}
-              onClick={() => setCurrentMember(i)}
-              className="pointContainer"
-            >
-              <AnimatePresence>
-                {currentMember === i && (
-                  <Progress key={currentMember} timer={timer} />
-                )}
-              </AnimatePresence>
-              <span className="point"></span>
-            </div>
-          );
-        })}
-      </div>
+      <>
+        <m.span
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          variants={animeProgress}
+          className="progress"
+        ></m.span>
+        <m.span
+          initial="initial"
+          exit="exit"
+          variants={animeProgressOut}
+          className="progressOut"
+        ></m.span>
+      </>
     );
-
-    function Progress({ timer }) {
-      const animeProgress = {
-        initial: {
-          background: `conic-gradient(#ffffff 0%, #000000 0%)`,
-        },
-        animate: {
-          background: `conic-gradient(#ffffff 100%, #000000 0%)`,
-          transition: { duration: timer / 1000, ease: [0.37, 0, 0.63, 1] },
-        },
-        exit: {
-          opacity: 0,
-          transition: { duration: 5 },
-        },
-      };
-
-      return <m.span variants={animeProgress} className="progress"></m.span>;
-    }
   }
+}
+
+function ImageContainer({ currentMember, carrouselTransi, persons }) {
+  return (
+    <div className="imagesContainer">
+      <AnimatePresence initial={false}>
+        <m.img
+          key={currentMember}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          variants={carrouselTransi}
+          src={persons[currentMember]?.image}
+          alt={`photo ${persons[currentMember]?.name}`}
+        />
+      </AnimatePresence>
+    </div>
+  );
+}
+
+function NamesContainer({ carrouselTransi, currentMember, persons }) {
+  return (
+    <div className="namesContainer">
+      <AnimatePresence initial={false}>
+        <m.p
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          variants={carrouselTransi}
+          key={currentMember}
+        >
+          {persons[currentMember]?.name} | {persons[currentMember]?.job}
+        </m.p>
+      </AnimatePresence>
+    </div>
+  );
+}
+
+function DescriptionContainer({ carrouselTransi, currentMember, persons }) {
+  return (
+    <div className="descriptionsContainer">
+      <AnimatePresence initial={false}>
+        <m.p
+          key={currentMember}
+          initial="initial"
+          animate="animate"
+          exit="exit"
+          variants={carrouselTransi}
+        >
+          {persons[currentMember]?.description}
+        </m.p>
+      </AnimatePresence>
+    </div>
+  );
 }

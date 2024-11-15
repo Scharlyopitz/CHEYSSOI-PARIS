@@ -240,11 +240,16 @@ nav .menu .background {
   border-radius: 50%;
   background-color: #ffffff;
 }
-#About .thirdSection .contenu .carousel .pointContainer .progress {
+#About .thirdSection .contenu .carousel .pointContainer .progress,
+#About .thirdSection .contenu .carousel .pointContainer .progressOut {
   position: absolute;
   width: 34px;
   height: 34px;
   border-radius: 50%;
+}
+#About .thirdSection .contenu .carousel .pointContainer .progressOut {
+  width: 37px;
+  height: 37px;
 }
 #About .thirdSection .contenu .carousel .pointContainer .point {
   position: absolute;
@@ -288,7 +293,6 @@ nav .menu .background {
   position: relative;
 }
 #About .thirdSection .contenu .left .namesContainer p {
-  transition: 0.5s;
   position: absolute;
   top: 0;
   left: 0;
@@ -303,7 +307,6 @@ nav .menu .background {
   height: 90%;
 }
 #About .thirdSection .contenu .left .descriptionsContainer p {
-  transition: 0.5s;
   position: absolute;
   top: 50%;
   left: 0;

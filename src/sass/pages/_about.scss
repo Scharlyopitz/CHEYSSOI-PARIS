@@ -132,11 +132,17 @@
             background-color: $White;
           }
 
-          .progress {
+          .progress,
+          .progressOut {
             position: absolute;
             width: 34px;
             height: 34px;
             border-radius: 50%;
+          }
+
+          .progressOut {
+            width: 37px;
+            height: 37px;
           }
 
           .point {
@@ -186,7 +192,7 @@
           position: relative;
 
           p {
-            transition: 0.5s;
+            // transition: 0.5s;
             position: absolute;
             top: 0;
             left: 0;
@@ -203,7 +209,7 @@
           height: 90%;
 
           p {
-            transition: 0.5s;
+            // transition: 0.5s;
             position: absolute;
             top: 50%;
             left: 0;
