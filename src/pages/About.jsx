@@ -15,6 +15,7 @@ export default function About() {
         <FirstSection />
         <SecondSection />
         <ThirdSection />
+        <FourthSection />
       </main>
     </>
   );
