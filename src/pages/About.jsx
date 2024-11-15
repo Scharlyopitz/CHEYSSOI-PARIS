@@ -52,7 +52,8 @@ function ThirdSection() {
   const persons = [
     {
       id: 0,
-      image: Tania,
+      image:
+        "https://www.frejoux-photographe.fr/wp-content/gallery/portrait-pro-corporate/Photographe-portrait-entreprise-pro-Corporate-toulon-Celine.jpg",
       name: "Tania",
       job: "CEO",
       description: `La Javaness m'a accueillie au sein d'une équipe extraordinaire et inclusive qui m'a permis de me développer professionnellement et aussi sur le plan personnel. Je travaille sur des sujets très intéressants, je relève de nouveaux défis chaque jour, j'apprends toujours de nouvelles choses.`,
@@ -60,7 +61,7 @@ function ThirdSection() {
     {
       id: 1,
       image:
-        "https://studiolecarre.com/wp-content/uploads/2020/07/190422-1905-SrcSet.jpg",
+        "https://cdn.booke.fr/wp-content/uploads/2021/01/10172447/Illustration-Use-Case-Althe%CC%81a.jpg",
       name: "Scharly",
       job: "Développeur Front-End",
       description: `J'ai rejoint La Javaness pour mon stage de fin d'études. 6 mois plus tard, sans hésiter, j'ai décidé de rester. Je suis tombé amoureux de notre ambiance conviviale. Je reviens dans nos bureaux à chaque fois avec la certitude de me réjouir et monter en compétences en AI auprès de vrais experts dans le domaine.`,
@@ -68,7 +69,7 @@ function ThirdSection() {
     {
       id: 2,
       image:
-        "https://studiolecarre.com/wp-content/uploads/2020/07/190422-1905-SrcSet.jpg",
+        "https://www.sylvaingelineau.com/wp-content/uploads/2020/12/photographe-portrait-pro-cv-linkedin-toulouse.jpg",
       name: "Mones",
       job: "Développeur Front-End",
       description: `Il y a un esprit d’équipe qui nous permet de partager nos connaissances et d’en apprendre tous les jours un peu plus avec des personnes bienveillantes. Cette collaboration nous permet d’être soudés et de nous épanouir dans le travail que nous fournissons au quotidien.`,
@@ -76,7 +77,7 @@ function ThirdSection() {
     {
       id: 3,
       image:
-        "https://studiolecarre.com/wp-content/uploads/2020/07/190422-1905-SrcSet.jpg",
+        "https://www.studiocorinneballouard.fr/wp-content/uploads/2020/04/photographie-studio-corporate-homme.studio-corinneballouard-8.jpg",
       name: "Adrien",
       job: "Architecte d'intérieur",
       description: `L’équipe Data et IA de La Javaness est une équipe jeune et dynamique. Au-delà du potentiel et de la diversité des expériences professionnelles, l’environnement ouvert et uni entre des équipes de La Javaness nous permet de faire évoluer nos compétences, nos savoir-faire et d’avoir une vision Fullstackerie de l’intelligence artificielle.`,
