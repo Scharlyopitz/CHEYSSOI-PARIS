@@ -1,9 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Image1 from "/Image1.webp";
 import Image2 from "/Image2.webp";
 import Tania from "/Tania.webp";
 import Navbar from "../components/Navbar";
-import { motion as m } from "framer-motion";
+import { motion as m, useInView } from "framer-motion";
 import { AnimatePresence } from "framer-motion";
 
 export default function About() {
@@ -95,17 +95,23 @@ function ThirdSection() {
 
   const timer = 5000;
 
-  useEffect(() => {
-    if (currentMember === persons.length) {
-      setCurrentMember(0);
-    }
+  const refCarrousel = useRef(null);
+  const isInView = useInView(refCarrousel, { once: true });
 
-    const interval = setInterval(() => {
-      setCurrentMember(currentMember + 1);
-    }, timer);
+  // useEffect(() => {
+  //   let interval;
 
-    return () => clearInterval(interval);
-  }, [currentMember]);
+  //   if (isInView) {
+  //     interval = setInterval(() => {
+  //       setCurrentMember(currentMember + 1);
+  //     }, timer);
+  //   }
+  //   if (currentMember === persons.length) {
+  //     setCurrentMember(0);
+  //   }
+
+  //   return () => clearInterval(interval);
+  // }, [currentMember, isInView]);
 
   const easeOutQuad = [0.5, 1, 0.89, 1];
 
@@ -126,6 +132,7 @@ function ThirdSection() {
       <h2>Membres de l'équipe</h2>
       <div className="contenu">
         <Carousel
+          refCarrousel={refCarrousel}
           persons={persons}
           currentMember={currentMember}
           setCurrentMember={setCurrentMember}
@@ -153,9 +160,15 @@ function ThirdSection() {
   );
 }
 
-function Carousel({ persons, currentMember, setCurrentMember, timer }) {
+function Carousel({
+  refCarrousel,
+  persons,
+  currentMember,
+  setCurrentMember,
+  timer,
+}) {
   return (
-    <div className="carousel">
+    <div ref={refCarrousel} className="carousel">
       {persons.map((_, i) => {
         return (
           <div
