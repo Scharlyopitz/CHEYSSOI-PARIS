@@ -161,3 +161,7 @@ function ThirdSection() {
     </section>
   );
 }
+
+function FourthSection() {
+  return <section className="fourthSection"></section>;
+}

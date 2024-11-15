@@ -1,0 +1,53 @@
+#About {
+  .firstSection {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .txtContainer {
+      display: flex;
+
+      h1 {
+        position: relative;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        text-transform: uppercase;
+        font-size: 120px;
+        letter-spacing: 1vw;
+        white-space: nowrap;
+
+        &::before,
+        &::after {
+          position: absolute;
+          text-transform: none;
+          top: 0;
+          font-size: 15px;
+          letter-spacing: normal;
+          font-family: "Poppins", sans-serif;
+        }
+
+        &::before {
+          content: "Architecte d'intérieur";
+          left: 0.5vw;
+        }
+
+        &::after {
+          content: "cheyssoiparis@gmail.com";
+          right: 2vw;
+        }
+      }
+    }
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      object-fit: cover;
+      object-position: top;
+      filter: brightness(0.5);
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
