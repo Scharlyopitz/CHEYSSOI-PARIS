@@ -27,7 +27,9 @@ function FirstSection() {
       <div className="txtContainer">
         <h1>Cheyssoi Paris</h1>
       </div>
-      <img src={Image1} alt="Image1" />
+      <div className="imgContainer">
+        <img src={Image1} alt="Image1" />
+      </div>
     </section>
   );
 }
