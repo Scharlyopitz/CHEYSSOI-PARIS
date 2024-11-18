@@ -14,8 +14,8 @@
     }
 
     .contenu {
+      position: relative;
       display: flex;
-      justify-content: end;
       height: 70%;
       gap: 3vw;
 
@@ -24,8 +24,8 @@
         flex-direction: column;
         justify-content: space-around;
         position: absolute;
-        left: 7vw;
-        height: 55%;
+        left: 0;
+        height: 100%;
 
         .pointContainer {
           position: relative;
@@ -77,10 +77,11 @@
       }
 
       .imagesContainer {
-        width: 30%;
         height: 100%;
         overflow: hidden;
         position: relative;
+        aspect-ratio: 2 / 3;
+        margin-left: 5vw;
 
         img {
           position: absolute;
@@ -97,7 +98,7 @@
       .left {
         display: flex;
         flex-direction: column;
-        width: 60%;
+        flex-grow: 1;
 
         .namesContainer {
           height: 10%;

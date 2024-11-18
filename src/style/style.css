@@ -99,8 +99,8 @@ a {
   padding-left: 5vw;
 }
 #About .thirdSection .contenu {
+  position: relative;
   display: flex;
-  justify-content: end;
   height: 70%;
   gap: 3vw;
 }
@@ -109,8 +109,8 @@ a {
   flex-direction: column;
   justify-content: space-around;
   position: absolute;
-  left: 7vw;
-  height: 55%;
+  left: 0;
+  height: 100%;
 }
 #About .thirdSection .contenu .carousel .pointContainer {
   position: relative;
@@ -155,10 +155,11 @@ a {
   cursor: pointer;
 }
 #About .thirdSection .contenu .imagesContainer {
-  width: 30%;
   height: 100%;
   overflow: hidden;
   position: relative;
+  aspect-ratio: 2/3;
+  margin-left: 5vw;
 }
 #About .thirdSection .contenu .imagesContainer img {
   position: absolute;
@@ -175,7 +176,7 @@ a {
 #About .thirdSection .contenu .left {
   display: flex;
   flex-direction: column;
-  width: 60%;
+  flex-grow: 1;
 }
 #About .thirdSection .contenu .left .namesContainer {
   height: 10%;
