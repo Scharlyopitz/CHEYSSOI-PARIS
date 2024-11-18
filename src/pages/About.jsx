@@ -26,7 +26,6 @@ function FirstSection() {
     <section className="firstSection">
       <div className="txtContainer">
         <h1>Cheyssoi Paris</h1>
-        <p>Designer d'espace hétique</p>
       </div>
       <img src={Image1} alt="Image1" />
     </section>

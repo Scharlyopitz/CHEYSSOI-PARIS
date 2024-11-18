@@ -33,6 +33,7 @@ a {
 }
 #About .firstSection .txtContainer {
   display: flex;
+  flex-direction: column;
 }
 #About .firstSection .txtContainer h1 {
   position: relative;
@@ -42,6 +43,9 @@ a {
   font-size: 120px;
   letter-spacing: 1vw;
   white-space: nowrap;
+}
+#About .firstSection .txtContainer p {
+  text-transform: uppercase;
 }
 #About .firstSection img {
   position: absolute;
