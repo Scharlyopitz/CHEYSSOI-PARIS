@@ -205,6 +205,10 @@ a {
   transform: translateY(-50%);
 }
 
+#About .fourthSection {
+  background-color: #ffffff;
+}
+
 nav {
   position: absolute;
   z-index: 10;
