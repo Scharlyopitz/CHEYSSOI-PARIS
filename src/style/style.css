@@ -280,9 +280,9 @@ nav .menu .background {
 }
 #Home .image {
   margin: 5vh 0;
-  width: 30%;
   height: 65%;
   overflow: hidden;
+  aspect-ratio: 3/4;
 }
 #Home .image:hover img {
   transform: scale(1.1);
