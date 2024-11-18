@@ -24,21 +24,8 @@
           transform: translateX(-50%);
           font-size: 18px;
           font-weight: 200;
-          // letter-spacing: normal;
         }
       }
-    }
-
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      z-index: -1;
-      object-fit: cover;
-      object-position: top;
-      filter: brightness(0.5);
-      height: 100%;
-      width: 100%;
     }
   }
 }

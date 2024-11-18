@@ -52,19 +52,6 @@ a {
   font-size: 18px;
   font-weight: 200;
 }
-#About .firstSection img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-  filter: brightness(0.5);
-  height: 100%;
-  width: 100%;
-}
 
 #About .secondSection {
   display: flex;

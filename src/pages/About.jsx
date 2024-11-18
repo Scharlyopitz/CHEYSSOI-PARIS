@@ -12,6 +12,7 @@ export default function About() {
     <>
       <main id="About">
         <Navbar />
+        <BackgroundImage />
         <FirstSection />
         <SecondSection />
         <ThirdSection />
@@ -21,14 +22,19 @@ export default function About() {
   );
 }
 
+function BackgroundImage() {
+  return (
+    <div className="imgContainer">
+      <img src={Image1} alt="Image1" />
+    </div>
+  );
+}
+
 function FirstSection() {
   return (
     <section className="firstSection">
       <div className="txtContainer">
         <h1>Cheyssoi Paris</h1>
-      </div>
-      <div className="imgContainer">
-        <img src={Image1} alt="Image1" />
       </div>
     </section>
   );
