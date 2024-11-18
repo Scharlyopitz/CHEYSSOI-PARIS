@@ -26,6 +26,25 @@ a {
   text-decoration: none;
 }
 
+.backgroundImage {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  height: 200vh;
+}
+.backgroundImage img {
+  position: sticky;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  filter: brightness(0.5);
+  height: 50%;
+  width: 100%;
+}
+
 #About .firstSection {
   display: flex;
   align-items: center;

@@ -24,7 +24,7 @@ export default function About() {
 
 function BackgroundImage() {
   return (
-    <div className="imgContainer">
+    <div className="backgroundImage">
       <img src={Image1} alt="Image1" />
     </div>
   );
