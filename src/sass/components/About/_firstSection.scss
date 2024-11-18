@@ -15,26 +15,6 @@
         font-size: 120px;
         letter-spacing: 1vw;
         white-space: nowrap;
-
-        &::before,
-        &::after {
-          position: absolute;
-          text-transform: none;
-          top: 0;
-          font-size: 15px;
-          letter-spacing: normal;
-          font-family: "Poppins", sans-serif;
-        }
-
-        &::before {
-          content: "Architecte d'intérieur";
-          left: 0.5vw;
-        }
-
-        &::after {
-          content: "cheyssoiparis@gmail.com";
-          right: 2vw;
-        }
       }
     }
 
