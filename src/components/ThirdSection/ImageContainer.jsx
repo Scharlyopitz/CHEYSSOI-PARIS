@@ -10,18 +10,21 @@ export default function ImageContainer({
     <div className="Container">
       <div className="imagesContainer">
         <AnimatePresence initial={false}>
-          <m.img
+          <m.div
             key={currentMember}
             initial="initial"
             animate="animate"
             exit="exit"
-            variants={carrouselTransi}
-            src={persons[currentMember]?.image}
-            alt={`photo ${persons[currentMember]?.name}`}
-          />
-          <div className="nameContainer">
-            <span>{persons[currentMember].name}</span>
-          </div>
+          >
+            <m.img
+              variants={carrouselTransi}
+              src={persons[currentMember]?.image}
+              alt={`photo ${persons[currentMember]?.name}`}
+            />
+            <m.div variants={carrouselTransi} className="nameContainer">
+              <span>{persons[currentMember].name}</span>
+            </m.div>
+          </m.div>
         </AnimatePresence>
       </div>
     </div>
