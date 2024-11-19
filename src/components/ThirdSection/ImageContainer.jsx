@@ -7,18 +7,23 @@ export default function ImageContainer({
   persons,
 }) {
   return (
-    <div className="imagesContainer">
-      <AnimatePresence initial={false}>
-        <m.img
-          key={currentMember}
-          initial="initial"
-          animate="animate"
-          exit="exit"
-          variants={carrouselTransi}
-          src={persons[currentMember]?.image}
-          alt={`photo ${persons[currentMember]?.name}`}
-        />
-      </AnimatePresence>
+    <div className="Container">
+      <div className="imagesContainer">
+        <AnimatePresence initial={false}>
+          <m.img
+            key={currentMember}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            variants={carrouselTransi}
+            src={persons[currentMember]?.image}
+            alt={`photo ${persons[currentMember]?.name}`}
+          />
+          <div className="nameContainer">
+            <span>{persons[currentMember].name}</span>
+          </div>
+        </AnimatePresence>
+      </div>
     </div>
   );
 }

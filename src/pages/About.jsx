@@ -129,7 +129,7 @@ function ThirdSection() {
           currentMember={currentMember}
           carrouselTransi={carrouselTransi}
         />
-        <div className="left">
+        {/* <div className="left">
           <NameContainer
             currentMember={currentMember}
             carrouselTransi={carrouselTransi}
@@ -140,7 +140,7 @@ function ThirdSection() {
             carrouselTransi={carrouselTransi}
             persons={persons}
           />
-        </div>
+        </div> */}
       </div>
     </section>
   );

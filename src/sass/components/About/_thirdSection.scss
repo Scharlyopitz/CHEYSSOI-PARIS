@@ -75,22 +75,52 @@
         }
       }
 
-      .imagesContainer {
-        height: 100%;
-        overflow: hidden;
-        position: relative;
-        aspect-ratio: 2 / 3;
-        margin-left: 5vw;
+      .Container {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        // padding: 0 0 0 5vw;
 
-        img {
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
+        .imagesContainer {
           height: 100%;
-          object-fit: cover;
-          object-position: center;
-          filter: grayscale(1);
+          overflow: hidden;
+          position: relative;
+          aspect-ratio: 2 / 3;
+
+          img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter: grayscale(1);
+          }
+
+          .nameContainer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: linear-gradient(
+              180deg,
+              rgba(255, 211, 144, 0) 0%,
+              $Black 100%
+            );
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            span {
+              font-family: "Poppins", sans-serif;
+              font-weight: 300;
+              font-size: 25px;
+            }
+          }
         }
       }
 

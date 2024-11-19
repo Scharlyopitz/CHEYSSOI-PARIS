@@ -155,14 +155,20 @@ a {
 #About .thirdSection .contenu .carousel .pointContainer .point:hover {
   cursor: pointer;
 }
-#About .thirdSection .contenu .imagesContainer {
+#About .thirdSection .contenu .Container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+#About .thirdSection .contenu .Container .imagesContainer {
   height: 100%;
   overflow: hidden;
   position: relative;
   aspect-ratio: 2/3;
-  margin-left: 5vw;
 }
-#About .thirdSection .contenu .imagesContainer img {
+#About .thirdSection .contenu .Container .imagesContainer img {
   position: absolute;
   top: 0;
   left: 0;
@@ -173,6 +179,22 @@ a {
   -o-object-position: center;
      object-position: center;
   filter: grayscale(1);
+}
+#About .thirdSection .contenu .Container .imagesContainer .nameContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30%;
+  background: linear-gradient(180deg, rgba(255, 211, 144, 0) 0%, #000000 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#About .thirdSection .contenu .Container .imagesContainer .nameContainer span {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  font-size: 25px;
 }
 #About .thirdSection .contenu .left {
   display: flex;
