@@ -242,8 +242,11 @@ nav .LogoContainer img {
 nav .menu {
   display: flex;
   flex-direction: row;
-  gap: 5vw;
   position: relative;
+  width: 100%;
+  justify-content: space-between;
+  margin-left: 5vw;
+  text-transform: uppercase;
 }
 nav .menu span {
   padding: 10px 30px;
