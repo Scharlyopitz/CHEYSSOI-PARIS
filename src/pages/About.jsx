@@ -43,13 +43,14 @@ function FirstSection() {
 
 function SecondSection() {
   const texts = [
-    `Cheyssoi Paris incarne le Slow Design avec des espaces durables, valorisant qualité et conscience. Notre mission est de créer des ambiances élégantes, éco-responsables, et accueillantes.`,
-    `Chaque création est imprégnée d'une atmosphère chaleureuse, établissant une connexion émotionnelle avec nos clients.`,
-    `En privilégiant l'artisanat local, la réuitilisation et une approche réfléchie, nos services offrent une élégance qui résiste à l'épreuve du temps.`,
+    `Cheyssoi Paris, studio de design d’intérieur éthique et écoresponsable, réinvente vos espaces en alliant élégance,
+durabilité et respect de l’environnement en France et à l’international. Chaque projet,à l’aide de nos artisans, est
+
+une harmonie parfaite entre esthétique, innovation et engagement pour un avenir meilleur`,
   ];
   return (
     <section id="apropos" className="secondSection">
-      <h2>Vous ne voudrez plus quitter votre interieur</h2>
+      <h2>CREATEURS D ESPACES DE VIE DURABLES ELEGANTS</h2>
       <div className="txtContainer">
         {texts.map((txt, i) => {
           return <p key={i}>{txt}</p>;
