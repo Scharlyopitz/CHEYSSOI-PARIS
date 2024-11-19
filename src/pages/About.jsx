@@ -84,20 +84,20 @@ function ThirdSection() {
   const refCarrousel = useRef(null);
   const isInView = useInView(refCarrousel, { once: true });
 
-  useEffect(() => {
-    let interval;
+  // useEffect(() => {
+  //   let interval;
 
-    if (isInView) {
-      interval = setInterval(() => {
-        setCurrentMember(currentMember + 1);
-      }, timer);
-    }
-    if (currentMember === persons.length) {
-      setCurrentMember(0);
-    }
+  //   if (isInView) {
+  //     interval = setInterval(() => {
+  //       setCurrentMember(currentMember + 1);
+  //     }, timer);
+  //   }
+  //   if (currentMember === persons.length) {
+  //     setCurrentMember(0);
+  //   }
 
-    return () => clearInterval(interval);
-  }, [currentMember, isInView]);
+  //   return () => clearInterval(interval);
+  // }, [currentMember, isInView]);
 
   const easeOutQuad = [0.5, 1, 0.89, 1];
 
@@ -106,10 +106,6 @@ function ThirdSection() {
     animate: {
       opacity: 1,
       transition: { duration: 1, delay: 0.2, ease: easeOutQuad },
-    },
-    exit: {
-      opacity: 0,
-      transition: { duration: 0.2, ease: easeOutQuad },
     },
   };
 
