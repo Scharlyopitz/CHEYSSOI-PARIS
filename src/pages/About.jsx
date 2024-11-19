@@ -16,6 +16,8 @@ export default function About() {
         <BackgroundImage />
         <FirstSection />
         <SecondSection
+          anchor={true}
+          white={false}
           title={"CREATEURS D ESPACES DE VIE DURABLES ELEGANTS"}
           texts={[
             `Cheyssoi Paris, studio de design d’intérieur éthique et écoresponsable, réinvente vos espaces en alliant élégance,
@@ -25,6 +27,8 @@ une harmonie parfaite entre esthétique, innovation et engagement pour un avenir
           ]}
         />
         <SecondSection
+          anchor={false}
+          white={true}
           title={"HARMONIE, CONFORT, DURABILITE, ELEGANCE"}
           texts={[
             `Chaque membre de l’équipe partage la même ambition : Expertise, créativité et souci du détail sont au cœur de
@@ -57,9 +61,12 @@ function FirstSection() {
   );
 }
 
-function SecondSection({ texts, title }) {
+function SecondSection({ texts, title, anchor, white }) {
   return (
-    <section id="apropos" className="secondSection">
+    <section
+      id={anchor ? "apropos" : null}
+      className={`secondSection ${white && "white"}`}
+    >
       <h2>{title}</h2>
       <div className="txtContainer">
         {texts.map((txt, i) => {
