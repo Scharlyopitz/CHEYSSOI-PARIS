@@ -116,7 +116,6 @@ function ThirdSection() {
 
   return (
     <section className="thirdSection">
-      <h2>Membres de l'équipe</h2>
       <div className="contenu">
         <Carousel
           refCarrousel={refCarrousel}
