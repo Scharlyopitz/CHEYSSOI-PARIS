@@ -1,6 +1,7 @@
 import Image1 from "/Image1.webp";
 import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../components/Navbar";
+import persons from "../assets/Persons.json";
 import { useInView } from "framer-motion";
 import Carousel from "../components/ThirdSection/Carousel";
 import ImageContainer from "../components/ThirdSection/ImageContainer";
@@ -132,7 +133,6 @@ function FourthSection() {
   return (
     <section className="fourthSection">
       <h2>Envie de démarrer ton projet ?</h2>
-      <button>Click ici</button>
     </section>
   );
 }
