@@ -2,11 +2,10 @@ import Image1 from "/Image1.webp";
 import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../components/Navbar";
 import persons from "../assets/Persons.json";
-import { useInView } from "framer-motion";
+import { useInView, motion as m, AnimatePresence } from "framer-motion";
 import Carousel from "../components/ThirdSection/Carousel";
-import ImageContainer from "../components/ThirdSection/ImageContainer";
-import NameContainer from "../components/ThirdSection/NameContainer";
-import DescriptionContainer from "../components/ThirdSection/DescriptionContainer";
+import Title from "../components/ThirdSection/Title";
+import PersonsContainer from "../components/ThirdSection/PersonsContainer";
 
 export default function About() {
   return (
@@ -18,7 +17,7 @@ export default function About() {
         <SecondSection
           anchor={true}
           white={false}
-          title={"CREATEURS D ESPACES DE VIE DURABLES ELEGANTS"}
+          title={"CRéATEURS D'ESPACES DE VIE DURABLES éLéGANTS"}
           texts={[
             `Cheyssoi Paris, studio de design d’intérieur éthique et écoresponsable, réinvente vos espaces en alliant élégance,
 durabilité et respect de l’environnement en France et à l’international. Chaque projet,à l’aide de nos artisans, est
@@ -29,7 +28,7 @@ une harmonie parfaite entre esthétique, innovation et engagement pour un avenir
         <SecondSection
           anchor={false}
           white={true}
-          title={"HARMONIE, CONFORT, DURABILITE, ELEGANCE"}
+          title={"HARMONIE, CONFORT, DURABILITé, éLéGANCE"}
           texts={[
             `Chaque membre de l’équipe partage la même ambition : Expertise, créativité et souci du détail sont au cœur de
 notre démarche, pour transformer vos espaces en véritables lieux d’exception, respectueux de la planète.
@@ -85,20 +84,20 @@ function ThirdSection() {
   const refCarrousel = useRef(null);
   const isInView = useInView(refCarrousel, { once: true });
 
-  // useEffect(() => {
-  //   let interval;
+  useEffect(() => {
+    let interval;
 
-  //   if (isInView) {
-  //     interval = setInterval(() => {
-  //       setCurrentMember(currentMember + 1);
-  //     }, timer);
-  //   }
-  //   if (currentMember === persons.length) {
-  //     setCurrentMember(0);
-  //   }
+    if (isInView) {
+      interval = setInterval(() => {
+        setCurrentMember(currentMember + 1);
+      }, timer);
+    }
+    if (currentMember === persons.length) {
+      setCurrentMember(0);
+    }
 
-  //   return () => clearInterval(interval);
-  // }, [currentMember, isInView]);
+    return () => clearInterval(interval);
+  }, [currentMember, isInView]);
 
   const easeOutQuad = [0.5, 1, 0.89, 1];
 
@@ -116,32 +115,23 @@ function ThirdSection() {
 
   return (
     <section className="thirdSection">
-      <div className="contenu">
-        <Carousel
-          refCarrousel={refCarrousel}
-          persons={persons}
-          currentMember={currentMember}
-          setCurrentMember={setCurrentMember}
-          timer={timer}
-        />
-        <ImageContainer
-          persons={persons}
-          currentMember={currentMember}
-          carrouselTransi={carrouselTransi}
-        />
-        {/* <div className="left">
-          <NameContainer
-            currentMember={currentMember}
-            carrouselTransi={carrouselTransi}
-            persons={persons}
-          />
-          <DescriptionContainer
-            currentMember={currentMember}
-            carrouselTransi={carrouselTransi}
-            persons={persons}
-          />
-        </div> */}
-      </div>
+      <Title
+        currentMember={currentMember}
+        persons={persons}
+        carrouselTransi={carrouselTransi}
+      />
+      <Carousel
+        refCarrousel={refCarrousel}
+        persons={persons}
+        currentMember={currentMember}
+        setCurrentMember={setCurrentMember}
+        timer={timer}
+      />
+      <PersonsContainer
+        persons={persons}
+        carrouselTransi={carrouselTransi}
+        currentMember={currentMember}
+      />
     </section>
   );
 }

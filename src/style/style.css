@@ -19,7 +19,7 @@ body {
 }
 
 section {
-  height: 100vh;
+  min-height: 100vh;
   padding: 0 10vw;
 }
 
@@ -92,34 +92,39 @@ a {
 }
 
 #About .thirdSection {
+  position: relative;
   padding-top: 20vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   background-color: #000000;
   color: #ffffff;
 }
-#About .thirdSection .contenu {
+#About .thirdSection .titleContainer {
   position: relative;
-  display: flex;
-  height: 70%;
-  gap: 3vw;
+  width: 100%;
+  margin-bottom: 5vh;
+  height: 5vh;
 }
-#About .thirdSection .contenu .carousel {
+#About .thirdSection .titleContainer h2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#About .thirdSection .carousel {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   position: absolute;
-  left: 0;
-  height: 100%;
+  top: 30vh;
+  left: 6vw;
+  height: 50%;
 }
-#About .thirdSection .contenu .carousel .pointContainer {
+#About .thirdSection .carousel .pointContainer {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#About .thirdSection .contenu .carousel .pointContainer::after {
+#About .thirdSection .carousel .pointContainer::after {
   content: "";
   pointer-events: none;
   position: absolute;
@@ -131,18 +136,18 @@ a {
   border-radius: 50%;
   background-color: #ffffff;
 }
-#About .thirdSection .contenu .carousel .pointContainer .progress,
-#About .thirdSection .contenu .carousel .pointContainer .progressOut {
+#About .thirdSection .carousel .pointContainer .progress,
+#About .thirdSection .carousel .pointContainer .progressOut {
   position: absolute;
   width: 34px;
   height: 34px;
   border-radius: 50%;
 }
-#About .thirdSection .contenu .carousel .pointContainer .progressOut {
+#About .thirdSection .carousel .pointContainer .progressOut {
   width: 37px;
   height: 37px;
 }
-#About .thirdSection .contenu .carousel .pointContainer .point {
+#About .thirdSection .carousel .pointContainer .point {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -152,79 +157,51 @@ a {
   border-radius: 50%;
   background-color: #000000;
 }
-#About .thirdSection .contenu .carousel .pointContainer .point:hover {
+#About .thirdSection .carousel .pointContainer .point:hover {
   cursor: pointer;
 }
-#About .thirdSection .contenu .Container {
-  width: 100%;
+#About .thirdSection .personsContainer {
+  position: relative;
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
   align-items: center;
 }
-#About .thirdSection .contenu .Container .imagesContainer {
-  height: 100%;
-  overflow: hidden;
-  position: relative;
-  aspect-ratio: 2/3;
-}
-#About .thirdSection .contenu .Container .imagesContainer img {
+#About .thirdSection .personsContainer .personContainer {
   position: absolute;
   top: 0;
   left: 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 1vw;
+}
+#About .thirdSection .personsContainer .personContainer .imgContainer {
+  position: relative;
+  width: 300px;
+  height: 50vh;
+}
+#About .thirdSection .personsContainer .personContainer .imgContainer img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  filter: grayscale(1);
 }
-#About .thirdSection .contenu .Container .imagesContainer .nameContainer {
+#About .thirdSection .personsContainer .personContainer .imgContainer .nameContainer {
   position: absolute;
   bottom: 0;
   left: 0;
-  width: 100%;
   height: 30%;
-  background: linear-gradient(180deg, rgba(255, 211, 144, 0) 0%, #000000 100%);
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255, 211, 144, 0) 0%, rgb(0, 0, 0) 100%);
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#About .thirdSection .contenu .Container .imagesContainer .nameContainer span {
+#About .thirdSection .personsContainer .personContainer .imgContainer .nameContainer .name {
+  font-size: 18px;
   font-family: "Poppins", sans-serif;
-  font-weight: 300;
-  font-size: 25px;
-}
-#About .thirdSection .contenu .left {
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-#About .thirdSection .contenu .left .namesContainer {
-  height: 10%;
-  margin-top: 4vh;
-  position: relative;
-}
-#About .thirdSection .contenu .left .namesContainer p {
-  position: absolute;
-  top: 0;
-  left: 0;
-  font-size: 30px;
-  font-weight: 200;
-  font-weight: 300;
-}
-#About .thirdSection .contenu .left .descriptionsContainer {
-  position: relative;
-  display: flex;
-  align-items: center;
-  height: 90%;
-}
-#About .thirdSection .contenu .left .descriptionsContainer p {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
 }
 
 #About .fourthSection {
