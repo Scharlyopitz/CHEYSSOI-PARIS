@@ -15,7 +15,23 @@ export default function About() {
         <Navbar />
         <BackgroundImage />
         <FirstSection />
-        <SecondSection />
+        <SecondSection
+          title={"CREATEURS D ESPACES DE VIE DURABLES ELEGANTS"}
+          texts={[
+            `Cheyssoi Paris, studio de design d’intérieur éthique et écoresponsable, réinvente vos espaces en alliant élégance,
+durabilité et respect de l’environnement en France et à l’international. Chaque projet,à l’aide de nos artisans, est
+
+une harmonie parfaite entre esthétique, innovation et engagement pour un avenir meilleur`,
+          ]}
+        />
+        <SecondSection
+          title={"HARMONIE, CONFORT, DURABILITE, ELEGANCE"}
+          texts={[
+            `Chaque membre de l’équipe partage la même ambition : Expertise, créativité et souci du détail sont au cœur de
+notre démarche, pour transformer vos espaces en véritables lieux d’exception, respectueux de la planète.
+Tania, CEO`,
+          ]}
+        />
         <ThirdSection />
         <FourthSection />
       </main>
@@ -41,16 +57,10 @@ function FirstSection() {
   );
 }
 
-function SecondSection() {
-  const texts = [
-    `Cheyssoi Paris, studio de design d’intérieur éthique et écoresponsable, réinvente vos espaces en alliant élégance,
-durabilité et respect de l’environnement en France et à l’international. Chaque projet,à l’aide de nos artisans, est
-
-une harmonie parfaite entre esthétique, innovation et engagement pour un avenir meilleur`,
-  ];
+function SecondSection({ texts, title }) {
   return (
     <section id="apropos" className="secondSection">
-      <h2>CREATEURS D ESPACES DE VIE DURABLES ELEGANTS</h2>
+      <h2>{title}</h2>
       <div className="txtContainer">
         {texts.map((txt, i) => {
           return <p key={i}>{txt}</p>;
