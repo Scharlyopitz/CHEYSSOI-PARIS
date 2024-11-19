@@ -23,20 +23,24 @@ function Logo() {
 function Menu() {
   const links = [
     {
-      name: "Home",
-      to: "#",
+      name: "à propos",
+      to: "#apropos",
     },
     {
-      name: "About",
-      to: "#about",
+      name: "services",
+      to: "#services",
     },
     {
-      name: "Works",
-      to: "#works",
+      name: "galerie",
+      to: "#galerie",
     },
     {
-      name: "Contact",
-      to: "#contact",
+      name: "demarrer mon projet",
+      to: "#demarrermonprojet",
+    },
+    {
+      name: "ebook",
+      to: "#ebook",
     },
   ];
 
