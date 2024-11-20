@@ -176,7 +176,7 @@ a {
   width: 100%;
 }
 
-#About .galerie {
+#About #galerie {
   background: #ffffff;
 }
 
@@ -207,22 +207,22 @@ a {
   font-weight: 500;
 }
 
-#About .services {
+#About #services {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10vh;
 }
-#About .services .txtContainer {
+#About #services .txtContainer {
   display: flex;
   flex-direction: column;
   gap: 3vh;
 }
-#About .services .txtContainer p {
+#About #services .txtContainer p {
   text-align: center;
 }
-#About .services button {
+#About #services button {
   position: relative;
   text-transform: uppercase;
   font-size: 20px;
@@ -234,7 +234,7 @@ a {
   overflow: hidden;
   transition: 0.3s;
 }
-#About .services button::after {
+#About #services button::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -246,11 +246,11 @@ a {
   background-color: #ff4500;
   transition: 0.3s;
 }
-#About .services button:hover {
+#About #services button:hover {
   cursor: pointer;
   padding: 15px 50px;
 }
-#About .services button:hover::after {
+#About #services button:hover::after {
   transform: translateY(0);
 }
 

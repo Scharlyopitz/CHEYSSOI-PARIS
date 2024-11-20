@@ -83,7 +83,7 @@ temps.`,
   ];
 
   return (
-    <section id="services" className="services">
+    <section id="services">
       <h2>Une expérience unique</h2>
       <div className="txtContainer">
         {texts.map((t, i) => {
@@ -96,5 +96,5 @@ temps.`,
 }
 
 function Galerie() {
-  return <section id="galerie" className="galerie"></section>;
+  return <section id="galerie"></section>;
 }
