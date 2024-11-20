@@ -2,11 +2,11 @@
 @import "../sass/base/fonts";
 @import "../sass/base/reset";
 
+@import "../sass/components/About/apropos";
 @import "../sass/components/About/backgroudnImage";
-@import "../sass/components/About/firstSection";
-@import "../sass/components/About/secondSection";
-@import "../sass/components/About/thirdSection";
-@import "../sass/components/About/fourthSection";
+@import "../sass/components/About/galerie";
+@import "../sass/components/About/homeSection";
+@import "../sass/components/About/services";
 @import "../sass/components/navbar";
 
 @import "../sass/pages/home";

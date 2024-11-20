@@ -27,6 +27,139 @@ a {
   text-decoration: none;
 }
 
+#About .Apropos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10vh;
+}
+#About .Apropos,
+#About .Apropos p {
+  text-align: center;
+}
+#About .Apropos .txtContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+}
+#About .white {
+  background-color: #ffffff;
+  color: #000000;
+}
+#About .memberSection {
+  position: relative;
+  padding-top: 20vh;
+  background-color: #000000;
+  color: #ffffff;
+}
+#About .memberSection .titleContainer {
+  position: relative;
+  width: 100%;
+  margin-bottom: 5vh;
+  height: 5vh;
+}
+#About .memberSection .titleContainer h2 {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+#About .memberSection .carousel {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  position: absolute;
+  top: 30vh;
+  left: 6vw;
+  height: 50%;
+}
+#About .memberSection .carousel .pointContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#About .memberSection .carousel .pointContainer::after {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #ffffff;
+}
+#About .memberSection .carousel .pointContainer .progress,
+#About .memberSection .carousel .pointContainer .progressOut {
+  position: absolute;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+}
+#About .memberSection .carousel .pointContainer .progressOut {
+  width: 37px;
+  height: 37px;
+}
+#About .memberSection .carousel .pointContainer .point {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #000000;
+}
+#About .memberSection .carousel .pointContainer .point:hover {
+  cursor: pointer;
+}
+#About .memberSection .personsContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+#About .memberSection .personsContainer .personContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: nowrap;
+  width: 100%;
+  gap: 1vw;
+}
+#About .memberSection .personsContainer .personContainer .imgContainer {
+  position: relative;
+  width: 300px;
+  height: 50vh;
+}
+#About .memberSection .personsContainer .personContainer .imgContainer img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+#About .memberSection .personsContainer .personContainer .imgContainer .nameContainer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 30%;
+  width: 100%;
+  background: linear-gradient(180deg, rgba(255, 211, 144, 0) 0%, rgb(0, 0, 0) 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#About .memberSection .personsContainer .personContainer .imgContainer .nameContainer .name {
+  font-size: 18px;
+  font-family: "Poppins", sans-serif;
+}
+
 .backgroundImage {
   position: fixed;
   z-index: -1;
@@ -43,15 +176,19 @@ a {
   width: 100%;
 }
 
-#About .firstSection {
+#About .galerie {
+  background: #ffffff;
+}
+
+#About .homeSection {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#About .firstSection .txtContainer {
+#About .homeSection .txtContainer {
   display: flex;
 }
-#About .firstSection .txtContainer h1 {
+#About .homeSection .txtContainer h1 {
   position: relative;
   font-family: "Cormorant Garamond", serif;
   font-weight: 300;
@@ -60,7 +197,7 @@ a {
   letter-spacing: 1vw;
   white-space: nowrap;
 }
-#About .firstSection .txtContainer h1::after {
+#About .homeSection .txtContainer h1::after {
   content: "Designer d'espace hétique";
   position: absolute;
   bottom: -10%;
@@ -70,156 +207,22 @@ a {
   font-weight: 500;
 }
 
-#About .secondSection {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 10vh;
-}
-#About .secondSection,
-#About .secondSection p {
-  text-align: center;
-}
-#About .secondSection .txtContainer {
-  display: flex;
-  flex-direction: column;
-  gap: 3vh;
-}
-#About .white {
-  background-color: #ffffff;
-  color: #000000;
-}
-
-#About .thirdSection {
-  position: relative;
-  padding-top: 20vh;
-  background-color: #000000;
-  color: #ffffff;
-}
-#About .thirdSection .titleContainer {
-  position: relative;
-  width: 100%;
-  margin-bottom: 5vh;
-  height: 5vh;
-}
-#About .thirdSection .titleContainer h2 {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-#About .thirdSection .carousel {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  position: absolute;
-  top: 30vh;
-  left: 6vw;
-  height: 50%;
-}
-#About .thirdSection .carousel .pointContainer {
-  position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#About .thirdSection .carousel .pointContainer::after {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: #ffffff;
-}
-#About .thirdSection .carousel .pointContainer .progress,
-#About .thirdSection .carousel .pointContainer .progressOut {
-  position: absolute;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-}
-#About .thirdSection .carousel .pointContainer .progressOut {
-  width: 37px;
-  height: 37px;
-}
-#About .thirdSection .carousel .pointContainer .point {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #000000;
-}
-#About .thirdSection .carousel .pointContainer .point:hover {
-  cursor: pointer;
-}
-#About .thirdSection .personsContainer {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-#About .thirdSection .personsContainer .personContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: nowrap;
-  width: 100%;
-  gap: 1vw;
-}
-#About .thirdSection .personsContainer .personContainer .imgContainer {
-  position: relative;
-  width: 300px;
-  height: 50vh;
-}
-#About .thirdSection .personsContainer .personContainer .imgContainer img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
-}
-#About .thirdSection .personsContainer .personContainer .imgContainer .nameContainer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  height: 30%;
-  width: 100%;
-  background: linear-gradient(180deg, rgba(255, 211, 144, 0) 0%, rgb(0, 0, 0) 100%);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-#About .thirdSection .personsContainer .personContainer .imgContainer .nameContainer .name {
-  font-size: 18px;
-  font-family: "Poppins", sans-serif;
-}
-
-#About .fourthSection {
+#About .services {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10vh;
 }
-#About .fourthSection .txtContainer {
+#About .services .txtContainer {
   display: flex;
   flex-direction: column;
   gap: 3vh;
 }
-#About .fourthSection .txtContainer p {
+#About .services .txtContainer p {
   text-align: center;
 }
-#About .fourthSection button {
+#About .services button {
   position: relative;
   text-transform: uppercase;
   font-size: 20px;
@@ -231,7 +234,7 @@ a {
   overflow: hidden;
   transition: 0.3s;
 }
-#About .fourthSection button::after {
+#About .services button::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -243,11 +246,11 @@ a {
   background-color: #ff4500;
   transition: 0.3s;
 }
-#About .fourthSection button:hover {
+#About .services button:hover {
   cursor: pointer;
   padding: 15px 50px;
 }
-#About .fourthSection button:hover::after {
+#About .services button:hover::after {
   transform: translateY(0);
 }
 
