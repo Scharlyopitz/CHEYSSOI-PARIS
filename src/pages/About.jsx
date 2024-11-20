@@ -96,5 +96,5 @@ temps.`,
 }
 
 function Galerie() {
-  return <section className="galerie"></section>;
+  return <section id="galerie" className="galerie"></section>;
 }
