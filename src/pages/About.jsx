@@ -37,6 +37,7 @@ Tania, CEO`,
         />
         <ThirdSection />
         <FourthSection />
+        <FifthSection />
       </main>
     </>
   );
@@ -159,4 +160,8 @@ temps.`,
       <button>nous contacter</button>
     </section>
   );
+}
+
+function FifthSection() {
+  return <section className="fifthSection"></section>;
 }
