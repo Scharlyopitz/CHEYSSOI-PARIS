@@ -2,7 +2,7 @@ import Image1 from "/Image1.webp";
 import React, { useEffect, useRef, useState } from "react";
 import Navbar from "../components/Navbar";
 import persons from "../assets/Persons.json";
-import { useInView, motion as m, AnimatePresence } from "framer-motion";
+import { useInView, motion as m } from "framer-motion";
 import Carousel from "../components/ThirdSection/Carousel";
 import Title from "../components/ThirdSection/Title";
 import PersonsContainer from "../components/ThirdSection/PersonsContainer";
