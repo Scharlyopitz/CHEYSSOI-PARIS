@@ -28,7 +28,7 @@ export default function Navbar() {
       transition: { duration: 0.5 },
     },
     animate: {
-      backdropFilter: "blur(25px)",
+      backdropFilter: "blur(15px)",
       background: "#3535358b",
       transition: { duration: 0.5 },
     },
