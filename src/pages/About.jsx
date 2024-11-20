@@ -133,9 +133,30 @@ function ThirdSection() {
 }
 
 function FourthSection() {
+  const texts = [
+    `Cheyssoi est votre studio de design spécialisé dans les intérieurs éthiques et durables.
+Nous vous accompagnons dans la création de lieux uniques, où esthétisme et respect de
+
+l’environnement s’entrelacent harmonieusement.`,
+    `Cheyssoi Paris, c’est avant tout une expérience sur-mesure : inspirez-vous de nos idées et
+laissez-vous guider à chaque étape, jusqu’à la réalisation d’un espace en parfaite adéquation
+
+avec vos valeurs et vos envies.`,
+    `Nous mettons un point d’honneur à collaborer avec des artisans locaux, valorisant savoir-
+faire, circularité et matériaux durables, pour des créations qui font sens et durent dans le
+
+temps.`,
+  ];
+
   return (
     <section className="fourthSection">
-      <h2>Envie de démarrer ton projet ?</h2>
+      <h2>Une expérience unique</h2>
+      <div className="txtContainer">
+        {texts.map((t, i) => {
+          return <p key={i}>{t}</p>;
+        })}
+      </div>
+      <button>nous contacter</button>
     </section>
   );
 }
