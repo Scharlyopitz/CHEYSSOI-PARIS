@@ -29,7 +29,7 @@ export default function Navbar() {
     },
     animate: {
       backdropFilter: "blur(15px)",
-      background: "#3535358b",
+      background: "#4848488c",
       transition: { duration: 0.5 },
     },
   };
