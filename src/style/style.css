@@ -53,96 +53,33 @@ a {
   gap: 3vh;
 }
 #apropos .memberSection {
-  position: relative;
-  padding-top: 20vh;
+  display: flex;
+  flex-direction: column;
+  gap: 10vh;
+  padding: 20vh 10vw 10vh;
   background-color: #000000;
   color: #ffffff;
   min-height: 100vh;
 }
-#apropos .memberSection .titleContainer {
-  position: relative;
-  width: 100%;
-  margin-bottom: 5vh;
-  height: 5vh;
-}
-#apropos .memberSection .titleContainer h2 {
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translateX(-50%);
-}
-#apropos .memberSection .carousel {
+#apropos .memberSection .groupContainer {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  position: absolute;
-  top: 30vh;
-  left: 6vw;
-  height: 50%;
+  gap: 10vh;
 }
-#apropos .memberSection .carousel .pointContainer {
-  position: relative;
+#apropos .memberSection .groupContainer .personsContainer {
   display: flex;
-  align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
 }
-#apropos .memberSection .carousel .pointContainer::after {
-  content: "";
-  pointer-events: none;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  background-color: #ffffff;
-}
-#apropos .memberSection .carousel .pointContainer .progress,
-#apropos .memberSection .carousel .pointContainer .progressOut {
-  position: absolute;
-  width: 34px;
-  height: 34px;
-  border-radius: 50%;
-}
-#apropos .memberSection .carousel .pointContainer .progressOut {
-  width: 37px;
-  height: 37px;
-}
-#apropos .memberSection .carousel .pointContainer .point {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-  background-color: #000000;
-}
-#apropos .memberSection .carousel .pointContainer .point:hover {
-  cursor: pointer;
-}
-#apropos .memberSection .personsContainer {
-  position: relative;
-  display: flex;
-  align-items: center;
-}
-#apropos .memberSection .personsContainer .personContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: nowrap;
-  width: 100%;
-  gap: 1vw;
-}
-#apropos .memberSection .personsContainer .personContainer .imgContainer {
+#apropos .memberSection .groupContainer .personsContainer .imgContainer {
+  overflow: hidden;
   position: relative;
   width: 300px;
-  height: 50vh;
+  height: 450px;
+  filter: grayscale(1);
 }
-#apropos .memberSection .personsContainer .personContainer .imgContainer img {
+#apropos .memberSection .groupContainer .personsContainer .imgContainer img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -150,7 +87,7 @@ a {
   -o-object-position: center;
      object-position: center;
 }
-#apropos .memberSection .personsContainer .personContainer .imgContainer .nameContainer {
+#apropos .memberSection .groupContainer .personsContainer .imgContainer .nameContainer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -161,7 +98,7 @@ a {
   align-items: center;
   justify-content: center;
 }
-#apropos .memberSection .personsContainer .personContainer .imgContainer .nameContainer .name {
+#apropos .memberSection .groupContainer .personsContainer .imgContainer .nameContainer .name {
   font-size: 18px;
   font-family: "Poppins", sans-serif;
 }
