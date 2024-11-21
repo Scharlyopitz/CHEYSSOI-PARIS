@@ -3,14 +3,18 @@ import persons from "../../assets/Persons.json";
 export default function MemberSection() {
   return (
     <div className="memberSection">
-      {persons.map((p, i) => {
+      {persons.map((person, i) => {
         return (
           <div key={i} className="groupContainer">
-            <h2>{p.job}</h2>
+            <h2>{person.job}</h2>
             <div className="personsContainer">
-              {p.names.map((n, i) => {
+              {person.members.map((member, i) => {
                 return (
-                  <PersonsContainer key={i} name={n.name} photo={n.image} />
+                  <PersonsContainer
+                    key={i}
+                    name={member.name}
+                    photo={member.image}
+                  />
                 );
               })}
             </div>

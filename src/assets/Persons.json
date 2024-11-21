@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "names": [
+    "members": [
       {
         "name": "Tania",
         "image": "https://www.frejoux-photographe.fr/wp-content/gallery/portrait-pro-corporate/Photographe-portrait-entreprise-pro-Corporate-toulon-Celine.jpg"
@@ -11,7 +11,7 @@
   },
   {
     "id": 1,
-    "names": [
+    "members": [
       {
         "name": "Hoang",
         "image": "https://cdn.booke.fr/wp-content/uploads/2021/01/10172447/Illustration-Use-Case-Althe%CC%81a.jpg"
@@ -37,7 +37,7 @@
   },
   {
     "id": 2,
-    "names": [
+    "members": [
       {
         "name": "Mones",
         "image": "https://www.sylvaingelineau.com/wp-content/uploads/2020/12/photographe-portrait-pro-cv-linkedin-toulouse.jpg"
@@ -51,7 +51,7 @@
   },
   {
     "id": 3,
-    "names": [
+    "members": [
       {
         "name": "Etienne",
         "image": "https://www.sylvaingelineau.com/wp-content/uploads/2020/12/photographe-portrait-pro-cv-linkedin-toulouse.jpg"
