@@ -27,45 +27,51 @@ a {
   text-decoration: none;
 }
 
-#About .Apropos {
+#apropos {
+  padding: 0;
+}
+#apropos,
+#apropos p {
+  text-align: center;
+}
+#apropos .textPart {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 10vh;
+  height: 100vh;
+  padding: 0 10vw;
 }
-#About .Apropos,
-#About .Apropos p {
-  text-align: center;
+#apropos .textPart:nth-child(2) {
+  background: #ffffff;
+  color: #000000;
 }
-#About .Apropos .txtContainer {
+#apropos .textPart .txtContainer {
   display: flex;
   flex-direction: column;
   gap: 3vh;
 }
-#About .white {
-  background-color: #ffffff;
-  color: #000000;
-}
-#About .memberSection {
+#apropos .memberSection {
   position: relative;
   padding-top: 20vh;
   background-color: #000000;
   color: #ffffff;
+  min-height: 100vh;
 }
-#About .memberSection .titleContainer {
+#apropos .memberSection .titleContainer {
   position: relative;
   width: 100%;
   margin-bottom: 5vh;
   height: 5vh;
 }
-#About .memberSection .titleContainer h2 {
+#apropos .memberSection .titleContainer h2 {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
 }
-#About .memberSection .carousel {
+#apropos .memberSection .carousel {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -74,13 +80,13 @@ a {
   left: 6vw;
   height: 50%;
 }
-#About .memberSection .carousel .pointContainer {
+#apropos .memberSection .carousel .pointContainer {
   position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#About .memberSection .carousel .pointContainer::after {
+#apropos .memberSection .carousel .pointContainer::after {
   content: "";
   pointer-events: none;
   position: absolute;
@@ -92,18 +98,18 @@ a {
   border-radius: 50%;
   background-color: #ffffff;
 }
-#About .memberSection .carousel .pointContainer .progress,
-#About .memberSection .carousel .pointContainer .progressOut {
+#apropos .memberSection .carousel .pointContainer .progress,
+#apropos .memberSection .carousel .pointContainer .progressOut {
   position: absolute;
   width: 34px;
   height: 34px;
   border-radius: 50%;
 }
-#About .memberSection .carousel .pointContainer .progressOut {
+#apropos .memberSection .carousel .pointContainer .progressOut {
   width: 37px;
   height: 37px;
 }
-#About .memberSection .carousel .pointContainer .point {
+#apropos .memberSection .carousel .pointContainer .point {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -113,15 +119,15 @@ a {
   border-radius: 50%;
   background-color: #000000;
 }
-#About .memberSection .carousel .pointContainer .point:hover {
+#apropos .memberSection .carousel .pointContainer .point:hover {
   cursor: pointer;
 }
-#About .memberSection .personsContainer {
+#apropos .memberSection .personsContainer {
   position: relative;
   display: flex;
   align-items: center;
 }
-#About .memberSection .personsContainer .personContainer {
+#apropos .memberSection .personsContainer .personContainer {
   position: absolute;
   top: 0;
   left: 0;
@@ -131,12 +137,12 @@ a {
   width: 100%;
   gap: 1vw;
 }
-#About .memberSection .personsContainer .personContainer .imgContainer {
+#apropos .memberSection .personsContainer .personContainer .imgContainer {
   position: relative;
   width: 300px;
   height: 50vh;
 }
-#About .memberSection .personsContainer .personContainer .imgContainer img {
+#apropos .memberSection .personsContainer .personContainer .imgContainer img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -144,7 +150,7 @@ a {
   -o-object-position: center;
      object-position: center;
 }
-#About .memberSection .personsContainer .personContainer .imgContainer .nameContainer {
+#apropos .memberSection .personsContainer .personContainer .imgContainer .nameContainer {
   position: absolute;
   bottom: 0;
   left: 0;
@@ -155,7 +161,7 @@ a {
   align-items: center;
   justify-content: center;
 }
-#About .memberSection .personsContainer .personContainer .imgContainer .nameContainer .name {
+#apropos .memberSection .personsContainer .personContainer .imgContainer .nameContainer .name {
   font-size: 18px;
   font-family: "Poppins", sans-serif;
 }
@@ -176,19 +182,19 @@ a {
   width: 100%;
 }
 
-#About #galerie {
+#galerie {
   background: #ffffff;
 }
 
-#About .homeSection {
+#homeSection {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-#About .homeSection .txtContainer {
+#homeSection .txtContainer {
   display: flex;
 }
-#About .homeSection .txtContainer h1 {
+#homeSection .txtContainer h1 {
   position: relative;
   font-family: "Cormorant Garamond", serif;
   font-weight: 300;
@@ -197,7 +203,7 @@ a {
   letter-spacing: 1vw;
   white-space: nowrap;
 }
-#About .homeSection .txtContainer h1::after {
+#homeSection .txtContainer h1::after {
   content: "Designer d'espace hétique";
   position: absolute;
   bottom: -10%;
@@ -207,22 +213,22 @@ a {
   font-weight: 500;
 }
 
-#About #services {
+#services {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 10vh;
 }
-#About #services .txtContainer {
+#services .txtContainer {
   display: flex;
   flex-direction: column;
   gap: 3vh;
 }
-#About #services .txtContainer p {
+#services .txtContainer p {
   text-align: center;
 }
-#About #services button {
+#services button {
   position: relative;
   text-transform: uppercase;
   font-size: 20px;
@@ -234,7 +240,7 @@ a {
   overflow: hidden;
   transition: 0.3s;
 }
-#About #services button::after {
+#services button::after {
   content: "";
   position: absolute;
   z-index: -1;
@@ -246,11 +252,11 @@ a {
   background-color: #ff4500;
   transition: 0.3s;
 }
-#About #services button:hover {
+#services button:hover {
   cursor: pointer;
   padding: 15px 50px;
 }
-#About #services button:hover::after {
+#services button:hover::after {
   transform: translateY(0);
 }
 
@@ -299,18 +305,23 @@ nav .menu {
   font-size: 14px;
   font-weight: 300;
 }
-nav .menu span {
+nav .menu .link {
+  position: relative;
   padding: 10px 30px;
 }
-nav .menu span:hover {
+nav .menu .link:hover {
   cursor: pointer;
 }
-nav .menu .background {
-  opacity: 0;
-  pointer-events: none;
+nav .menu .link .background {
   position: absolute;
-  border-radius: 20px;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   border: 1px solid #ffffff;
+  border-radius: 99999px;
+  z-index: -1;
+  pointer-events: none;
 }
 
 #Home {
@@ -368,5 +379,4 @@ nav .menu .background {
   font-family: "Poppins", sans-serif;
   font-size: 18px;
   font-weight: 200;
-  text-align: justify;
 }/*# sourceMappingURL=style.css.map */

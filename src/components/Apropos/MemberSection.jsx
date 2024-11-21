@@ -18,12 +18,13 @@ export default function MemberSection() {
   //         setCurrentMember(currentMember + 1);
   //       }, timer);
   //     }
+
   //     if (currentMember === persons.length) {
   //       setCurrentMember(0);
   //     }
 
   //     return () => clearInterval(interval);
-  //   }, [currentMember, isInView]);
+  //   }, [currentMember]);
 
   const easeOutQuad = [0.5, 1, 0.89, 1];
 
@@ -36,7 +37,7 @@ export default function MemberSection() {
   };
 
   return (
-    <section className="memberSection">
+    <div className="memberSection">
       <Title
         currentMember={currentMember}
         persons={persons}
@@ -54,7 +55,7 @@ export default function MemberSection() {
         carrouselTransi={carrouselTransi}
         currentMember={currentMember}
       />
-    </section>
+    </div>
   );
 }
 

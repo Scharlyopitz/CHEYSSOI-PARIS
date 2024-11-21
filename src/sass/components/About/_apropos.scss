@@ -1,14 +1,23 @@
-#About {
-  .Apropos {
+#apropos {
+  padding: 0;
+
+  &,
+  p {
+    text-align: center;
+  }
+
+  .textPart {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 10vh;
+    height: 100vh;
+    padding: 0 10vw;
 
-    &,
-    p {
-      text-align: center;
+    &:nth-child(2) {
+      background: $White;
+      color: $Black;
     }
 
     .txtContainer {
@@ -18,16 +27,12 @@
     }
   }
 
-  .white {
-    background-color: $White;
-    color: $Black;
-  }
-
   .memberSection {
     position: relative;
     padding-top: 20vh;
     background-color: $Black;
     color: $White;
+    min-height: 100vh;
 
     .titleContainer {
       position: relative;

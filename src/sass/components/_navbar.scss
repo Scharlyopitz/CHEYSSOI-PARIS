@@ -3,8 +3,6 @@ nav {
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  // backdrop-filter: blur(25px);
-  // background-color: #3535358b;
   z-index: 10;
   align-items: center;
   justify-content: space-between;
@@ -45,20 +43,25 @@ nav {
     font-size: 14px;
     font-weight: 300;
 
-    span {
+    .link {
+      position: relative;
       padding: 10px 30px;
 
       &:hover {
         cursor: pointer;
       }
-    }
 
-    .background {
-      opacity: 0;
-      pointer-events: none;
-      position: absolute;
-      border-radius: 20px;
-      border: 1px solid $White;
+      .background {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 1px solid $White;
+        border-radius: 99999px;
+        z-index: -1;
+        pointer-events: none;
+      }
     }
   }
 }

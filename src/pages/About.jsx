@@ -1,21 +1,31 @@
 import Image1 from "/Image1.webp";
 import Navbar from "../components/Navbar";
 
-import Presentation from "../components/Apropos/Presentation";
 import MemberSection from "../components/Apropos/MemberSection";
+import TextPart from "../components/Apropos/TextPart";
+import Observer from "../components/Observer";
+import { useState } from "react";
 
 export default function About() {
+  const [activeSection, setActiveSection] = useState("homeSection");
+
   return (
-    <>
-      <main id="About">
-        <Navbar />
-        <BackgroundImage />
+    <main id="About">
+      <Navbar activeSection={activeSection} />
+      <BackgroundImage />
+      <Observer setActiveSection={setActiveSection}>
         <HomeSection />
+      </Observer>
+      <Observer setActiveSection={setActiveSection}>
         <Apropos />
+      </Observer>
+      <Observer setActiveSection={setActiveSection}>
         <Services />
+      </Observer>
+      <Observer setActiveSection={setActiveSection}>
         <Galerie />
-      </main>
-    </>
+      </Observer>
+    </main>
   );
 }
 
@@ -29,7 +39,7 @@ function BackgroundImage() {
 
 function HomeSection() {
   return (
-    <section className="homeSection">
+    <section id="homeSection">
       <div className="txtContainer">
         <h1>Cheyssoi Paris</h1>
       </div>
@@ -38,31 +48,29 @@ function HomeSection() {
 }
 
 function Apropos() {
-  return (
-    <>
-      <Presentation
-        anchor={true}
-        white={false}
-        title={"CRéATEURS D'ESPACES DE VIE DURABLES éLéGANTS"}
-        texts={[
-          `Cheyssoi Paris, studio de design d’intérieur éthique et écoresponsable, réinvente vos espaces en alliant élégance,
+  const TextsBlocs = [
+    {
+      title: `CRéATEURS D'ESPACES DE VIE DURABLES éLéGANTS`,
+      text: `Cheyssoi Paris, studio de design d’intérieur éthique et écoresponsable, réinvente vos espaces en alliant élégance,
 durabilité et respect de l’environnement en France et à l’international. Chaque projet,à l’aide de nos artisans, est
 
 une harmonie parfaite entre esthétique, innovation et engagement pour un avenir meilleur`,
-        ]}
-      />
-      <Presentation
-        anchor={false}
-        white={true}
-        title={"HARMONIE, CONFORT, DURABILITé, éLéGANCE"}
-        texts={[
-          `Chaque membre de l’équipe partage la même ambition : Expertise, créativité et souci du détail sont au cœur de
+    },
+    {
+      title: `HARMONIE, CONFORT, DURABILITE, ELEGANCE`,
+      text: `Chaque membre de l’équipe partage la même ambition : Expertise, créativité et souci du détail sont au cœur de
 notre démarche, pour transformer vos espaces en véritables lieux d’exception, respectueux de la planète.
 Tania, CEO`,
-        ]}
-      />
+    },
+  ];
+
+  return (
+    <section id="apropos">
+      {TextsBlocs.map((txtBloc, i) => {
+        return <TextPart key={i} title={txtBloc.title} texts={txtBloc.text} />;
+      })}
       <MemberSection />
-    </>
+    </section>
   );
 }
 
