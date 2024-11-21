@@ -92,7 +92,7 @@ function Menu({ activeSection }) {
                 <m.span
                   layoutId="activeBg"
                   className="background"
-                  transition={{ type: "spring", bounce: 0.2, duration: 0.6 }}
+                  transition={{ type: "spring", bounce: 0.1, duration: 0.6 }}
                 ></m.span>
               )}
 
