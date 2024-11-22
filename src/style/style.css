@@ -53,6 +53,53 @@ a {
   flex-direction: column;
   gap: 3vh;
 }
+#apropos .txtSeparation {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  height: 20vh;
+  background: linear-gradient(356deg, #000000 50%, #ffffff 50%);
+}
+#apropos .txtSeparation .txtInfinite {
+  display: flex;
+  position: absolute;
+  top: 50%;
+  left: -1%;
+  color: #ffffff;
+  text-transform: uppercase;
+  font-size: 35px;
+  font-weight: 500;
+  transform: rotate(356deg) translate(0%, -50%);
+  animation: 15s textInfinite linear infinite;
+}
+#apropos .txtSeparation .txtInfinite .wordsContainer {
+  background-color: #ff4500;
+  display: flex;
+  justify-content: space-around;
+  width: 101vw;
+}
+#apropos .txtSeparation .txtInfinite .wordsContainer:nth-child(2) {
+  position: absolute;
+  top: 0;
+  left: 100%;
+}
+#apropos .txtSeparation .txtInfinite .wordsContainer .words {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2vw;
+}
+#apropos .txtSeparation .txtInfinite .wordsContainer .words .word {
+  display: flex;
+  gap: 20px;
+}
+@keyframes textInfinite {
+  from {
+    transform: rotate(356deg) translate(0%, -50%);
+  }
+  to {
+    transform: rotate(356deg) translate(-100%, -50%);
+  }
+}
 #apropos .memberSection {
   display: flex;
   flex-direction: column;
