@@ -46,6 +46,7 @@ a {
 #apropos .textPart:nth-child(2) {
   background: #ffffff;
   color: #000000;
+  border-radius: 3vw 3vw 0 0;
 }
 #apropos .textPart .txtContainer {
   display: flex;
@@ -56,9 +57,9 @@ a {
   display: flex;
   flex-direction: column;
   gap: 10vh;
-  padding: 20vh 10vw 10vh;
+  padding: 20vh 10vw;
   background-color: #000000;
-  color: #ffffff;
+  border-radius: 0 0 3vw 3vw;
   min-height: 100vh;
 }
 #apropos .memberSection .groupContainer {
@@ -75,9 +76,10 @@ a {
 #apropos .memberSection .groupContainer .personsContainer .imgContainer {
   overflow: hidden;
   position: relative;
-  width: 300px;
-  height: 450px;
+  width: 320px;
+  height: 480px;
   filter: grayscale(1);
+  border-radius: 20px;
 }
 #apropos .memberSection .groupContainer .personsContainer .imgContainer img {
   width: 100%;
