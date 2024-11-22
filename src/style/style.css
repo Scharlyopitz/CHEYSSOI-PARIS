@@ -73,7 +73,9 @@ a {
   animation: 10s textInfinite linear infinite;
 }
 #apropos .txtSeparation .txtInfinite .wordsContainer {
-  background-color: #ff4500;
+  background: #000000;
+  color: #ffffff;
+  border-bottom: 2px solid #ffffff;
   display: flex;
   justify-content: space-around;
   width: 101vw;
