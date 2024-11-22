@@ -26,6 +26,9 @@ export default function About() {
       <Observer setActiveSection={setActiveSection}>
         <Galerie />
       </Observer>
+      <Observer setActiveSection={setActiveSection}>
+        <DemarrerMonProjet />
+      </Observer>
     </main>
   );
 }
@@ -109,4 +112,8 @@ temps.`,
 
 function Galerie() {
   return <section id="galerie"></section>;
+}
+
+function DemarrerMonProjet() {
+  return <section id="demarrermonprojet"></section>;
 }
