@@ -6,6 +6,7 @@ import TextPart from "../components/Apropos/TextPart";
 import Observer from "../components/Observer";
 import { useState } from "react";
 import TextSeparation from "../components/Apropos/TextSeparation";
+import Formulaire from "../components/DemarrerMonProjet/Formulaire";
 
 export default function About() {
   const [activeSection, setActiveSection] = useState("homeSection");
@@ -115,5 +116,9 @@ function Galerie() {
 }
 
 function DemarrerMonProjet() {
-  return <section id="demarrermonprojet"></section>;
+  return (
+    <section id="demarrermonprojet">
+      <Formulaire />
+    </section>
+  );
 }
