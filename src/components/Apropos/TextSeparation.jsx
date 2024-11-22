@@ -1,7 +1,6 @@
 import React from "react";
 
-export default function TexteSeparation() {
-  const text = "Cheyssoi Paris";
+export default function TextSeparation({ textSeparation }) {
   return (
     <div className="txtSeparation">
       <div className="txtInfinite">
@@ -12,7 +11,7 @@ export default function TexteSeparation() {
                 return (
                   <div className="words" key={i}>
                     <div className="word">
-                      {text.split(" ").map((t, i) => {
+                      {textSeparation.split(" ").map((t, i) => {
                         return <span key={i}>{t}</span>;
                       })}
                     </div>

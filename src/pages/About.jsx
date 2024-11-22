@@ -5,7 +5,7 @@ import MemberSection from "../components/Apropos/MemberSection";
 import TextPart from "../components/Apropos/TextPart";
 import Observer from "../components/Observer";
 import { useState } from "react";
-import TexteSeparation from "../components/Apropos/TexteSeparation";
+import TextSeparation from "../components/Apropos/TextSeparation";
 
 export default function About() {
   const [activeSection, setActiveSection] = useState("homeSection");
@@ -65,12 +65,14 @@ Tania, CEO`,
     },
   ];
 
+  const textSeparation = "Cheyssoi Paris";
+
   return (
     <section id="apropos">
       {TextsBlocs.map((txtBloc, i) => {
         return <TextPart key={i} title={txtBloc.title} texts={txtBloc.text} />;
       })}
-      <TexteSeparation />
+      <TextSeparation textSeparation={textSeparation} />
       <MemberSection />
     </section>
   );
