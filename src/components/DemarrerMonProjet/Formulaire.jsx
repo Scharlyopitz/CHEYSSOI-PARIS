@@ -35,76 +35,93 @@ export default function Formulaire() {
     }, 1500);
   };
 
-  const sendEmail = (e) => {
-    e.preventDefault();
+  //   const sendEmail = (e) => {
+  //     e.preventDefault();
 
-    const serviceId = "service_is6z0jh";
-    const templateId = "template_723rf7y";
-    const plublicKey = "Ivv9VH-K6JIKana-R";
+  //     const serviceId = "service_is6z0jh";
+  //     const templateId = "template_723rf7y";
+  //     const plublicKey = "Ivv9VH-K6JIKana-R";
 
-    const templateParams = {
-      user_message: informations.message,
-      user_email: informations.email,
-      user_name: informations.name,
-      to_name: "Wilhelm le boss",
-    };
+  //     const templateParams = {
+  //       user_message: informations.message,
+  //       user_email: informations.email,
+  //       user_name: informations.name,
+  //       to_name: "Wilhelm le boss",
+  //     };
 
-    const sendEmail = () => {
-      emailjs
-        .send(serviceId, templateId, templateParams, plublicKey)
-        .then((reponse) => {
-          if (
-            informations.surface !== "" &&
-            informations.message !== "" &&
-            informations.name !== "" &&
-            informations.firstname !== "" &&
-            informations.tel !== "" &&
-            informations.email !== "" &&
-            informations.postalCode !== ""
-          ) {
-            console.log(reponse);
-            clearFields();
-            setButtonMessage(SuccesMsg);
-            refreshButton();
-          } else {
-            setButtonMessage(ErrorMsg);
-            refreshButton();
-          }
-        })
-        .catch((err) => {
-          console.log(err);
-        });
-    };
+  //     const sendEmail = () => {
+  //       emailjs
+  //         .send(serviceId, templateId, templateParams, plublicKey)
+  //         .then((reponse) => {
+  //           if (
+  //             informations.surface !== "" &&
+  //             informations.message !== "" &&
+  //             informations.name !== "" &&
+  //             informations.firstname !== "" &&
+  //             informations.tel !== "" &&
+  //             informations.email !== "" &&
+  //             informations.postalCode !== ""
+  //           ) {
+  //             console.log(reponse);
+  //             clearFields();
+  //             setButtonMessage(SuccesMsg);
+  //             refreshButton();
+  //           } else {
+  //             setButtonMessage(ErrorMsg);
+  //             refreshButton();
+  //           }
+  //         })
+  //         .catch((err) => {
+  //           console.log(err);
+  //         });
+  //     };
 
-    if (
-      informations.surface !== "" &&
-      informations.message !== "" &&
-      informations.name !== "" &&
-      informations.firstname !== "" &&
-      informations.tel !== "" &&
-      informations.email !== "" &&
-      informations.postalCode !== ""
-    ) {
-      clearFields();
-      setError(false);
-      refreshMessage();
-      setmessageOff(true);
-      sendEmail();
-    } else {
-      setError(true);
-      setmessageOff(true);
-    }
-  };
+  //     if (
+  //       informations.surface !== "" &&
+  //       informations.message !== "" &&
+  //       informations.name !== "" &&
+  //       informations.firstname !== "" &&
+  //       informations.tel !== "" &&
+  //       informations.email !== "" &&
+  //       informations.postalCode !== ""
+  //     ) {
+  //       clearFields();
+  //       setError(false);
+  //       refreshMessage();
+  //       setmessageOff(true);
+  //       sendEmail();
+  //     } else {
+  //       setError(true);
+  //       setmessageOff(true);
+  //     }
+  //   };
 
   return (
-    <div>
-      <h1>Contact Me</h1>
+    <div className="formulaire">
+      <h1>Démarrer mon projet</h1>
 
       <form onSubmit={(e) => sendEmail(e)}>
         <p></p>
         <div>
+          <label htmlFor="firstName">
+            Prénom <span>*</span>{" "}
+          </label>
+          <input
+            autoComplete="off"
+            value={informations.firstname}
+            onChange={(e) =>
+              setInformations((prec) => ({
+                ...prec,
+                firstname: e.target.value,
+              }))
+            }
+            type="text"
+            id="firstName"
+          />
+        </div>
+        <div>
           <label htmlFor="name">
-            Full Name <span>*</span>{" "}
+            Nom <span>*</span>{" "}
           </label>
           <input
             autoComplete="off"
@@ -114,6 +131,51 @@ export default function Formulaire() {
             }
             type="text"
             id="name"
+          />
+        </div>
+        <div>
+          <label htmlFor="postalCode">
+            Code Postal <span>*</span>{" "}
+          </label>
+          <input
+            autoComplete="off"
+            value={informations.postalCode}
+            onChange={(e) =>
+              setInformations((prec) => ({
+                ...prec,
+                postalCode: e.target.value,
+              }))
+            }
+            type="text"
+            id="postalCode"
+          />
+        </div>
+        <div>
+          <label htmlFor="tel">
+            Tel. <span>*</span>{" "}
+          </label>
+          <input
+            autoComplete="off"
+            value={informations.tel}
+            onChange={(e) =>
+              setInformations((prec) => ({ ...prec, tel: e.target.value }))
+            }
+            type="text"
+            id="tel"
+          />
+        </div>
+        <div>
+          <label htmlFor="surface">
+            Surface <span>*</span>{" "}
+          </label>
+          <input
+            autoComplete="off"
+            value={informations.surface}
+            onChange={(e) =>
+              setInformations((prec) => ({ ...prec, surface: e.target.value }))
+            }
+            type="text"
+            id="surface"
           />
         </div>
 
@@ -148,8 +210,7 @@ export default function Formulaire() {
 
         <button type="submit">
           <div className="submit">
-            <p>Send</p>
-            <p>Send</p>
+            <p>Envoyer</p>
           </div>
         </button>
       </form>

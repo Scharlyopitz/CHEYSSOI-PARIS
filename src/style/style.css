@@ -170,6 +170,13 @@ a {
   width: 100%;
 }
 
+#demarrermonprojet {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-transform: uppercase;
+}
+
 #galerie {
   background: #ffffff;
 }
