@@ -6,7 +6,6 @@ export default function Observer({ setActiveSection, children }) {
   const activeSection = (entries) => {
     if (entries[0].isIntersecting) {
       setActiveSection(entries[0].target.children[0].id);
-      console.log(entries[0].target.children);
     }
   };
 
