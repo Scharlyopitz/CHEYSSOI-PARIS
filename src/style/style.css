@@ -195,29 +195,42 @@ a {
 }
 #demarrermonprojet .formulaire form {
   display: flex;
+  flex-direction: column;
   gap: 3vw;
 }
-#demarrermonprojet .formulaire form .left,
-#demarrermonprojet .formulaire form .right {
+#demarrermonprojet .formulaire form ::-webkit-scrollbar {
+  width: 5px;
+}
+#demarrermonprojet .formulaire form ::-webkit-scrollbar-thumb {
+  background: #ffffff;
+  border-radius: 99999px;
+}
+#demarrermonprojet .formulaire form ::-webkit-scrollbar-thumb:hover {
+  background: #ffffff;
+  cursor: pointer;
+}
+#demarrermonprojet .formulaire form .middle {
+  display: flex;
+  gap: 3vw;
+}
+#demarrermonprojet .formulaire form .middle .left,
+#demarrermonprojet .formulaire form .middle .right {
   width: 50%;
   display: flex;
   flex-direction: column;
   gap: 2vh;
 }
-#demarrermonprojet .formulaire .right {
-  display: flex;
-  flex-direction: column;
-}
 #demarrermonprojet .formulaire .right textarea {
   width: 100%;
   height: 100%;
+  padding: 15px;
   resize: none;
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   background-color: transparent;
-  border: none;
+  border: 2px solid #ffffff;
+  border-radius: 10px;
   outline: none;
-  border-bottom: 2px solid #ffffff;
   color: #ffffff;
 }
 #demarrermonprojet .formulaire .right textarea::-moz-placeholder {
@@ -236,12 +249,11 @@ a {
 #demarrermonprojet .formulaire button {
   position: relative;
   text-transform: uppercase;
-  width: 50%;
   margin: auto;
   font-size: 20px;
   color: #ffffff;
   background: transparent;
-  padding: 15px 40px;
+  padding: 10px 40px;
   border: 2px solid #ffffff;
   border-radius: 25px;
   overflow: hidden;

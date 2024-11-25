@@ -101,126 +101,127 @@ export default function Formulaire() {
       <h2>Démarrer mon projet</h2>
 
       <form onSubmit={(e) => sendEmail(e)}>
-        <div className="left">
-          <div>
-            <label htmlFor="surface">
-              Surface <span>*</span>{" "}
-            </label>
-            <input
-              autoComplete="off"
-              value={informations.surface}
-              onChange={(e) =>
-                setInformations((prec) => ({
-                  ...prec,
-                  surface: e.target.value,
-                }))
-              }
-              type="text"
-              id="surface"
-            />
+        <div className="middle">
+          <div className="left">
+            <div>
+              <label htmlFor="surface">
+                Surface <span>*</span>{" "}
+              </label>
+              <input
+                autoComplete="off"
+                value={informations.surface}
+                onChange={(e) =>
+                  setInformations((prec) => ({
+                    ...prec,
+                    surface: e.target.value,
+                  }))
+                }
+                type="text"
+                id="surface"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="firstName">
+                Prénom <span>*</span>{" "}
+              </label>
+              <input
+                autoComplete="off"
+                value={informations.firstname}
+                onChange={(e) =>
+                  setInformations((prec) => ({
+                    ...prec,
+                    firstname: e.target.value,
+                  }))
+                }
+                type="text"
+                id="firstName"
+              />
+            </div>
+            <div>
+              <label htmlFor="name">
+                Nom <span>*</span>{" "}
+              </label>
+              <input
+                autoComplete="off"
+                value={informations.name}
+                onChange={(e) =>
+                  setInformations((prec) => ({ ...prec, name: e.target.value }))
+                }
+                type="text"
+                id="name"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="tel">
+                Tel. <span>*</span>{" "}
+              </label>
+              <input
+                autoComplete="off"
+                value={informations.tel}
+                onChange={(e) =>
+                  setInformations((prec) => ({ ...prec, tel: e.target.value }))
+                }
+                type="text"
+                id="tel"
+              />
+            </div>
+            <div>
+              <label htmlFor="mail">
+                Email <span>*</span>
+              </label>
+              <input
+                autoComplete="off"
+                value={informations.email}
+                onChange={(e) =>
+                  setInformations((prec) => ({
+                    ...prec,
+                    email: e.target.value,
+                  }))
+                }
+                type="email"
+                id="mail"
+              />
+            </div>
+
+            <div>
+              <label htmlFor="postalCode">
+                Code Postal <span>*</span>{" "}
+              </label>
+              <input
+                autoComplete="off"
+                value={informations.postalCode}
+                onChange={(e) =>
+                  setInformations((prec) => ({
+                    ...prec,
+                    postalCode: e.target.value,
+                  }))
+                }
+                type="text"
+                id="postalCode"
+              />
+            </div>
           </div>
 
-          <div>
-            <label htmlFor="firstName">
-              Prénom <span>*</span>{" "}
-            </label>
-            <input
+          <div className="right">
+            <textarea
               autoComplete="off"
-              value={informations.firstname}
+              placeholder="Décrivez votre projet"
+              value={informations.message}
               onChange={(e) =>
                 setInformations((prec) => ({
                   ...prec,
-                  firstname: e.target.value,
+                  message: e.target.value,
                 }))
               }
-              type="text"
-              id="firstName"
-            />
-          </div>
-          <div>
-            <label htmlFor="name">
-              Nom <span>*</span>{" "}
-            </label>
-            <input
-              autoComplete="off"
-              value={informations.name}
-              onChange={(e) =>
-                setInformations((prec) => ({ ...prec, name: e.target.value }))
-              }
-              type="text"
-              id="name"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="tel">
-              Tel. <span>*</span>{" "}
-            </label>
-            <input
-              autoComplete="off"
-              value={informations.tel}
-              onChange={(e) =>
-                setInformations((prec) => ({ ...prec, tel: e.target.value }))
-              }
-              type="text"
-              id="tel"
-            />
-          </div>
-          <div>
-            <label htmlFor="mail">
-              Email <span>*</span>
-            </label>
-            <input
-              autoComplete="off"
-              value={informations.email}
-              onChange={(e) =>
-                setInformations((prec) => ({
-                  ...prec,
-                  email: e.target.value,
-                }))
-              }
-              type="email"
-              id="mail"
-            />
-          </div>
-
-          <div>
-            <label htmlFor="postalCode">
-              Code Postal <span>*</span>{" "}
-            </label>
-            <input
-              autoComplete="off"
-              value={informations.postalCode}
-              onChange={(e) =>
-                setInformations((prec) => ({
-                  ...prec,
-                  postalCode: e.target.value,
-                }))
-              }
-              type="text"
-              id="postalCode"
-            />
+              id="msg"
+            ></textarea>
           </div>
         </div>
-
-        <div className="right">
-          <textarea
-            autoComplete="off"
-            placeholder="Décrivez votre projet"
-            value={informations.message}
-            onChange={(e) =>
-              setInformations((prec) => ({
-                ...prec,
-                message: e.target.value,
-              }))
-            }
-            id="msg"
-          ></textarea>
-
-          <button type="submit">
-            <p>Envoyer</p>
-          </button>
-        </div>
+        <button type="submit">
+          <p>Envoyer</p>
+        </button>
       </form>
     </div>
   );
