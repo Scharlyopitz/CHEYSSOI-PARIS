@@ -180,21 +180,90 @@ a {
 #demarrermonprojet .formulaire {
   display: flex;
   flex-direction: column;
+  gap: 10vh;
   width: 100%;
 }
-#demarrermonprojet .formulaire .formSection {
+#demarrermonprojet .formulaire input {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff;
+  font-weight: 300;
+}
+#demarrermonprojet .formulaire form {
   display: flex;
-  justify-content: center;
-  gap: 10vw;
+  gap: 3vw;
 }
-#demarrermonprojet .formulaire .formSection div {
-  width: 100%;
-}
-#demarrermonprojet .formulaire .formSection:nth-child(1) div, #demarrermonprojet .formulaire .formSection:nth-child(4) div {
+#demarrermonprojet .formulaire form .left,
+#demarrermonprojet .formulaire form .right {
   width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
 }
-#demarrermonprojet .formulaire .formSection input {
+#demarrermonprojet .formulaire .right {
+  display: flex;
+  flex-direction: column;
+}
+#demarrermonprojet .formulaire .right textarea {
   width: 100%;
+  height: 100%;
+  resize: none;
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  border-bottom: 2px solid #ffffff;
+  color: #ffffff;
+}
+#demarrermonprojet .formulaire .right textarea::-moz-placeholder {
+  color: #ffffff;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+#demarrermonprojet .formulaire .right textarea::placeholder {
+  color: #ffffff;
+  font-weight: 200;
+  text-transform: uppercase;
+}
+#demarrermonprojet .formulaire span {
+  color: #ff0000;
+}
+#demarrermonprojet .formulaire button {
+  position: relative;
+  text-transform: uppercase;
+  width: 50%;
+  margin: auto;
+  font-size: 20px;
+  color: #ffffff;
+  background: transparent;
+  padding: 15px 40px;
+  border: 2px solid #ffffff;
+  border-radius: 25px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+#demarrermonprojet .formulaire button:hover {
+  cursor: pointer;
+}
+#demarrermonprojet .formulaire button:hover::after {
+  transform: translateY(0%);
+}
+#demarrermonprojet .formulaire button::after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateY(100%);
+  background-color: #000000;
+  transition: 0.3s;
 }
 
 #galerie {

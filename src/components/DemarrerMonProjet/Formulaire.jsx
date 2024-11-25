@@ -101,7 +101,7 @@ export default function Formulaire() {
       <h2>Démarrer mon projet</h2>
 
       <form onSubmit={(e) => sendEmail(e)}>
-        <div className="formSection">
+        <div className="left">
           <div>
             <label htmlFor="surface">
               Surface <span>*</span>{" "}
@@ -119,8 +119,7 @@ export default function Formulaire() {
               id="surface"
             />
           </div>
-        </div>
-        <div className="formSection">
+
           <div>
             <label htmlFor="firstName">
               Prénom <span>*</span>{" "}
@@ -152,9 +151,7 @@ export default function Formulaire() {
               id="name"
             />
           </div>
-        </div>
 
-        <div className="formSection">
           <div>
             <label htmlFor="tel">
               Tel. <span>*</span>{" "}
@@ -177,14 +174,16 @@ export default function Formulaire() {
               autoComplete="off"
               value={informations.email}
               onChange={(e) =>
-                setInformations((prec) => ({ ...prec, email: e.target.value }))
+                setInformations((prec) => ({
+                  ...prec,
+                  email: e.target.value,
+                }))
               }
               type="email"
               id="mail"
             />
           </div>
-        </div>
-        <div className="formSection">
+
           <div>
             <label htmlFor="postalCode">
               Code Postal <span>*</span>{" "}
@@ -204,26 +203,24 @@ export default function Formulaire() {
           </div>
         </div>
 
-        <div className="formSection">
-          <div>
-            <textarea
-              autoComplete="off"
-              placeholder="Décrivez votre projet"
-              value={informations.message}
-              onChange={(e) =>
-                setInformations((prec) => ({
-                  ...prec,
-                  message: e.target.value,
-                }))
-              }
-              id="msg"
-            ></textarea>
-          </div>
-        </div>
+        <div className="right">
+          <textarea
+            autoComplete="off"
+            placeholder="Décrivez votre projet"
+            value={informations.message}
+            onChange={(e) =>
+              setInformations((prec) => ({
+                ...prec,
+                message: e.target.value,
+              }))
+            }
+            id="msg"
+          ></textarea>
 
-        <button type="submit">
-          <p>Envoyer</p>
-        </button>
+          <button type="submit">
+            <p>Envoyer</p>
+          </button>
+        </div>
       </form>
     </div>
   );

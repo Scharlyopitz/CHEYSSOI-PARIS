@@ -4,29 +4,98 @@
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+
   .formulaire {
     display: flex;
     flex-direction: column;
+    gap: 10vh;
     width: 100%;
 
-    .formSection {
+    input {
+      width: 100%;
+      font-family: "Poppins", sans-serif;
+      background-color: transparent;
+      border: none;
+      outline: none;
+      border-bottom: 2px solid $White;
+      color: $White;
+      font-weight: 300;
+    }
+
+    form {
       display: flex;
-      justify-content: center;
-      gap: 10vw;
+      gap: 3vw;
 
-      div {
-        width: 100%;
+      .left,
+      .right {
+        width: 50%;
+        display: flex;
+        flex-direction: column;
+        gap: 2vh;
       }
+    }
 
-      &:nth-child(1),
-      &:nth-child(4) {
-        div {
-          width: 50%;
+    .right {
+      display: flex;
+      flex-direction: column;
+
+      textarea {
+        width: 100%;
+        height: 100%;
+        resize: none;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        background-color: transparent;
+        border: none;
+        outline: none;
+        border-bottom: 2px solid $White;
+        color: $White;
+
+        &::placeholder {
+          color: $White;
+          font-weight: 200;
+          text-transform: uppercase;
+        }
+      }
+    }
+
+    span {
+      color: $Red;
+    }
+
+    button {
+      position: relative;
+      text-transform: uppercase;
+      width: 50%;
+      margin: auto;
+      font-size: 20px;
+      color: #ffffff;
+      background: transparent;
+      padding: 15px 40px;
+      border: 2px solid #ffffff;
+      border-radius: 25px;
+      overflow: hidden;
+      transition: 0.3s;
+
+      &:hover {
+        cursor: pointer;
+
+        &::after {
+          transform: translateY(0%);
         }
       }
 
-      input {
+      &::after {
+        content: "";
+        position: absolute;
+        z-index: -1;
+        bottom: 0;
+        left: 0;
         width: 100%;
+        height: 100%;
+        transform: translateY(100%);
+        background-color: $Black;
+        transition: 0.3s;
       }
     }
   }
