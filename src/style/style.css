@@ -338,7 +338,6 @@ a {
 }
 #services button:hover {
   cursor: pointer;
-  padding: 15px 50px;
 }
 #services button:hover::after {
   transform: translateY(0);
