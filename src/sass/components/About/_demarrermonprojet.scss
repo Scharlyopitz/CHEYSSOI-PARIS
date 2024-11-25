@@ -1,9 +1,33 @@
 #demarrermonprojet {
+  font-family: "Poppins", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
-  // .formulaire{
+  .formulaire {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 
-  // }
+    .formSection {
+      display: flex;
+      justify-content: center;
+      gap: 10vw;
+
+      div {
+        width: 100%;
+      }
+
+      &:nth-child(1),
+      &:nth-child(4) {
+        div {
+          width: 50%;
+        }
+      }
+
+      input {
+        width: 100%;
+      }
+    }
+  }
 }

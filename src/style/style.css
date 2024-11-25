@@ -171,10 +171,30 @@ a {
 }
 
 #demarrermonprojet {
+  font-family: "Poppins", sans-serif;
   display: flex;
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+}
+#demarrermonprojet .formulaire {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+#demarrermonprojet .formulaire .formSection {
+  display: flex;
+  justify-content: center;
+  gap: 10vw;
+}
+#demarrermonprojet .formulaire .formSection div {
+  width: 100%;
+}
+#demarrermonprojet .formulaire .formSection:nth-child(1) div, #demarrermonprojet .formulaire .formSection:nth-child(4) div {
+  width: 50%;
+}
+#demarrermonprojet .formulaire .formSection input {
+  width: 100%;
 }
 
 #galerie {
