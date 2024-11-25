@@ -104,23 +104,19 @@ export default function Formulaire() {
         <div className="middle">
           <div className="left">
             <div>
-              <label htmlFor="surface">
-                Surface <span>*</span>{" "}
+              <label htmlFor="name">
+                Nom <span>*</span>{" "}
               </label>
               <input
                 autoComplete="off"
-                value={informations.surface}
+                value={informations.name}
                 onChange={(e) =>
-                  setInformations((prec) => ({
-                    ...prec,
-                    surface: e.target.value,
-                  }))
+                  setInformations((prec) => ({ ...prec, name: e.target.value }))
                 }
                 type="text"
-                id="surface"
+                id="name"
               />
             </div>
-
             <div>
               <label htmlFor="firstName">
                 Prénom <span>*</span>{" "}
@@ -138,18 +134,22 @@ export default function Formulaire() {
                 id="firstName"
               />
             </div>
+
             <div>
-              <label htmlFor="name">
-                Nom <span>*</span>{" "}
+              <label htmlFor="surface">
+                Surface <span>*</span>{" "}
               </label>
               <input
                 autoComplete="off"
-                value={informations.name}
+                value={informations.surface}
                 onChange={(e) =>
-                  setInformations((prec) => ({ ...prec, name: e.target.value }))
+                  setInformations((prec) => ({
+                    ...prec,
+                    surface: e.target.value,
+                  }))
                 }
                 type="text"
-                id="name"
+                id="surface"
               />
             </div>
 

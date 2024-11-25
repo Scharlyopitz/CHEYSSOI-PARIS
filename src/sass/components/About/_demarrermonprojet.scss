@@ -27,20 +27,6 @@
       flex-direction: column;
       gap: 3vw;
 
-      ::-webkit-scrollbar {
-        width: 5px;
-      }
-
-      ::-webkit-scrollbar-thumb {
-        background: $White;
-        border-radius: 99999px;
-      }
-
-      ::-webkit-scrollbar-thumb:hover {
-        background: $White;
-        cursor: pointer;
-      }
-
       .middle {
         display: flex;
         gap: 3vw;
@@ -64,7 +50,7 @@
         font-family: "Poppins", sans-serif;
         font-weight: 300;
         background-color: transparent;
-        border: 2px solid $White;
+        border: 1px solid $White;
         border-radius: 10px;
         outline: none;
         color: $White;
@@ -72,6 +58,7 @@
         &::placeholder {
           color: $White;
           font-weight: 200;
+          font-size: 20px;
           text-transform: uppercase;
         }
       }

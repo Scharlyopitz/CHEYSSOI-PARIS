@@ -198,17 +198,6 @@ a {
   flex-direction: column;
   gap: 3vw;
 }
-#demarrermonprojet .formulaire form ::-webkit-scrollbar {
-  width: 5px;
-}
-#demarrermonprojet .formulaire form ::-webkit-scrollbar-thumb {
-  background: #ffffff;
-  border-radius: 99999px;
-}
-#demarrermonprojet .formulaire form ::-webkit-scrollbar-thumb:hover {
-  background: #ffffff;
-  cursor: pointer;
-}
 #demarrermonprojet .formulaire form .middle {
   display: flex;
   gap: 3vw;
@@ -228,7 +217,7 @@ a {
   font-family: "Poppins", sans-serif;
   font-weight: 300;
   background-color: transparent;
-  border: 2px solid #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 10px;
   outline: none;
   color: #ffffff;
@@ -236,11 +225,13 @@ a {
 #demarrermonprojet .formulaire .right textarea::-moz-placeholder {
   color: #ffffff;
   font-weight: 200;
+  font-size: 20px;
   text-transform: uppercase;
 }
 #demarrermonprojet .formulaire .right textarea::placeholder {
   color: #ffffff;
   font-weight: 200;
+  font-size: 20px;
   text-transform: uppercase;
 }
 #demarrermonprojet .formulaire span {
