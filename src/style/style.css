@@ -219,7 +219,7 @@ a {
   white-space: nowrap;
 }
 #homeSection .txtContainer h1::after {
-  content: "Designer d'espace hétique";
+  content: "Designers d’espaces éthiques";
   position: absolute;
   bottom: -10%;
   left: 50%;
