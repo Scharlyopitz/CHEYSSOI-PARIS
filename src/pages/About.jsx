@@ -9,32 +9,38 @@ import TextSeparation from "../components/Apropos/TextSeparation";
 import Formulaire from "../components/DemarrerMonProjet/Formulaire";
 import { NavLink } from "react-router-dom";
 
+import { faInstagram, faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 export default function About() {
   const [activeSection, setActiveSection] = useState("homeSection");
 
   return (
-    <main id="About">
-      <Navbar activeSection={activeSection} />
-      <BackgroundImage />
-      <Observer setActiveSection={setActiveSection}>
-        <HomeSection />
-      </Observer>
-      <Observer setActiveSection={setActiveSection}>
-        <Apropos />
-      </Observer>
-      <Observer setActiveSection={setActiveSection}>
-        <Services />
-      </Observer>
-      <Observer setActiveSection={setActiveSection}>
-        <Galerie />
-      </Observer>
-      <Observer setActiveSection={setActiveSection}>
-        <DemarrerMonProjet />
-      </Observer>
-      <Observer setActiveSection={setActiveSection}>
-        <Ebook />
-      </Observer>
-    </main>
+    <>
+      <main id="About">
+        <Navbar activeSection={activeSection} />
+        <BackgroundImage />
+        <Observer setActiveSection={setActiveSection}>
+          <HomeSection />
+        </Observer>
+        <Observer setActiveSection={setActiveSection}>
+          <Apropos />
+        </Observer>
+        <Observer setActiveSection={setActiveSection}>
+          <Services />
+        </Observer>
+        <Observer setActiveSection={setActiveSection}>
+          <Galerie />
+        </Observer>
+        <Observer setActiveSection={setActiveSection}>
+          <DemarrerMonProjet />
+        </Observer>
+        <Observer setActiveSection={setActiveSection}>
+          <Ebook />
+        </Observer>
+      </main>
+      <Footer />
+    </>
   );
 }
 
@@ -152,5 +158,42 @@ cqx1wG_-3ywsVy2W5DKAo3ZXhTyPTe47YF9gnxfkqJg5oyp4EkpPHEq9Q2HccGUYdV2yu5oU4kazHDdD
         Découvrir notre Ebook
       </NavLink>
     </section>
+  );
+}
+
+function Footer() {
+  const generalInformations = [
+    "+33 (0)7 81 16 56 22",
+    "CHEYSSOIPARIS@GMAIL.COM",
+  ];
+
+  const socialMedias = [
+    {
+      icon: <FontAwesomeIcon icon={faFacebookF} style={{ color: "#B197FC" }} />,
+      to: `https://www.facebook.com/CheyssoiParis/`,
+    },
+    {
+      icon: <FontAwesomeIcon icon={faInstagram} style={{ color: "#74C0FC" }} />,
+      to: `https://www.instagram.com/cheyssoiparis/`,
+    },
+  ];
+
+  return (
+    <footer>
+      <div>
+        {generalInformations.map((info, i) => {
+          return <div key={i}>{info}</div>;
+        })}
+      </div>
+      <div>
+        {socialMedias.map((social, i) => {
+          return (
+            <NavLink key={i} target="_blank" to={social.to}>
+              {social.icon}
+            </NavLink>
+          );
+        })}
+      </div>
+    </footer>
   );
 }

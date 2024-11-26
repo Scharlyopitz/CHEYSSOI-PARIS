@@ -330,6 +330,10 @@ a {
   transition: 0.3s;
 }
 
+footer {
+  background: #000000;
+}
+
 #galerie {
   background: #ffffff;
 }
