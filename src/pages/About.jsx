@@ -169,23 +169,30 @@ function Footer() {
 
   const socialMedias = [
     {
-      icon: <FontAwesomeIcon icon={faFacebookF} style={{ color: "#B197FC" }} />,
+      icon: <FontAwesomeIcon icon={faFacebookF} style={{ color: "#000000" }} />,
       to: `https://www.facebook.com/CheyssoiParis/`,
     },
     {
-      icon: <FontAwesomeIcon icon={faInstagram} style={{ color: "#74C0FC" }} />,
+      icon: (
+        <FontAwesomeIcon
+          icon={faInstagram}
+          style={{
+            color: "#000000",
+          }}
+        />
+      ),
       to: `https://www.instagram.com/cheyssoiparis/`,
     },
   ];
 
   return (
     <footer>
-      <div>
+      <div className="general">
         {generalInformations.map((info, i) => {
           return <div key={i}>{info}</div>;
         })}
       </div>
-      <div>
+      <div className="social">
         {socialMedias.map((social, i) => {
           return (
             <NavLink key={i} target="_blank" to={social.to}>

@@ -331,7 +331,30 @@ a {
 }
 
 footer {
-  background: #000000;
+  font-family: "Poppins", sans-serif;
+  padding: 10vh 10vw;
+  font-weight: 300;
+  display: flex;
+  gap: 3vh;
+  flex-direction: column;
+  align-items: center;
+  background: #ffffff;
+  color: #000000;
+}
+footer .general,
+footer .social {
+  text-transform: lowercase;
+  display: flex;
+  gap: 30px;
+}
+footer .social svg {
+  padding: 2px 4px;
+  border-radius: 10px;
+  font-size: 40px;
+  transition: 0.2s;
+}
+footer .social svg:hover {
+  filter: contrast(0.1);
 }
 
 #galerie {
