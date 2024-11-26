@@ -291,6 +291,10 @@ a {
   transition: 0.3s;
 }
 
+#ebook {
+  background: #ffffff;
+}
+
 #galerie {
   background: #ffffff;
 }

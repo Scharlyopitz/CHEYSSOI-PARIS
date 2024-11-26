@@ -30,6 +30,9 @@ export default function About() {
       <Observer setActiveSection={setActiveSection}>
         <DemarrerMonProjet />
       </Observer>
+      <Observer setActiveSection={setActiveSection}>
+        <Ebook />
+      </Observer>
     </main>
   );
 }
@@ -121,4 +124,8 @@ function DemarrerMonProjet() {
       <Formulaire />
     </section>
   );
+}
+
+function Ebook() {
+  return <section id="ebook"></section>;
 }
