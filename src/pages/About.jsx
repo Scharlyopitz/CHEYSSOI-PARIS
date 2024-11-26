@@ -116,7 +116,7 @@ temps.`,
           return <p key={i}>{t}</p>;
         })}
       </div>
-      <button>nous contacter</button>
+      <a href="#demarrermonprojet">nous contacter</a>
     </section>
   );
 }
