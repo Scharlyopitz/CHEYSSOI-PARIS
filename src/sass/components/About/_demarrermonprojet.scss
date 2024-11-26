@@ -4,12 +4,18 @@
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  padding: 20vh 10vh;
 
   .formulaire {
     display: flex;
     flex-direction: column;
     gap: 10vh;
     width: 100%;
+
+    input,
+    textarea {
+      font-size: 18px;
+    }
 
     input {
       width: 100%;
@@ -23,9 +29,26 @@
     }
 
     form {
+      position: relative;
       display: flex;
       flex-direction: column;
       gap: 3vw;
+
+      .message {
+        color: $White;
+        position: absolute;
+        background: black;
+        padding: 1vh 15px;
+        border-radius: 5px;
+        width: 48.5%;
+        top: -6vh;
+        left: 0;
+        backdrop-filter: blur(15px);
+        background: rgba(72, 72, 72, 0.55);
+        text-transform: none;
+        font-weight: 200;
+        transition: 0.2s;
+      }
 
       .middle {
         display: flex;

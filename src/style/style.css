@@ -176,12 +176,17 @@ a {
   align-items: center;
   justify-content: center;
   text-transform: uppercase;
+  padding: 20vh 10vh;
 }
 #demarrermonprojet .formulaire {
   display: flex;
   flex-direction: column;
   gap: 10vh;
   width: 100%;
+}
+#demarrermonprojet .formulaire input,
+#demarrermonprojet .formulaire textarea {
+  font-size: 18px;
 }
 #demarrermonprojet .formulaire input {
   width: 100%;
@@ -194,9 +199,26 @@ a {
   font-weight: 300;
 }
 #demarrermonprojet .formulaire form {
+  position: relative;
   display: flex;
   flex-direction: column;
   gap: 3vw;
+}
+#demarrermonprojet .formulaire form .message {
+  color: #ffffff;
+  position: absolute;
+  background: black;
+  padding: 1vh 15px;
+  border-radius: 5px;
+  width: 48.5%;
+  top: -6vh;
+  left: 0;
+  -webkit-backdrop-filter: blur(15px);
+          backdrop-filter: blur(15px);
+  background: rgba(72, 72, 72, 0.55);
+  text-transform: none;
+  font-weight: 200;
+  transition: 0.2s;
 }
 #demarrermonprojet .formulaire form .middle {
   display: flex;
