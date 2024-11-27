@@ -5,10 +5,11 @@
   .formulaire {
     margin-left: 50vw;
     h2 {
+      //   font-family: "Cormorant Garamond", serif;
       text-transform: uppercase;
-
+      color: $OrangeRed;
       font-size: 40px;
-      font-weight: 500;
+      font-weight: bold;
     }
   }
 }
