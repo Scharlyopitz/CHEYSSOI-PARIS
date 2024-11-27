@@ -148,7 +148,7 @@ function Nom({ informations, setInformations }) {
         Nom <span>*</span>{" "}
       </label>
       <input
-        placeholder="Nom"
+        placeholder="Votre Nom"
         autoComplete="off"
         value={informations.name}
         onChange={(e) =>
@@ -168,7 +168,7 @@ function Prenom({ informations, setInformations }) {
         Prénom <span>*</span>{" "}
       </label>
       <input
-        placeholder="Prénom"
+        placeholder="Votre Prénom"
         autoComplete="off"
         value={informations.firstname}
         onChange={(e) =>
@@ -191,7 +191,7 @@ function Surface({ informations, setInformations }) {
         Surface <span>*</span>{" "}
       </label>
       <input
-        placeholder="Surface en m²"
+        placeholder="La Surface en m²"
         autoComplete="off"
         value={informations.surface}
         onChange={(e) =>
@@ -214,7 +214,7 @@ function Telephone({ informations, setInformations }) {
         Tel. <span>*</span>{" "}
       </label>
       <input
-        placeholder="Téléphone"
+        placeholder="Votre Téléphone"
         maxLength={10}
         autoComplete="off"
         value={informations.tel}
@@ -235,7 +235,7 @@ function Mail({ informations, setInformations }) {
         Email <span>*</span>
       </label>
       <input
-        placeholder="Email"
+        placeholder="Votre Email"
         autoComplete="off"
         value={informations.email}
         onChange={(e) =>
@@ -258,7 +258,7 @@ function CodePostal({ informations, setInformations }) {
         Code Postal <span>*</span>{" "}
       </label>
       <input
-        placeholder="Code Postal"
+        placeholder="Votre Code Postal"
         maxLength={5}
         autoComplete="off"
         value={informations.postalCode}
