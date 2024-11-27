@@ -276,6 +276,9 @@ function CodePostal({ informations, setInformations }) {
 function RigthPart({ informations, setInformations }) {
   return (
     <div className="right">
+      <label htmlFor="msg">
+        Message <span>*</span>{" "}
+      </label>
       <textarea
         autoComplete="off"
         placeholder="Décrivez votre projet"
