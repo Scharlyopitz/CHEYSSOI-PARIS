@@ -412,6 +412,7 @@ footer .general {
   align-items: center;
 }
 #demarrerprojet .leftPart .title h2 {
+  font-weight: 400;
   font-size: 40px;
   color: #ff0000;
 }
