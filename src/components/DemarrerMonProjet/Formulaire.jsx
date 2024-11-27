@@ -99,6 +99,10 @@ export default function Formulaire() {
   return (
     <div className="formulaire">
       <form onSubmit={(e) => sendEmail(e)}>
+        <div className="title">
+          <span>Travaillons ensemble.</span>
+          <h2>Démarrer mon projet</h2>
+        </div>
         <span
           className="message"
           style={{

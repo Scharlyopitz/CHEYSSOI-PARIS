@@ -1,40 +1,50 @@
 #demarrerprojet {
-  display: flex;
-  flex-direction: column;
-  justify-content: end;
   background: $White;
   color: $Black;
+  min-height: 100vh;
+  padding: 10vh 0 2vh;
 
   .leftPart {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     align-items: start;
-    position: absolute;
+    position: fixed;
     top: 50%;
     left: 25%;
     transform: translate(-50%, -50%);
     height: 65%;
+    width: 25%;
 
     .button {
+      overflow: hidden;
+      display: flex;
+      gap: 5px;
+
+      div {
+        transform: translateX(-13px);
+        transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+
+      svg {
+        padding-top: 13%;
+        overflow: hidden;
+        font-size: 12px;
+        path {
+          transform: translateX(-100%);
+          transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+      }
+
       &:hover {
         cursor: pointer;
-      }
-    }
 
-    .title {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-
-      h2 {
-        font-weight: 400;
-        font-size: 40px;
-        color: $Red;
-      }
-
-      span {
-        font-weight: 300;
+        div {
+          transform: translateX(0);
+        }
+        svg path {
+          transform: translateX(0);
+        }
       }
     }
 
@@ -52,10 +62,25 @@
 
   .formulaire {
     display: flex;
-    align-items: center;
     width: 50%;
-    height: 100vh;
     margin-left: 50vw;
+
+    .title {
+      display: flex;
+      flex-direction: column;
+
+      h2 {
+        margin: 5vh 0;
+        text-align: start;
+        font-weight: 400;
+        font-size: 40px;
+        color: $Red;
+      }
+
+      span {
+        font-weight: 300;
+      }
+    }
 
     .message {
       padding: 0 0 5px 5px;
@@ -94,7 +119,7 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      gap: 3vh;
+      gap: 20px;
 
       span {
         color: $Red;
@@ -111,7 +136,7 @@
       align-items: center;
       gap: 10px;
       position: relative;
-      margin: 2vh auto 0;
+      margin: 20px auto 0;
       background: transparent;
       padding: 5px 20px;
       border: none;

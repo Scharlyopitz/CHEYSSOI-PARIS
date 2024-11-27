@@ -2,6 +2,8 @@ import React from "react";
 import Formulaire from "../components/DemarrerMonProjet/Formulaire";
 import Socials from "../components/Footer/Socials";
 import { useNavigate } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function DemarrerProjet() {
   return (
@@ -16,7 +18,6 @@ function LeftPart() {
   return (
     <div className="leftPart">
       <Button />
-      <Title />
       <Socials />
     </div>
   );
@@ -30,7 +31,8 @@ function LeftPart() {
 
     return (
       <div className="button" onClick={() => handleGoBack()}>
-        Back
+        <FontAwesomeIcon icon={faChevronLeft} style={{ color: "#000000" }} />
+        <div>Back</div>
       </div>
     );
   }
