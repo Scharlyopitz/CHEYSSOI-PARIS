@@ -12,6 +12,10 @@ nav {
   padding: 1vh 1vw;
   border-radius: 20px;
 
+  a {
+    color: $White;
+  }
+
   .LogoContainer {
     overflow: hidden;
     position: relative;
@@ -39,7 +43,6 @@ nav {
     justify-content: space-between;
     margin-left: 5vw;
     text-transform: uppercase;
-    font-family: "Poppins", sans-serif;
     font-size: 14px;
     font-weight: 300;
 
@@ -49,18 +52,6 @@ nav {
 
       &:hover {
         cursor: pointer;
-      }
-
-      .background {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        border: 1px solid $White;
-        border-radius: 99999px;
-        z-index: -1;
-        pointer-events: none;
       }
     }
   }

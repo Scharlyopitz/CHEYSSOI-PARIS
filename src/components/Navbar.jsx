@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 import LogoCheyssoi from "/Logo.png";
 import { motion as m, useMotionValueEvent, useScroll } from "framer-motion";
 
-export default function Navbar({ activeSection }) {
+export default function Navbar() {
   const { scrollY } = useScroll();
 
   const [show, setShow] = useState(false);
@@ -41,7 +41,7 @@ export default function Navbar({ activeSection }) {
       variants={navAnimation}
     >
       <Logo />
-      <Menu activeSection={activeSection} />
+      <Menu />
     </m.nav>
   );
 }
@@ -54,27 +54,27 @@ function Logo() {
   );
 }
 
-function Menu({ activeSection }) {
+function Menu() {
   const links = [
     {
       name: "à propos",
-      to: "#apropos",
+      to: "apropos",
     },
     {
       name: "services",
-      to: "#services",
+      to: "services",
     },
     {
       name: "galerie",
-      to: "#galerie",
+      to: "galerie",
     },
     {
       name: "demarrer mon projet",
-      to: "#demarrermonprojet",
+      to: "demarrermonprojet",
     },
     {
       name: "ebook",
-      to: "#ebook",
+      to: "ebook",
     },
   ];
 
@@ -83,21 +83,9 @@ function Menu({ activeSection }) {
       <div className="menu">
         {links.map((link, i) => {
           return (
-            <div
-              className="link"
-              key={i}
-              onClick={() => (window.location.href = link.to)}
-            >
-              {`#${activeSection}` === link.to && (
-                <m.span
-                  layoutId="activeBg"
-                  className="background"
-                  transition={{ type: "spring", bounce: 0.1, duration: 0.6 }}
-                ></m.span>
-              )}
-
+            <NavLink key={i} className={"link"} to={link.to}>
               {link.name}
-            </div>
+            </NavLink>
           );
         })}
       </div>

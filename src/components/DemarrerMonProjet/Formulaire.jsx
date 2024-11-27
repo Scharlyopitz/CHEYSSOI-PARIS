@@ -1,5 +1,7 @@
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Formulaire() {
   const [informations, setInformations] = useState({
@@ -96,14 +98,12 @@ export default function Formulaire() {
 
   return (
     <div className="formulaire">
-      <h2>Démarrer mon projet</h2>
-
       <form onSubmit={(e) => sendEmail(e)}>
         <span
           className="message"
           style={{
             opacity: messageOff ? 1 : 0,
-            background: error ? "#c642428c" : "#43d35f8c",
+            color: error ? "#ff0000" : "#43d35f8c",
           }}
         >
           {error ? ErrorMsg : SuccesMsg}
@@ -134,6 +134,7 @@ export default function Formulaire() {
         </div>
         <button type="submit">
           <p>Envoyer</p>
+          <FontAwesomeIcon icon={faChevronRight} />
         </button>
       </form>
     </div>
@@ -147,6 +148,7 @@ function Nom({ informations, setInformations }) {
         Nom <span>*</span>{" "}
       </label>
       <input
+        placeholder="Nom"
         autoComplete="off"
         value={informations.name}
         onChange={(e) =>
@@ -166,6 +168,7 @@ function Prenom({ informations, setInformations }) {
         Prénom <span>*</span>{" "}
       </label>
       <input
+        placeholder="Prénom"
         autoComplete="off"
         value={informations.firstname}
         onChange={(e) =>
@@ -185,9 +188,10 @@ function Surface({ informations, setInformations }) {
   return (
     <div>
       <label htmlFor="surface">
-        Surface (m²)<span>*</span>{" "}
+        Surface <span>*</span>{" "}
       </label>
       <input
+        placeholder="Surface en m²"
         autoComplete="off"
         value={informations.surface}
         onChange={(e) =>
@@ -210,6 +214,7 @@ function Telephone({ informations, setInformations }) {
         Tel. <span>*</span>{" "}
       </label>
       <input
+        placeholder="Téléphone"
         maxLength={10}
         autoComplete="off"
         value={informations.tel}
@@ -230,6 +235,7 @@ function Mail({ informations, setInformations }) {
         Email <span>*</span>
       </label>
       <input
+        placeholder="Email"
         autoComplete="off"
         value={informations.email}
         onChange={(e) =>
@@ -252,6 +258,7 @@ function CodePostal({ informations, setInformations }) {
         Code Postal <span>*</span>{" "}
       </label>
       <input
+        placeholder="Code Postal"
         maxLength={5}
         autoComplete="off"
         value={informations.postalCode}

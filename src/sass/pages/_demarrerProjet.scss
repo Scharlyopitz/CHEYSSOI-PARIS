@@ -1,0 +1,147 @@
+#demarrerprojet {
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  background: $White;
+  color: $Black;
+
+  .leftPart {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: start;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    transform: translate(-50%, -50%);
+    height: 65%;
+
+    .button {
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    .title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      h2 {
+        font-size: 40px;
+        color: $Red;
+      }
+
+      span {
+        font-weight: 300;
+      }
+    }
+
+    .socials {
+      svg {
+        font-size: 20px;
+        transition: 0.2s;
+
+        &:hover {
+          filter: contrast(0.1);
+        }
+      }
+    }
+  }
+
+  .formulaire {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100vh;
+    margin-left: 50vw;
+
+    .message {
+      padding: 0 0 5px 5px;
+      font-size: 13px;
+      transition: 0.2s;
+    }
+
+    label {
+      padding-left: 5px;
+      font-size: 13px;
+    }
+
+    input,
+    textarea {
+      border: none;
+      background-color: transparent;
+      border-bottom: 2px solid $Grey;
+      outline: none;
+      resize: none;
+      font-size: 15px;
+      padding: 5px;
+      transition: 0.2s;
+
+      &:focus {
+        border-bottom: 2px solid $Black;
+      }
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+      width: 80%;
+    }
+
+    .middle {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 3vh;
+
+      span {
+        color: $Red;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+      margin: 2vh auto 0;
+      background: transparent;
+      padding: 5px 20px;
+      border: none;
+      overflow: hidden;
+
+      p {
+        font-size: 15px;
+        font-weight: 300;
+      }
+
+      &,
+      svg {
+        transition: 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+      }
+
+      svg {
+        color: $Black;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        &,
+        svg {
+          filter: contrast(0.3);
+        }
+
+        svg {
+          transform: translateX(5px);
+        }
+      }
+    }
+  }
+}

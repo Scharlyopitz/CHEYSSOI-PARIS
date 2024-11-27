@@ -2,16 +2,15 @@
 @import "../sass/base/fonts";
 @import "../sass/base/reset";
 
-@import "../sass/components/About/apropos";
-@import "../sass/components/About/backgroudnImage";
-@import "../sass/components/About/demarrermonprojet";
-@import "../sass/components/About/ebook";
-@import "../sass/components/About/footer";
-@import "../sass/components/About/galerie";
-@import "../sass/components/About/homeSection";
-@import "../sass/components/About/services";
+@import "../sass/components/socials";
 @import "../sass/components/navbar";
 
-@import "../sass/pages/home";
-@import "../sass/pages/about";
-@import "../sass/pages/contact";
+@import "../sass/pages/Home/apropos";
+@import "../sass/pages/Home/backgroudnImage";
+@import "../sass/pages/Home/ebook";
+@import "../sass/pages/Home/footer";
+@import "../sass/pages/Home/galerie";
+@import "../sass/pages/Home/homeSection";
+@import "../sass/pages/Home/services";
+
+@import "../sass/pages/demarrerProjet";

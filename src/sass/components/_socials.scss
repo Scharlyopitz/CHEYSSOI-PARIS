@@ -1,0 +1,16 @@
+.socials {
+  text-transform: lowercase;
+  display: flex;
+  gap: 30px;
+
+  svg {
+    padding: 2px 4px;
+    border-radius: 10px;
+    font-size: 40px;
+    transition: 0.2s;
+
+    &:hover {
+      filter: contrast(0.1);
+    }
+  }
+}
