@@ -109,11 +109,25 @@ export default function Formulaire() {
           {error ? ErrorMsg : SuccesMsg}
         </span>
         <div className="middle">
-          <LeftPart
+          <Nom informations={informations} setInformations={setInformations} />
+          <Prenom
             informations={informations}
             setInformations={setInformations}
           />
-          <RigthPart
+          <Surface
+            informations={informations}
+            setInformations={setInformations}
+          />
+          <Telephone
+            informations={informations}
+            setInformations={setInformations}
+          />
+          <Mail informations={informations} setInformations={setInformations} />
+          <CodePostal
+            informations={informations}
+            setInformations={setInformations}
+          />
+          <Message
             informations={informations}
             setInformations={setInformations}
           />
@@ -122,25 +136,6 @@ export default function Formulaire() {
           <p>Envoyer</p>
         </button>
       </form>
-    </div>
-  );
-}
-
-function LeftPart({ informations, setInformations }) {
-  return (
-    <div className="left">
-      <Nom informations={informations} setInformations={setInformations} />
-      <Prenom informations={informations} setInformations={setInformations} />
-      <Surface informations={informations} setInformations={setInformations} />
-      <Telephone
-        informations={informations}
-        setInformations={setInformations}
-      />
-      <Mail informations={informations} setInformations={setInformations} />
-      <CodePostal
-        informations={informations}
-        setInformations={setInformations}
-      />
     </div>
   );
 }
@@ -273,9 +268,9 @@ function CodePostal({ informations, setInformations }) {
   );
 }
 
-function RigthPart({ informations, setInformations }) {
+function Message({ informations, setInformations }) {
   return (
-    <div className="right">
+    <div>
       <label htmlFor="msg">
         Message <span>*</span>{" "}
       </label>
