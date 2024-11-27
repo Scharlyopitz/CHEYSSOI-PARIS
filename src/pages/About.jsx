@@ -167,9 +167,11 @@ function Footer() {
     "CHEYSSOIPARIS@GMAIL.COM",
   ];
 
+  const color = "#000000";
+
   const socialMedias = [
     {
-      icon: <FontAwesomeIcon icon={faFacebookF} style={{ color: "#000000" }} />,
+      icon: <FontAwesomeIcon icon={faFacebookF} style={{ color: color }} />,
       to: `https://www.facebook.com/CheyssoiParis/`,
     },
     {
@@ -177,7 +179,7 @@ function Footer() {
         <FontAwesomeIcon
           icon={faInstagram}
           style={{
-            color: "#000000",
+            color: color,
           }}
         />
       ),
