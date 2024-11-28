@@ -62,11 +62,10 @@ a {
 }
 
 nav {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
-  z-index: 10;
   align-items: center;
   justify-content: space-between;
   display: flex;
@@ -128,6 +127,7 @@ nav .menu .link:hover::after {
 }
 
 #ConnextSection {
+  position: relative;
   background: #1a1a1a;
   display: flex;
   flex-direction: column;
@@ -372,6 +372,8 @@ footer .general {
   display: flex;
   align-items: center;
   justify-content: center;
+  position: sticky;
+  top: 0;
 }
 #homeSection .txtContainer {
   display: flex;

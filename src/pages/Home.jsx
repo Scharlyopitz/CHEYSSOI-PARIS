@@ -14,7 +14,6 @@ export default function Home() {
   return (
     <>
       <main id="Home">
-        <Navbar />
         <BackgroundImage />
         <HomeSection />
         <ConnectSection />
@@ -39,6 +38,7 @@ function BackgroundImage() {
 function HomeSection() {
   return (
     <section id="homeSection">
+      <Navbar />
       <div className="txtContainer">
         <h1>Cheyssoi Paris</h1>
       </div>
