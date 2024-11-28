@@ -7,7 +7,7 @@ import { useState } from "react";
 import TextSeparation from "../components/Apropos/TextSeparation";
 import { NavLink } from "react-router-dom";
 
-import Socials from "../components/Footer/Socials";
+import Socials from "../components/Socials";
 
 export default function Home() {
   return (

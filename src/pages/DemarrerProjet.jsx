@@ -1,6 +1,6 @@
 import React from "react";
 import Formulaire from "../components/DemarrerMonProjet/Formulaire";
-import Socials from "../components/Footer/Socials";
+import Socials from "../components/Socials";
 import { useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
@@ -35,15 +35,6 @@ function LeftPart() {
           <FontAwesomeIcon icon={faChevronLeft} style={{ color: "#000000" }} />
           <span>Back</span>
         </div>
-      </div>
-    );
-  }
-
-  function Title() {
-    return (
-      <div className="title">
-        <h2>Démarrer mon projet</h2>
-        <span>Travaillons ensemble.</span>
       </div>
     );
   }
