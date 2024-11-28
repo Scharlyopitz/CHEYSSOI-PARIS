@@ -31,8 +31,10 @@ function LeftPart() {
 
     return (
       <div className="button" onClick={() => handleGoBack()}>
-        <FontAwesomeIcon icon={faChevronLeft} style={{ color: "#000000" }} />
-        <div>Back</div>
+        <div>
+          <FontAwesomeIcon icon={faChevronLeft} style={{ color: "#000000" }} />
+          <span>Back</span>
+        </div>
       </div>
     );
   }

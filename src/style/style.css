@@ -405,29 +405,18 @@ footer .general {
 }
 #demarrerprojet .leftPart .button {
   overflow: hidden;
-  display: flex;
-  gap: 5px;
 }
 #demarrerprojet .leftPart .button div {
-  transform: translateX(-13px);
-  transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
-}
-#demarrerprojet .leftPart .button svg {
-  padding-top: 13%;
-  overflow: hidden;
-  font-size: 12px;
-}
-#demarrerprojet .leftPart .button svg path {
-  transform: translateX(-100%);
-  transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transform: translateX(-28%);
+  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
 }
 #demarrerprojet .leftPart .button:hover {
   cursor: pointer;
 }
 #demarrerprojet .leftPart .button:hover div {
-  transform: translateX(0);
-}
-#demarrerprojet .leftPart .button:hover svg path {
   transform: translateX(0);
 }
 #demarrerprojet .leftPart .socials svg {
@@ -522,10 +511,6 @@ footer .general {
 }
 #demarrerprojet .formulaire button:hover {
   cursor: pointer;
-}
-#demarrerprojet .formulaire button:hover,
-#demarrerprojet .formulaire button:hover svg {
-  filter: contrast(0.3);
 }
 #demarrerprojet .formulaire button:hover svg {
   transform: translateX(5px);
