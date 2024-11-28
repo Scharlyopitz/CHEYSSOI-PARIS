@@ -1,48 +1,13 @@
-import React, { useRef, useState } from "react";
 import { NavLink } from "react-router-dom";
 import LogoCheyssoi from "/Logo.png";
-import { motion as m, useMotionValueEvent, useScroll } from "framer-motion";
+import { motion as m } from "framer-motion";
 
 export default function Navbar() {
-  const { scrollY } = useScroll();
-
-  const [show, setShow] = useState(false);
-
-  useMotionValueEvent(
-    scrollY,
-    "change",
-    (latest) => {
-      if (latest > 200) {
-        setShow(true);
-      } else {
-        setShow(false);
-      }
-    },
-    [scrollY]
-  );
-
-  const navAnimation = {
-    initial: {
-      backdropFilter: "none",
-      background: "#00000000",
-      transition: { duration: 0.5 },
-    },
-    animate: {
-      backdropFilter: "blur(15px)",
-      background: "#4848488c",
-      transition: { duration: 0.5 },
-    },
-  };
-
   return (
-    <m.nav
-      initial="initial"
-      animate={show ? "animate" : "initial"}
-      variants={navAnimation}
-    >
+    <nav>
       <Logo />
       <Menu />
-    </m.nav>
+    </nav>
   );
 }
 
