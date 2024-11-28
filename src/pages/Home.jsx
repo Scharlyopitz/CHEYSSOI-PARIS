@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 
 import MemberSection from "../components/Apropos/MemberSection";
 import TextPart from "../components/Apropos/TextPart";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import TextSeparation from "../components/Apropos/TextSeparation";
 import { NavLink } from "react-router-dom";
 
