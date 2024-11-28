@@ -70,7 +70,7 @@ nav {
   align-items: center;
   justify-content: space-between;
   display: flex;
-  width: 96vw;
+  width: 90vw;
   margin-top: 2vh;
   padding: 1vh 1vw;
   border-radius: 20px;
@@ -99,21 +99,32 @@ nav .LogoContainer img {
 }
 nav .menu {
   display: flex;
-  flex-direction: row;
-  position: relative;
-  flex-grow: 1;
-  justify-content: space-between;
-  margin-left: 5vw;
-  text-transform: uppercase;
+  gap: 5vw;
+  text-transform: capitalize;
   font-size: 14px;
   font-weight: 300;
 }
 nav .menu .link {
   position: relative;
-  padding: 10px 30px;
+}
+nav .menu .link::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #f6f6f6;
+  transform: scaleX(0);
+  transform-origin: right;
+  transition: transform 0.5s ease;
 }
 nav .menu .link:hover {
   cursor: pointer;
+}
+nav .menu .link:hover::after {
+  transform: scaleX(1);
+  transform-origin: left;
 }
 
 #ConnextSection {
