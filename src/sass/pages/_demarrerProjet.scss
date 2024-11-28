@@ -1,7 +1,6 @@
 #demarrerprojet {
   background: $White;
   color: $Black;
-  min-height: 100vh;
   padding: 10vh 0 2vh;
 
   .leftPart {
@@ -57,12 +56,18 @@
       display: flex;
       flex-direction: column;
 
-      h2 {
+      .titleSection {
         margin: 5vh 0;
-        text-align: start;
-        font-weight: 400;
-        font-size: 40px;
-        color: $Red;
+
+        h2 {
+          text-align: start;
+          font-size: 50px;
+
+          &:nth-child(2),
+          &:nth-child(3) {
+            color: $LightRed;
+          }
+        }
       }
 
       span {

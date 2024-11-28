@@ -34,10 +34,6 @@ function Menu() {
       to: "galerie",
     },
     {
-      name: "demarrer mon projet",
-      to: "demarrermonprojet",
-    },
-    {
       name: "ebook",
       to: "ebook",
     },

@@ -8,6 +8,7 @@ import TextSeparation from "../components/Apropos/TextSeparation";
 import { NavLink } from "react-router-dom";
 
 import Socials from "../components/Socials";
+import ConnectSection from "../components/Home/ConnectSection";
 
 export default function Home() {
   return (
@@ -16,6 +17,7 @@ export default function Home() {
         <Navbar />
         <BackgroundImage />
         <HomeSection />
+        <ConnectSection />
         {/* <Apropos />
         <Services />
         <Galerie />

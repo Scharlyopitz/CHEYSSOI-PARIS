@@ -96,12 +96,18 @@ export default function Formulaire() {
   //   }
   // };
 
+  const titleSection = "Démarrer mon projet";
+
   return (
     <div className="formulaire">
       <form onSubmit={(e) => sendEmail(e)}>
         <div className="title">
           <span>Travaillons ensemble.</span>
-          <h2>Démarrer mon projet</h2>
+          <div className="titleSection">
+            {titleSection.split(" ").map((word, i) => {
+              return <h2 key={i}>{word}</h2>;
+            })}
+          </div>
         </div>
         <span
           className="message"

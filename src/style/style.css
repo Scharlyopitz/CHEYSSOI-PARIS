@@ -1,14 +1,11 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-}
-
-html {
-  scroll-behavior: smooth;
 }
 
 body {
@@ -22,10 +19,16 @@ body textarea {
 }
 
 h2 {
-  font-size: 30px;
+  font-family: "Fjalla One", sans-serif;
+  font-size: 60px;
   text-transform: uppercase;
   font-weight: 300;
   text-align: center;
+}
+
+.titleSection {
+  display: flex;
+  gap: 15px;
 }
 
 p {
@@ -33,12 +36,14 @@ p {
   font-weight: 200;
 }
 
-section {
+section,
+main {
   min-height: 100vh;
 }
 
 a {
   text-decoration: none;
+  color: inherit;
 }
 
 .socials {
@@ -109,6 +114,47 @@ nav .menu .link {
 }
 nav .menu .link:hover {
   cursor: pointer;
+}
+
+#ConnextSection {
+  background: #1a1a1a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: #e4e1dc;
+}
+#ConnextSection .titleSection h2:nth-child(2) {
+  color: #ff0000;
+}
+#ConnextSection p {
+  width: 750px;
+  text-align: center;
+  margin: 8vh 0;
+}
+#ConnextSection .button {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 99999px;
+  border: 1px solid #e4e1dc;
+}
+#ConnextSection .button,
+#ConnextSection .button svg {
+  transition: 0.35s ease;
+}
+#ConnextSection .button:hover {
+  background-color: #e4e1dc;
+}
+#ConnextSection .button:hover svg {
+  color: #000000;
+}
+#ConnextSection .button svg {
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 #apropos {
@@ -388,7 +434,6 @@ footer .general {
 #demarrerprojet {
   background: #f6f6f6;
   color: #000000;
-  min-height: 100vh;
   padding: 10vh 0 2vh;
 }
 #demarrerprojet .leftPart {
@@ -435,12 +480,15 @@ footer .general {
   display: flex;
   flex-direction: column;
 }
-#demarrerprojet .formulaire .title h2 {
+#demarrerprojet .formulaire .title .titleSection {
   margin: 5vh 0;
+}
+#demarrerprojet .formulaire .title .titleSection h2 {
   text-align: start;
-  font-weight: 400;
-  font-size: 40px;
-  color: #ff0000;
+  font-size: 50px;
+}
+#demarrerprojet .formulaire .title .titleSection h2:nth-child(2), #demarrerprojet .formulaire .title .titleSection h2:nth-child(3) {
+  color: #c13636;
 }
 #demarrerprojet .formulaire .title span {
   font-weight: 300;
