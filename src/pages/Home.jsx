@@ -46,36 +46,6 @@ function HomeSection() {
   );
 }
 
-function Apropos() {
-  const TextsBlocs = [
-    {
-      title: `CRéATEURS D'ESPACES DE VIE DURABLES éLéGANTS`,
-      text: `Cheyssoi Paris, studio de design d’intérieur éthique et écoresponsable, réinvente vos espaces en alliant élégance,
-durabilité et respect de l’environnement en France et à l’international. Chaque projet,à l’aide de nos artisans, est
-
-une harmonie parfaite entre esthétique, innovation et engagement pour un avenir meilleur`,
-    },
-    {
-      title: `HARMONIE, CONFORT, DURABILITE, ELEGANCE`,
-      text: `Chaque membre de l’équipe partage la même ambition : Expertise, créativité et souci du détail sont au cœur de
-notre démarche, pour transformer vos espaces en véritables lieux d’exception, respectueux de la planète.
-Tania, CEO`,
-    },
-  ];
-
-  const textSeparation = "Cheyssoi Paris";
-
-  return (
-    <section id="apropos">
-      {TextsBlocs.map((txtBloc, i) => {
-        return <TextPart key={i} title={txtBloc.title} texts={txtBloc.text} />;
-      })}
-      <TextSeparation textSeparation={textSeparation} />
-      <MemberSection />
-    </section>
-  );
-}
-
 function Services() {
   const texts = [
     `Cheyssoi est votre studio de design spécialisé dans les intérieurs éthiques et durables.

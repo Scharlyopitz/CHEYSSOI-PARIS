@@ -1,146 +1,16 @@
 #apropos {
-  padding: 0;
+  background: $DarkGrey;
+  color: $Black;
 
-  &,
-  p {
-    text-align: center;
+  .aproposSection {
+    padding-top: 10vh;
+    border-top: 1px solid $Black;
   }
 
-  .textPart {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 10vh;
-    height: 100vh;
-    padding: 0 10vw;
-
-    &:nth-child(2) {
-      background: $White;
-      color: $Black;
-      border-radius: 3vw 3vw 0 0;
-    }
-
-    .txtContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 3vh;
-    }
-  }
-
-  .txtSeparation {
-    overflow: hidden;
-    position: relative;
-    width: 100%;
-    height: 25vh;
-    background: linear-gradient(356deg, $Black 50%, $White 50%);
-
-    .txtInfinite {
-      display: flex;
-      position: absolute;
-      top: 50%;
-      left: -1%;
-      color: $White;
-      text-transform: uppercase;
-      font-size: 35px;
-      font-weight: 500;
-      transform: rotate(356deg) translate(0%, -50%);
-
-      animation: 10s textInfinite linear infinite;
-
-      .wordsContainer {
-        background: $Black;
-        color: $White;
-        border-bottom: 2px solid $White;
-        display: flex;
-        justify-content: space-around;
-        width: 101vw;
-
-        &:nth-child(2) {
-          position: absolute;
-          top: 0;
-          left: 100%;
-        }
-
-        .words {
-          display: flex;
-          flex-wrap: nowrap;
-          gap: 2vw;
-
-          .word {
-            display: flex;
-            gap: 20px;
-          }
-        }
-      }
-    }
-
-    @keyframes textInfinite {
-      from {
-        transform: rotate(356deg) translate(0%, -50%);
-      }
-      to {
-        transform: rotate(356deg) translate(-100%, -50%);
-      }
-    }
-  }
-
-  .memberSection {
-    display: flex;
-    flex-direction: column;
-    gap: 10vh;
-    padding: 20vh 10vw;
-    background-color: $Black;
-    border-radius: 0 0 3vw 3vw;
-    min-height: 100vh;
-
-    .groupContainer {
-      display: flex;
-      flex-direction: column;
-      gap: 10vh;
-
-      .personsContainer {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 30px;
-
-        .imgContainer {
-          overflow: hidden;
-          position: relative;
-          width: 320px;
-          height: 480px;
-          filter: grayscale(1);
-          border-radius: 20px;
-
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            object-position: center;
-          }
-
-          .nameContainer {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            height: 30%;
-            width: 100%;
-            background: linear-gradient(
-              180deg,
-              rgba(255, 211, 144, 0) 0%,
-              rgba(0, 0, 0, 1) 100%
-            );
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            .name {
-              font-size: 18px;
-            }
-          }
-        }
-      }
+  .title {
+    h2 {
+      text-align: start;
+      font-size: 115px;
     }
   }
 }
