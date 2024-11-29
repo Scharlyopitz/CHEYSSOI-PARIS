@@ -1,6 +1,5 @@
 [
   {
-    "id": 0,
     "members": [
       {
         "name": "Tania",
@@ -10,7 +9,6 @@
     "job": "CEO"
   },
   {
-    "id": 1,
     "members": [
       {
         "name": "Hoang",
@@ -33,10 +31,9 @@
         "image": "https://cdn.booke.fr/wp-content/uploads/2021/01/10172447/Illustration-Use-Case-Althe%CC%81a.jpg"
       }
     ],
-    "job": "Architectes d'intérieur"
+    "job": "Architectes d'interieur"
   },
   {
-    "id": 2,
     "members": [
       {
         "name": "Mones",
@@ -47,10 +44,9 @@
         "image": "https://www.sylvaingelineau.com/wp-content/uploads/2020/12/photographe-portrait-pro-cv-linkedin-toulouse.jpg"
       }
     ],
-    "job": "Développement web"
+    "job": "Developpement web"
   },
   {
-    "id": 3,
     "members": [
       {
         "name": "Etienne",
@@ -61,6 +57,6 @@
         "image": "https://www.sylvaingelineau.com/wp-content/uploads/2020/12/photographe-portrait-pro-cv-linkedin-toulouse.jpg"
       }
     ],
-    "job": "Développement commercial"
+    "job": "Developpement commercial"
   }
 ]

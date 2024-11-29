@@ -22,7 +22,7 @@ function Menu() {
   const links = [
     { name: "à propos", to: "/apropos" },
     { name: "demarrer mon projet", to: "/demarrermonprojet" },
-    { name: "team", to: "/team" },
+    { name: "L'équipe", to: "/team" },
     { name: "galerie", to: "/galerie" },
     { name: "ebook", to: "/ebook" },
   ];

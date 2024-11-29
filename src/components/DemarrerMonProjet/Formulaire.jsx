@@ -96,7 +96,7 @@ export default function Formulaire() {
   //   }
   // };
 
-  const titleSection = "Démarrer mon projet";
+  const titleSection = "Demarrer mon projet";
 
   return (
     <div className="formulaire">
