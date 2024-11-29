@@ -212,6 +212,84 @@ nav .menu .link:hover::after {
   font-weight: 500;
 }
 
+#apropos {
+  background: #e4e1dc;
+  color: #191a19;
+}
+#apropos nav .LogoContainer img {
+  filter: drop-shadow(0px 80px 0 #191a19);
+}
+#apropos nav .menu {
+  font-weight: 400;
+}
+#apropos nav .menu a {
+  color: #191a19;
+}
+#apropos nav .menu a::after {
+  background-color: #191a19;
+}
+#apropos .aproposSection {
+  padding: 100px 2vw 0vh;
+}
+#apropos .aproposSection:nth-child(odd) .content {
+  flex-direction: row-reverse;
+}
+#apropos .aproposSection .lineContainer {
+  position: relative;
+  width: 100%;
+}
+#apropos .aproposSection .lineContainer .line {
+  width: 100%;
+  transform-origin: left;
+  height: 1.5px;
+  background: #191a19;
+}
+#apropos .aproposSection .lineContainer .number {
+  position: absolute;
+  top: 10px;
+  right: 0;
+}
+#apropos .aproposSection .content {
+  padding-top: 100px;
+  display: flex;
+  gap: 4vw;
+}
+#apropos .aproposSection .content .txt {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 700px;
+  width: 60%;
+  flex-grow: 1;
+}
+#apropos .aproposSection .content .txt .title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#apropos .aproposSection .content .txt .title h2 {
+  text-align: start;
+  font-size: 110px;
+  line-height: 100px;
+}
+#apropos .aproposSection .content .txt .title h2:nth-child(2) {
+  color: #c13636;
+}
+#apropos .aproposSection .content .txt .paragraphe {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+}
+#apropos .aproposSection .content .image {
+  width: 490px;
+  height: 650px;
+  background: #191a19;
+}
+
 #demarrerprojet {
   background: #e4e1dc;
   color: #191a19;
@@ -345,80 +423,6 @@ nav .menu .link:hover::after {
   transform: translateX(5px);
 }
 
-#apropos {
-  background: #e4e1dc;
+#team {
   color: #191a19;
-}
-#apropos nav .LogoContainer img {
-  filter: drop-shadow(0px 80px 0 #191a19);
-}
-#apropos nav .menu {
-  font-weight: 400;
-}
-#apropos nav .menu a {
-  color: #191a19;
-}
-#apropos nav .menu a::after {
-  background-color: #191a19;
-}
-#apropos .aproposSection {
-  padding: 100px 2vw 0vh;
-}
-#apropos .aproposSection:nth-child(odd) .content {
-  flex-direction: row-reverse;
-}
-#apropos .aproposSection .lineContainer {
-  position: relative;
-  width: 100%;
-}
-#apropos .aproposSection .lineContainer .line {
-  width: 100%;
-  transform-origin: left;
-  height: 1.5px;
-  background: #191a19;
-}
-#apropos .aproposSection .lineContainer .number {
-  position: absolute;
-  top: 10px;
-  right: 0;
-}
-#apropos .aproposSection .content {
-  padding-top: 100px;
-  display: flex;
-  gap: 4vw;
-}
-#apropos .aproposSection .content .txt {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 700px;
-  width: 60%;
-  flex-grow: 1;
-}
-#apropos .aproposSection .content .txt .title {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 20px;
-}
-#apropos .aproposSection .content .txt .title h2 {
-  text-align: start;
-  font-size: 110px;
-  line-height: 100px;
-}
-#apropos .aproposSection .content .txt .title h2:nth-child(2) {
-  color: #c13636;
-}
-#apropos .aproposSection .content .txt .paragraphe {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  text-align: justify;
-}
-#apropos .aproposSection .content .image {
-  width: 490px;
-  height: 650px;
-  background: #191a19;
 }/*# sourceMappingURL=style.css.map */

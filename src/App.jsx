@@ -4,6 +4,7 @@ import DemarrerProjet from "./pages/DemarrerProjet";
 import Home from "./pages/Home";
 import { useEffect } from "react";
 import Apropos from "./pages/Apropos";
+import Team from "./pages/Team";
 
 function App() {
   const { pathname } = useLocation();
@@ -15,8 +16,9 @@ function App() {
   return (
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/demarrermonprojet" element={<DemarrerProjet />} />
       <Route path="/apropos" element={<Apropos />} />
+      <Route path="/demarrermonprojet" element={<DemarrerProjet />} />
+      <Route path="/team" element={<Team />} />
     </Routes>
   );
 }
