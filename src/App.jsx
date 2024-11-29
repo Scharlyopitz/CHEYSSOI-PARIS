@@ -11,14 +11,13 @@ function App() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, [pathname]);
+
   return (
-    <>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/demarrermonprojet" element={<DemarrerProjet />} />
-        <Route path="/apropos" element={<Apropos />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/demarrermonprojet" element={<DemarrerProjet />} />
+      <Route path="/apropos" element={<Apropos />} />
+    </Routes>
   );
 }
 

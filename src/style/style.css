@@ -62,7 +62,7 @@ a {
 }
 
 nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -70,9 +70,7 @@ nav {
   justify-content: space-between;
   display: flex;
   width: 90vw;
-  margin-top: 2vh;
-  padding: 1vh 1vw;
-  border-radius: 20px;
+  height: 100px;
 }
 nav a {
   color: #f6f6f6;
@@ -117,6 +115,7 @@ nav .menu .link::after {
   transform: scaleX(0);
   transform-origin: right;
   transition: transform 0.5s ease;
+  will-change: transform;
 }
 nav .menu .link:hover {
   cursor: pointer;
@@ -350,10 +349,22 @@ nav .menu .link:hover::after {
   background: #e4e1dc;
   color: #191a19;
 }
-#apropos .aproposSection {
-  padding: 10vh 2vw 0vh;
+#apropos nav .LogoContainer img {
+  filter: drop-shadow(0px 80px 0 #191a19);
 }
-#apropos .aproposSection:nth-child(even) .content {
+#apropos nav .menu {
+  font-weight: 400;
+}
+#apropos nav .menu a {
+  color: #191a19;
+}
+#apropos nav .menu a::after {
+  background-color: #191a19;
+}
+#apropos .aproposSection {
+  padding: 100px 2vw 0vh;
+}
+#apropos .aproposSection:nth-child(odd) .content {
   flex-direction: row-reverse;
 }
 #apropos .aproposSection .lineContainer {
@@ -363,7 +374,7 @@ nav .menu .link:hover::after {
 #apropos .aproposSection .lineContainer .line {
   width: 100%;
   transform-origin: left;
-  height: 2px;
+  height: 1.5px;
   background: #191a19;
 }
 #apropos .aproposSection .lineContainer .number {
@@ -372,7 +383,7 @@ nav .menu .link:hover::after {
   right: 0;
 }
 #apropos .aproposSection .content {
-  padding-top: 10vh;
+  padding-top: 100px;
   display: flex;
   gap: 4vw;
 }

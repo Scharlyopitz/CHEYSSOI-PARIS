@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import LogoCheyssoi from "/Logo.png";
-import { motion as m } from "framer-motion";
 
 export default function Navbar() {
   return (
@@ -21,22 +20,10 @@ function Logo() {
 
 function Menu() {
   const links = [
-    {
-      name: "à propos",
-      to: "apropos",
-    },
-    {
-      name: "services",
-      to: "services",
-    },
-    {
-      name: "galerie",
-      to: "galerie",
-    },
-    {
-      name: "ebook",
-      to: "ebook",
-    },
+    { name: "à propos", to: "/apropos" },
+    { name: "services", to: "/services" },
+    { name: "galerie", to: "/galerie" },
+    { name: "ebook", to: "/ebook" },
   ];
 
   return (

@@ -1,5 +1,5 @@
 nav {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -7,9 +7,7 @@ nav {
   justify-content: space-between;
   display: flex;
   width: 90vw;
-  margin-top: 2vh;
-  padding: 1vh 1vw;
-  border-radius: 20px;
+  height: 100px;
 
   a {
     color: $White;
@@ -55,6 +53,7 @@ nav {
         transform: scaleX(0);
         transform-origin: right;
         transition: transform 0.5s ease;
+        will-change: transform;
       }
 
       &:hover {

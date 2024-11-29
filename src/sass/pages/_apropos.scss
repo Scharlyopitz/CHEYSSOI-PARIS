@@ -2,12 +2,31 @@
   background: $DarkGrey;
   color: $Black;
 
+  nav {
+    .LogoContainer {
+      // opacity: 0;
+      img {
+        filter: drop-shadow(0px 80px 0 $Black);
+      }
+    }
+    .menu {
+      font-weight: 400;
+      a {
+        color: $Black;
+
+        &::after {
+          background-color: $Black;
+        }
+      }
+    }
+  }
+
   .aproposSection {
-    padding: 10vh 2vw 0vh;
+    padding: 100px 2vw 0vh;
 
     // SECTION 2
 
-    &:nth-child(even) {
+    &:nth-child(odd) {
       .content {
         flex-direction: row-reverse;
       }
@@ -20,7 +39,7 @@
       .line {
         width: 100%;
         transform-origin: left;
-        height: 2px;
+        height: 1.5px;
         background: $Black;
       }
 
@@ -32,7 +51,7 @@
     }
 
     .content {
-      padding-top: 10vh;
+      padding-top: 100px;
       display: flex;
       gap: 4vw;
 
