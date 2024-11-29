@@ -7,24 +7,9 @@
 
     // SECTION 2
 
-    &:nth-child(2) {
+    &:nth-child(even) {
       .content {
         flex-direction: row-reverse;
-
-        .txt {
-          .title {
-            align-items: end;
-          }
-
-          .paragraphe {
-            display: flex;
-            align-items: center;
-            flex-grow: 1;
-            display: flex;
-            align-items: center;
-            text-align: justify;
-          }
-        }
       }
     }
 
