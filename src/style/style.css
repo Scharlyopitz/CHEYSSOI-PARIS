@@ -353,6 +353,20 @@ nav .menu .link:hover::after {
 #apropos .aproposSection {
   padding: 10vh 2vw 0vh;
 }
+#apropos .aproposSection:nth-child(2) .content {
+  flex-direction: row-reverse;
+}
+#apropos .aproposSection:nth-child(2) .content .txt .title {
+  align-items: end;
+}
+#apropos .aproposSection:nth-child(2) .content .txt .paragraphe {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+}
 #apropos .aproposSection .lineContainer {
   position: relative;
   width: 100%;

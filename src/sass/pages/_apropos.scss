@@ -5,6 +5,29 @@
   .aproposSection {
     padding: 10vh 2vw 0vh;
 
+    // SECTION 2
+
+    &:nth-child(2) {
+      .content {
+        flex-direction: row-reverse;
+
+        .txt {
+          .title {
+            align-items: end;
+          }
+
+          .paragraphe {
+            display: flex;
+            align-items: center;
+            flex-grow: 1;
+            display: flex;
+            align-items: center;
+            text-align: justify;
+          }
+        }
+      }
+    }
+
     .lineContainer {
       position: relative;
       width: 100%;
