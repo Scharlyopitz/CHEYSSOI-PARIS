@@ -21,7 +21,7 @@ function Logo() {
 function Menu() {
   const links = [
     { name: "à propos", to: "/apropos" },
-    { name: "services", to: "/services" },
+    { name: "demarrer mon projet", to: "/demarrermonprojet" },
     { name: "galerie", to: "/galerie" },
     { name: "ebook", to: "/ebook" },
   ];
