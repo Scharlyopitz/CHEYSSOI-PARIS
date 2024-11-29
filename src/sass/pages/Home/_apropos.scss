@@ -3,14 +3,59 @@
   color: $Black;
 
   .aproposSection {
-    padding-top: 10vh;
-    border-top: 1px solid $Black;
-  }
+    padding: 10vh 2vw 0vh;
 
-  .title {
-    h2 {
-      text-align: start;
-      font-size: 115px;
+    .line {
+      width: 100%;
+      height: 2px;
+      background: $Black;
+    }
+
+    .content {
+      padding-top: 10vh;
+      display: flex;
+      gap: 4vw;
+
+      .txt {
+        display: flex;
+        flex-direction: column;
+        position: relative;
+        height: 700px;
+        width: 60%;
+        flex-grow: 1;
+
+        .title {
+          display: flex;
+          flex-direction: row;
+          flex-wrap: wrap;
+          gap: 20px;
+
+          h2 {
+            text-align: start;
+            font-size: 110px;
+            line-height: 100px;
+
+            &:nth-child(2) {
+              color: $LightRed;
+            }
+          }
+        }
+
+        .paragraphe {
+          display: flex;
+          align-items: center;
+          flex-grow: 1;
+          display: flex;
+          align-items: center;
+          text-align: justify;
+        }
+      }
+
+      .image {
+        width: 490px;
+        height: 650px;
+        background: $Black;
+      }
     }
   }
 }

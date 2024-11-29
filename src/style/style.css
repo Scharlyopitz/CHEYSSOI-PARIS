@@ -33,7 +33,7 @@ h2 {
 
 p {
   font-size: 18px;
-  font-weight: 200;
+  font-weight: 300;
 }
 
 section,
@@ -158,7 +158,7 @@ nav .menu .link:hover::after {
   background-color: #e4e1dc;
 }
 #ConnextSection .button:hover svg {
-  color: #000000;
+  color: #191a19;
 }
 #ConnextSection .button svg {
   font-size: 20px;
@@ -170,15 +170,55 @@ nav .menu .link:hover::after {
 
 #apropos {
   background: #e4e1dc;
-  color: #000000;
+  color: #191a19;
 }
 #apropos .aproposSection {
-  padding-top: 10vh;
-  border-top: 1px solid #000000;
+  padding: 10vh 2vw 0vh;
 }
-#apropos .title h2 {
+#apropos .aproposSection .line {
+  width: 100%;
+  height: 2px;
+  background: #191a19;
+}
+#apropos .aproposSection .content {
+  padding-top: 10vh;
+  display: flex;
+  gap: 4vw;
+}
+#apropos .aproposSection .content .txt {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  height: 700px;
+  width: 60%;
+  flex-grow: 1;
+}
+#apropos .aproposSection .content .txt .title {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+#apropos .aproposSection .content .txt .title h2 {
   text-align: start;
-  font-size: 115px;
+  font-size: 110px;
+  line-height: 100px;
+}
+#apropos .aproposSection .content .txt .title h2:nth-child(2) {
+  color: #c13636;
+}
+#apropos .aproposSection .content .txt .paragraphe {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  text-align: justify;
+}
+#apropos .aproposSection .content .image {
+  width: 490px;
+  height: 650px;
+  background: #191a19;
 }
 
 .backgroundImage {
@@ -243,7 +283,7 @@ footer {
   flex-direction: column;
   align-items: center;
   background: #f6f6f6;
-  color: #000000;
+  color: #191a19;
 }
 footer .general {
   text-transform: lowercase;
@@ -333,7 +373,7 @@ footer .general {
 
 #demarrerprojet {
   background: #f6f6f6;
-  color: #000000;
+  color: #191a19;
   padding: 10vh 0 2vh;
 }
 #demarrerprojet .leftPart {
@@ -415,7 +455,7 @@ footer .general {
 }
 #demarrerprojet .formulaire input:focus,
 #demarrerprojet .formulaire textarea:focus {
-  border-bottom: 2px solid #000000;
+  border-bottom: 2px solid #191a19;
 }
 #demarrerprojet .formulaire form {
   display: flex;
@@ -455,7 +495,7 @@ footer .general {
   transition: 0.3s cubic-bezier(0.65, 0, 0.35, 1);
 }
 #demarrerprojet .formulaire button svg {
-  color: #000000;
+  color: #191a19;
 }
 #demarrerprojet .formulaire button:hover {
   cursor: pointer;
