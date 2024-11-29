@@ -134,12 +134,12 @@ nav .menu .link:hover::after {
   align-items: center;
   color: #e4e1dc;
 }
-#ConnextSection .titleSection h2:nth-child(2) {
+#ConnextSection .titleSection h2:last-child {
   color: #ff0000;
 }
 #ConnextSection p {
-  width: 750px;
-  text-align: center;
+  width: 80vw;
+  text-align: justify;
   margin: 8vh 0;
 }
 #ConnextSection .button {
