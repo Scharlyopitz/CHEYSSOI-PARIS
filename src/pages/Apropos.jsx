@@ -18,7 +18,10 @@ une harmonie parfaite entre esthétique, innovation et engagement pour un avenir
   return (
     <main id="apropos">
       <section className="aproposSection">
-        <div className="line" />
+        <div className="lineContainer">
+          <div className="line" />
+          <span className="number">[ 1 ]</span>
+        </div>
         <div className="content">
           <div className="txt">
             <div className="title">
