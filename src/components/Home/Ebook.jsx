@@ -28,7 +28,7 @@ cqx1wG_-3ywsVy2W5DKAo3ZXhTyPTe47YF9gnxfkqJg5oyp4EkpPHEq9Q2HccGUYdV2yu5oU4kazHDdD
         <div className="paragraph">
           <p>{text}</p>
 
-          <Link to={href} target="_blank">
+          <Link to={href} className="redButton" target="_blank">
             Regarde Ici !
           </Link>
         </div>

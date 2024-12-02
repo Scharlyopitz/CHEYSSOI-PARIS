@@ -1,7 +1,6 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+
 export default function ConnectSection() {
   const titleSection = "UNE EXPERIENCE UNIQUE";
 
@@ -16,11 +15,14 @@ export default function ConnectSection() {
         })}
       </div>
       <p>{txt}</p>
-      <NavLink to={"demarrermonprojet"}>
-        <div className="button">
-          <FontAwesomeIcon icon={faArrowRight} />
-        </div>
-      </NavLink>
+      <div className="buttonsContainer">
+        <Link to={"apropos"} className="redButton">
+          En savoir plus ?
+        </Link>
+        <Link to={"demarrermonprojet"} className="redButton">
+          Démarrer mon projet !
+        </Link>
+      </div>
     </section>
   );
 }
