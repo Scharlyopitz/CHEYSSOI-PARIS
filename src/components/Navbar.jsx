@@ -24,7 +24,6 @@ function Menu() {
     { name: "demarrer mon projet", to: "/demarrermonprojet" },
     { name: "L'équipe", to: "/team" },
     { name: "galerie", to: "/galerie" },
-    { name: "ebook", to: "/ebook" },
   ];
 
   return (
