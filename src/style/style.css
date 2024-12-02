@@ -439,9 +439,6 @@ nav .menu .link:hover::after {
   flex-direction: column;
   gap: 20px;
 }
-#demarrerprojet .formulaire .middle span {
-  color: #ff0000;
-}
 #demarrerprojet .formulaire .middle div {
   display: flex;
   flex-direction: column;

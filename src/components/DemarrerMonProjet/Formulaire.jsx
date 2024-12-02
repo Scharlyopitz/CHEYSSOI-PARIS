@@ -154,9 +154,7 @@ export default function Formulaire() {
 function Nom({ informations, setInformations }) {
   return (
     <div>
-      <label htmlFor="name">
-        Nom <span>*</span>{" "}
-      </label>
+      <label htmlFor="name">Nom</label>
       <input
         placeholder="Votre Nom"
         autoComplete="off"
@@ -174,9 +172,7 @@ function Nom({ informations, setInformations }) {
 function Prenom({ informations, setInformations }) {
   return (
     <div>
-      <label htmlFor="firstName">
-        Prénom <span>*</span>{" "}
-      </label>
+      <label htmlFor="firstName">Prénom</label>
       <input
         placeholder="Votre Prénom"
         autoComplete="off"
@@ -197,9 +193,7 @@ function Prenom({ informations, setInformations }) {
 function Surface({ informations, setInformations }) {
   return (
     <div>
-      <label htmlFor="surface">
-        Surface <span>*</span>{" "}
-      </label>
+      <label htmlFor="surface">Surface</label>
       <input
         placeholder="La Surface en m²"
         autoComplete="off"
@@ -220,9 +214,7 @@ function Surface({ informations, setInformations }) {
 function Telephone({ informations, setInformations }) {
   return (
     <div>
-      <label htmlFor="tel">
-        Tel. <span>*</span>{" "}
-      </label>
+      <label htmlFor="tel">Tel.</label>
       <input
         placeholder="Votre Téléphone"
         maxLength={10}
@@ -241,9 +233,7 @@ function Telephone({ informations, setInformations }) {
 function Mail({ informations, setInformations }) {
   return (
     <div>
-      <label htmlFor="mail">
-        Email <span>*</span>
-      </label>
+      <label htmlFor="mail">Email</label>
       <input
         placeholder="Votre Email"
         autoComplete="off"
@@ -264,9 +254,7 @@ function Mail({ informations, setInformations }) {
 function CodePostal({ informations, setInformations }) {
   return (
     <div>
-      <label htmlFor="postalCode">
-        Code Postal <span>*</span>{" "}
-      </label>
+      <label htmlFor="postalCode">Code Postal</label>
       <input
         placeholder="Votre Code Postal"
         maxLength={5}
@@ -288,9 +276,7 @@ function CodePostal({ informations, setInformations }) {
 function Message({ informations, setInformations }) {
   return (
     <div>
-      <label htmlFor="msg">
-        Message <span>*</span>{" "}
-      </label>
+      <label htmlFor="msg">Message</label>
       <textarea
         autoComplete="off"
         placeholder="Décrivez votre projet"
