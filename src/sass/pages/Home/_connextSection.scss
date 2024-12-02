@@ -1,19 +1,11 @@
 #ConnextSection {
   position: relative;
-  background: $LightBlack;
+  background: $DarkGrey;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: $DarkGrey;
-
-  .titleSection {
-    h2 {
-      &:last-child {
-        color: $Red;
-      }
-    }
-  }
+  color: $LightBlack;
 
   p {
     width: 80vw;

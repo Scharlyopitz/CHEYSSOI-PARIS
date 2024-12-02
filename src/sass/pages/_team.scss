@@ -1,6 +1,6 @@
 #team {
-  background: $LightBlack;
-  color: $DarkGrey;
+  color: $LightBlack;
+  background: $DarkGrey;
   padding: 100px 2vw 0vh;
 
   header {
@@ -14,10 +14,6 @@
 
       h2 {
         font-size: 280px;
-
-        &:nth-child(2) {
-          color: $LightRed;
-        }
       }
     }
 

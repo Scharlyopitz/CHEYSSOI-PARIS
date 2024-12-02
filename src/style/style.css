@@ -40,7 +40,6 @@
 }
 
 body {
-  background: #f6f6f6;
   color: #f6f6f6;
 }
 body,
@@ -187,15 +186,12 @@ nav .menu .link:hover::after {
 
 #ConnextSection {
   position: relative;
-  background: #1a1a1a;
+  background: #e4e1dc;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #e4e1dc;
-}
-#ConnextSection .titleSection h2:last-child {
-  color: #ff0000;
+  color: #1a1a1a;
 }
 #ConnextSection p {
   width: 80vw;
@@ -209,10 +205,11 @@ nav .menu .link:hover::after {
 
 #ebook {
   position: relative;
-  background: #1a1a1a;
+  background: #e4e1dc;
   padding: 10vh 2vw 0;
   display: flex;
   flex-direction: column;
+  color: #1a1a1a;
 }
 #ebook .container {
   display: flex;
@@ -227,7 +224,6 @@ nav .menu .link:hover::after {
   line-height: 270px;
 }
 #ebook .container .title h2:nth-child(2) {
-  color: #c13636;
   padding-left: 592px;
 }
 #ebook .container .paragraph {
@@ -398,9 +394,6 @@ nav .menu .link:hover::after {
   text-align: start;
   font-size: 50px;
 }
-#demarrerprojet .formulaire .title .titleSection h2:nth-child(2), #demarrerprojet .formulaire .title .titleSection h2:nth-child(3) {
-  color: #c13636;
-}
 #demarrerprojet .formulaire .title span {
   font-weight: 300;
 }
@@ -473,13 +466,14 @@ nav .menu .link:hover::after {
 }
 
 #galerie {
-  background: #1a1a1a;
+  background: #e4e1dc;
   padding: 100px 0 0;
+  color: #1a1a1a;
 }
 
 #team {
-  background: #1a1a1a;
-  color: #e4e1dc;
+  color: #1a1a1a;
+  background: #e4e1dc;
   padding: 100px 2vw 0vh;
 }
 #team header {
@@ -493,9 +487,6 @@ nav .menu .link:hover::after {
 }
 #team header .titleContainer h2 {
   font-size: 280px;
-}
-#team header .titleContainer h2:nth-child(2) {
-  color: #c13636;
 }
 #team header p {
   text-align: justify;
