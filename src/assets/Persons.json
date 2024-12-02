@@ -1,62 +1,52 @@
 [
   {
-    "members": [
-      {
-        "name": "Tania",
-        "image": "https://www.frejoux-photographe.fr/wp-content/gallery/portrait-pro-corporate/Photographe-portrait-entreprise-pro-Corporate-toulon-Celine.jpg"
-      }
-    ],
+    "name": "Tania",
+    "image": "https://www.frejoux-photographe.fr/wp-content/gallery/portrait-pro-corporate/Photographe-portrait-entreprise-pro-Corporate-toulon-Celine.jpg",
     "job": "CEO"
   },
   {
-    "members": [
-      {
-        "name": "Hoang",
-        "image": "https://cdn.booke.fr/wp-content/uploads/2021/01/10172447/Illustration-Use-Case-Althe%CC%81a.jpg"
-      },
-      {
-        "name": "Michelle",
-        "image": "https://cdn.booke.fr/wp-content/uploads/2021/01/10172447/Illustration-Use-Case-Althe%CC%81a.jpg"
-      },
-      {
-        "name": "Huabing",
-        "image": "https://cdn.booke.fr/wp-content/uploads/2021/01/10172447/Illustration-Use-Case-Althe%CC%81a.jpg"
-      },
-      {
-        "name": "Gamze",
-        "image": "https://cdn.booke.fr/wp-content/uploads/2021/01/10172447/Illustration-Use-Case-Althe%CC%81a.jpg"
-      },
-      {
-        "name": "Supriya",
-        "image": "https://cdn.booke.fr/wp-content/uploads/2021/01/10172447/Illustration-Use-Case-Althe%CC%81a.jpg"
-      }
-    ],
+    "name": "Hoang",
+    "image": "https://cdn.booke.fr/wp-content/uploads/2021/01/10172447/Illustration-Use-Case-Althe%CC%81a.jpg",
     "job": "Architectes d'interieur"
   },
   {
-    "members": [
-      {
-        "name": "Mones",
-        "image": "https://www.sylvaingelineau.com/wp-content/uploads/2020/12/photographe-portrait-pro-cv-linkedin-toulouse.jpg"
-      },
-      {
-        "name": "Scharly",
-        "image": "https://www.sylvaingelineau.com/wp-content/uploads/2020/12/photographe-portrait-pro-cv-linkedin-toulouse.jpg"
-      }
-    ],
-    "job": "Developpement web"
+    "name": "Michelle",
+    "image": "https://cdn.booke.fr/wp-content/uploads/2021/01/10172447/Illustration-Use-Case-Althe%CC%81a.jpg",
+    "job": "Architectes d'interieur"
   },
   {
-    "members": [
-      {
-        "name": "Etienne",
-        "image": "https://www.sylvaingelineau.com/wp-content/uploads/2020/12/photographe-portrait-pro-cv-linkedin-toulouse.jpg"
-      },
-      {
-        "name": "Valentina",
-        "image": "https://www.sylvaingelineau.com/wp-content/uploads/2020/12/photographe-portrait-pro-cv-linkedin-toulouse.jpg"
-      }
-    ],
-    "job": "Developpement commercial"
+    "name": "Huabing",
+    "image": "https://cdn.booke.fr/wp-content/uploads/2021/01/10172447/Illustration-Use-Case-Althe%CC%81a.jpg",
+    "job": "Architectes d'interieur"
+  },
+  {
+    "name": "Gamze",
+    "image": "https://cdn.booke.fr/wp-content/uploads/2021/01/10172447/Illustration-Use-Case-Althe%CC%81a.jpg",
+    "job": "Architectes d'interieur"
+  },
+  {
+    "name": "Supriya",
+    "image": "https://cdn.booke.fr/wp-content/uploads/2021/01/10172447/Illustration-Use-Case-Althe%CC%81a.jpg",
+    "job": "Architectes d'interieur"
+  },
+  {
+    "name": "Mones",
+    "image": "https://www.sylvaingelineau.com/wp-content/uploads/2020/12/photographe-portrait-pro-cv-linkedin-toulouse.jpg",
+    "job": "Développement web"
+  },
+  {
+    "name": "Scharly",
+    "image": "https://www.sylvaingelineau.com/wp-content/uploads/2020/12/photographe-portrait-pro-cv-linkedin-toulouse.jpg",
+    "job": "Développement web"
+  },
+  {
+    "name": "Etienne",
+    "image": "https://www.sylvaingelineau.com/wp-content/uploads/2020/12/photographe-portrait-pro-cv-linkedin-toulouse.jpg",
+    "job": "Développement commercial"
+  },
+  {
+    "name": "Valentina",
+    "image": "https://www.sylvaingelineau.com/wp-content/uploads/2020/12/photographe-portrait-pro-cv-linkedin-toulouse.jpg",
+    "job": "Développement commercial"
   }
 ]
