@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 
 export default function ConnectSection() {
   const titleSection = "UNE EXPERIENCE UNIQUE";
@@ -16,12 +15,12 @@ export default function ConnectSection() {
       </div>
       <p>{txt}</p>
       <div className="buttonsContainer">
-        <Link to={"apropos"} className="redButton">
+        <a href="#apropos" className="redButton">
           En savoir plus ?
-        </Link>
-        <Link to={"demarrermonprojet"} className="redButton">
+        </a>
+        <a href="#demarrermonprojet" className="redButton">
           Démarrer mon projet !
-        </Link>
+        </a>
       </div>
     </section>
   );

@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   color: $White;
 
@@ -15,9 +19,8 @@ body {
 }
 
 h2 {
-  // font-family: "Fjalla One", sans-serif;
   font-family: "Cormorant Garamond", serif;
-  font-size: 60px;
+  font-size: 70px;
   text-transform: uppercase;
   font-weight: 300;
   text-align: center;

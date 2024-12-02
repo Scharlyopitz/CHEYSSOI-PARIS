@@ -3,6 +3,7 @@ import Navbar from "../components/Navbar";
 
 import ConnectSection from "../components/Home/ConnectSection";
 import Ebook from "../components/Home/Ebook";
+import Apropos from "./Apropos";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
       <BackgroundImage />
       <HomeSection />
       <ConnectSection />
+      <Apropos />
       <Ebook />
     </main>
   );
