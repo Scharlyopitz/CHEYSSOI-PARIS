@@ -46,6 +46,19 @@ a {
   color: inherit;
 }
 
+footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 5vh 0;
+}
+footer .contact {
+  text-transform: lowercase;
+  display: flex;
+  gap: 30px;
+}
+
 .socials {
   text-transform: lowercase;
   display: flex;
@@ -54,7 +67,7 @@ a {
 .socials svg {
   padding: 2px 4px;
   border-radius: 10px;
-  font-size: 40px;
+  font-size: 20px;
   transition: 0.2s;
 }
 .socials svg:hover {
@@ -322,13 +335,6 @@ nav .menu .link:hover::after {
 }
 #demarrerprojet .leftPart .button:hover div {
   transform: translateX(0);
-}
-#demarrerprojet .leftPart .socials svg {
-  font-size: 20px;
-  transition: 0.2s;
-}
-#demarrerprojet .leftPart .socials svg:hover {
-  filter: contrast(0.1);
 }
 #demarrerprojet .formulaire {
   display: flex;

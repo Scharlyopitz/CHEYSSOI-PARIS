@@ -3,22 +3,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 
 export default function Socials() {
-  const color = "#000000";
-
   const socialMedias = [
     {
-      icon: <FontAwesomeIcon icon={faFacebookF} style={{ color: color }} />,
+      icon: <FontAwesomeIcon icon={faFacebookF} />,
       to: `https://www.facebook.com/CheyssoiParis/`,
     },
     {
-      icon: (
-        <FontAwesomeIcon
-          icon={faInstagram}
-          style={{
-            color: color,
-          }}
-        />
-      ),
+      icon: <FontAwesomeIcon icon={faInstagram} />,
       to: `https://www.instagram.com/cheyssoiparis/`,
     },
   ];

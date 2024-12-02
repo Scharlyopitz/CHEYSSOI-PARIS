@@ -1,5 +1,6 @@
 import Navbar from "../components/Navbar";
 import Persons from "../assets/Persons.json";
+import Footer from "../components/Footer";
 
 export default function Team() {
   const titleWords = "L'eq uipe";
@@ -20,6 +21,7 @@ export default function Team() {
       </header>
 
       <Members />
+      <Footer />
     </main>
   );
 }
