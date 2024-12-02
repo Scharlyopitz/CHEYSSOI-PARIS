@@ -474,6 +474,7 @@ nav .menu .link:hover::after {
 
 #galerie {
   background: #1a1a1a;
+  padding: 100px 0 0;
 }
 
 #team {
