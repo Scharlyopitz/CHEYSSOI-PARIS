@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import LogoCheyssoi from "/Logo.png";
 
 export default function Navbar() {
@@ -12,18 +11,18 @@ export default function Navbar() {
 
 function Logo() {
   return (
-    <NavLink to={"/"} className="LogoContainer">
+    <a href={"/"} className="LogoContainer">
       <img src={LogoCheyssoi} alt="LogoCheyssoi" />
-    </NavLink>
+    </a>
   );
 }
 
 function Menu() {
   const links = [
-    { name: "à propos", to: "/apropos" },
-    { name: "demarrer mon projet", to: "/demarrermonprojet" },
-    { name: "L'équipe", to: "/team" },
-    { name: "galerie", to: "/galerie" },
+    { name: "à propos", to: "#apropos" },
+    { name: "demarrer mon projet", to: "#demarrermonprojet" },
+    { name: "L'équipe", to: "#team" },
+    { name: "galerie", to: "#galerie" },
   ];
 
   return (
@@ -31,9 +30,9 @@ function Menu() {
       <div className="menu">
         {links.map((link, i) => {
           return (
-            <NavLink key={i} className={"link"} to={link.to}>
+            <a key={i} className={"link"} href={link.to}>
               {link.name}
-            </NavLink>
+            </a>
           );
         })}
       </div>

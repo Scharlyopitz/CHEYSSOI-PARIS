@@ -8,7 +8,6 @@ export default function Galerie() {
     "Plongez dans notre collection de projets d’intérieurs inspirants, où design et durabilité se rencontrent.";
   return (
     <main id="galerie">
-      <Navbar />
       <div className="titleContainer">
         {title.split(" ").map((word, i) => {
           return <h2 key={i}>{word}</h2>;
