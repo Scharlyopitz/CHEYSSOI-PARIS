@@ -2,6 +2,7 @@ import React from "react";
 import AproposSection from "../components/Apropos/AproposSection";
 import AproposInfos from "../assets/AproposInfos.json";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function Apropos() {
   return (
@@ -18,6 +19,7 @@ export default function Apropos() {
             />
           );
         })}
+        <Footer />
       </main>
     </>
   );
