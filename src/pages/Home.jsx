@@ -6,14 +6,12 @@ import Ebook from "../components/Home/Ebook";
 
 export default function Home() {
   return (
-    <>
-      <main id="Home">
-        <BackgroundImage />
-        <HomeSection />
-        <ConnectSection />
-        <Ebook />
-      </main>
-    </>
+    <main id="Home">
+      <BackgroundImage />
+      <HomeSection />
+      <ConnectSection />
+      <Ebook />
+    </main>
   );
 }
 
