@@ -4,7 +4,7 @@ import AproposInfos from "../assets/AproposInfos.json";
 
 export default function Apropos() {
   return (
-    <main id="apropos">
+    <section id="apropos">
       {AproposInfos.map((info, i) => {
         return (
           <AproposSection
@@ -15,6 +15,6 @@ export default function Apropos() {
           />
         );
       })}
-    </main>
+    </section>
   );
 }

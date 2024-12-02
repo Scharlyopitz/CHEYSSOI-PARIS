@@ -6,10 +6,10 @@ import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 
 export default function DemarrerProjet() {
   return (
-    <main id="demarrerprojet">
+    <section id="demarrerprojet">
       <LeftPart />
       <Formulaire />
-    </main>
+    </section>
   );
 }
 

@@ -5,7 +5,7 @@ import Footer from "../components/Footer";
 export default function Team() {
   const titleWords = "L'eq uipe";
   return (
-    <main id="team">
+    <section id="team">
       <header>
         <div className="titleContainer">
           {titleWords.split(" ").map((word, i) => {
@@ -20,7 +20,7 @@ export default function Team() {
       </header>
 
       <Members />
-    </main>
+    </section>
   );
 }
 
