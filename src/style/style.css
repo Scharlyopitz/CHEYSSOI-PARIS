@@ -138,6 +138,22 @@ nav .menu .link:hover::after {
   transform-origin: left;
 }
 
+.backgroundImage {
+  position: fixed;
+  z-index: -1;
+  width: 100%;
+  height: 100vh;
+}
+.backgroundImage img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: top;
+     object-position: top;
+  filter: brightness(0.5);
+  height: 100%;
+  width: 100%;
+}
+
 #ConnextSection {
   position: relative;
   background: #1a1a1a;
@@ -180,20 +196,69 @@ nav .menu .link:hover::after {
   transform: translate(-50%, -50%);
 }
 
-.backgroundImage {
-  position: fixed;
-  z-index: -1;
-  width: 100%;
-  height: 100vh;
+#ebook {
+  position: relative;
+  background: #1a1a1a;
+  padding: 10vh 2vw 0;
+  display: flex;
+  flex-direction: column;
 }
-.backgroundImage img {
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
-  filter: brightness(0.5);
-  height: 100%;
+#ebook .container {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin: 0 auto;
+  flex-grow: 1;
+}
+#ebook .container .title h2 {
+  text-align: start;
+  font-size: 300px;
+  line-height: 270px;
+}
+#ebook .container .title h2:nth-child(2) {
+  color: #c13636;
+  padding-left: 592px;
+}
+#ebook .container .paragraph {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute;
+  top: 50%;
+  left: 20px;
+  text-align: justify;
+  width: 550px;
+  height: 270px;
+}
+#ebook .container .paragraph a {
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  padding: 0 3px;
+}
+#ebook .container .paragraph a:hover::before {
+  transform: scaleY(1);
+}
+#ebook .container .paragraph a::before, #ebook .container .paragraph a::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
   width: 100%;
+  height: 2px;
+  background: #c13636;
+}
+#ebook .container .paragraph a::before {
+  height: calc(100% + 2px);
+  transform: scaleY(0);
+  z-index: -1;
+  transform-origin: bottom;
+  transition: transform 0.3s;
+  will-change: transform;
+}
+#ebook .container .paragraph a::after {
+  height: 2px;
 }
 
 #homeSection {

@@ -1,0 +1,77 @@
+#ebook {
+  position: relative;
+  background: $LightBlack;
+  padding: 10vh 2vw 0;
+  display: flex;
+  flex-direction: column;
+
+  .container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    margin: 0 auto;
+    flex-grow: 1;
+
+    .title {
+      h2 {
+        text-align: start;
+        font-size: 300px;
+        line-height: 270px;
+
+        &:nth-child(2) {
+          color: $LightRed;
+          padding-left: 592px;
+        }
+      }
+    }
+
+    .paragraph {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: absolute;
+      top: 50%;
+      left: 20px;
+      text-align: justify;
+      width: 550px;
+      height: 270px;
+
+      a {
+        width: fit-content;
+        position: relative;
+        z-index: 1;
+        padding: 0 3px;
+
+        &:hover {
+          &::before {
+            transform: scaleY(1);
+          }
+        }
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          bottom: -2px;
+          left: 0;
+          width: 100%;
+          height: 2px;
+          background: $LightRed;
+        }
+
+        &::before {
+          height: calc(100% + 2px);
+          transform: scaleY(0);
+          z-index: -1;
+          transform-origin: bottom;
+          transition: transform 0.3s;
+          will-change: transform;
+        }
+
+        &::after {
+          height: 2px;
+        }
+      }
+    }
+  }
+}

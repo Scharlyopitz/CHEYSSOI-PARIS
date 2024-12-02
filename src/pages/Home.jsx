@@ -2,6 +2,7 @@ import Image1 from "/Image1.webp";
 import Navbar from "../components/Navbar";
 
 import ConnectSection from "../components/Home/ConnectSection";
+import Ebook from "../components/Home/Ebook";
 
 export default function Home() {
   return (
@@ -10,6 +11,7 @@ export default function Home() {
         <BackgroundImage />
         <HomeSection />
         <ConnectSection />
+        <Ebook />
       </main>
     </>
   );
