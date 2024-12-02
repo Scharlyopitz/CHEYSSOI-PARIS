@@ -3,14 +3,31 @@
   color: $DarkGrey;
   padding: 100px 2vw 0vh;
 
-  .titleContainer {
+  header {
     display: flex;
-    h2 {
-      font-size: 280px;
+    flex-direction: column;
+    height: 90vh;
 
-      &:nth-child(2) {
-        color: $LightRed;
+    .titleContainer {
+      display: flex;
+      padding-top: 10vh;
+
+      h2 {
+        font-size: 280px;
+
+        &:nth-child(2) {
+          color: $LightRed;
+        }
       }
+    }
+
+    p {
+      text-align: justify;
+      font-size: 25px;
+      width: 850px;
+      flex-grow: 1;
+      display: flex;
+      align-items: center;
     }
   }
 

@@ -6,11 +6,19 @@ export default function Team() {
   return (
     <main id="team">
       <Navbar />
-      <div className="titleContainer">
-        {titleWords.split(" ").map((word, i) => {
-          return <h2 key={i}>{word}</h2>;
-        })}
-      </div>
+      <header>
+        <div className="titleContainer">
+          {titleWords.split(" ").map((word, i) => {
+            return <h2 key={i}>{word}</h2>;
+          })}
+        </div>
+        <p>
+          La quête de l'excellence anime chaque membre de l'équipe. Chacun, en
+          apportant son expertise, sa créativité et son sens du détail contribue
+          à la création de projets uniques.
+        </p>
+      </header>
+
       <Members />
     </main>
   );

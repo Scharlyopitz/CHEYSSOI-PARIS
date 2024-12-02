@@ -428,14 +428,28 @@ nav .menu .link:hover::after {
   color: #e4e1dc;
   padding: 100px 2vw 0vh;
 }
-#team .titleContainer {
+#team header {
   display: flex;
+  flex-direction: column;
+  height: 90vh;
 }
-#team .titleContainer h2 {
+#team header .titleContainer {
+  display: flex;
+  padding-top: 10vh;
+}
+#team header .titleContainer h2 {
   font-size: 280px;
 }
-#team .titleContainer h2:nth-child(2) {
+#team header .titleContainer h2:nth-child(2) {
   color: #c13636;
+}
+#team header p {
+  text-align: justify;
+  font-size: 25px;
+  width: 850px;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
 }
 #team .membersContainer .jobContainer .job {
   display: flex;
