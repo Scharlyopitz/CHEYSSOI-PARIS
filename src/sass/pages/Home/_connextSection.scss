@@ -7,6 +7,14 @@
   align-items: center;
   color: $LightBlack;
 
+  .titleSection {
+    h2 {
+      &:last-child {
+        color: $LightBrown;
+      }
+    }
+  }
+
   p {
     width: 80vw;
     text-align: justify;
