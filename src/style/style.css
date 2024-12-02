@@ -472,6 +472,10 @@ nav .menu .link:hover::after {
   transform: translateX(5px);
 }
 
+#galerie {
+  background: #1a1a1a;
+}
+
 #team {
   background: #1a1a1a;
   color: #e4e1dc;

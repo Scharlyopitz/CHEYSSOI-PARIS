@@ -1,5 +1,5 @@
 import React from "react";
 
 export default function Galerie() {
-  return <div>Galerie</div>;
+  return <main id="galerie"></main>;
 }
