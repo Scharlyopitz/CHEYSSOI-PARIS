@@ -6,16 +6,21 @@ import Ebook from "../components/Home/Ebook";
 import Apropos from "./Apropos";
 import DemarrerProjet from "./DemarrerProjet";
 
+import Footer from "../components/Footer";
+
 export default function Home() {
   return (
-    <main id="Home">
-      <BackgroundImage />
-      <HomeSection />
-      <ConnectSection />
-      <Apropos />
-      <DemarrerProjet />
-      <Ebook />
-    </main>
+    <>
+      <main id="Home">
+        <BackgroundImage />
+        <HomeSection />
+        <ConnectSection />
+        <Apropos />
+        <DemarrerProjet />
+        <Ebook />
+      </main>
+      <Footer />
+    </>
   );
 }
 

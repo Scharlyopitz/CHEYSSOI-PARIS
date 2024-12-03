@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom";
-import Footer from "../Footer";
 
 export default function Ebook() {
   const title = "Notre Ebook";
@@ -33,8 +32,6 @@ cqx1wG_-3ywsVy2W5DKAo3ZXhTyPTe47YF9gnxfkqJg5oyp4EkpPHEq9Q2HccGUYdV2yu5oU4kazHDdD
           </Link>
         </div>
       </div>
-
-      <Footer />
     </section>
   );
 }
