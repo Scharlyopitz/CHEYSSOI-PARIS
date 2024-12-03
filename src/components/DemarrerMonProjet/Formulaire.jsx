@@ -101,14 +101,8 @@ export default function Formulaire() {
   return (
     <div className="formulaire">
       <form onSubmit={(e) => sendEmail(e)}>
-        <div className="title">
-          <span>Travaillons ensemble.</span>
-          <div className="titleSection">
-            {titleSection.split(" ").map((word, i) => {
-              return <h2 key={i}>{word}</h2>;
-            })}
-          </div>
-        </div>
+        <span className="miniText">Travaillons ensemble.</span>
+
         <span
           className="message"
           style={{

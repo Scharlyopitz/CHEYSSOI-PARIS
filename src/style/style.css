@@ -365,10 +365,12 @@ nav .menu .link:hover::after {
 }
 
 #demarrerprojet {
+  display: flex;
   position: relative;
   background: #e4e1dc;
   color: #191a19;
-  padding: 10vh 0 2vh;
+  padding: 10vh 0;
+  background: #585b4c;
 }
 #demarrerprojet .leftPart {
   display: flex;
@@ -400,21 +402,10 @@ nav .menu .link:hover::after {
 }
 #demarrerprojet .formulaire {
   display: flex;
-  width: 50%;
   margin-left: 50vw;
+  flex-grow: 1;
 }
-#demarrerprojet .formulaire .title {
-  display: flex;
-  flex-direction: column;
-}
-#demarrerprojet .formulaire .title .titleSection {
-  margin: 5vh 0;
-}
-#demarrerprojet .formulaire .title .titleSection h2 {
-  text-align: start;
-  font-size: 50px;
-}
-#demarrerprojet .formulaire .title span {
+#demarrerprojet .formulaire .miniText {
   font-weight: 300;
 }
 #demarrerprojet .formulaire .message {
@@ -450,7 +441,8 @@ nav .menu .link:hover::after {
   position: relative;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 30px;
+  flex-grow: 1;
 }
 #demarrerprojet .formulaire .middle div {
   display: flex;

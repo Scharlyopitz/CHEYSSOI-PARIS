@@ -1,8 +1,10 @@
 #demarrerprojet {
+  display: flex;
   position: relative;
   background: $DarkGrey;
   color: $Black;
-  padding: 10vh 0 2vh;
+  padding: 10vh 0;
+  background: $Kaki;
 
   .leftPart {
     display: flex;
@@ -39,25 +41,11 @@
 
   .formulaire {
     display: flex;
-    width: 50%;
     margin-left: 50vw;
+    flex-grow: 1;
 
-    .title {
-      display: flex;
-      flex-direction: column;
-
-      .titleSection {
-        margin: 5vh 0;
-
-        h2 {
-          text-align: start;
-          font-size: 50px;
-        }
-      }
-
-      span {
-        font-weight: 300;
-      }
+    .miniText {
+      font-weight: 300;
     }
 
     .message {
@@ -97,7 +85,8 @@
       position: relative;
       display: flex;
       flex-direction: column;
-      gap: 20px;
+      gap: 30px;
+      flex-grow: 1;
 
       div {
         display: flex;
