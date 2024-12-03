@@ -571,6 +571,10 @@ nav .menu .link:hover::after {
   text-align: center;
   overflow: hidden;
 }
+#galerie .content .projectsContainer .projectsNameContainer p {
+  text-transform: uppercase;
+  font-size: 30px;
+}
 #galerie .content .projectsContainer .projectContainer {
   display: flex;
   justify-content: space-between;
