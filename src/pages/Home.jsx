@@ -5,6 +5,7 @@ import ConnectSection from "../components/Home/ConnectSection";
 import Ebook from "../components/Home/Ebook";
 import Apropos from "./Apropos";
 import DemarrerProjet from "./DemarrerProjet";
+import Team from "./Team";
 
 import Footer from "../components/Footer";
 
@@ -16,6 +17,7 @@ export default function Home() {
         <HomeSection />
         <ConnectSection />
         <Apropos />
+        <Team />
         <DemarrerProjet />
         <Ebook />
       </main>
