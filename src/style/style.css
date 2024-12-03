@@ -209,6 +209,7 @@ nav .menu .link:hover::after {
   color: #c49d83;
 }
 #ConnextSection p {
+  max-width: 1440px;
   width: 80vw;
   text-align: justify;
   margin: 8vh 0;
