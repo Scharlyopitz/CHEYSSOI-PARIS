@@ -18,7 +18,7 @@ export default function ConnectSection() {
         <a href="#apropos" className="redButton">
           En savoir plus ?
         </a>
-        <a href="#demarrermonprojet" className="redButton">
+        <a href="#demarrerprojet" className="redButton">
           Démarrer mon projet !
         </a>
       </div>
