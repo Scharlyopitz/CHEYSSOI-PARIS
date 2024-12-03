@@ -415,7 +415,9 @@ nav .menu .link:hover::after {
   font-size: 12px;
 }
 #demarrerprojet .content .formulaire input,
-#demarrerprojet .content .formulaire textarea {
+#demarrerprojet .content .formulaire textarea,
+#demarrerprojet .content .formulaire select,
+#demarrerprojet .content .formulaire option {
   border: none;
   background-color: transparent;
   border-bottom: 2px solid #d0d0d0;
@@ -426,7 +428,9 @@ nav .menu .link:hover::after {
   transition: 0.2s;
 }
 #demarrerprojet .content .formulaire input:focus,
-#demarrerprojet .content .formulaire textarea:focus {
+#demarrerprojet .content .formulaire textarea:focus,
+#demarrerprojet .content .formulaire select:focus,
+#demarrerprojet .content .formulaire option:focus {
   border-bottom: 2px solid #c49d83;
 }
 #demarrerprojet .content .formulaire form {

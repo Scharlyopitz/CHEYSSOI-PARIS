@@ -46,7 +46,9 @@
       }
 
       input,
-      textarea {
+      textarea,
+      select,
+      option {
         border: none;
         background-color: transparent;
         border-bottom: 2px solid $Grey;

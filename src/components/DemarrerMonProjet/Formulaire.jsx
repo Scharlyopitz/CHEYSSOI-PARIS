@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 export default function Formulaire() {
   const [informations, setInformations] = useState({
+    formule: "Chey",
     surface: "",
     message: "",
     firstname: "",
@@ -22,6 +23,7 @@ export default function Formulaire() {
 
   const clearFields = () => {
     setInformations({
+      formule: "Chey",
       surface: "",
       message: "",
       firstname: "",
@@ -46,6 +48,7 @@ export default function Formulaire() {
   //   const plublicKey = "Ivv9VH-K6JIKana-R";
 
   //   const templateParams = {
+  //     formule: informations.formule,
   //     name: informations.name,
   //     firstname: informations.firstname,
   //     tel: informations.tel,
@@ -110,11 +113,16 @@ export default function Formulaire() {
           {error ? ErrorMsg : SuccesMsg}
         </span>
         <div className="middle">
+          <Formules
+            informations={informations}
+            setInformations={setInformations}
+          />
           <Nom informations={informations} setInformations={setInformations} />
           <Prenom
             informations={informations}
             setInformations={setInformations}
           />
+
           <Surface
             informations={informations}
             setInformations={setInformations}
@@ -140,6 +148,32 @@ export default function Formulaire() {
           </div>
         </button>
       </form>
+    </div>
+  );
+}
+
+function Formules({ informations, setInformations }) {
+  const options = ["Chey", "Ssoi"];
+
+  return (
+    <div>
+      <label htmlFor="formule">Choisir une formule</label>
+
+      <select
+        value={informations.formule}
+        onChange={(e) =>
+          setInformations((prec) => ({ ...prec, formule: e.target.value }))
+        }
+        id="formule"
+      >
+        {options.map((option, i) => {
+          return (
+            <option key={i} value={option}>
+              {option}
+            </option>
+          );
+        })}
+      </select>
     </div>
   );
 }
