@@ -474,31 +474,55 @@ nav .menu .link:hover::after {
   position: relative;
   background-color: #e4e1dc;
   color: #191a19;
+  padding: 100px 2vw;
 }
-#formules .title {
+#formules .contenu {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+#formules .contenu .title {
   display: flex;
   justify-content: center;
   gap: 15px;
 }
-#formules .title h2:last-child {
+#formules .contenu .title h2:last-child {
   color: #c49d83;
 }
-#formules .formuleCard {
+#formules .contenu .cardsContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+}
+#formules .contenu .cardsContainer .formuleCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   width: 350px;
-  height: 400px;
+  height: 460px;
   border-radius: 20px;
   border: 2px solid #191a19;
-  padding: 16px;
+  padding: 15px;
 }
-#formules .formuleCard .Name {
+#formules .contenu .cardsContainer .formuleCard ul li::before {
+  content: "•";
+  padding-right: 10px;
+}
+#formules .contenu .cardsContainer .formuleCard .topContainer {
+  border-bottom: 1px solid #191a19;
+  padding-bottom: 20px;
+}
+#formules .contenu .cardsContainer .formuleCard .topContainer .Name {
   font-size: 32px;
   font-weight: bold;
 }
-#formules .formuleCard .price {
+#formules .contenu .cardsContainer .formuleCard .topContainer .price {
   font-size: 14px;
 }
-#formules .formuleCard .descriptif {
+#formules .contenu .cardsContainer .formuleCard .descriptif {
   font-weight: 500;
+}
+#formules .contenu .cardsContainer .formuleCard a {
+  margin: 0 auto 20px;
 }
 
 #galerie {

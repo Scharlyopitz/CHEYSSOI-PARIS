@@ -2,36 +2,69 @@
   position: relative;
   background-color: $DarkGrey;
   color: $Black;
+  padding: 100px 2vw;
 
-  .title {
-    display: flex;
+  .contenu {
+    max-width: 1440px;
+    margin: 0 auto;
+    .title {
+      display: flex;
 
-    justify-content: center;
-    gap: 15px;
+      justify-content: center;
+      gap: 15px;
 
-    h2 {
-      &:last-child {
-        color: $LightBrown;
+      h2 {
+        &:last-child {
+          color: $LightBrown;
+        }
       }
     }
-  }
 
-  .formuleCard {
-    width: 350px;
-    height: 400px;
-    border-radius: 20px;
-    border: 2px solid $Black;
-    padding: 16px;
+    .cardsContainer {
+      display: flex;
+      justify-content: center;
+      margin-top: 100px;
 
-    .Name {
-      font-size: 32px;
-      font-weight: bold;
-    }
-    .price {
-      font-size: 14px;
-    }
-    .descriptif {
-      font-weight: 500;
+      .formuleCard {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 350px;
+        height: 460px;
+        border-radius: 20px;
+        border: 2px solid $Black;
+        padding: 15px;
+
+        ul {
+          li {
+            &::before {
+              content: "•";
+              padding-right: 10px;
+            }
+          }
+        }
+
+        .topContainer {
+          border-bottom: 1px solid $Black;
+          padding-bottom: 20px;
+
+          .Name {
+            font-size: 32px;
+            font-weight: bold;
+          }
+          .price {
+            font-size: 14px;
+          }
+        }
+
+        .descriptif {
+          font-weight: 500;
+        }
+
+        a {
+          margin: 0 auto 20px;
+        }
+      }
     }
   }
 }
