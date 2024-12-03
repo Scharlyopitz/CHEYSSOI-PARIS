@@ -4,6 +4,7 @@ import Navbar from "../components/Navbar";
 import ConnectSection from "../components/Home/ConnectSection";
 import Ebook from "../components/Home/Ebook";
 import Apropos from "./Apropos";
+import DemarrerProjet from "./DemarrerProjet";
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       <HomeSection />
       <ConnectSection />
       <Apropos />
+      <DemarrerProjet />
       <Ebook />
     </main>
   );
