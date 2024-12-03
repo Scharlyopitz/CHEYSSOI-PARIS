@@ -470,6 +470,31 @@ nav .menu .link:hover::after {
   background-color: #e4e1dc;
   color: #191a19;
 }
+#formules .title {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+#formules .title h2:last-child {
+  color: #c49d83;
+}
+#formules .formuleCard {
+  width: 350px;
+  height: 400px;
+  border-radius: 20px;
+  border: 2px solid #191a19;
+  padding: 16px;
+}
+#formules .formuleCard .Name {
+  font-size: 32px;
+  font-weight: bold;
+}
+#formules .formuleCard .price {
+  font-size: 14px;
+}
+#formules .formuleCard .descriptif {
+  font-weight: 500;
+}
 
 #galerie {
   background: #e4e1dc;
