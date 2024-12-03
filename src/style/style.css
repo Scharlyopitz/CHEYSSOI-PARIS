@@ -575,6 +575,7 @@ nav .menu .link:hover::after {
 #team .content .membersContainer .members {
   padding-bottom: 10vh;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
 }
 #team .content .membersContainer .members .card {
