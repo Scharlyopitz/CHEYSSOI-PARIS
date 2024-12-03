@@ -96,8 +96,6 @@ export default function Formulaire() {
   //   }
   // };
 
-  const titleSection = "Demarrer mon projet";
-
   return (
     <div className="formulaire">
       <form onSubmit={(e) => sendEmail(e)}>
@@ -136,8 +134,10 @@ export default function Formulaire() {
           />
         </div>
         <button type="submit">
-          <p>Envoyer</p>
-          <FontAwesomeIcon icon={faChevronRight} />
+          <div className="container">
+            <p>Envoyer</p>
+            <FontAwesomeIcon icon={faChevronRight} />
+          </div>
         </button>
       </form>
     </div>

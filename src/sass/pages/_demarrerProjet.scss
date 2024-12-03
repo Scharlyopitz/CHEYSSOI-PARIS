@@ -3,93 +3,110 @@
   position: relative;
   background: $DarkGrey;
   color: $Black;
-  padding: 10vh 0;
+  padding: 10vh 2vw;
 
-  .formulaire {
+  .content {
     display: flex;
-    margin-left: 50vw;
-    flex-grow: 1;
+    max-width: 1440px;
+    width: 100%;
+    margin: 0 auto;
 
-    .miniText {
-      font-weight: 300;
-    }
+    .titleFormulaire {
+      width: 50%;
 
-    .message {
-      padding: 10px 0 10px 5px;
-      font-size: 13px;
-      transition: 0.2s;
-    }
+      h2 {
+        text-align: start;
+        font-size: 115px;
+        line-height: 90px;
 
-    label {
-      padding-left: 5px;
-      font-size: 12px;
-    }
-
-    input,
-    textarea {
-      border: none;
-      background-color: transparent;
-      border-bottom: 2px solid $Grey;
-      outline: none;
-      resize: none;
-      font-size: 15px;
-      padding: 5px;
-      transition: 0.2s;
-
-      &:focus {
-        border-bottom: 2px solid $Black;
+        &:nth-child(2),
+        &:last-child {
+          color: $LightBrown;
+        }
       }
     }
 
-    form {
+    .formulaire {
       display: flex;
-      flex-direction: column;
-      width: 80%;
-    }
-
-    .middle {
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
       flex-grow: 1;
 
-      div {
-        display: flex;
-        flex-direction: column;
-      }
-    }
-
-    button {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      position: relative;
-      margin: 20px auto 0;
-      background: transparent;
-      padding: 5px 20px;
-      border: none;
-      overflow: hidden;
-
-      p {
-        font-size: 15px;
+      .miniText {
         font-weight: 300;
       }
 
-      &,
-      svg {
-        transition: 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+      .message {
+        padding: 10px 0 10px 5px;
+        font-size: 13px;
+        transition: 0.2s;
       }
 
-      svg {
-        color: $Black;
+      label {
+        padding-left: 5px;
+        font-size: 12px;
       }
 
-      &:hover {
-        cursor: pointer;
+      input,
+      textarea {
+        border: none;
+        background-color: transparent;
+        border-bottom: 2px solid $Grey;
+        outline: none;
+        resize: none;
+        font-size: 15px;
+        padding: 5px;
+        transition: 0.2s;
 
-        svg {
-          transform: translateX(5px);
+        &:focus {
+          border-bottom: 2px solid $LightBrown;
+        }
+      }
+
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+
+      .middle {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+
+        div {
+          display: flex;
+          flex-direction: column;
+        }
+      }
+
+      button {
+        margin: 50px auto 0;
+        background: transparent;
+        border: none;
+        overflow: hidden;
+
+        .container {
+          display: flex;
+          align-items: center;
+          gap: 10px;
+          transform: translateX(11px);
+          transition: 0.3s cubic-bezier(0.65, 0, 0.35, 1);
+          will-change: transform;
+
+          p {
+            font-size: 15px;
+            font-weight: 300;
+          }
+
+          svg {
+            color: $Black;
+          }
+
+          &:hover {
+            cursor: pointer;
+
+            transform: translateX(0);
+          }
         }
       }
     }
