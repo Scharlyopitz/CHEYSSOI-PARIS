@@ -465,6 +465,12 @@ nav .menu .link:hover::after {
   transform: translateX(0);
 }
 
+#formules {
+  position: relative;
+  background-color: #e4e1dc;
+  color: #191a19;
+}
+
 #galerie {
   background: #e4e1dc;
   padding: 100px 0 0;

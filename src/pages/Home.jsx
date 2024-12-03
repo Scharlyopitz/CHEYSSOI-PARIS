@@ -8,6 +8,7 @@ import DemarrerProjet from "./DemarrerProjet";
 import Team from "./Team";
 
 import Footer from "../components/Footer";
+import Formules from "./Formules";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
         <ConnectSection />
         <Apropos />
         <Team />
+        <Formules />
         <DemarrerProjet />
         <Ebook />
       </main>
