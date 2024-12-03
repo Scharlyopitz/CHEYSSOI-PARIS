@@ -4,8 +4,10 @@ import Socials from "./Socials";
 export default function Footer() {
   return (
     <footer>
-      <Contact />
-      <Socials />
+      <div className="content">
+        <Contact />
+        <Socials />
+      </div>
     </footer>
   );
 }

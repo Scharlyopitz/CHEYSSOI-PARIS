@@ -1,17 +1,23 @@
 footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
+  color: $Black;
+  background: $DarkGrey;
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   align-items: center;
   padding: 5vh 0;
 
-  .contact {
-    text-transform: lowercase;
+  .content {
     display: flex;
-    gap: 30px;
+    justify-content: space-between;
+    padding: 0 100px;
+    width: 100%;
+    max-width: 1440px;
+
+    .contact {
+      text-transform: lowercase;
+      display: flex;
+      gap: 30px;
+    }
   }
 }
