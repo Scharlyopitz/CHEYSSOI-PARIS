@@ -365,6 +365,7 @@ nav .menu .link:hover::after {
 }
 
 #demarrerprojet {
+  position: relative;
   background: #e4e1dc;
   color: #191a19;
   padding: 10vh 0 2vh;
@@ -374,7 +375,7 @@ nav .menu .link:hover::after {
   flex-direction: column;
   justify-content: space-between;
   align-items: start;
-  position: fixed;
+  position: absolute;
   top: 50%;
   left: 25%;
   transform: translate(-50%, -50%);
