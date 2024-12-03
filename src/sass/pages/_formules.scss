@@ -23,6 +23,8 @@
     .cardsContainer {
       display: flex;
       justify-content: center;
+      flex-wrap: wrap;
+      gap: 40px;
       margin-top: 100px;
 
       .formuleCard {
