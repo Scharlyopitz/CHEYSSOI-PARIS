@@ -9,6 +9,7 @@ import Team from "./Team";
 
 import Footer from "../components/Footer";
 import Formules from "./Formules";
+import Galerie from "./Galerie";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
         <ConnectSection />
         <Apropos />
         <Team />
+        <Galerie />
         <Formules />
         <DemarrerProjet />
         <Ebook />

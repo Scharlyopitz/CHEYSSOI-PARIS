@@ -20,9 +20,9 @@ function Logo() {
 function Menu() {
   const links = [
     { name: "à propos", to: "#apropos" },
-    { name: "demarrer mon projet", to: "#demarrerprojet" },
-    { name: "L'équipe", to: "#team" },
     { name: "galerie", to: "#galerie" },
+    { name: "demarrer mon projet", to: "#demarrerprojet" },
+    { name: "Ebook", to: "#ebook" },
   ];
 
   return (

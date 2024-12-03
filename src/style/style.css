@@ -535,8 +535,9 @@ nav .menu .link:hover::after {
 }
 
 #galerie {
+  position: relative;
   background: #e4e1dc;
-  padding: 100px 0 0;
+  padding: 100px 2vw 0;
   color: #1a1a1a;
 }
 
