@@ -1,3 +1,5 @@
+import FormulesData from "../assets/FormulesData.json";
+
 export default function Formules() {
   const title = "Nos Formules";
   return (
@@ -10,37 +12,16 @@ export default function Formules() {
         </div>
 
         <div className="cardsContainer">
-          <FormuleCard
-            name={"Chey"}
-            price={"49"}
-            descriptions={[
-              "Conseils",
-              "Etude personnalisée",
-              "Accompagnement personnalisé",
-              "Planche d'ambiances",
-              "Plans 2D et Visuels 3D",
-              "Présentation des matériaux à utiliser",
-              "Shopping list",
-              "Coffret livré à domicile",
-              "Mise en lien avec artisans",
-            ]}
-          />
-          <FormuleCard
-            name={"Ssoi"}
-            price={"69"}
-            descriptions={[
-              "Conseils",
-              "Etude personnalisée",
-              "Accompagnement personnalisé",
-              "Planche d'ambiances",
-              "Plans 2D et Visuels 3D",
-              "Présentation des matériaux à utiliser",
-              "Shopping list",
-              "Coffret livré à domicile",
-              "Mise en lien avec artisans",
-              "Gestion du chantier",
-            ]}
-          />
+          {FormulesData.map((formData, i) => {
+            return (
+              <FormuleCard
+                key={i}
+                name={formData.name}
+                price={formData.price}
+                descriptions={formData.descriptions}
+              />
+            );
+          })}
         </div>
       </div>
     </section>

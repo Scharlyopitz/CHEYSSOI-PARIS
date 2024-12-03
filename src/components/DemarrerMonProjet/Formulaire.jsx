@@ -3,6 +3,8 @@ import emailjs from "@emailjs/browser";
 import { faChevronRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
+import FormulesData from "../../assets/FormulesData.json";
+
 export default function Formulaire() {
   const [informations, setInformations] = useState({
     formule: "Chey",
@@ -107,7 +109,7 @@ export default function Formulaire() {
           className="message"
           style={{
             opacity: messageOff ? 1 : 0,
-            color: error ? "#ff0000" : "#43d35f8c",
+            color: error ? "#e90505" : "#07a726",
           }}
         >
           {error ? ErrorMsg : SuccesMsg}
@@ -153,8 +155,6 @@ export default function Formulaire() {
 }
 
 function Formules({ informations, setInformations }) {
-  const options = ["Chey", "Ssoi"];
-
   return (
     <div>
       <label htmlFor="formule">Choisir une formule</label>
@@ -166,10 +166,10 @@ function Formules({ informations, setInformations }) {
         }
         id="formule"
       >
-        {options.map((option, i) => {
+        {FormulesData.map((formule, i) => {
           return (
-            <option key={i} value={option}>
-              {option}
+            <option key={i} value={formule.name}>
+              {formule.name}
             </option>
           );
         })}
