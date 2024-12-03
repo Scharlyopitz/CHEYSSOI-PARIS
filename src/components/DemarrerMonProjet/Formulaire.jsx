@@ -38,63 +38,63 @@ export default function Formulaire() {
     }, 1500);
   };
 
-  // const sendEmail = (e) => {
-  //   e.preventDefault();
+  const sendEmail = (e) => {
+    e.preventDefault();
 
-  //   const serviceId = "service_s2gudpp";
-  //   const templateId = "template_vj885kk";
-  //   const plublicKey = "Ivv9VH-K6JIKana-R";
+    const serviceId = "service_s2gudpp";
+    const templateId = "template_vj885kk";
+    const plublicKey = "Ivv9VH-K6JIKana-R";
 
-  //   const templateParams = {
-  //     name: informations.name,
-  //     firstname: informations.firstname,
-  //     tel: informations.tel,
-  //     email: informations.email,
-  //     surface: informations.surface,
-  //     postalCode: informations.postalCode,
-  //     message: informations.message,
-  //   };
+    const templateParams = {
+      name: informations.name,
+      firstname: informations.firstname,
+      tel: informations.tel,
+      email: informations.email,
+      surface: informations.surface,
+      postalCode: informations.postalCode,
+      message: informations.message,
+    };
 
-  //   const sendEmail = () => {
-  //     emailjs
-  //       .send(serviceId, templateId, templateParams, plublicKey)
-  //       .then((reponse) => {
-  //         if (
-  //           informations.surface !== "" &&
-  //           informations.message !== "" &&
-  //           informations.name !== "" &&
-  //           informations.firstname !== "" &&
-  //           informations.tel !== "" &&
-  //           informations.email !== "" &&
-  //           informations.postalCode !== ""
-  //         ) {
-  //           console.log(reponse);
-  //         }
-  //       })
-  //       .catch((err) => {
-  //         console.log(err);
-  //       });
-  //   };
+    const sendEmail = () => {
+      emailjs
+        .send(serviceId, templateId, templateParams, plublicKey)
+        .then((reponse) => {
+          if (
+            informations.surface !== "" &&
+            informations.message !== "" &&
+            informations.name !== "" &&
+            informations.firstname !== "" &&
+            informations.tel !== "" &&
+            informations.email !== "" &&
+            informations.postalCode !== ""
+          ) {
+            console.log(reponse);
+          }
+        })
+        .catch((err) => {
+          console.log(err);
+        });
+    };
 
-  //   if (
-  //     informations.surface !== "" &&
-  //     informations.message !== "" &&
-  //     informations.name !== "" &&
-  //     informations.firstname !== "" &&
-  //     informations.tel !== "" &&
-  //     informations.email !== "" &&
-  //     informations.postalCode !== ""
-  //   ) {
-  //     clearFields();
-  //     setError(false);
-  //     refreshMessage();
-  //     setmessageOff(true);
-  //     sendEmail();
-  //   } else {
-  //     setError(true);
-  //     setmessageOff(true);
-  //   }
-  // };
+    if (
+      informations.surface !== "" &&
+      informations.message !== "" &&
+      informations.name !== "" &&
+      informations.firstname !== "" &&
+      informations.tel !== "" &&
+      informations.email !== "" &&
+      informations.postalCode !== ""
+    ) {
+      clearFields();
+      setError(false);
+      refreshMessage();
+      setmessageOff(true);
+      sendEmail();
+    } else {
+      setError(true);
+      setmessageOff(true);
+    }
+  };
 
   const titleSection = "Demarrer mon projet";
 

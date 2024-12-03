@@ -370,35 +370,6 @@ nav .menu .link:hover::after {
   background: #e4e1dc;
   color: #191a19;
   padding: 10vh 0;
-  background: #585b4c;
-}
-#demarrerprojet .leftPart {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: start;
-  position: absolute;
-  top: 50%;
-  left: 25%;
-  transform: translate(-50%, -50%);
-  height: 65%;
-  width: 25%;
-}
-#demarrerprojet .leftPart .button {
-  overflow: hidden;
-}
-#demarrerprojet .leftPart .button div {
-  display: flex;
-  align-items: center;
-  gap: 5px;
-  transform: translateX(-10px);
-  transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
-}
-#demarrerprojet .leftPart .button:hover {
-  cursor: pointer;
-}
-#demarrerprojet .leftPart .button:hover div {
-  transform: translateX(0);
 }
 #demarrerprojet .formulaire {
   display: flex;
@@ -409,7 +380,7 @@ nav .menu .link:hover::after {
   font-weight: 300;
 }
 #demarrerprojet .formulaire .message {
-  padding: 0 0 5px 5px;
+  padding: 10px 0 10px 5px;
   font-size: 13px;
   transition: 0.2s;
 }

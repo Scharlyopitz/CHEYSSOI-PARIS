@@ -4,40 +4,6 @@
   background: $DarkGrey;
   color: $Black;
   padding: 10vh 0;
-  background: $Kaki;
-
-  .leftPart {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: start;
-    position: absolute;
-    top: 50%;
-    left: 25%;
-    transform: translate(-50%, -50%);
-    height: 65%;
-    width: 25%;
-
-    .button {
-      overflow: hidden;
-
-      div {
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        transform: translateX(-10px);
-        transition: transform 0.35s cubic-bezier(0.65, 0, 0.35, 1);
-      }
-
-      &:hover {
-        cursor: pointer;
-
-        div {
-          transform: translateX(0);
-        }
-      }
-    }
-  }
 
   .formulaire {
     display: flex;
@@ -49,7 +15,7 @@
     }
 
     .message {
-      padding: 0 0 5px 5px;
+      padding: 10px 0 10px 5px;
       font-size: 13px;
       transition: 0.2s;
     }
