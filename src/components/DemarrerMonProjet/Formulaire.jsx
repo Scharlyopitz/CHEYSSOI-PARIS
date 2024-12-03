@@ -157,7 +157,9 @@ export default function Formulaire() {
 function Formules({ informations, setInformations }) {
   return (
     <div>
-      <label htmlFor="formule">Choisir une formule</label>
+      <label htmlFor="formule">
+        Choisir une <a href="#formules">formule</a>
+      </label>
 
       <select
         value={informations.formule}

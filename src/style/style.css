@@ -414,6 +414,9 @@ nav .menu .link:hover::after {
   padding-left: 5px;
   font-size: 12px;
 }
+#demarrerprojet .content .formulaire label a {
+  text-decoration: underline;
+}
 #demarrerprojet .content .formulaire input,
 #demarrerprojet .content .formulaire textarea,
 #demarrerprojet .content .formulaire select,
