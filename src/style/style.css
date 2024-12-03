@@ -427,7 +427,7 @@ nav .menu .link:hover::after {
 #demarrerprojet .content .formulaire form {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  width: 90%;
 }
 #demarrerprojet .content .formulaire .middle {
   position: relative;
