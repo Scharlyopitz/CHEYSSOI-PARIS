@@ -3,4 +3,64 @@
   background: $DarkGrey;
   padding: 100px 2vw 0;
   color: $LightBlack;
+
+  .content {
+    max-width: 1440px;
+    margin: 0 auto;
+
+    .titleContainer {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      .h2Container {
+        display: flex;
+        gap: 15px;
+
+        h2 {
+          font-size: 115px;
+          &:last-child {
+            color: $LightBrown;
+          }
+        }
+      }
+    }
+
+    .projectsContainer {
+      position: relative;
+      padding: 100px 0;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
+
+      .projectsNameContainer {
+        width: 50%;
+        text-align: center;
+        overflow: hidden;
+
+        // p {
+        //   transform: translateY(50%);
+        // }
+      }
+
+      .projectContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        &:nth-child(odd) {
+          flex-direction: row-reverse;
+          .project {
+            height: 400px;
+            width: 600px;
+          }
+        }
+        .project {
+          width: 400px;
+          height: 600px;
+          background: $Black;
+        }
+      }
+    }
+  }
 }
