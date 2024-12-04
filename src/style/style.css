@@ -130,6 +130,28 @@ footer .content .contact {
   border-radius: 5px;
 }
 
+.progressBarContainer {
+  position: fixed;
+  pointer-events: none;
+  z-index: 5;
+  top: 0;
+  right: 0;
+  height: 40vh;
+  width: 3px;
+}
+.progressBarContainer .progressBar {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  border-radius: 9999px;
+}
+.progressBarContainer .progressBar .bar {
+  width: 100%;
+  height: 100%;
+  transform-origin: top;
+  background: #191a19;
+}
+
 .socials {
   text-transform: lowercase;
   display: flex;

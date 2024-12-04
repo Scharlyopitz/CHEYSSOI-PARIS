@@ -11,11 +11,13 @@ import Footer from "../components/Footer";
 import Formules from "./Formules";
 import Galerie from "./Galerie";
 import GotoTopButton from "../components/GotoTopButton";
+import ProgressBar from "../components/ProgressBar";
 
 export default function Home() {
   return (
     <>
       <main id="Home">
+        <ProgressBar />
         <GotoTopButton />
         <BackgroundImage />
         <HomeSection />
