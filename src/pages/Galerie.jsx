@@ -24,7 +24,9 @@ export default function Galerie() {
                 <div className="projectsNameContainer">
                   <p>{galerie.name}</p>
                 </div>
-                <div className="project"></div>
+                <div className="project">
+                  <img src={galerie.image} alt={galerie.name} />
+                </div>
               </div>
             );
           })}
