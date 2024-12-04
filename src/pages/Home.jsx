@@ -10,11 +10,13 @@ import Team from "./Team";
 import Footer from "../components/Footer";
 import Formules from "./Formules";
 import Galerie from "./Galerie";
+import GotoTopButton from "../components/GotoTopButton";
 
 export default function Home() {
   return (
     <>
       <main id="Home">
+        <GotoTopButton />
         <BackgroundImage />
         <HomeSection />
         <ConnectSection />

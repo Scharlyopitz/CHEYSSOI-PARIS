@@ -111,6 +111,25 @@ footer .content .contact {
   gap: 30px;
 }
 
+.gotoTopButton {
+  position: fixed;
+  overflow: hidden;
+  z-index: 5;
+  width: 35px;
+  height: 35px;
+  right: 2vw;
+  bottom: 5vh;
+}
+.gotoTopButton a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #c49d83;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+}
+
 .socials {
   text-transform: lowercase;
   display: flex;
