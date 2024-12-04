@@ -218,8 +218,8 @@ nav .menu .link:hover::after {
 .backgroundImage img {
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  -o-object-position: center;
+     object-position: center;
   filter: brightness(0.5);
   height: 100%;
   width: 100%;
