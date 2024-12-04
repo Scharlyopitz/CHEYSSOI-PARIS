@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import "./style/style.css";
 import DemarrerProjet from "./pages/DemarrerProjet";
 import Home from "./pages/Home";
@@ -8,11 +8,9 @@ import Team from "./pages/Team";
 import Galerie from "./pages/Galerie";
 
 function App() {
-  const { pathname } = useLocation();
-
   useEffect(() => {
     window.scrollTo(0, 0);
-  }, [pathname]);
+  }, []);
 
   return (
     <Routes>

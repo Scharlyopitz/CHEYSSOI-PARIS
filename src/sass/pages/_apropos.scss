@@ -3,25 +3,6 @@
   background: $DarkGrey;
   color: $Black;
 
-  nav {
-    .LogoContainer {
-      // opacity: 0;
-      img {
-        filter: drop-shadow(0px 80px 0 $Black);
-      }
-    }
-    .menu {
-      font-weight: 400;
-      a {
-        color: $Black;
-
-        &::after {
-          background-color: $Black;
-        }
-      }
-    }
-  }
-
   .aproposSection {
     padding: 100px 2vw 0vh;
     max-width: 1440px;
@@ -97,6 +78,13 @@
         width: 490px;
         height: 650px;
         background: $Black;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+          object-position: left;
+        }
       }
     }
   }

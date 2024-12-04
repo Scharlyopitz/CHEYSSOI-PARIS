@@ -1,4 +1,4 @@
-export default function AproposSection({ wordsTitle, text, number }) {
+export default function AproposSection({ wordsTitle, text, image, number }) {
   return (
     <section className="aproposSection">
       <div className="lineContainer">
@@ -16,7 +16,9 @@ export default function AproposSection({ wordsTitle, text, number }) {
             <p>{text}</p>
           </div>
         </div>
-        <div className="image"></div>
+        <div className="image">
+          <img src={image} alt="image" />
+        </div>
       </div>
     </section>
   );

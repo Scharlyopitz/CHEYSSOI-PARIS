@@ -11,6 +11,7 @@ export default function Apropos() {
             key={i}
             wordsTitle={info.wordsTitle}
             text={info.text}
+            image={info.image}
             number={i + 1}
           />
         );
