@@ -1,4 +1,8 @@
-import { faInstagram, faFacebookF } from "@fortawesome/free-brands-svg-icons";
+import {
+  faInstagram,
+  faFacebookF,
+  faLinkedinIn,
+} from "@fortawesome/free-brands-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 
@@ -11,6 +15,10 @@ export default function Socials() {
     {
       icon: <FontAwesomeIcon icon={faInstagram} />,
       to: `https://www.instagram.com/cheyssoiparis/`,
+    },
+    {
+      icon: <FontAwesomeIcon icon={faLinkedinIn} />,
+      to: `https://www.linkedin.com/in/tania-vingadassalon-design/`,
     },
   ];
   return (
