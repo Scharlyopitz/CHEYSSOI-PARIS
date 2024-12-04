@@ -13,7 +13,23 @@ import Galerie from "./Galerie";
 import GotoTopButton from "../components/GotoTopButton";
 import ProgressBar from "../components/ProgressBar";
 
+import { useEffect } from "react";
+
+import Lenis from "lenis";
+
 export default function Home() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+
+    const lenis = new Lenis();
+
+    function raf(time) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
   return (
     <>
       <main id="Home">
