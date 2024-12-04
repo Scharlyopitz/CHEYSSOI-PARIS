@@ -145,7 +145,10 @@ footer .content .contact {
   right: 2vw;
   bottom: 5vh;
 }
-.gotoTopButton a {
+.gotoTopButton:hover {
+  cursor: pointer;
+}
+.gotoTopButton .button {
   display: flex;
   align-items: center;
   justify-content: center;

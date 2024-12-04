@@ -7,6 +7,10 @@ import { animate, motion as m } from "framer-motion";
 export default function GotoTopButton() {
   const [reveal, setReveal] = useState(false);
 
+  function handleClick() {
+    window.scrollTo(0, 0);
+  }
+
   const revealButton = {
     initial: {
       x: "101%",
@@ -33,7 +37,8 @@ export default function GotoTopButton() {
       style={{ pointerEvents: reveal ? "all" : "none" }}
       className="gotoTopButton"
     >
-      <m.a
+      <m.div
+        onClick={() => handleClick()}
         initial="initial"
         animate={reveal ? "animate" : "initial"}
         variants={revealButton}
@@ -42,7 +47,7 @@ export default function GotoTopButton() {
         className="button"
       >
         <FontAwesomeIcon icon={faArrowUp} />
-      </m.a>
+      </m.div>
     </div>
   );
 }
