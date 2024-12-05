@@ -196,6 +196,7 @@ footer .content .contact {
 
 nav {
   position: absolute;
+  z-index: 1;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
@@ -330,13 +331,12 @@ nav .menu .link:hover::after {
   width: 550px;
 }
 
-#homeSection {
+#homeSection .txtContainer {
+  width: 100%;
+  height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-#homeSection .txtContainer {
-  display: flex;
 }
 #homeSection .txtContainer h1 {
   position: relative;
