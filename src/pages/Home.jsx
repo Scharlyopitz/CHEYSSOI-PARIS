@@ -13,10 +13,10 @@ import Galerie from "./Galerie";
 import GotoTopButton from "../components/GotoTopButton";
 import ProgressBar from "../components/ProgressBar";
 
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 import Lenis from "lenis";
-import { motion as m } from "framer-motion";
+import { motion as m, useScroll, useTransform } from "framer-motion";
 
 export default function Home() {
   useEffect(() => {
@@ -31,14 +31,16 @@ export default function Home() {
 
     requestAnimationFrame(raf);
   }, []);
+
   return (
     <>
       <main id="Home">
         <ProgressBar />
         <GotoTopButton />
-        <BackgroundImage />
-        <HomeSection />
-        <ConnectSection />
+        <BackgroundImage>
+          <HomeSection />
+          <ConnectSection />
+        </BackgroundImage>
         <Apropos />
         <Team />
         <Galerie />
@@ -51,10 +53,22 @@ export default function Home() {
   );
 }
 
-function BackgroundImage() {
+function BackgroundImage({ children }) {
+  const containerRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.6], [1, 1, 0]);
+
   return (
-    <div className="backgroundImage">
-      <img src={Image1} alt="Image1" />
+    <div className="backgroundImageContainer">
+      <m.div ref={containerRef} style={{ opacity }} className="backgroundImage">
+        <img src={Image1} alt="Image1" />
+      </m.div>
+      {children}
     </div>
   );
 }
