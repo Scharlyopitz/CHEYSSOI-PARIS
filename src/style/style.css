@@ -74,6 +74,7 @@ html {
 
 body {
   color: #f6f6f6;
+  background: #e4e1dc;
 }
 body,
 body input,
@@ -259,6 +260,8 @@ nav .menu .link:hover::after {
 
 .backgroundImage {
   position: fixed;
+  top: 0;
+  left: 0;
   z-index: -1;
   width: 100%;
   height: 100vh;
@@ -274,8 +277,6 @@ nav .menu .link:hover::after {
 }
 
 #ConnextSection {
-  position: relative;
-  background: #e4e1dc;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -297,8 +298,6 @@ nav .menu .link:hover::after {
 }
 
 #ebook {
-  position: relative;
-  background: #e4e1dc;
   padding: 0 2vw;
   display: flex;
   flex-direction: column;
@@ -335,8 +334,6 @@ nav .menu .link:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  position: sticky;
-  top: 0;
 }
 #homeSection .txtContainer {
   display: flex;
@@ -361,8 +358,6 @@ nav .menu .link:hover::after {
 }
 
 #apropos {
-  position: relative;
-  background: #e4e1dc;
   color: #191a19;
 }
 #apropos .aproposSection {
@@ -439,8 +434,6 @@ nav .menu .link:hover::after {
 
 #demarrerprojet {
   display: flex;
-  position: relative;
-  background: #e4e1dc;
   color: #191a19;
   padding: 10vh 2vw;
 }
@@ -541,8 +534,6 @@ nav .menu .link:hover::after {
 }
 
 #formules {
-  position: relative;
-  background-color: #e4e1dc;
   color: #191a19;
   padding: 100px 2vw;
 }
@@ -598,8 +589,6 @@ nav .menu .link:hover::after {
 }
 
 #galerie {
-  position: relative;
-  background: #e4e1dc;
   padding: 100px 2vw 0;
   color: #1a1a1a;
 }
@@ -666,9 +655,7 @@ nav .menu .link:hover::after {
 }
 
 #team {
-  position: relative;
   color: #1a1a1a;
-  background: #e4e1dc;
   padding: 100px 2vw 0vh;
 }
 #team .content {
