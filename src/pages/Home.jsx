@@ -16,6 +16,8 @@ import ProgressBar from "../components/ProgressBar";
 import { useEffect } from "react";
 
 import Lenis from "lenis";
+import { useScroll, useTransform, motion as m } from "framer-motion";
+import { useRef } from "react";
 
 export default function Home() {
   useEffect(() => {
@@ -59,12 +61,21 @@ function BackgroundImage() {
 }
 
 function HomeSection() {
+  const containerRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 0.7, 1], [1, 1, 0]);
+
   return (
-    <section id="homeSection">
+    <section ref={containerRef} id="homeSection">
       <Navbar />
-      <div className="txtContainer">
+      <m.div style={{ opacity }} className="txtContainer">
         <h1>Cheyssoi Paris</h1>
-      </div>
+      </m.div>
     </section>
   );
 }
