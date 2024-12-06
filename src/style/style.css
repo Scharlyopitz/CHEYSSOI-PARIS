@@ -623,7 +623,7 @@ nav .menu .link:hover::after {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: transform 0.5s;
+  transition: transform 0.5s cubic-bezier(0.5, 1, 0.89, 1);
   will-change: transform;
 }
 #galerie .content .projectsContainer .projectContainer .projectsNameContainer {
