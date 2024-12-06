@@ -1,8 +1,9 @@
 .redButton {
+  overflow: hidden;
   width: fit-content;
   position: relative;
   z-index: 1;
-  padding: 0 3px;
+  padding: 0 2px 3px;
   transition: 0.3s;
 
   &:hover {
@@ -17,9 +18,9 @@
   &::after {
     content: "";
     position: absolute;
-    bottom: -2px;
+    bottom: 0px;
     left: 0;
-    width: 100%;
+    width: 101%;
     height: 2px;
     background: $LightBrown;
   }
