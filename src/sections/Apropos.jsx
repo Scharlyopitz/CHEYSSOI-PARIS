@@ -1,4 +1,25 @@
-export default function AproposSection({ wordsTitle, text, image, number }) {
+import React from "react";
+import AproposInfos from "../assets/AproposInfos.json";
+
+export default function Apropos() {
+  return (
+    <section id="apropos">
+      {AproposInfos.map((info, i) => {
+        return (
+          <AproposSection
+            key={i}
+            wordsTitle={info.wordsTitle}
+            text={info.text}
+            image={info.image}
+            number={i + 1}
+          />
+        );
+      })}
+    </section>
+  );
+}
+
+function AproposSection({ wordsTitle, text, image, number }) {
   return (
     <section className="aproposSection">
       <div className="lineContainer">

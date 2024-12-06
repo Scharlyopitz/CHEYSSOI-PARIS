@@ -1,15 +1,15 @@
 import Image1 from "/Image2.webp";
 import Navbar from "../components/Navbar";
 
-import ConnectSection from "../components/Home/ConnectSection";
-import Ebook from "../components/Home/Ebook";
-import Apropos from "./Apropos";
-import DemarrerProjet from "./DemarrerProjet";
-import Team from "./Team";
+import ConnectSection from "../sections/ConnectSection";
+import Ebook from "../sections/Ebook";
+import Apropos from "../sections/Apropos";
+import DemarrerProjet from "../sections/DemarrerProjet";
+import Team from "../sections/Team";
 
 import Footer from "../components/Footer";
-import Formules from "./Formules";
-import Galerie from "./Galerie";
+import Formules from "../sections/Formules";
+import Galerie from "../sections/Galerie";
 import GotoTopButton from "../components/GotoTopButton";
 import ProgressBar from "../components/ProgressBar";
 
