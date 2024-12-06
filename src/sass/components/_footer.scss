@@ -20,4 +20,21 @@ footer {
       gap: 30px;
     }
   }
+
+  .socials {
+    text-transform: lowercase;
+    display: flex;
+    gap: 30px;
+
+    svg {
+      padding: 2px 4px;
+      border-radius: 10px;
+      font-size: 20px;
+      transition: 0.2s;
+
+      &:hover {
+        filter: contrast(0.1);
+      }
+    }
+  }
 }
