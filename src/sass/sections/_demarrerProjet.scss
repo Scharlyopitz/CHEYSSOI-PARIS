@@ -5,19 +5,15 @@
   padding: 10vh 2vw;
 
   .content {
-    display: flex;
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
 
     .titleFormulaire {
-      width: 50%;
-
+      display: flex;
+      justify-content: center;
+      gap: 15px;
       h2 {
-        text-align: start;
-        font-size: 115px;
-        line-height: 90px;
-
         &:nth-child(2),
         &:last-child {
           color: $LightBrown;
@@ -27,9 +23,11 @@
 
     .formulaire {
       display: flex;
-      flex-grow: 1;
+      justify-content: center;
+      margin-top: 100px;
 
       .miniText {
+        text-align: center;
         font-weight: 300;
       }
 
@@ -69,7 +67,7 @@
       form {
         display: flex;
         flex-direction: column;
-        width: 90%;
+        width: 70%;
       }
 
       .middle {

@@ -386,27 +386,25 @@ nav .menu .link:hover::after {
   padding: 10vh 2vw;
 }
 #demarrerprojet .content {
-  display: flex;
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
 }
 #demarrerprojet .content .titleFormulaire {
-  width: 50%;
-}
-#demarrerprojet .content .titleFormulaire h2 {
-  text-align: start;
-  font-size: 115px;
-  line-height: 90px;
+  display: flex;
+  justify-content: center;
+  gap: 15px;
 }
 #demarrerprojet .content .titleFormulaire h2:nth-child(2), #demarrerprojet .content .titleFormulaire h2:last-child {
   color: #c49d83;
 }
 #demarrerprojet .content .formulaire {
   display: flex;
-  flex-grow: 1;
+  justify-content: center;
+  margin-top: 100px;
 }
 #demarrerprojet .content .formulaire .miniText {
+  text-align: center;
   font-weight: 300;
 }
 #demarrerprojet .content .formulaire .message {
@@ -443,7 +441,7 @@ nav .menu .link:hover::after {
 #demarrerprojet .content .formulaire form {
   display: flex;
   flex-direction: column;
-  width: 90%;
+  width: 70%;
 }
 #demarrerprojet .content .formulaire .middle {
   position: relative;
