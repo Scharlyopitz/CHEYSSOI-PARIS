@@ -175,9 +175,11 @@ footer .content .contact {
   height: 100%;
 }
 .progressBarContainer .progressBar .bar {
+  transform-origin: top;
   width: 100%;
   height: 100%;
   background: #191a19;
+  will-change: transform;
 }
 
 .socials {
@@ -267,6 +269,7 @@ nav .menu .link:hover::after {
   z-index: -1;
   width: 100%;
   height: 200vh;
+  will-change: opacity;
 }
 .backgroundImage img {
   position: sticky;
@@ -335,14 +338,25 @@ nav .menu .link:hover::after {
   width: 550px;
 }
 
-#homeSection .txtContainer {
+#homeSection .parentContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 200vh;
+}
+#homeSection .parentContainer .txtContainer {
+  pointer-events: none;
+  position: sticky;
+  top: 0;
   width: 100%;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  will-change: opacity;
 }
-#homeSection .txtContainer h1 {
+#homeSection .parentContainer .txtContainer h1 {
   position: relative;
   font-family: "Cormorant Garamond", serif;
   font-weight: 300;
@@ -350,8 +364,9 @@ nav .menu .link:hover::after {
   font-size: 120px;
   letter-spacing: 1vw;
   white-space: nowrap;
+  will-change: transform;
 }
-#homeSection .txtContainer h1::after {
+#homeSection .parentContainer .txtContainer h1::after {
   content: "Designers d’espaces éthiques";
   position: absolute;
   bottom: -10%;

@@ -37,10 +37,9 @@ export default function Home() {
       <main id="Home">
         <ProgressBar />
         <GotoTopButton />
-        <BackgroundImage>
-          <HomeSection />
-          <ConnectSection />
-        </BackgroundImage>
+        <BackgroundImage />
+        <HomeSection />
+        <ConnectSection />
         <Apropos />
         <Team />
         <Galerie />
@@ -53,7 +52,7 @@ export default function Home() {
   );
 }
 
-function BackgroundImage({ children }) {
+function BackgroundImage() {
   const containerRef = useRef(null);
 
   const { scrollYProgress } = useScroll({
@@ -61,31 +60,34 @@ function BackgroundImage({ children }) {
     offset: ["start start", "end end"],
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.3, 0.6], [1, 1, 0]);
+  const opacity = useTransform(scrollYProgress, [0, 0.25, 0.6], [1, 1, 0]);
 
   return (
-    <div className="backgroundImageContainer">
-      <m.div ref={containerRef} style={{ opacity }} className="backgroundImage">
-        <img src={Image1} alt="Image1" />
-      </m.div>
-      {children}
-    </div>
+    <m.div ref={containerRef} style={{ opacity }} className="backgroundImage">
+      <img src={Image1} alt="Image1" />
+    </m.div>
   );
 }
 
 function HomeSection() {
+  const txtContainerRef = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: txtContainerRef,
+    offset: ["start start", "end end"],
+  });
+
+  const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
+  const y = useTransform(scrollYProgress, [0, 0.3], [0, -20]);
+
   return (
     <section id="homeSection">
       <Navbar />
-      <m.div
-        initial={{ opacity: 0 }}
-        whileInView={{ opacity: 1 }}
-        viewport={{ amount: 0.9 }}
-        transition={{ duration: 0.3 }}
-        className="txtContainer"
-      >
-        <h1>Cheyssoi Paris</h1>
-      </m.div>
+      <div ref={txtContainerRef} className="parentContainer">
+        <m.div style={{ opacity }} className="txtContainer">
+          <m.h1 style={{ y }}>Cheyssoi Paris</m.h1>
+        </m.div>
+      </div>
     </section>
   );
 }
