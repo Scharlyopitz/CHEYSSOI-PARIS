@@ -591,46 +591,64 @@ nav .menu .link:hover::after {
   color: #c49d83;
 }
 #galerie .content .projectsContainer {
-  position: relative;
   padding: 100px 0;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-#galerie .content .projectsContainer .projectsNameContainer {
-  width: 50%;
-  text-align: center;
-  overflow: hidden;
-}
-#galerie .content .projectsContainer .projectsNameContainer p {
-  text-transform: uppercase;
-  font-size: 30px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
 }
 #galerie .content .projectsContainer .projectContainer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
 }
-#galerie .content .projectsContainer .projectContainer:nth-child(odd) {
-  flex-direction: row-reverse;
+#galerie .content .projectsContainer .projectContainer:nth-child(2n-1) {
+  grid-row: span 15;
 }
-#galerie .content .projectsContainer .projectContainer:nth-child(odd) .project {
-  height: 400px;
-  width: 600px;
+#galerie .content .projectsContainer .projectContainer:hover img {
+  transform: scale(1.1);
+}
+#galerie .content .projectsContainer .projectContainer .filter {
+  background: linear-gradient(0deg, #191a19 0%, rgba(0, 0, 0, 0) 50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 #galerie .content .projectsContainer .projectContainer .project {
-  width: 400px;
-  height: 600px;
-  background: #191a19;
   overflow: hidden;
+  height: 100%;
 }
 #galerie .content .projectsContainer .projectContainer .project img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
+  transition: transform 0.5s;
+  will-change: transform;
+}
+#galerie .content .projectsContainer .projectContainer .projectsNameContainer {
+  position: absolute;
+  z-index: 2;
+  bottom: 5px;
+  left: 10px;
+  display: flex;
+  align-items: baseline;
+  gap: 7px;
+  margin-top: 5px;
+}
+#galerie .content .projectsContainer .projectContainer .projectsNameContainer p,
+#galerie .content .projectsContainer .projectContainer .projectsNameContainer svg {
+  color: #f6f6f6;
+}
+#galerie .content .projectsContainer .projectContainer .projectsNameContainer p {
+  margin-top: 5px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 17px;
+}
+#galerie .content .projectsContainer .projectContainer .projectsNameContainer svg {
+  transform: rotate(310deg);
+  font-size: 13px;
 }
 
 #homeSection .parentContainer {
