@@ -13,10 +13,9 @@
 
       .titleContainer {
         display: flex;
+        justify-content: center;
 
         h2 {
-          font-size: 150px;
-
           &:last-child {
             color: $Gold;
           }
@@ -24,10 +23,8 @@
       }
 
       p {
-        text-align: justify;
+        text-align: center;
         font-size: 20px;
-        width: 50%;
-        flex-grow: 1;
         display: flex;
         align-items: center;
       }

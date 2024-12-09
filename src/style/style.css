@@ -700,18 +700,14 @@ nav .menu .link:hover::after {
 }
 #team .content header .titleContainer {
   display: flex;
-}
-#team .content header .titleContainer h2 {
-  font-size: 150px;
+  justify-content: center;
 }
 #team .content header .titleContainer h2:last-child {
   color: #c49d39;
 }
 #team .content header p {
-  text-align: justify;
+  text-align: center;
   font-size: 20px;
-  width: 50%;
-  flex-grow: 1;
   display: flex;
   align-items: center;
 }
