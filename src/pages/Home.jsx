@@ -13,12 +13,25 @@ import Galerie from "../sections/Galerie";
 import GotoTopButton from "../components/GotoTopButton";
 import ProgressBar from "../components/ProgressBar";
 
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import Lenis from "lenis";
 import { motion as m, useScroll, useTransform } from "framer-motion";
+import Projet from "./Projet";
 
 export default function Home() {
+  const [projectName, setProjectName] = useState("");
+
+  useEffect(() => {
+    if (projectName) {
+      document.body.style.overflow = "hidden"; // standard no-scroll implementation
+      document.body.setAttribute("data-lenis-prevent", "true"); // Make sure you pass true as string
+    } else {
+      document.body.style.overflow = "auto";
+      document.body.removeAttribute("data-lenis-prevent", "true");
+    }
+  }, [projectName]);
+
   useEffect(() => {
     window.scrollTo(0, 0);
 
@@ -42,7 +55,10 @@ export default function Home() {
         <ConnectSection />
         <Apropos />
         <Team />
-        <Galerie />
+        <Galerie setProjectName={setProjectName} />
+        {projectName && (
+          <Projet projectName={projectName} setProjectName={setProjectName} />
+        )}
         <Formules />
         <DemarrerProjet />
         <Ebook />

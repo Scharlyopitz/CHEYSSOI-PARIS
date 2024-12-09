@@ -1,13 +1,13 @@
 import GalerieData from "../assets/GalerieData.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import { Link } from "react-router-dom";
 
-export default function Galerie() {
+export default function Galerie({ setProjectName }) {
   const title = "L'art du detail";
 
   const text =
     "Plongez dans notre collection de projets d’intérieurs inspirants, où design et durabilité se rencontrent.";
+
   return (
     <section id="galerie">
       <div className="content">
@@ -23,9 +23,9 @@ export default function Galerie() {
         <div className="projectsContainer">
           {GalerieData.map((galerie, i) => {
             return (
-              <Link
+              <div
                 key={i}
-                to={`/${galerie.name}`}
+                onClick={() => setProjectName(galerie.name)}
                 className="projectContainer"
               >
                 <div className="filter" />
@@ -36,7 +36,7 @@ export default function Galerie() {
                   <p>{galerie.name}</p>
                   <FontAwesomeIcon icon={faArrowRight} />
                 </div>
-              </Link>
+              </div>
             );
           })}
         </div>
