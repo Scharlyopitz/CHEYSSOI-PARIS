@@ -1,5 +1,6 @@
 import { useParams } from "react-router-dom";
 import Galerie from "../assets/GalerieData.json";
+import { motion as m } from "framer-motion";
 
 export default function Projet({ projectName, setProjectName }) {
   const projet = Galerie.find((projet) => projet.name === projectName);
@@ -8,8 +9,30 @@ export default function Projet({ projectName, setProjectName }) {
     setProjectName("");
   }
 
+  const bottomPath = "polygon(0 100%, 100% 100%, 100% 100%, 0% 100%)";
+  const basicPath = "polygon(0 0, 100% 0, 100% 100%, 0% 100%)";
+  const topPath = "polygon(0 0, 100% 0, 100% 0, 0 0)";
+
+  const animePath = {
+    initial: {
+      clipPath: bottomPath,
+    },
+    animate: {
+      clipPath: basicPath,
+    },
+    exit: {
+      clipPath: bottomPath,
+    },
+  };
+
   return (
-    <section id="Projet">
+    <m.section
+      initial="initial"
+      animate="animate"
+      exit="exit"
+      variants={animePath}
+      id="Projet"
+    >
       <div
         className="image"
         style={{ backgroundImage: `URL(${projet?.image})` }}
@@ -26,6 +49,6 @@ export default function Projet({ projectName, setProjectName }) {
           <img src={projet.projetImage} alt="image projet" />
         </div> */}
       </div>
-    </section>
+    </m.section>
   );
 }

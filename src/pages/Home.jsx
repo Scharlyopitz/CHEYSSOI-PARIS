@@ -16,7 +16,12 @@ import ProgressBar from "../components/ProgressBar";
 import { useEffect, useRef, useState } from "react";
 
 import Lenis from "lenis";
-import { motion as m, useScroll, useTransform } from "framer-motion";
+import {
+  AnimatePresence,
+  motion as m,
+  useScroll,
+  useTransform,
+} from "framer-motion";
 import Projet from "./Projet";
 
 export default function Home() {
@@ -58,9 +63,11 @@ export default function Home() {
         <Apropos />
         <Team />
         <Galerie setProjectName={setProjectName} />
-        {projectName && (
-          <Projet projectName={projectName} setProjectName={setProjectName} />
-        )}
+        <AnimatePresence>
+          {projectName && (
+            <Projet projectName={projectName} setProjectName={setProjectName} />
+          )}
+        </AnimatePresence>
         <Formules />
         <DemarrerProjet />
         <Ebook />
