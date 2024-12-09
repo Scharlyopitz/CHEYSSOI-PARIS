@@ -1,6 +1,7 @@
 import GalerieData from "../assets/GalerieData.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 export default function Galerie() {
   const title = "L'art du detail";
@@ -22,7 +23,11 @@ export default function Galerie() {
         <div className="projectsContainer">
           {GalerieData.map((galerie, i) => {
             return (
-              <div key={i} className="projectContainer">
+              <Link
+                key={i}
+                to={`/${galerie.name}`}
+                className="projectContainer"
+              >
                 <div className="filter" />
                 <div className="project">
                   <img src={galerie.image} alt={galerie.name} />
@@ -31,7 +36,7 @@ export default function Galerie() {
                   <p>{galerie.name}</p>
                   <FontAwesomeIcon icon={faArrowRight} />
                 </div>
-              </div>
+              </Link>
             );
           })}
         </div>
