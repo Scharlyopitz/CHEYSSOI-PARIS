@@ -1,0 +1,46 @@
+#Projet {
+  color: $Black;
+
+  .image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 50%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    .filter {
+      background: linear-gradient(0deg, #191a19 0%, rgba(0, 0, 0, 0) 50%);
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+
+    h1 {
+      font-size: 5vw;
+      font-weight: 400;
+      position: absolute;
+      bottom: 1vw;
+      left: 2vw;
+      color: #f6f6f6;
+      z-index: 2;
+    }
+  }
+
+  .content {
+    position: absolute;
+    bottom: 2vw;
+    right: 0;
+    padding-left: 52%;
+
+    p {
+      padding-right: 2vw;
+      text-align: justify;
+    }
+  }
+}

@@ -265,6 +265,48 @@ nav .menu .link:hover::after {
   transform-origin: left;
 }
 
+#Projet {
+  color: #191a19;
+}
+#Projet .image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+#Projet .image .filter {
+  background: linear-gradient(0deg, #191a19 0%, rgba(0, 0, 0, 0) 50%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+#Projet .image h1 {
+  font-size: 5vw;
+  font-weight: 400;
+  position: absolute;
+  bottom: 1vw;
+  left: 2vw;
+  color: #f6f6f6;
+  z-index: 2;
+}
+#Projet .content {
+  position: absolute;
+  bottom: 2vw;
+  right: 0;
+  padding-left: 52%;
+}
+#Projet .content p {
+  padding-right: 2vw;
+  text-align: justify;
+}
+
 #apropos {
   color: #191a19;
 }

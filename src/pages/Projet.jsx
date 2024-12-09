@@ -9,11 +9,17 @@ export default function Projet() {
   const projet = Galerie.find((projet) => projet.name === name);
 
   return (
-    <section id="Projet">
-      <h2>
-        Bienvenue sur le {projet.name}
+    <main id="Projet">
+      <div
+        className="image"
+        style={{ backgroundImage: `URL(${projet.image})` }}
+      >
+        <div className="filter"></div>
+        <h1>{projet.name}</h1>
+      </div>
+      <div className="content">
         <p>{projet.description}</p>
-      </h2>
-    </section>
+      </div>
+    </main>
   );
 }
