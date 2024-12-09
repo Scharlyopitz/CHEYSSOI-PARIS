@@ -301,13 +301,13 @@ nav .menu .link:hover::after {
 }
 #apropos .aproposSection .content .txt .title {
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   flex-wrap: wrap;
   gap: 20px;
 }
 #apropos .aproposSection .content .txt .title h2 {
   text-align: start;
-  line-height: 60px;
+  line-height: 50px;
 }
 #apropos .aproposSection .content .txt .title h2:nth-child(2) {
   color: #c49d39;

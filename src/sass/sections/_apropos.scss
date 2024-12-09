@@ -41,13 +41,13 @@
 
         .title {
           display: flex;
-          flex-direction: row;
+          flex-direction: column;
           flex-wrap: wrap;
           gap: 20px;
 
           h2 {
             text-align: start;
-            line-height: 60px;
+            line-height: 50px;
 
             &:nth-child(2) {
               color: $Gold;
