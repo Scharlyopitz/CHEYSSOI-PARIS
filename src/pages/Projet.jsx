@@ -1,12 +1,16 @@
-import { useLocation, useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
 import Galerie from "../assets/GalerieData.json";
 
 export default function Projet() {
-  const location = useLocation();
-
   const { name } = useParams();
 
   const projet = Galerie.find((projet) => projet.name === name);
+
+  const navigate = useNavigate();
+
+  function GoBack() {
+    navigate(-1);
+  }
 
   return (
     <main id="Projet">
@@ -18,7 +22,13 @@ export default function Projet() {
         <h1>{projet.name}</h1>
       </div>
       <div className="content">
+        <div className="backBtn" onClick={() => GoBack()}>
+          <span>Back</span>
+        </div>
         <p>{projet.description}</p>
+        {/* <div className="imageProjet">
+          <img src={projet.projetImage} alt="image projet" />
+        </div> */}
       </div>
     </main>
   );
