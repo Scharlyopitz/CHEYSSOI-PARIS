@@ -307,11 +307,10 @@ nav .menu .link:hover::after {
 }
 #apropos .aproposSection .content .txt .title h2 {
   text-align: start;
-  font-size: 90px;
   line-height: 60px;
 }
 #apropos .aproposSection .content .txt .title h2:nth-child(2) {
-  color: #c49d83;
+  color: #c49d39;
 }
 #apropos .aproposSection .content .txt .paragraphe {
   display: flex;
@@ -365,7 +364,7 @@ nav .menu .link:hover::after {
   color: #1a1a1a;
 }
 #ConnextSection .titleSection h2:last-child {
-  color: #c49d83;
+  color: #c49d39;
 }
 #ConnextSection p {
   max-width: 1440px;
@@ -394,7 +393,7 @@ nav .menu .link:hover::after {
   gap: 15px;
 }
 #demarrerprojet .content .titleFormulaire h2:nth-child(2), #demarrerprojet .content .titleFormulaire h2:last-child {
-  color: #c49d83;
+  color: #c49d39;
 }
 #demarrerprojet .content .formulaire {
   display: flex;
@@ -497,7 +496,7 @@ nav .menu .link:hover::after {
 }
 #ebook .container .title h2:nth-child(2) {
   padding-left: 592px;
-  color: #c49d83;
+  color: #c49d39;
 }
 #ebook .container .paragraph {
   display: flex;
@@ -524,7 +523,7 @@ nav .menu .link:hover::after {
   gap: 15px;
 }
 #formules .contenu .title h2:last-child {
-  color: #c49d83;
+  color: #c49d39;
 }
 #formules .contenu .cardsContainer {
   display: flex;
@@ -586,7 +585,7 @@ nav .menu .link:hover::after {
   font-size: 115px;
 }
 #galerie .content .titleContainer .h2Container h2:last-child {
-  color: #c49d83;
+  color: #c49d39;
 }
 #galerie .content .projectsContainer {
   padding: 100px 0;
@@ -706,7 +705,7 @@ nav .menu .link:hover::after {
   font-size: 150px;
 }
 #team .content header .titleContainer h2:last-child {
-  color: #c49d83;
+  color: #c49d39;
 }
 #team .content header p {
   text-align: justify;
