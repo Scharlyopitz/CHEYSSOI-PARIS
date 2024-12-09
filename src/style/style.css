@@ -691,6 +691,9 @@ nav .menu .link:hover::after {
 #galerie .content .projectsContainer .projectContainer:nth-child(2n-1) {
   grid-row: span 15;
 }
+#galerie .content .projectsContainer .projectContainer:hover {
+  cursor: pointer;
+}
 #galerie .content .projectsContainer .projectContainer:hover img {
   transform: scale(1.1);
 }
