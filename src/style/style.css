@@ -828,10 +828,11 @@ nav .menu .link:hover::after {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  -o-object-position: top;
-     object-position: top;
+  -o-object-position: center;
+     object-position: center;
   filter: grayscale(1);
   transition: filter 0.5s;
+  will-change: filter;
 }
 #team .content .membersContainer .members .card p {
   text-transform: uppercase;
