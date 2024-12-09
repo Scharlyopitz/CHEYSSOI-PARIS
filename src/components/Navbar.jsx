@@ -1,4 +1,4 @@
-import LogoCheyssoi from "/Logo.png";
+import LogoCheyssoi from "/2.png";
 
 export default function Navbar() {
   return (
