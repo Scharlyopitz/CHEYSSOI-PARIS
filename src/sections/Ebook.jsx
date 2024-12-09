@@ -20,18 +20,21 @@ cqx1wG_-3ywsVy2W5DKAo3ZXhTyPTe47YF9gnxfkqJg5oyp4EkpPHEq9Q2HccGUYdV2yu5oU4kazHDdD
 4&sprefix=creer+un+interieur+eco+responsable%2Caps%2C137&sr=8-1`;
   return (
     <section id="ebook">
+      <div className="title">
+        {title.split(" ").map((word, i) => {
+          return <h2 key={i}>{word}</h2>;
+        })}
+      </div>
       <div className="container">
-        <div className="title">
-          {title.split(" ").map((word, i) => {
-            return <h2 key={i}>{word}</h2>;
-          })}
-        </div>
         <div className="paragraph">
           <p>{text}</p>
 
           <Link to={href} className="redButton" target="_blank">
             Commander mon Ebook
           </Link>
+        </div>
+        <div className="ebookImage">
+          <img src={EbookImage} alt="image Ebook" />
         </div>
       </div>
     </section>

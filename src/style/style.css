@@ -477,36 +477,45 @@ nav .menu .link:hover::after {
 }
 
 #ebook {
-  padding: 0 2vw;
+  padding: 0 5vw;
   display: flex;
   flex-direction: column;
   color: #1a1a1a;
+  gap: 100px;
+}
+#ebook .title {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+}
+#ebook .title h2:nth-child(2) {
+  color: #c49d39;
 }
 #ebook .container {
   display: flex;
+  flex-direction: row-reverse;
   align-items: center;
   position: relative;
   margin: 0 auto;
   flex-grow: 1;
-}
-#ebook .container .title h2 {
-  text-align: start;
-  font-size: 212px;
-  line-height: 165px;
-}
-#ebook .container .title h2:nth-child(2) {
-  padding-left: 592px;
-  color: #c49d39;
+  gap: 30px;
 }
 #ebook .container .paragraph {
   display: flex;
   flex-direction: column;
-  gap: 48px;
-  position: absolute;
-  top: 51%;
-  left: 20px;
   text-align: justify;
-  width: 550px;
+  gap: 100px;
+}
+#ebook .container .ebookImage {
+  width: 100%;
+}
+#ebook .container .ebookImage img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
 }
 
 #formules {
