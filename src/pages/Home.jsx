@@ -84,9 +84,9 @@ function HomeSection() {
     <section id="homeSection">
       <Navbar />
       <div ref={txtContainerRef} className="parentContainer">
-        <m.div style={{ opacity }} className="txtContainer">
-          <m.h1 style={{ y }}>Cheyssoi Paris</m.h1>
-        </m.div>
+        <div className="txtContainer">
+          <m.h1 style={{ y, opacity }}>Cheyssoi Paris</m.h1>
+        </div>
       </div>
     </section>
   );
