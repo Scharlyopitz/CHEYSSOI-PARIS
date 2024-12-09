@@ -27,12 +27,12 @@
         will-change: transform;
 
         &::after {
-          content: "Designers d’espaces éthiques";
+          content: "Designers d’intérieurs éthiques";
           position: absolute;
-          bottom: -10%;
+          bottom: -18%;
           left: 50%;
           transform: translateX(-50%);
-          font-size: 18px;
+          font-size: 25px;
           font-weight: 500;
         }
       }

@@ -25,7 +25,7 @@
   left: 0;
   width: 101%;
   height: 2px;
-  background: #c49d83;
+  background: #c49d39;
 }
 .redButton::before {
   height: calc(100% + 2px);
@@ -216,8 +216,10 @@ nav a {
 nav .LogoContainer {
   overflow: hidden;
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 70px;
+  height: 70px;
+  background-color: #c49d39;
+  border-radius: 50%;
 }
 nav .LogoContainer img {
   position: absolute;
@@ -229,7 +231,7 @@ nav .LogoContainer img {
      object-position: center;
   top: 0;
   left: 0;
-  filter: drop-shadow(0px 80px 0 #f6f6f6);
+  filter: drop-shadow(0px 80px 0 #191a19);
   transform: translateY(-80px);
 }
 nav .menu {
@@ -283,11 +285,6 @@ nav .menu .link:hover::after {
   transform-origin: left;
   height: 1.5px;
   background: #191a19;
-}
-#apropos .aproposSection .lineContainer .number {
-  position: absolute;
-  top: 10px;
-  right: 0;
 }
 #apropos .aproposSection .content {
   padding-top: 100px;
@@ -680,12 +677,12 @@ nav .menu .link:hover::after {
   will-change: transform;
 }
 #homeSection .parentContainer .txtContainer h1::after {
-  content: "Designers d’espaces éthiques";
+  content: "Designers d’intérieurs éthiques";
   position: absolute;
-  bottom: -10%;
+  bottom: -18%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 18px;
+  font-size: 25px;
   font-weight: 500;
 }
 

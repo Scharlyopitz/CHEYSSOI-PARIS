@@ -11,7 +11,6 @@ export default function Apropos() {
             wordsTitle={info.wordsTitle}
             text={info.text}
             image={info.image}
-            number={i + 1}
           />
         );
       })}
@@ -19,12 +18,11 @@ export default function Apropos() {
   );
 }
 
-function AproposSection({ wordsTitle, text, image, number }) {
+function AproposSection({ wordsTitle, text, image }) {
   return (
     <section className="aproposSection">
       <div className="lineContainer">
         <div className="line" />
-        <span className="number">[ {number} ]</span>
       </div>
       <div className="content">
         <div className="txt">
