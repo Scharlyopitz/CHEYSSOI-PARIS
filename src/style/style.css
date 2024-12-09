@@ -667,7 +667,6 @@ nav .menu .link:hover::after {
   display: flex;
   align-items: center;
   justify-content: center;
-  will-change: opacity;
 }
 #homeSection .parentContainer .txtContainer h1 {
   position: relative;
