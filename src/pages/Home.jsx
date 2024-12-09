@@ -22,6 +22,8 @@ import Projet from "./Projet";
 export default function Home() {
   const [projectName, setProjectName] = useState("");
 
+  // FONCTION POUR ELEVER LE SCROLL ET LE REMTTRE SI LA MODAL EST OUVERTE OU NON
+
   useEffect(() => {
     if (projectName) {
       document.body.style.overflow = "hidden"; // standard no-scroll implementation
