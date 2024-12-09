@@ -576,13 +576,11 @@ nav .menu .link:hover::after {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 50px;
 }
 #galerie .content .titleContainer .h2Container {
   display: flex;
   gap: 15px;
-}
-#galerie .content .titleContainer .h2Container h2 {
-  font-size: 115px;
 }
 #galerie .content .titleContainer .h2Container h2:last-child {
   color: #c49d39;
