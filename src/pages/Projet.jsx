@@ -78,7 +78,7 @@ export default function Projet({ projectName, setProjectName }) {
     },
     animate: {
       transform: "translateY(0)",
-      transition: { duration: 1, delay: 0.2, ease: easeInOutCubic },
+      transition: { duration: 1.3, ease: easeInOutCubic },
     },
     exit: {
       transform: "translateY(60px)",
