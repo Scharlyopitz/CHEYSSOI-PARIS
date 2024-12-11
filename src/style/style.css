@@ -373,6 +373,10 @@ nav .menu .link:hover::after {
   max-width: 1440px;
   margin: 0 auto;
 }
+#apropos .aproposSection:nth-child(2) .content .image img {
+  -o-object-position: center;
+     object-position: center;
+}
 #apropos .aproposSection:nth-child(odd) .content {
   flex-direction: row-reverse;
 }

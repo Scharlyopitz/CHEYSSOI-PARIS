@@ -8,6 +8,16 @@
 
     // SECTION 2
 
+    &:nth-child(2) {
+      .content {
+        .image {
+          img {
+            object-position: center;
+          }
+        }
+      }
+    }
+
     &:nth-child(odd) {
       .content {
         flex-direction: row-reverse;
