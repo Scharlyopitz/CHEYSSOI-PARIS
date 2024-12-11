@@ -65,27 +65,13 @@
       position: relative;
       overflow: hidden;
       padding: 0 2px;
-
-      span {
-        display: block;
-        transition: transform 0.3s;
-        will-change: transform;
-
-        &::after {
-          content: "Back";
-          position: absolute;
-          bottom: -100%;
-          left: 0;
-          font-style: italic;
-        }
-      }
+      transition: opacity 0.3s;
+      will-change: opacity;
 
       &:hover {
         cursor: pointer;
 
-        span {
-          transform: translateY(-100%);
-        }
+        opacity: 0.4;
       }
     }
 

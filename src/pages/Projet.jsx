@@ -32,14 +32,14 @@ export default function Projet({ projectName, setProjectName }) {
 
   const animePhoto = {
     initial: {
-      transform: "scale(1)",
+      transform: "translateY(20%)",
     },
     animate: {
-      transform: "scale(1.1)",
+      transform: "translateY(0%)",
       transition: { duration: 1.3, ease: easeInOutQuart },
     },
     exit: {
-      transform: "scale(1.1)",
+      transform: "translateY(0%)",
     },
   };
 

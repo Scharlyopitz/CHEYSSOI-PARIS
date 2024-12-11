@@ -329,24 +329,12 @@ nav .menu .link:hover::after {
   position: relative;
   overflow: hidden;
   padding: 0 2px;
-}
-#Projet .content .backBtn span {
-  display: block;
-  transition: transform 0.3s;
-  will-change: transform;
-}
-#Projet .content .backBtn span::after {
-  content: "Back";
-  position: absolute;
-  bottom: -100%;
-  left: 0;
-  font-style: italic;
+  transition: opacity 0.3s;
+  will-change: opacity;
 }
 #Projet .content .backBtn:hover {
   cursor: pointer;
-}
-#Projet .content .backBtn:hover span {
-  transform: translateY(-100%);
+  opacity: 0.4;
 }
 #Projet .content .imageProjet {
   width: 100%;
