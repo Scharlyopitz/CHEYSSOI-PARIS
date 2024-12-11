@@ -1,4 +1,3 @@
-import { useParams } from "react-router-dom";
 import Galerie from "../assets/GalerieData.json";
 import { motion as m, transform } from "framer-motion";
 
@@ -43,13 +42,13 @@ export default function Projet({ projectName, setProjectName }) {
     },
   };
 
-  // const animeTitle = {
+  // const reveal = {
   //   initial: {
-  //     transform: "translateY(-100%)",
+  //     transform: "translateY(100%)",
   //   },
   //   animate: {
   //     transform: "translateY(0)",
-  //     transition: { duration: 1, delay: 1, ease: easeInOutCubic },
+  //     transition: { duration: 1, delay: 0.2, ease: easeInOutCubic },
   //   },
   //   exit: {
   //     transform: "translateY(0)",
@@ -59,25 +58,30 @@ export default function Projet({ projectName, setProjectName }) {
   const animeOpacity = {
     initial: {
       opacity: 0,
+      transform: "translateY(0px)",
     },
     animate: {
       opacity: 1,
-      transition: { duration: 0.5, delay: 1, ease: easeInOutCubic },
+      transform: "translateY(0px)",
+      transition: { duration: 0.8, delay: 0.8, ease: easeInOutCubic },
     },
     exit: {
       opacity: 1,
+      transform: "translateY(60px)",
+      transition: { duration: 0.75, ease: easeInOutCubic },
     },
   };
 
   const exitText = {
     initial: {
-      transform: "translateY(0)",
+      transform: "translateY(100%)",
     },
     animate: {
       transform: "translateY(0)",
+      transition: { duration: 1, delay: 0.2, ease: easeInOutCubic },
     },
     exit: {
-      transform: "translateY(40px)",
+      transform: "translateY(60px)",
       transition: { duration: 0.75, ease: easeInOutCubic },
     },
   };
@@ -94,17 +98,18 @@ export default function Projet({ projectName, setProjectName }) {
         <m.img variants={animePhoto} src={projet?.image} alt={projet?.name} />
         <div className="filter"></div>
         <m.div variants={exitText} className="title">
-          <m.h1 variants={animeOpacity}>{projet?.name}</m.h1>
+          <m.h1>{projet?.name}</m.h1>
         </m.div>
       </div>
       <div className="content">
         <m.div variants={exitText} className="backBtn">
-          <m.span variants={animeOpacity} onClick={() => Goback()}>
-            Back
-          </m.span>
+          <m.span onClick={() => Goback()}>Back</m.span>
         </m.div>
-        <m.div variants={exitText}>
-          <m.p variants={animeOpacity}>{projet?.description}</m.p>
+
+        <m.div>
+          <m.p variants={animeOpacity} className="projetTxt">
+            {projet?.description}
+          </m.p>
         </m.div>
       </div>
     </m.section>

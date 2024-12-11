@@ -315,6 +315,7 @@ nav .menu .link:hover::after {
   font-size: 5vw;
   font-weight: 400;
   color: #f6f6f6;
+  line-height: 1.3;
 }
 #Projet .content {
   display: flex;
@@ -331,6 +332,9 @@ nav .menu .link:hover::after {
   padding: 0 2px;
   transition: opacity 0.3s;
   will-change: opacity;
+}
+#Projet .content .backBtn span {
+  display: block;
 }
 #Projet .content .backBtn:hover {
   cursor: pointer;
