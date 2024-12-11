@@ -2,7 +2,7 @@ import image1 from "/Image2.webp";
 import Haussman from "/Haussman.jpg";
 import Vendome from "/Vendome.jpg";
 import Vosges from "/Vosges.jpg";
-// import Montaigne from "/Montaigne.jpg";
+import Montaigne from "/Montaigne.jpg";
 
 import { motion as m } from "framer-motion";
 
@@ -48,7 +48,7 @@ export default function Loader({ loader, setLoader }) {
   };
 
   const loaderImages = [
-    { src: image1 },
+    { src: Montaigne },
     { src: Haussman },
     { src: image1 },
     { src: Vendome },
