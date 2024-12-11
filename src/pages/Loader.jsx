@@ -47,7 +47,7 @@ export default function Loader({ loader, setLoader }) {
     },
   };
 
-  const images = [
+  const loaderImages = [
     { src: Montaigne },
     { src: Haussman },
     { src: image1 },
@@ -68,7 +68,7 @@ export default function Loader({ loader, setLoader }) {
       }}
     >
       <m.div variants={columnMoove} className="imagesContainer">
-        {images.map(({ src }, i) => {
+        {loaderImages.map(({ src }, i) => {
           return (
             <m.div key={i} custom={i} variants={imageReveal} className="image">
               <m.img variants={filterImage} src={src} alt={`image ${i + 1}`} />
