@@ -25,13 +25,21 @@
     }
 
     .projectsContainer {
-      padding: 100px 0;
+      margin: 100px 0;
       display: grid;
       grid-template-columns: repeat(2, 1fr);
       gap: 20px;
 
+      &:hover {
+        .projectContainer:not(:hover) {
+          filter: grayscale(1);
+        }
+      }
+
       .projectContainer {
         position: relative;
+        transition: filter 0.3s cubic-bezier(0.5, 1, 0.89, 1);
+        will-change: filter;
 
         &:nth-child(2n - 1) {
           grid-row: span 15;
@@ -39,9 +47,6 @@
 
         &:hover {
           cursor: pointer;
-          img {
-            transform: scale(1.1);
-          }
         }
 
         .filter {
@@ -62,8 +67,6 @@
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s cubic-bezier(0.5, 1, 0.89, 1);
-            will-change: transform;
           }
         }
 

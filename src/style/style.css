@@ -683,22 +683,24 @@ nav .menu .link:hover::after {
   color: #c49d39;
 }
 #galerie .content .projectsContainer {
-  padding: 100px 0;
+  margin: 100px 0;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 20px;
 }
+#galerie .content .projectsContainer:hover .projectContainer:not(:hover) {
+  filter: grayscale(1);
+}
 #galerie .content .projectsContainer .projectContainer {
   position: relative;
+  transition: filter 0.3s cubic-bezier(0.5, 1, 0.89, 1);
+  will-change: filter;
 }
 #galerie .content .projectsContainer .projectContainer:nth-child(2n-1) {
   grid-row: span 15;
 }
 #galerie .content .projectsContainer .projectContainer:hover {
   cursor: pointer;
-}
-#galerie .content .projectsContainer .projectContainer:hover img {
-  transform: scale(1.1);
 }
 #galerie .content .projectsContainer .projectContainer .filter {
   background: linear-gradient(0deg, #191a19 0%, rgba(0, 0, 0, 0) 50%);
@@ -718,8 +720,6 @@ nav .menu .link:hover::after {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: transform 0.5s cubic-bezier(0.5, 1, 0.89, 1);
-  will-change: transform;
 }
 #galerie .content .projectsContainer .projectContainer .projectsNameContainer {
   position: absolute;
