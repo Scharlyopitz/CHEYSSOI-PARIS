@@ -1,11 +1,25 @@
 import LogoCheyssoi from "/2.png";
 
+import { motion as m } from "framer-motion";
+
 export default function Navbar() {
+  const revealNav = {
+    initial: {
+      transform: "translate(-50%,-105%) ",
+      pointerEvents: "none",
+    },
+    animate: {
+      pointerEvents: "all",
+      transform: "translate(-50%,0%) ",
+      transition: { duration: 1, delay: 4, ease: [0.65, 0, 0.35, 1] },
+    },
+  };
+
   return (
-    <nav>
+    <m.nav initial="initial" animate="animate" variants={revealNav}>
       <Logo />
       <Menu />
-    </nav>
+    </m.nav>
   );
 }
 

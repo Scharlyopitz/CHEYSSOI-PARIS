@@ -23,21 +23,24 @@ import {
   useTransform,
 } from "framer-motion";
 import Projet from "./Projet";
+import Loader from "./Loader";
 
 export default function Home() {
   const [projectName, setProjectName] = useState("");
 
+  const [loader, setLoader] = useState(true);
+
   // FONCTION POUR ELEVER LE SCROLL ET LE REMTTRE SI LA MODAL EST OUVERTE OU NON
 
   useEffect(() => {
-    if (projectName) {
+    if (projectName || loader) {
       document.body.style.overflow = "hidden"; // standard no-scroll implementation
       document.body.setAttribute("data-lenis-prevent", "true"); // Make sure you pass true as string
     } else {
       document.body.style.overflow = "auto";
       document.body.removeAttribute("data-lenis-prevent", "true");
     }
-  }, [projectName]);
+  }, [projectName, loader]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -98,6 +101,7 @@ export default function Home() {
         <Ebook />
       </main>
       <Footer />
+      <Loader loader={loader} setLoader={setLoader} />
     </>
   );
 }
@@ -130,13 +134,30 @@ function HomeSection() {
   const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
   const y = useTransform(scrollYProgress, [0, 0.3], [0, -20]);
 
+  const revealH1 = {
+    initial: {
+      opacity: 0,
+    },
+    animate: {
+      opacity: 1,
+      transition: { duration: 1, delay: 4, ease: [0.65, 0, 0.35, 1] },
+    },
+  };
+
   return (
     <section id="homeSection">
       <Navbar />
       <div ref={txtContainerRef} className="parentContainer">
-        <div className="txtContainer">
-          <m.h1 style={{ y, opacity }}>Cheyssoi Paris</m.h1>
-        </div>
+        <m.div
+          initial="initial"
+          animate="animate"
+          variants={revealH1}
+          className="txtContainer"
+        >
+          <m.h1 style={{ y, opacity }}>
+            Cheyssoi Paris <span>Designers d’intérieurs éthiques</span>
+          </m.h1>
+        </m.div>
       </div>
     </section>
   );
