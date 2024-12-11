@@ -1,12 +1,12 @@
 [
   {
-    "image": "/HAUSSMANN.JPG",
+    "image": "/HAUSSMANN.jpg",
     "name": "Projet Haussman",
     "description": "Ce projet propose la création d'une suite résidentielle luxueuse et durable, inspirée par l'élégance intemporelle du quartier Place Vendôme. Chaque espace, de la chambre au salon, allie design raffiné et matériaux naturels tels que bois certifié et textiles biologiques. L'éclairage optimal associe lumière naturelle et LED basse consommation, créant une ambiance apaisante. Les choix de design écoresponsables, documentés avec soin, garantissent un équilibre parfait entre luxe et durabilité. Plans détaillés, modélisations 3D et sélection de matériaux durables forment une expérience haut de gamme engagée.texte de paragraphe",
     "projetImage": "/vendome2.JPG"
   },
   {
-    "image": "/vosges2.JPG",
+    "image": "/vosges2.jpg",
     "name": "Projet Vosges",
     "description": "Ce projet vise à concevoir un salon de co-living élégant et durable, inspiré par le charme historique de la Place des Vosges. L’espace modulable inclut des zones dédiées à la lecture, au travail, et à la détente, favorisant la convivialité et le confort. Matériaux recyclés et naturels tels que le bois, le rotin, et les fibres recyclées sont au cœur du design. L’ambiance est enrichie par des plantes purifiantes et une luminosité optimale grâce à un éclairage LED écoénergétique et une ventilation naturelle. Modélisations 3D et plans détaillés illustrent cette vision écoresponsable et chic.",
     "projetImage": "/vendome2.JPG"
@@ -18,7 +18,7 @@
     "projetImage": "/vendome2.JPG"
   },
   {
-    "image": "/vendome2.JPG",
+    "image": "/vendome2.jpg",
     "name": "Projet Vendome",
     "description": "Conception d’un espace de travail prestigieux dans un immeuble haussmannien emblématique de la Place Vendôme. Alliant élégance et durabilité, le design inclut des bureaux individuels et open-spaces, réalisés avec des matériaux éco-responsables comme le bois massif certifié et le marbre écologique. Un éclairage naturel optimisé et des luminaires LED basse consommation complètent l’aménagement. Plans détaillés, visualisations 3D et moodboards traduisent cette vision luxueuse et durable.",
     "projetImage": "/vendome2.JPG"
