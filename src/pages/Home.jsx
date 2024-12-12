@@ -101,7 +101,7 @@ export default function Home() {
         <Ebook />
       </main>
       <Footer />
-      <Loader loader={loader} setLoader={setLoader} />
+      {loader && <Loader loader={loader} setLoader={setLoader} />}
     </>
   );
 }
@@ -118,7 +118,9 @@ function BackgroundImage() {
 
   return (
     <m.div ref={containerRef} style={{ opacity }} className="backgroundImage">
-      <img src={Image1} alt="Image1" />
+      <div className="image">
+        <img src={Image1} alt="Image1" />
+      </div>
     </m.div>
   );
 }

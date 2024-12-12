@@ -1,5 +1,5 @@
 .backgroundImage {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   z-index: -1;
@@ -7,14 +7,20 @@
   height: 200vh;
   will-change: opacity;
 
-  img {
-    position: sticky;
-    top: 0;
-    left: 0;
-    object-fit: cover;
-    object-position: center;
-    filter: brightness(0.5);
-    height: 100vh;
-    width: 100%;
+  .image {
+    position: absolute;
+    top: 25%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(4.01);
+    width: 25vw;
+    height: 25vh;
+
+    img {
+      object-fit: cover;
+      object-position: center;
+      filter: brightness(0.5);
+      height: 100%;
+      width: 100%;
+    }
   }
 }

@@ -1,31 +1,28 @@
 #loaderContainer {
   position: fixed;
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   overflow: hidden;
+  column-gap: 5vw;
   top: 0;
   left: 0;
   width: 100vw;
   height: 100vh;
   background: $Black;
   z-index: 99996;
-  //   transform: scale(4);
 
   .imagesContainer {
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    // transform: translateY(110%);
+    gap: 5vh;
 
     .image {
       position: relative;
       width: 25vw;
       height: 25vh;
-      //   transform: translateY(20vh);
 
       img {
-        // filter: brightness(0.5);
         width: 100%;
         height: 100%;
         object-fit: cover;
