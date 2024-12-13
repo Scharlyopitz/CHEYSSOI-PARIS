@@ -26,7 +26,7 @@
   },
   {
     "name": "Supriya",
-    "image": "https://cdn.booke.fr/wp-content/uploads/2021/01/10172447/Illustration-Use-Case-Althe%CC%81a.jpg",
+    "image": "/SUPRIYA.jpg",
     "job": "Architectes d'interieur"
   },
   {
@@ -41,12 +41,12 @@
   },
   {
     "name": "Etienne",
-    "image": "https://www.sylvaingelineau.com/wp-content/uploads/2020/12/photographe-portrait-pro-cv-linkedin-toulouse.jpg",
+    "image": "/ETIENNE.jpg",
     "job": "Développement commercial"
   },
   {
     "name": "Valentina",
-    "image": "https://www.sylvaingelineau.com/wp-content/uploads/2020/12/photographe-portrait-pro-cv-linkedin-toulouse.jpg",
+    "image": "/VALENTINA.jpg",
     "job": "Développement commercial"
   }
 ]
