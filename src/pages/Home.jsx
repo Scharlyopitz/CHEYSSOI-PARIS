@@ -134,17 +134,6 @@ function HomeSection() {
   });
 
   const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
-  const y = useTransform(scrollYProgress, [0, 0.3], [0, -20]);
-
-  const revealH1 = {
-    initial: {
-      opacity: 0,
-    },
-    animate: {
-      opacity: 1,
-      transition: { duration: 1, delay: 4, ease: [0.65, 0, 0.35, 1] },
-    },
-  };
 
   return (
     <section id="homeSection">
@@ -153,14 +142,50 @@ function HomeSection() {
         <m.div
           initial="initial"
           animate="animate"
-          variants={revealH1}
+          style={{ opacity }}
           className="txtContainer"
         >
-          <m.h1 style={{ y, opacity }}>
-            Cheyssoi Paris <span>Designers d’intérieurs éthiques</span>
-          </m.h1>
+          <Title />
+          <UnderTitle />
         </m.div>
       </div>
     </section>
+  );
+}
+
+function Title() {
+  const revealH1 = {
+    initial: {
+      y: "105%",
+    },
+    animate: {
+      y: 0,
+      transition: { duration: 1, delay: 2.5, ease: [0.65, 0, 0.35, 1] },
+    },
+  };
+
+  return (
+    <div className="h1container">
+      <m.h1 variants={revealH1}>Cheyssoi Paris</m.h1>
+    </div>
+  );
+}
+
+function UnderTitle() {
+  const revealUnderTitle = {
+    initial: {
+      y: "-105%",
+    },
+    animate: {
+      y: 0,
+      transition: { duration: 1, delay: 2.5, ease: [0.65, 0, 0.35, 1] },
+    },
+  };
+  return (
+    <div className="spanContainer">
+      <m.span variants={revealUnderTitle}>
+        Designers d’intérieurs éthiques
+      </m.span>
+    </div>
   );
 }

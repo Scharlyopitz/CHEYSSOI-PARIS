@@ -266,6 +266,7 @@ nav .menu .link:hover::after {
 }
 
 #loaderContainer {
+  pointer-events: none;
   position: fixed;
   display: flex;
   justify-content: center;
@@ -808,6 +809,8 @@ nav .menu .link:hover::after {
   height: 200vh;
 }
 #homeSection .parentContainer .txtContainer {
+  font-family: "Cormorant Garamond", serif;
+  text-transform: uppercase;
   pointer-events: none;
   position: sticky;
   z-index: 99997;
@@ -815,25 +818,27 @@ nav .menu .link:hover::after {
   width: 100%;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
 }
-#homeSection .parentContainer .txtContainer h1 {
-  position: relative;
-  font-family: "Cormorant Garamond", serif;
+#homeSection .parentContainer .txtContainer .h1container {
+  line-height: 80px;
+  overflow: hidden;
+}
+#homeSection .parentContainer .txtContainer .h1container h1 {
   font-weight: 300;
-  text-transform: uppercase;
   font-size: 100px;
   letter-spacing: 1vw;
   white-space: nowrap;
   will-change: transform;
 }
-#homeSection .parentContainer .txtContainer h1 span {
+#homeSection .parentContainer .txtContainer .spanContainer {
+  overflow: hidden;
+}
+#homeSection .parentContainer .txtContainer .spanContainer span {
+  display: block;
   letter-spacing: 10px;
-  position: absolute;
-  bottom: -18%;
-  left: 50%;
-  transform: translateX(-50%);
   font-size: 25px;
   font-weight: 500;
 }

@@ -7,6 +7,8 @@
     height: 200vh;
 
     .txtContainer {
+      font-family: "Cormorant Garamond", serif;
+      text-transform: uppercase;
       pointer-events: none;
       position: sticky;
       z-index: 99997;
@@ -14,25 +16,29 @@
       width: 100%;
       height: 100vh;
       display: flex;
+      flex-direction: column;
       align-items: center;
       justify-content: center;
 
-      h1 {
-        position: relative;
-        font-family: "Cormorant Garamond", serif;
-        font-weight: 300;
-        text-transform: uppercase;
-        font-size: 100px;
-        letter-spacing: 1vw;
-        white-space: nowrap;
-        will-change: transform;
+      .h1container {
+        line-height: 80px;
+        overflow: hidden;
+
+        h1 {
+          font-weight: 300;
+          font-size: 100px;
+          letter-spacing: 1vw;
+          white-space: nowrap;
+          will-change: transform;
+        }
+      }
+
+      .spanContainer {
+        overflow: hidden;
 
         span {
+          display: block;
           letter-spacing: 10px;
-          position: absolute;
-          bottom: -18%;
-          left: 50%;
-          transform: translateX(-50%);
           font-size: 25px;
           font-weight: 500;
         }

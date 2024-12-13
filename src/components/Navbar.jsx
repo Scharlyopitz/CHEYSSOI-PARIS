@@ -11,7 +11,7 @@ export default function Navbar() {
     animate: {
       pointerEvents: "all",
       transform: "translate(-50%,0%) ",
-      transition: { duration: 1, delay: 4, ease: [0.65, 0, 0.35, 1] },
+      transition: { duration: 1, delay: 2.7, ease: [0.65, 0, 0.35, 1] },
     },
   };
 
