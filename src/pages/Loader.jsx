@@ -87,7 +87,6 @@ export default function Loader({ setLoader }) {
       animate="animate"
       variants={imageScaling}
       onAnimationComplete={() => setLoader(false)}
-      // onLoad={() => console.log(ok++)}
       id="loaderContainer"
     >
       <Column
