@@ -101,7 +101,7 @@ export default function Home() {
         <Ebook />
       </main>
       <Footer />
-      {loader && <Loader loader={loader} setLoader={setLoader} />}
+      {loader && <Loader setLoader={setLoader} />}
     </>
   );
 }

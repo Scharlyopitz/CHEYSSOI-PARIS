@@ -823,12 +823,13 @@ nav .menu .link:hover::after {
   font-family: "Cormorant Garamond", serif;
   font-weight: 300;
   text-transform: uppercase;
-  font-size: 120px;
+  font-size: 100px;
   letter-spacing: 1vw;
   white-space: nowrap;
   will-change: transform;
 }
 #homeSection .parentContainer .txtContainer h1 span {
+  letter-spacing: 10px;
   position: absolute;
   bottom: -18%;
   left: 50%;

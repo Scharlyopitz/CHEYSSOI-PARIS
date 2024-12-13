@@ -6,23 +6,13 @@ import Vosges from "/Vosges.jpg";
 
 import { motion as m } from "framer-motion";
 
-export default function Loader({ loader, setLoader }) {
-  const imageScaling = {
-    initial: {
-      transform: "scale(1)",
-    },
-    animate: {
-      transform: "scale(4.01)",
-      transition: { duration: 3, delay: 1.8, ease: [0.83, 0, 0.17, 1] },
-    },
-  };
-
+export default function Loader({ setLoader }) {
   const loaderImages1 = [
     { src: Vendome },
     { src: Haussman },
     { src: image1 },
     { src: Vosges },
-    { src: Vosges },
+    { src: "" },
   ];
 
   const loaderImages2 = [
@@ -30,56 +20,64 @@ export default function Loader({ loader, setLoader }) {
     { src: image1 },
     { src: Haussman },
     { src: Vendome },
-    { src: Vosges },
   ];
 
-  const columnMooveTop = {
+  const imageScaling = {
     initial: {
-      y: "100%",
+      transform: "scale(1)",
     },
     animate: {
-      y: 0,
-
+      transform: "scale(4.01)",
       transition: {
-        duration: 3,
-        staggerChildren: 0.25,
-        ease: [0.65, 0, 0.35, 1],
+        duration: 2.5,
+        delay: 1.4,
+        ease: [0.83, 0, 0.17, 1],
       },
     },
   };
 
-  const columnMooveBottom = {
-    initial: {
-      y: "-100%",
-    },
+  const staggerColumnTop = {
     animate: {
-      y: 0,
       transition: {
-        duration: 3,
-        staggerChildren: 0.25,
+        staggerChildren: 0.2,
+        ease: [0.87, 0, 0.13, 1],
+      },
+    },
+  };
+
+  const staggerColumnBottom = {
+    animate: {
+      transition: {
+        staggerChildren: 0.3,
         staggerDirection: -1,
-        ease: [0.65, 0, 0.35, 1],
+        ease: [0.87, 0, 0.13, 1],
       },
     },
   };
 
   const imageRevealTop = {
     initial: {
-      y: "100vh",
+      y: "125vh",
     },
     animate: {
       y: 0,
-      transition: { duration: 3, ease: [0.65, 0, 0.35, 1] },
+      transition: {
+        duration: 2.25,
+        ease: [0.65, 0, 0.35, 1],
+      },
     },
   };
 
   const imageRevealBottom = {
     initial: {
-      y: "-100vh",
+      y: "-125vh",
     },
     animate: {
-      y: 0,
-      transition: { duration: 3, ease: [0.65, 0, 0.35, 1] },
+      y: "0vh",
+      transition: {
+        duration: 2.25,
+        ease: [0.65, 0, 0.35, 1],
+      },
     },
   };
 
@@ -89,47 +87,44 @@ export default function Loader({ loader, setLoader }) {
       animate="animate"
       variants={imageScaling}
       onAnimationComplete={() => setLoader(false)}
+      // onLoad={() => console.log(ok++)}
       id="loaderContainer"
-      // style={{
-      //   opacity: loader ? 1 : 0,
-      //   pointerEvents: loader ? "all" : "none",
-      // }}
     >
       <Column
         loaderImages={loaderImages2}
-        columnMoove={columnMooveBottom}
+        staggerColumn={staggerColumnBottom}
         imageReveal={imageRevealBottom}
       />
       <Column
         loaderImages={loaderImages1}
-        columnMoove={columnMooveTop}
+        staggerColumn={staggerColumnTop}
         imageReveal={imageRevealTop}
       />
       <Column
         loaderImages={loaderImages2}
-        columnMoove={columnMooveBottom}
+        staggerColumn={staggerColumnBottom}
         imageReveal={imageRevealBottom}
       />
     </m.div>
   );
 }
 
-function Column({ loaderImages, columnMoove, imageReveal }) {
+function Column({ loaderImages, staggerColumn, imageReveal }) {
   const filterImage = {
     initial: {
       filter: "brightness(1)",
     },
     animate: {
       filter: "brightness(0.5)",
-      transition: { duration: 3, delay: 1.8, ease: [0.83, 0, 0.17, 1] },
+      transition: { duration: 2.5, delay: 1.5, ease: [0.83, 0, 0.17, 1] },
     },
   };
 
   return (
-    <m.div variants={columnMoove} className="imagesContainer">
+    <m.div variants={staggerColumn} className="imagesContainer">
       {loaderImages.map(({ src }, i) => {
         return (
-          <m.div key={i} variants={imageReveal} className="image">
+          <m.div variants={imageReveal} key={i} className="image">
             <m.img variants={filterImage} src={src} alt={`image ${i + 1}`} />
           </m.div>
         );
