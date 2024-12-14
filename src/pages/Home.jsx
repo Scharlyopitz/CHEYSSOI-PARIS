@@ -57,20 +57,6 @@ export default function Home() {
     requestAnimationFrame(raf);
   }, []);
 
-  const backgroundAnimation = {
-    initial: {
-      background: "#05050500",
-    },
-    animate: {
-      background: "#050505a1",
-      transition: { duration: 1.3, ease: [0.76, 0, 0.24, 1] },
-    },
-    exit: {
-      background: "#05050500",
-      transition: { duration: 0.75, ease: [0.65, 0, 0.35, 1] },
-    },
-  };
-
   return (
     <>
       <main id="Home">
@@ -84,18 +70,7 @@ export default function Home() {
         <Galerie setProjectName={setProjectName} />
         <AnimatePresence>
           {projectName && (
-            <m.div
-              initial="initial"
-              animate="animate"
-              exit="exit"
-              variants={backgroundAnimation}
-              className="backgroundProjet"
-            >
-              <Projet
-                projectName={projectName}
-                setProjectName={setProjectName}
-              />
-            </m.div>
+            <Projet projectName={projectName} setProjectName={setProjectName} />
           )}
         </AnimatePresence>
         <Formules />
