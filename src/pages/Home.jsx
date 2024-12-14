@@ -43,7 +43,9 @@ export default function Home() {
   }, [projectName, loader]);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // RESET DE L'HISTORIQUE DE L'URL ET SCROLLRESTORATION POUR SCROLL TO TOP
+    history.scrollRestoration = "manual";
+    window.history.replaceState({}, "", "/");
 
     const lenis = new Lenis();
 
