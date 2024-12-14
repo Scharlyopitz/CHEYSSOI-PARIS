@@ -137,7 +137,7 @@ function Title() {
     },
     animate: {
       y: 0,
-      transition: { duration: 1, delay: 2.5, ease: [0.65, 0, 0.35, 1] },
+      transition: { duration: 1, delay: 2.35, ease: [0.65, 0, 0.35, 1] },
     },
   };
 
@@ -155,7 +155,7 @@ function UnderTitle() {
     },
     animate: {
       y: 0,
-      transition: { duration: 1, delay: 2.5, ease: [0.65, 0, 0.35, 1] },
+      transition: { duration: 1, delay: 2.35, ease: [0.65, 0, 0.35, 1] },
     },
   };
   return (
