@@ -1,4 +1,5 @@
 import React from "react";
+import InView from "../components/InView";
 
 export default function ConnectSection() {
   const titleSection = "UNE EXPERIENCE UNIQUE";
@@ -8,11 +9,13 @@ export default function ConnectSection() {
 
   return (
     <section id="ConnextSection">
-      <div className="titleSection">
-        {titleSection.split(" ").map((word, i) => {
-          return <h2 key={i}>{word}</h2>;
-        })}
-      </div>
+      <InView>
+        <div className="titleSection">
+          {titleSection.split(" ").map((word, i) => {
+            return <h2 key={i}>{word}</h2>;
+          })}
+        </div>
+      </InView>
       <p>{txt}</p>
       <div className="buttonsContainer">
         <a href="#apropos" className="redButton">
