@@ -30,7 +30,7 @@ export default function Home() {
 
   const [loader, setLoader] = useState(true);
 
-  // FONCTION POUR ELEVER LE SCROLL ET LE REMTTRE SI LA MODAL EST OUVERTE OU NON
+  // FONCTION POUR ELEVER LE SCROLL ET LE REMTTRE SI LA MODAL EST OUVERTE OU NON AVEC LENIS
 
   useEffect(() => {
     if (projectName || loader) {
@@ -91,37 +91,23 @@ function BackgroundImage() {
     offset: ["start start", "end end"],
   });
 
-  const opacity = useTransform(scrollYProgress, [0, 0.25, 0.6], [1, 1, 0]);
+  const y = useTransform(scrollYProgress, [0, 1], ["0", "30%"]);
 
   return (
-    <m.div ref={containerRef} style={{ opacity }} className="backgroundImage">
+    <div ref={containerRef} className="backgroundImage">
       <div className="image">
-        <img src={Image1} alt="Image1" />
+        <m.img style={{ y }} src={Image1} alt="Image1" />
       </div>
-    </m.div>
+    </div>
   );
 }
 
 function HomeSection() {
-  const txtContainerRef = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: txtContainerRef,
-    offset: ["start start", "end end"],
-  });
-
-  const opacity = useTransform(scrollYProgress, [0, 0.3], [1, 0]);
-
   return (
     <section id="homeSection">
       <Navbar />
-      <div ref={txtContainerRef} className="parentContainer">
-        <m.div
-          initial="initial"
-          animate="animate"
-          style={{ opacity }}
-          className="txtContainer"
-        >
+      <div className="parentContainer">
+        <m.div initial="initial" animate="animate" className="txtContainer">
           <Title />
           <UnderTitle />
         </m.div>

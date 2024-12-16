@@ -472,7 +472,7 @@ nav .menu .link:hover::after {
 }
 
 .backgroundImage {
-  position: fixed;
+  position: absolute;
   top: 0;
   left: 0;
   z-index: -1;
@@ -487,8 +487,10 @@ nav .menu .link:hover::after {
   transform: translate(-50%, -50%) scale(4.01);
   width: 25vw;
   height: 25vh;
+  overflow: hidden;
 }
 .backgroundImage .image img {
+  will-change: transform;
   -o-object-fit: cover;
      object-fit: cover;
   -o-object-position: center;
@@ -812,7 +814,7 @@ nav .menu .link:hover::after {
   font-family: "Cormorant Garamond", serif;
   text-transform: uppercase;
   pointer-events: none;
-  position: sticky;
+  position: absolute;
   z-index: 99997;
   top: 0;
   width: 100%;
