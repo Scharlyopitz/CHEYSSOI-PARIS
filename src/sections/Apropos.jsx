@@ -1,5 +1,6 @@
-import React from "react";
 import AproposInfos from "../assets/AproposInfos.json";
+import Text from "../components/Text";
+import Title from "../components/Title";
 
 export default function Apropos() {
   return (
@@ -26,13 +27,9 @@ function AproposSection({ wordsTitle, text, image }) {
       </div>
       <div className="content">
         <div className="txt">
-          <div className="title">
-            {wordsTitle.map((word, i) => {
-              return <h2 key={i}>{word}</h2>;
-            })}
-          </div>
+          <Title words={wordsTitle} />
           <div className="paragraphe">
-            <p>{text}</p>
+            <Text text={text} />
           </div>
         </div>
         <div className="image">

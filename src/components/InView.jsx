@@ -3,7 +3,10 @@ import { useRef } from "react";
 
 export default function InView({ children }) {
   const ref = useRef(null);
-  const isInView = useInView(ref, { once: true });
+  const isInView = useInView(ref, {
+    once: true,
+    margin: "0px 0px -20% 0px",
+  });
 
   return (
     <m.div

@@ -1,16 +1,12 @@
 import FormulesData from "../assets/FormulesData.json";
+import Button from "../components/Button";
+import Title from "../components/Title";
 
 export default function Formules() {
-  const title = "Nos Formules";
   return (
     <section id="formules">
       <div className="contenu">
-        <div className="title">
-          {title.split(" ").map((word, i) => {
-            return <h2 key={i}>{word}</h2>;
-          })}
-        </div>
-
+        <Title words={["nos", "formules"]} />
         <div className="cardsContainer">
           {FormulesData.map((formData, i) => {
             return (
@@ -42,9 +38,8 @@ function FormuleCard({ name, price, descriptions }) {
           })}
         </ul>
       </div>
-      <a href="#demarrerprojet" className="redButton">
-        Démarrer mon projet
-      </a>
+
+      <Button href="#demarrerprojet" txt="Démarrer mon projet" />
     </div>
   );
 }

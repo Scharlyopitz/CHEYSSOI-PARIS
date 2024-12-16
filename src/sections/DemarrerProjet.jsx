@@ -1,23 +1,13 @@
 import Formulaire from "../components/DemarrerMonProjet/Formulaire";
+import Title from "../components/Title";
 
 export default function DemarrerProjet() {
   return (
     <section id="demarrerprojet">
       <div className="content">
-        <Title />
+        <Title words={["demarrer", "mon", "projet"]} />
         <Formulaire />
       </div>
     </section>
-  );
-}
-
-function Title() {
-  const titleSection = "Demarrer mon projet";
-  return (
-    <div className="titleFormulaire">
-      {titleSection.split(" ").map((word, i) => {
-        return <h2 key={i}>{word}</h2>;
-      })}
-    </div>
   );
 }

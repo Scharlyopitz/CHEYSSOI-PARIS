@@ -1,0 +1,10 @@
+.titleContainer {
+  display: flex;
+  gap: 15px;
+  .wordContainer {
+    overflow: hidden;
+    &:last-child {
+      color: $Gold;
+    }
+  }
+}

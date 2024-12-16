@@ -1,23 +1,18 @@
-import Navbar from "../components/Navbar";
 import Persons from "../assets/Persons.json";
-import Footer from "../components/Footer";
+import Text from "../components/Text";
+import Title from "../components/Title";
 
 export default function Team() {
-  const titleWords = "L'eq uipe";
   return (
     <section id="team">
       <div className="content">
         <header>
-          <div className="titleContainer">
-            {titleWords.split(" ").map((word, i) => {
-              return <h2 key={i}>{word}</h2>;
-            })}
-          </div>
-          <p>
-            La quête de l'excellence anime chaque membre de l'équipe. Chacun, en
-            apportant son expertise, sa créativité et son sens du détail
-            contribue à la création de projets uniques.
-          </p>
+          <Title words={["l'eq", "uipe"]} />
+          <Text
+            text=" La quête de l'excellence anime chaque membre de l'équipe. Chacun,
+              en apportant son expertise, sa créativité et son sens du détail
+              contribue à la création de projets uniques."
+          />
         </header>
 
         <Members />

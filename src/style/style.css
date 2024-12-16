@@ -1,44 +1,6 @@
 @charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500;1,600;1,700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Fjalla+One&display=swap");
-.redButton {
-  overflow: hidden;
-  width: -moz-fit-content;
-  width: fit-content;
-  position: relative;
-  z-index: 1;
-  padding: 0 2px 3px;
-  transition: 0.3s;
-  font-size: 20px;
-}
-.redButton:hover {
-  color: #f6f6f6;
-}
-.redButton:hover::before {
-  transform: scaleY(1);
-}
-.redButton::before, .redButton::after {
-  content: "";
-  position: absolute;
-  bottom: 0px;
-  left: 0;
-  width: 101%;
-  height: 2px;
-  background: #c49d39;
-}
-.redButton::before {
-  height: calc(100% + 2px);
-  transform: scaleY(0);
-  z-index: -1;
-  transform-origin: bottom;
-  transition: transform 0.3s;
-  will-change: transform;
-}
-.redButton::after {
-  height: 2px;
-}
-
 html.lenis,
 html.lenis body {
   height: auto;
@@ -76,7 +38,7 @@ html {
 }
 
 body {
-  color: #f6f6f6;
+  color: #1a1a1a;
   background: #e4e1dc;
 }
 body,
@@ -91,11 +53,6 @@ h2 {
   text-transform: uppercase;
   font-weight: 400;
   text-align: center;
-}
-
-.titleSection {
-  display: flex;
-  gap: 15px;
 }
 
 ul,
@@ -116,6 +73,43 @@ main {
 a {
   text-decoration: none;
   color: inherit;
+}
+
+.Button {
+  overflow: hidden;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: relative;
+  z-index: 1;
+  padding: 0 2px 3px;
+  transition: 0.3s;
+  font-size: 20px;
+}
+.Button:hover {
+  color: #f6f6f6;
+}
+.Button:hover::before {
+  transform: scaleY(1);
+}
+.Button::before, .Button::after {
+  content: "";
+  position: absolute;
+  bottom: 0px;
+  left: 0;
+  width: 101%;
+  height: 2px;
+  background: #c49d39;
+}
+.Button::before {
+  height: calc(100% + 2px);
+  transform: scaleY(0);
+  z-index: -1;
+  transform-origin: bottom;
+  transition: transform 0.3s;
+  will-change: transform;
+}
+.Button::after {
+  height: 2px;
 }
 
 footer {
@@ -162,6 +156,7 @@ footer .socials svg:hover {
   height: 35px;
   right: 2vw;
   bottom: 5vh;
+  color: #f6f6f6;
 }
 .gotoTopButton:hover {
   cursor: pointer;
@@ -196,6 +191,22 @@ footer .socials svg:hover {
   height: 100%;
   background: #191a19;
   will-change: transform;
+}
+
+.titleContainer {
+  display: flex;
+  gap: 15px;
+}
+.titleContainer .wordContainer {
+  overflow: hidden;
+}
+.titleContainer .wordContainer:last-child {
+  color: #c49d39;
+}
+
+.Text {
+  -webkit-background-clip: text !important;
+  color: transparent;
 }
 
 nav {
@@ -306,6 +317,7 @@ nav .menu .link:hover::after {
   height: 100vh;
   z-index: 6;
   background: #1a1a1a;
+  color: #f6f6f6;
   display: flex;
 }
 #Projet .image {
@@ -318,9 +330,6 @@ nav .menu .link:hover::after {
   overflow: hidden;
 }
 #Projet .image img {
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
@@ -347,7 +356,6 @@ nav .menu .link:hover::after {
 #Projet .image .title h1 {
   font-size: 5vw;
   font-weight: 400;
-  color: #f6f6f6;
   line-height: 1.3;
 }
 #Projet .content {
@@ -360,9 +368,6 @@ nav .menu .link:hover::after {
   padding: 2vh 2vw 4vh 30px;
 }
 #Projet .content .backBtn {
-  position: relative;
-  overflow: hidden;
-  padding: 0 2px;
   transition: opacity 0.3s;
   will-change: opacity;
 }
@@ -372,18 +377,6 @@ nav .menu .link:hover::after {
 #Projet .content .backBtn:hover {
   cursor: pointer;
   opacity: 0.4;
-}
-#Projet .content .imageProjet {
-  width: 100%;
-  height: 30vh;
-}
-#Projet .content .imageProjet img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: center;
-     object-position: center;
 }
 #Projet .content p {
   text-align: justify;
@@ -398,9 +391,6 @@ nav .menu .link:hover::after {
   height: 100vh;
 }
 
-#apropos {
-  color: #191a19;
-}
 #apropos .aproposSection {
   padding: 100px 2vw 0vh;
   max-width: 1440px;
@@ -414,7 +404,6 @@ nav .menu .link:hover::after {
   flex-direction: row-reverse;
 }
 #apropos .aproposSection .lineContainer {
-  position: relative;
   width: 100%;
 }
 #apropos .aproposSection .lineContainer .line {
@@ -436,18 +425,13 @@ nav .menu .link:hover::after {
   width: 60%;
   flex-grow: 1;
 }
-#apropos .aproposSection .content .txt .title {
-  display: flex;
+#apropos .aproposSection .content .txt .titleContainer {
   flex-direction: column;
-  flex-wrap: wrap;
   gap: 20px;
 }
-#apropos .aproposSection .content .txt .title h2 {
+#apropos .aproposSection .content .txt .titleContainer h2 {
   text-align: start;
   line-height: 50px;
-}
-#apropos .aproposSection .content .txt .title h2:nth-child(2) {
-  color: #c49d39;
 }
 #apropos .aproposSection .content .txt .paragraphe {
   display: flex;
@@ -460,7 +444,6 @@ nav .menu .link:hover::after {
 #apropos .aproposSection .content .image {
   width: 490px;
   height: 650px;
-  background: #191a19;
 }
 #apropos .aproposSection .content .image img {
   width: 100%;
@@ -505,10 +488,7 @@ nav .menu .link:hover::after {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: #1a1a1a;
-}
-#ConnextSection .titleSection h2:last-child {
-  color: #c49d39;
+  padding: 100px 0;
 }
 #ConnextSection p {
   max-width: 1440px;
@@ -523,21 +503,15 @@ nav .menu .link:hover::after {
 
 #demarrerprojet {
   display: flex;
-  color: #191a19;
-  padding: 10vh 2vw;
+  padding: 100px 2vw;
 }
 #demarrerprojet .content {
   max-width: 1440px;
   width: 100%;
   margin: 0 auto;
 }
-#demarrerprojet .content .titleFormulaire {
-  display: flex;
+#demarrerprojet .content .titleContainer {
   justify-content: center;
-  gap: 15px;
-}
-#demarrerprojet .content .titleFormulaire h2:nth-child(2), #demarrerprojet .content .titleFormulaire h2:last-child {
-  color: #c49d39;
 }
 #demarrerprojet .content .formulaire {
   display: flex;
@@ -577,7 +551,7 @@ nav .menu .link:hover::after {
 #demarrerprojet .content .formulaire textarea:focus,
 #demarrerprojet .content .formulaire select:focus,
 #demarrerprojet .content .formulaire option:focus {
-  border-bottom: 2px solid #c49d83;
+  border-bottom: 2px solid #c49d39;
 }
 #demarrerprojet .content .formulaire form {
   display: flex;
@@ -624,16 +598,10 @@ nav .menu .link:hover::after {
   padding: 0 5vw;
   display: flex;
   flex-direction: column;
-  color: #1a1a1a;
   gap: 100px;
 }
-#ebook .title {
-  display: flex;
+#ebook .titleContainer {
   justify-content: center;
-  gap: 15px;
-}
-#ebook .title h2:nth-child(2) {
-  color: #c49d39;
 }
 #ebook .container {
   max-width: 1440px;
@@ -664,20 +632,14 @@ nav .menu .link:hover::after {
 }
 
 #formules {
-  color: #191a19;
   padding: 100px 2vw;
 }
 #formules .contenu {
   max-width: 1440px;
   margin: 0 auto;
 }
-#formules .contenu .title {
-  display: flex;
+#formules .contenu .titleContainer {
   justify-content: center;
-  gap: 15px;
-}
-#formules .contenu .title h2:last-child {
-  color: #c49d39;
 }
 #formules .contenu .cardsContainer {
   display: flex;
@@ -720,24 +682,16 @@ nav .menu .link:hover::after {
 
 #galerie {
   padding: 100px 2vw 0;
-  color: #1a1a1a;
 }
 #galerie .content {
-  max-width: 1440px;
-  margin: 0 auto;
-}
-#galerie .content .titleContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
+  max-width: 1440px;
+  margin: 0 auto;
 }
-#galerie .content .titleContainer .h2Container {
-  display: flex;
-  gap: 15px;
-}
-#galerie .content .titleContainer .h2Container h2:last-child {
-  color: #c49d39;
+#galerie .content p {
+  margin-top: 50px;
 }
 #galerie .content .projectsContainer {
   margin: 100px 0;
@@ -835,6 +789,10 @@ nav .menu .link:hover::after {
   white-space: nowrap;
   will-change: transform;
 }
+#homeSection .parentContainer .txtContainer h1,
+#homeSection .parentContainer .txtContainer span {
+  color: #f6f6f6;
+}
 #homeSection .parentContainer .txtContainer .spanContainer {
   overflow: hidden;
 }
@@ -846,7 +804,6 @@ nav .menu .link:hover::after {
 }
 
 #team {
-  color: #1a1a1a;
   padding: 100px 2vw 0vh;
 }
 #team .content {
@@ -859,11 +816,8 @@ nav .menu .link:hover::after {
   gap: 50px;
 }
 #team .content header .titleContainer {
-  display: flex;
+  gap: 0px;
   justify-content: center;
-}
-#team .content header .titleContainer h2:last-child {
-  color: #c49d39;
 }
 #team .content header p {
   padding: 0 2vw;
@@ -873,7 +827,7 @@ nav .menu .link:hover::after {
   align-items: center;
 }
 #team .content .membersContainer .members {
-  padding-bottom: 10vh;
+  padding-bottom: 100px;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
@@ -902,7 +856,6 @@ nav .menu .link:hover::after {
 #team .content .membersContainer .members .card p {
   text-transform: uppercase;
   font-weight: 400;
-  font-size: 20px;
   margin-top: 26px;
 }
 #team .content .membersContainer .members .card span {

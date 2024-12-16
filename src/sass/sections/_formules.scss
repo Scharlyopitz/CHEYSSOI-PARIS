@@ -1,21 +1,12 @@
 #formules {
-  color: $Black;
   padding: 100px 2vw;
 
   .contenu {
     max-width: 1440px;
     margin: 0 auto;
-    .title {
-      display: flex;
 
+    .titleContainer {
       justify-content: center;
-      gap: 15px;
-
-      h2 {
-        &:last-child {
-          color: $Gold;
-        }
-      }
     }
 
     .cardsContainer {

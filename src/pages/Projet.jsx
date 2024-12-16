@@ -1,5 +1,5 @@
 import Galerie from "../assets/GalerieData.json";
-import { motion as m, transform } from "framer-motion";
+import { motion as m } from "framer-motion";
 
 export default function Projet({ projectName, setProjectName }) {
   const projet = Galerie.find((projet) => projet.name === projectName);

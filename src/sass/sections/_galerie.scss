@@ -1,27 +1,15 @@
 #galerie {
   padding: 100px 2vw 0;
-  color: $LightBlack;
 
   .content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     max-width: 1440px;
     margin: 0 auto;
 
-    .titleContainer {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 50px;
-
-      .h2Container {
-        display: flex;
-        gap: 15px;
-
-        h2 {
-          &:last-child {
-            color: $Gold;
-          }
-        }
-      }
+    p {
+      margin-top: 50px;
     }
 
     .projectsContainer {

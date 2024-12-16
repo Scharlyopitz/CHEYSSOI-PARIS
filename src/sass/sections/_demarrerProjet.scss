@@ -1,23 +1,14 @@
 #demarrerprojet {
   display: flex;
-  color: $Black;
-  padding: 10vh 2vw;
+  padding: 100px 2vw;
 
   .content {
     max-width: 1440px;
     width: 100%;
     margin: 0 auto;
 
-    .titleFormulaire {
-      display: flex;
+    .titleContainer {
       justify-content: center;
-      gap: 15px;
-      h2 {
-        &:nth-child(2),
-        &:last-child {
-          color: $Gold;
-        }
-      }
     }
 
     .formulaire {
@@ -59,7 +50,7 @@
         transition: 0.2s;
 
         &:focus {
-          border-bottom: 2px solid $LightBrown;
+          border-bottom: 2px solid $Gold;
         }
       }
 

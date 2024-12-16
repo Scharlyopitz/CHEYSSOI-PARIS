@@ -1,6 +1,4 @@
 #apropos {
-  color: $Black;
-
   .aproposSection {
     padding: 100px 2vw 0vh;
     max-width: 1440px;
@@ -25,7 +23,6 @@
     }
 
     .lineContainer {
-      position: relative;
       width: 100%;
 
       .line {
@@ -49,19 +46,13 @@
         width: 60%;
         flex-grow: 1;
 
-        .title {
-          display: flex;
+        .titleContainer {
           flex-direction: column;
-          flex-wrap: wrap;
           gap: 20px;
 
           h2 {
             text-align: start;
             line-height: 50px;
-
-            &:nth-child(2) {
-              color: $Gold;
-            }
           }
         }
 
@@ -78,7 +69,6 @@
       .image {
         width: 490px;
         height: 650px;
-        background: $Black;
 
         img {
           width: 100%;

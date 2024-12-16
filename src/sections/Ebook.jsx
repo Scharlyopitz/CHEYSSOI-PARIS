@@ -1,12 +1,10 @@
+import Text from "../components/Text";
+import Title from "../components/Title";
 import EbookImage from "/Ebook.webp";
 
 import { Link } from "react-router-dom";
 
 export default function Ebook() {
-  const title = "Notre Ebook";
-
-  const text = `"Créer un intérieur éco-responsable élégant" est un guide pour transformer votre espace de vie en un sanctuaire chic et respectueux de l'environnement.`;
-
   const href = `https://www.amazon.fr/CREER-INTERIEUR-ECO-RESPONSABLE-ELEGANT-ebook/dp/B0D73LSF6C/ref=sr_1_1?
 
 __mk_fr_FR=%C3%85M%C3%85%C5%BD%C3%95%C3%91&crid=31XJVAMSA9CSQ&dib=eyJ2IjoiMSJ9.A4z4bMsJWqTjD5P2uzG2Pk6BHSfM10a6b8b
@@ -18,18 +16,17 @@ cqx1wG_-3ywsVy2W5DKAo3ZXhTyPTe47YF9gnxfkqJg5oyp4EkpPHEq9Q2HccGUYdV2yu5oU4kazHDdD
 5qpH0FHw4JAwZ78VHYd4GCg&dib_tag=se&keywords=CREER+UN+INTERIEUR+ECO+RESPONSABLE&nsdOptOutParam=true&qid=173195137
 
 4&sprefix=creer+un+interieur+eco+responsable%2Caps%2C137&sr=8-1`;
+
   return (
     <section id="ebook">
-      <div className="title">
-        {title.split(" ").map((word, i) => {
-          return <h2 key={i}>{word}</h2>;
-        })}
-      </div>
+      <Title words={["notre", "ebook"]} />
       <div className="container">
         <div className="paragraph">
-          <p>{text}</p>
+          <Text
+            text={`"Créer un intérieur éco-responsable élégant" est un guide pour transformer votre espace de vie en un sanctuaire chic et respectueux de l'environnement.`}
+          />
 
-          <Link to={href} className="redButton" target="_blank">
+          <Link to={href} className="Button" target="_blank">
             Commander mon Ebook
           </Link>
         </div>

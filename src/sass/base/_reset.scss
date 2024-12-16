@@ -16,7 +16,7 @@ html {
 }
 
 body {
-  color: $White;
+  color: $LightBlack;
   background: $DarkGrey;
 
   &,
@@ -32,11 +32,6 @@ h2 {
   text-transform: uppercase;
   font-weight: 400;
   text-align: center;
-}
-
-.titleSection {
-  display: flex;
-  gap: 15px;
 }
 
 ul,

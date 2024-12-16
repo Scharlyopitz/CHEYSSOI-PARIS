@@ -3,15 +3,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: $LightBlack;
-
-  .titleSection {
-    h2 {
-      &:last-child {
-        color: $Gold;
-      }
-    }
-  }
+  padding: 100px 0;
 
   p {
     max-width: 1440px;
