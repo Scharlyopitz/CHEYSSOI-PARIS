@@ -6,7 +6,7 @@
   },
   {
     "name": "Hoang",
-    "image": "/HOANG.jpg",
+    "image": "/HOANG.webp",
     "job": "Architectes d'interieur"
   },
   {
@@ -16,17 +16,17 @@
   },
   {
     "name": "Huabing",
-    "image": "/HUABING.jpg",
+    "image": "/HUABING.webp",
     "job": "Architectes d'interieur"
   },
   {
     "name": "Gamze",
-    "image": "/GAMZE.jpg",
+    "image": "/GAMZE.webp",
     "job": "Architectes d'interieur"
   },
   {
     "name": "Supriya",
-    "image": "/SUPRIYA.jpg",
+    "image": "/SUPRIYA.webp",
     "job": "Architectes d'interieur"
   },
   {
@@ -41,12 +41,12 @@
   },
   {
     "name": "Etienne",
-    "image": "/ETIENNE.jpg",
+    "image": "/ETIENNE.webp",
     "job": "Développement commercial"
   },
   {
     "name": "Valentina",
-    "image": "/VALENTINA.jpg",
+    "image": "/VALENTINA.webp",
     "job": "Développement commercial"
   }
 ]

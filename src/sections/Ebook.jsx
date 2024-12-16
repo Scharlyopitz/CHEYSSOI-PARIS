@@ -1,4 +1,4 @@
-import EbookImage from "/Ebook.png";
+import EbookImage from "/Ebook.webp";
 
 import { Link } from "react-router-dom";
 

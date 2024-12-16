@@ -1,7 +1,7 @@
 import image1 from "/Image2.webp";
-import Haussman from "/Haussman.jpg";
-import Vendome from "/Vendome.jpg";
-import Vosges from "/Vosges.jpg";
+import Haussman from "/Haussman.webp";
+import Vendome from "/Vendome.webp";
+import Vosges from "/Vosges.webp";
 // import Montaigne from "/Montaigne.jpg";
 
 import { motion as m } from "framer-motion";
