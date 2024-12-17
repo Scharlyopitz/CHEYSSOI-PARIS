@@ -28,11 +28,18 @@ function Members() {
         {Persons.map((member, i) => {
           return (
             <div key={i} className="card">
+              <div className="filter" />
               <div className="image">
                 <img src={member.image} alt={member.name} />
               </div>
-              <p>{member.name}</p>
-              <span>{member.job}</span>
+              <div className="textContainer">
+                <div className="hiddenContent">
+                  <p>{member.name}</p>
+                </div>
+                <div className="hiddenContent">
+                  <span>{member.job}</span>
+                </div>
+              </div>
             </div>
           );
         })}

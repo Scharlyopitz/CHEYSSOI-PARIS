@@ -827,20 +827,41 @@ nav .menu .link:hover::after {
   align-items: center;
 }
 #team .content .membersContainer .members {
-  padding-bottom: 100px;
+  padding: 100px 0;
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
+  gap: 30px;
 }
 #team .content .membersContainer .members .card {
-  margin: 100px 30px 0;
+  position: relative;
+}
+#team .content .membersContainer .members .card:hover .filter {
+  opacity: 1;
+}
+#team .content .membersContainer .members .card:hover .image img {
+  filter: grayscale(0);
+}
+#team .content .membersContainer .members .card:hover .textContainer p,
+#team .content .membersContainer .members .card:hover .textContainer span {
+  transform: translateY(0%);
+}
+#team .content .membersContainer .members .card .filter {
+  opacity: 0;
+  background: linear-gradient(180deg, rgba(241, 255, 144, 0) 80%, rgb(0, 0, 0) 120%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  pointer-events: none;
+  transition: opacity 0.5s;
+  will-change: opacity;
 }
 #team .content .membersContainer .members .card .image {
-  width: 400px;
-  height: 500px;
-}
-#team .content .membersContainer .members .card .image:hover img {
-  filter: grayscale(0);
+  width: 300px;
+  height: 400px;
 }
 #team .content .membersContainer .members .card .image img {
   width: 100%;
@@ -853,11 +874,31 @@ nav .menu .link:hover::after {
   transition: filter 0.5s;
   will-change: filter;
 }
-#team .content .membersContainer .members .card p {
+#team .content .membersContainer .members .card .hiddenContent {
+  overflow: hidden;
+}
+#team .content .membersContainer .members .card .textContainer {
+  position: absolute;
+  bottom: 10px;
+  left: 15px;
+  z-index: 1;
+  color: #f6f6f6;
+  pointer-events: none;
+}
+#team .content .membersContainer .members .card .textContainer p,
+#team .content .membersContainer .members .card .textContainer span {
+  transform: translateY(105%);
+}
+#team .content .membersContainer .members .card .textContainer p {
   text-transform: uppercase;
   font-weight: 400;
   margin-top: 26px;
+  transition: transform 0.5s;
+  will-change: transform;
 }
-#team .content .membersContainer .members .card span {
+#team .content .membersContainer .members .card .textContainer span {
+  display: block;
   font-weight: 200;
+  transition: transform 0.5s;
+  will-change: transform;
 }/*# sourceMappingURL=style.css.map */
