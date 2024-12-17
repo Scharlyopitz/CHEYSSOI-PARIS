@@ -101,21 +101,19 @@
             p,
             span {
               transform: translateY(105%);
+              transition: transform 0.5s;
+              will-change: transform;
             }
 
             p {
               text-transform: uppercase;
               font-weight: 400;
               margin-top: 26px;
-              transition: transform 0.5s;
-              will-change: transform;
             }
 
             span {
               display: block;
               font-weight: 200;
-              transition: transform 0.5s;
-              will-change: transform;
             }
           }
         }

@@ -682,6 +682,8 @@ nav .menu .link:hover::after {
 
 #galerie {
   padding: 100px 2vw 0;
+  display: flex;
+  flex-direction: column;
 }
 #galerie .content {
   display: flex;
@@ -689,72 +691,72 @@ nav .menu .link:hover::after {
   align-items: center;
   max-width: 1440px;
   margin: 0 auto;
+  flex-grow: 1;
+  width: 100%;
 }
 #galerie .content p {
   margin-top: 50px;
 }
 #galerie .content .projectsContainer {
-  margin: 100px 0;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  margin-top: 100px;
+  display: flex;
   gap: 30px;
+  flex-grow: 1;
+  width: 100%;
 }
-#galerie .content .projectsContainer:hover .projectContainer:not(:hover) {
-  filter: grayscale(1);
+#galerie .content .projectsContainer .left,
+#galerie .content .projectsContainer .right {
+  width: 50%;
 }
-#galerie .content .projectsContainer .projectContainer {
+#galerie .content .projectsContainer .left .imageProjetContainer {
   position: relative;
-  transition: filter 0.3s cubic-bezier(0.5, 1, 0.89, 1);
-  will-change: filter;
-}
-#galerie .content .projectsContainer .projectContainer:nth-child(2n-1) {
-  grid-row: span 15;
-}
-#galerie .content .projectsContainer .projectContainer:hover {
-  cursor: pointer;
-}
-#galerie .content .projectsContainer .projectContainer .filter {
-  background: linear-gradient(0deg, #191a19 0%, rgba(0, 0, 0, 0) 50%);
-  position: absolute;
-  top: 0;
-  left: 0;
   width: 100%;
   height: 100%;
-  z-index: 1;
+  flex-grow: 1;
 }
-#galerie .content .projectsContainer .projectContainer .project {
-  overflow: hidden;
-  height: 100%;
-}
-#galerie .content .projectsContainer .projectContainer .project img {
+#galerie .content .projectsContainer .left .imageProjetContainer img {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
 }
-#galerie .content .projectsContainer .projectContainer .projectsNameContainer {
-  position: absolute;
-  z-index: 2;
-  bottom: 5px;
-  left: 10px;
+#galerie .content .projectsContainer .right {
   display: flex;
-  align-items: baseline;
-  gap: 7px;
-  margin-top: 5px;
+  align-items: center;
 }
-#galerie .content .projectsContainer .projectContainer .projectsNameContainer p,
-#galerie .content .projectsContainer .projectContainer .projectsNameContainer svg {
-  color: #f6f6f6;
+#galerie .content .projectsContainer .right .projectsNamesContainer {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  overflow: hidden;
 }
-#galerie .content .projectsContainer .projectContainer .projectsNameContainer p {
-  margin-top: 5px;
-  text-transform: uppercase;
-  font-weight: 400;
-  font-size: 17px;
+#galerie .content .projectsContainer .right .projectsNamesContainer .projectName {
+  border-top: 1px solid #191a19;
+  font-size: 24px;
+  padding: 24px 0;
 }
-#galerie .content .projectsContainer .projectContainer .projectsNameContainer svg {
-  transform: rotate(310deg);
-  font-size: 13px;
+#galerie .content .projectsContainer .right .projectsNamesContainer .projectName:first-child {
+  border-top: none;
+}
+#galerie .content .projectsContainer .right .projectsNamesContainer .projectName:hover span {
+  transform: translateX(0);
+}
+#galerie .content .projectsContainer .right .projectsNamesContainer .projectName span {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  transform: translateX(-5%);
+  transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+  will-change: transform;
+}
+#galerie .content .projectsContainer .right .projectsNamesContainer .projectName span svg {
+  font-size: 20px;
+}
+#galerie .content .projectsContainer .right .projectsNamesContainer .projectName:hover {
+  cursor: pointer;
 }
 
 #homeSection .parentContainer {
@@ -888,17 +890,15 @@ nav .menu .link:hover::after {
 #team .content .membersContainer .members .card .textContainer p,
 #team .content .membersContainer .members .card .textContainer span {
   transform: translateY(105%);
+  transition: transform 0.5s;
+  will-change: transform;
 }
 #team .content .membersContainer .members .card .textContainer p {
   text-transform: uppercase;
   font-weight: 400;
   margin-top: 26px;
-  transition: transform 0.5s;
-  will-change: transform;
 }
 #team .content .membersContainer .members .card .textContainer span {
   display: block;
   font-weight: 200;
-  transition: transform 0.5s;
-  will-change: transform;
 }/*# sourceMappingURL=style.css.map */

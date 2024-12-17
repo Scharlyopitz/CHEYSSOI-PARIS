@@ -1,5 +1,7 @@
 #galerie {
   padding: 100px 2vw 0;
+  display: flex;
+  flex-direction: column;
 
   .content {
     display: flex;
@@ -7,82 +9,84 @@
     align-items: center;
     max-width: 1440px;
     margin: 0 auto;
+    flex-grow: 1;
+    width: 100%;
 
     p {
       margin-top: 50px;
     }
 
     .projectsContainer {
-      margin: 100px 0;
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      margin-top: 100px;
+      display: flex;
       gap: 30px;
+      flex-grow: 1;
+      width: 100%;
 
-      &:hover {
-        .projectContainer:not(:hover) {
-          filter: grayscale(1);
-        }
+      .left,
+      .right {
+        width: 50%;
       }
 
-      .projectContainer {
-        position: relative;
-        transition: filter 0.3s cubic-bezier(0.5, 1, 0.89, 1);
-        will-change: filter;
-
-        &:nth-child(2n - 1) {
-          grid-row: span 15;
-        }
-
-        &:hover {
-          cursor: pointer;
-        }
-
-        .filter {
-          background: linear-gradient(0deg, $Black 0%, rgba(0, 0, 0, 0) 50%);
-          position: absolute;
-          top: 0;
-          left: 0;
+      .left {
+        .imageProjetContainer {
+          position: relative;
           width: 100%;
           height: 100%;
-          z-index: 1;
-        }
-
-        .project {
-          overflow: hidden;
-          height: 100%;
+          flex-grow: 1;
 
           img {
+            position: absolute;
+            left: 0;
+            top: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
           }
         }
+      }
 
-        .projectsNameContainer {
-          position: absolute;
-          z-index: 2;
-          bottom: 5px;
-          left: 10px;
+      .right {
+        display: flex;
+        align-items: center;
+
+        .projectsNamesContainer {
           display: flex;
-          align-items: baseline;
-          gap: 7px;
-          margin-top: 5px;
+          flex-direction: column;
+          width: 80%;
+          overflow: hidden;
 
-          p,
-          svg {
-            color: $White;
-          }
+          .projectName {
+            border-top: 1px solid $Black;
+            font-size: 24px;
+            padding: 24px 0;
 
-          p {
-            margin-top: 5px;
-            text-transform: uppercase;
-            font-weight: 400;
-            font-size: 17px;
-          }
+            &:first-child {
+              border-top: none;
+            }
 
-          svg {
-            transform: rotate(310deg);
-            font-size: 13px;
+            &:hover {
+              span {
+                transform: translateX(0);
+              }
+            }
+
+            span {
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              transform: translateX(-5%);
+              transition: transform 0.4s cubic-bezier(0.65, 0, 0.35, 1);
+              will-change: transform;
+
+              svg {
+                font-size: 20px;
+              }
+            }
+
+            &:hover {
+              cursor: pointer;
+            }
           }
         }
       }
