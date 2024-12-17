@@ -1,4 +1,5 @@
 import AproposInfos from "../assets/AproposInfos.json";
+import ImageReveal from "../components/ImageReveal";
 import TextReveal from "../components/TextReveal";
 import TitleReveal from "../components/TitleReveal";
 
@@ -12,6 +13,7 @@ export default function Apropos() {
             wordsTitle={info.wordsTitle}
             text={info.text}
             image={info.image}
+            index={i}
           />
         );
       })}
@@ -19,7 +21,7 @@ export default function Apropos() {
   );
 }
 
-function AproposSection({ wordsTitle, text, image }) {
+function AproposSection({ wordsTitle, text, image, index }) {
   return (
     <section className="aproposSection">
       <div className="lineContainer">
@@ -32,9 +34,11 @@ function AproposSection({ wordsTitle, text, image }) {
             <TextReveal text={text} />
           </div>
         </div>
-        <div className="image">
-          <img src={image} alt="image" />
-        </div>
+        <ImageReveal
+          src={image}
+          alt={`image projet ${index + 1}`}
+          color="#2e1006"
+        />
       </div>
     </section>
   );

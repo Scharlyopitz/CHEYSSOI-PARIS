@@ -1,4 +1,4 @@
-import image1 from "/Image2.webp";
+import image1 from "/PREZ.jpg";
 import Haussman from "/Haussman.webp";
 import Vendome from "/Vendome.webp";
 import Vosges from "/Vosges.webp";

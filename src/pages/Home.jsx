@@ -1,4 +1,4 @@
-import Image1 from "/Image2.webp";
+import Image1 from "/PREZ.jpg";
 import Navbar from "../components/Navbar";
 
 import ConnectSection from "../sections/ConnectSection";
