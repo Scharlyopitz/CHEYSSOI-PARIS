@@ -702,7 +702,7 @@ nav .menu .link:hover::after {
   display: flex;
   gap: 30px;
   flex-grow: 1;
-  width: 100%;
+  width: 85%;
 }
 #galerie .content .projectsContainer .left,
 #galerie .content .projectsContainer .right {
@@ -734,7 +734,7 @@ nav .menu .link:hover::after {
 #galerie .content .projectsContainer .right .projectsNamesContainer {
   display: flex;
   flex-direction: column;
-  width: 80%;
+  width: 100%;
   overflow: hidden;
 }
 #galerie .content .projectsContainer .right .projectsNamesContainer .projectName {
@@ -752,7 +752,7 @@ nav .menu .link:hover::after {
   display: flex;
   align-items: center;
   gap: 10px;
-  transform: translateX(-5%);
+  transform: translateX(-25px);
   transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
   will-change: transform;
 }

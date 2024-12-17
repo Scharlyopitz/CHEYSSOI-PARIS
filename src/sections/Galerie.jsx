@@ -18,7 +18,7 @@ export default function Galerie({ setProjectName }) {
 }
 
 function Projects({ setProjectName }) {
-  const [currentProject, setCurrentProject] = useState();
+  const [currentProject, setCurrentProject] = useState(1);
 
   return (
     <div className="projectsContainer">
@@ -47,7 +47,6 @@ function Projects({ setProjectName }) {
                 key={i}
                 onClick={() => setProjectName(galerie.name)}
                 onMouseEnter={() => setCurrentProject(i)}
-                onMouseLeave={() => setCurrentProject()}
                 className="projectName"
               >
                 <div className="hiddenContent">
