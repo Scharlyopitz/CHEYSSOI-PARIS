@@ -1,7 +1,7 @@
 import { motion as m } from "framer-motion";
 import InView from "./InView";
 
-export default function Title({ words }) {
+export default function TitleReveal({ words }) {
   const animeTitle = {
     initial: {
       y: "105%",

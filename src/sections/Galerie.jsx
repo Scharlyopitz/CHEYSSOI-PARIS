@@ -1,15 +1,15 @@
 import GalerieData from "../assets/GalerieData.json";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
-import Text from "../components/Text";
-import Title from "../components/Title";
+import TextReveal from "../components/TextReveal";
+import TitleReveal from "../components/TitleReveal";
 
 export default function Galerie({ setProjectName }) {
   return (
     <section id="galerie">
       <div className="content">
-        <Title words={["l'art", "du", "detail"]} />
-        <Text text="Plongez dans notre collection de projets d’intérieurs inspirants, où design et durabilité se rencontrent." />
+        <TitleReveal words={["l'art", "du", "detail"]} />
+        <TextReveal text="Plongez dans notre collection de projets d’intérieurs inspirants, où design et durabilité se rencontrent." />
         <Projects setProjectName={setProjectName} />
       </div>
     </section>

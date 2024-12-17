@@ -1,12 +1,12 @@
 import FormulesData from "../assets/FormulesData.json";
 import Button from "../components/Button";
-import Title from "../components/Title";
+import TitleReveal from "../components/TitleReveal";
 
 export default function Formules() {
   return (
     <section id="formules">
       <div className="contenu">
-        <Title words={["nos", "formules"]} />
+        <TitleReveal words={["nos", "formules"]} />
         <div className="cardsContainer">
           {FormulesData.map((formData, i) => {
             return (

@@ -1,6 +1,6 @@
 import AproposInfos from "../assets/AproposInfos.json";
-import Text from "../components/Text";
-import Title from "../components/Title";
+import TextReveal from "../components/TextReveal";
+import TitleReveal from "../components/TitleReveal";
 
 export default function Apropos() {
   return (
@@ -27,9 +27,9 @@ function AproposSection({ wordsTitle, text, image }) {
       </div>
       <div className="content">
         <div className="txt">
-          <Title words={wordsTitle} />
+          <TitleReveal words={wordsTitle} />
           <div className="paragraphe">
-            <Text text={text} />
+            <TextReveal text={text} />
           </div>
         </div>
         <div className="image">

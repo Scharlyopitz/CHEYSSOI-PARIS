@@ -1,11 +1,11 @@
 import Formulaire from "../components/DemarrerMonProjet/Formulaire";
-import Title from "../components/Title";
+import TitleReveal from "../components/TitleReveal";
 
 export default function DemarrerProjet() {
   return (
     <section id="demarrerprojet">
       <div className="content">
-        <Title words={["demarrer", "mon", "projet"]} />
+        <TitleReveal words={["demarrer", "mon", "projet"]} />
         <Formulaire />
       </div>
     </section>

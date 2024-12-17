@@ -1,7 +1,7 @@
 import { motion as m } from "framer-motion";
 import InView from "./InView";
 
-export default function Text({ text }) {
+export default function TextReveal({ text }) {
   return (
     <InView>
       <m.p

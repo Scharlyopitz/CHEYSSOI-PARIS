@@ -1,5 +1,5 @@
-import Text from "../components/Text";
-import Title from "../components/Title";
+import TextReveal from "../components/TextReveal";
+import TitleReveal from "../components/TitleReveal";
 import EbookImage from "/Ebook.webp";
 
 import { Link } from "react-router-dom";
@@ -19,10 +19,10 @@ cqx1wG_-3ywsVy2W5DKAo3ZXhTyPTe47YF9gnxfkqJg5oyp4EkpPHEq9Q2HccGUYdV2yu5oU4kazHDdD
 
   return (
     <section id="ebook">
-      <Title words={["notre", "ebook"]} />
+      <TitleReveal words={["notre", "ebook"]} />
       <div className="container">
         <div className="paragraph">
-          <Text
+          <TextReveal
             text={`"Créer un intérieur éco-responsable élégant" est un guide pour transformer votre espace de vie en un sanctuaire chic et respectueux de l'environnement.`}
           />
 
