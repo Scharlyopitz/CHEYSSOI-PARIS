@@ -765,46 +765,40 @@ nav .menu a:hover::after {
   background: #1a1a1a;
 }
 
-#homeSection .parentContainer {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 200vh;
+#BigTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: #f6f6f6;
 }
-#homeSection .parentContainer .txtContainer {
-  font-family: "Cormorant Garamond", serif;
-  text-transform: uppercase;
+#BigTitle .hidden {
+  overflow: hidden;
+}
+#BigTitle .titleContainer {
   pointer-events: none;
-  position: absolute;
-  z-index: 99997;
-  top: 0;
-  width: 100%;
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  position: absolute;
+  z-index: 99997;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "Cormorant Garamond", serif;
+  text-transform: uppercase;
+  pointer-events: none;
+  gap: 0;
 }
-#homeSection .parentContainer .txtContainer .h1container {
+#BigTitle .titleContainer h1 {
   line-height: 80px;
-  overflow: hidden;
-}
-#homeSection .parentContainer .txtContainer .h1container h1 {
   font-weight: 300;
   font-size: 100px;
   letter-spacing: 1vw;
   white-space: nowrap;
   will-change: transform;
 }
-#homeSection .parentContainer .txtContainer h1,
-#homeSection .parentContainer .txtContainer span {
-  color: #f6f6f6;
-}
-#homeSection .parentContainer .txtContainer .spanContainer {
-  overflow: hidden;
-}
-#homeSection .parentContainer .txtContainer .spanContainer span {
+#BigTitle .titleContainer span {
   display: block;
   letter-spacing: 10px;
   font-size: 25px;

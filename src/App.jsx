@@ -52,7 +52,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home loader={loader} />} />
-        <Route path="/espacepro" element={<EspacePro />} />
+        <Route path="/espacepro" element={<EspacePro loader={loader} />} />
       </Routes>
       {loader && <Loader setLoader={setLoader} />}
     </>

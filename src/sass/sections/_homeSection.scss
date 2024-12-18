@@ -1,53 +1,43 @@
-#homeSection {
-  .parentContainer {
+#BigTitle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  color: $White;
+
+  .hidden {
+    overflow: hidden;
+  }
+
+  .titleContainer {
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 200vh;
+    z-index: 99997;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Cormorant Garamond", serif;
+    text-transform: uppercase;
+    pointer-events: none;
+    gap: 0;
 
-    .txtContainer {
-      font-family: "Cormorant Garamond", serif;
-      text-transform: uppercase;
-      pointer-events: none;
-      position: absolute;
-      z-index: 99997;
-      top: 0;
-      width: 100%;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
+    h1 {
+      line-height: 80px;
+      font-weight: 300;
+      font-size: 100px;
+      letter-spacing: 1vw;
+      white-space: nowrap;
+      will-change: transform;
+    }
 
-      .h1container {
-        line-height: 80px;
-        overflow: hidden;
-
-        h1 {
-          font-weight: 300;
-          font-size: 100px;
-          letter-spacing: 1vw;
-          white-space: nowrap;
-          will-change: transform;
-        }
-      }
-
-      h1,
-      span {
-        color: $White;
-      }
-
-      .spanContainer {
-        overflow: hidden;
-
-        span {
-          display: block;
-          letter-spacing: 10px;
-          font-size: 25px;
-          font-weight: 500;
-        }
-      }
+    span {
+      display: block;
+      letter-spacing: 10px;
+      font-size: 25px;
+      font-weight: 500;
     }
   }
 }

@@ -14,14 +14,10 @@ import ProgressBar from "../components/ProgressBar";
 
 import { useEffect, useRef, useState } from "react";
 
-import {
-  AnimatePresence,
-  motion as m,
-  useScroll,
-  useTransform,
-} from "framer-motion";
+import { AnimatePresence } from "framer-motion";
 import Projet from "./Projet";
 import BackgroundImage from "../components/BackgroundImage";
+import BigTitle from "../components/BigTitle";
 
 export default function Home({ loader }) {
   const [projectName, setProjectName] = useState("");
@@ -50,7 +46,11 @@ export default function Home({ loader }) {
         <ProgressBar />
         <GotoTopButton />
         <BackgroundImage image={Image1} />
-        <HomeSection loader={loader} />
+        <BigTitle
+          loader={loader}
+          text="Cheyssoi Paris"
+          undertitle="Designers d’intérieurs éthiques"
+        />
         <ConnectSection />
         <Apropos />
         <Team />
@@ -66,63 +66,5 @@ export default function Home({ loader }) {
       </main>
       <Footer />
     </>
-  );
-}
-
-function HomeSection({ loader }) {
-  return (
-    <section id="homeSection">
-      <div className="parentContainer">
-        <m.div initial="initial" animate="animate" className="txtContainer">
-          <Title loader={loader} />
-          <UnderTitle loader={loader} />
-        </m.div>
-      </div>
-    </section>
-  );
-}
-
-function Title({ loader }) {
-  const revealH1 = {
-    initial: {
-      y: "105%",
-    },
-    animate: {
-      y: 0,
-      transition: {
-        duration: 1,
-        delay: loader ? 2.35 : 0,
-        ease: [0.65, 0, 0.35, 1],
-      },
-    },
-  };
-
-  return (
-    <div className="h1container">
-      <m.h1 variants={revealH1}>Cheyssoi Paris</m.h1>
-    </div>
-  );
-}
-
-function UnderTitle({ loader }) {
-  const revealUnderTitle = {
-    initial: {
-      y: "-105%",
-    },
-    animate: {
-      y: 0,
-      transition: {
-        duration: 1,
-        delay: loader ? 2.35 : 0,
-        ease: [0.65, 0, 0.35, 1],
-      },
-    },
-  };
-  return (
-    <div className="spanContainer">
-      <m.span variants={revealUnderTitle}>
-        Designers d’intérieurs éthiques
-      </m.span>
-    </div>
   );
 }
