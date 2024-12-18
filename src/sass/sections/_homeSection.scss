@@ -1,7 +1,4 @@
 #BigTitle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
   color: $White;
 
@@ -23,6 +20,7 @@
     text-transform: uppercase;
     pointer-events: none;
     gap: 0;
+    white-space: nowrap;
 
     h1 {
       line-height: 80px;
@@ -35,7 +33,7 @@
 
     span {
       display: block;
-      letter-spacing: 10px;
+      letter-spacing: 0.4vw;
       font-size: 25px;
       font-weight: 500;
     }

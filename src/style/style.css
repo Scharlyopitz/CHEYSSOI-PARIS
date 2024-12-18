@@ -223,6 +223,21 @@ nav {
 nav a {
   color: #f6f6f6;
 }
+nav a .line-through {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scaleX(0);
+  width: 110%;
+  height: 1.5px;
+  background: #f6f6f6;
+  transform-origin: left;
+  transition: transform 0.5s;
+  will-change: transform;
+}
+nav a .line-through.active {
+  transform: translate(-50%, -50%) scaleX(1);
+}
 nav .LogoContainer {
   overflow: hidden;
   position: relative;
@@ -688,8 +703,6 @@ nav .menu a:hover::after {
   display: flex;
   flex-direction: column;
   align-items: center;
-  max-width: 1440px;
-  margin: 0 auto;
   width: 100%;
 }
 #galerie .content p {
@@ -766,9 +779,6 @@ nav .menu a:hover::after {
 }
 
 #BigTitle {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   position: relative;
   color: #f6f6f6;
 }
@@ -789,6 +799,7 @@ nav .menu a:hover::after {
   text-transform: uppercase;
   pointer-events: none;
   gap: 0;
+  white-space: nowrap;
 }
 #BigTitle .titleContainer h1 {
   line-height: 80px;
@@ -800,7 +811,7 @@ nav .menu a:hover::after {
 }
 #BigTitle .titleContainer span {
   display: block;
-  letter-spacing: 10px;
+  letter-spacing: 0.4vw;
   font-size: 25px;
   font-weight: 500;
 }

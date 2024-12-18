@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import LogoCheyssoi from "/2.png";
 
 import { motion as m } from "framer-motion";
@@ -44,13 +44,25 @@ function Menu() {
     { name: "Ebook", to: "#ebook" },
   ];
 
+  const { pathname } = useLocation();
+
   return (
     <>
       <div className="menu">
         <Link to="espacepro">espace pro</Link>
         {links.map((link, i) => {
           return (
-            <a key={i} className={"link"} href={link.to}>
+            <a
+              key={i}
+              style={{
+                pointerEvents: pathname !== "/" && "none",
+              }}
+              className={"link"}
+              href={link.to}
+            >
+              <span
+                className={`line-through ${pathname !== "/" && "active"}`}
+              />
               {link.name}
             </a>
           );

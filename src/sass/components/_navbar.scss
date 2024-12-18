@@ -12,6 +12,23 @@ nav {
 
   a {
     color: $White;
+
+    .line-through {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%) scaleX(0);
+      width: 110%;
+      height: 1.5px;
+      background: $White;
+      transform-origin: left;
+      transition: transform 0.5s;
+      will-change: transform;
+
+      &.active {
+        transform: translate(-50%, -50%) scaleX(1);
+      }
+    }
   }
 
   .LogoContainer {

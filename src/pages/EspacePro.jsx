@@ -10,8 +10,8 @@ export default function EspacePro({ loader }) {
       <BackgroundImage image={ImageEspacePro} />
       <BigTitle
         loader={loader}
-        text="PAGE RESERVEE AUX"
-        undertitle="PROFESSIONNELS"
+        text="espace pro"
+        undertitle="PAGE RESERVEE AUX PROFESSIONNELS"
       />
     </main>
   );
