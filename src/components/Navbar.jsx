@@ -3,7 +3,7 @@ import LogoCheyssoi from "/2.png";
 
 import { motion as m } from "framer-motion";
 
-export default function Navbar() {
+export default function Navbar({ loader }) {
   const revealNav = {
     initial: {
       transform: "translate(-50%,-105%) ",
@@ -12,7 +12,11 @@ export default function Navbar() {
     animate: {
       pointerEvents: "all",
       transform: "translate(-50%,0%) ",
-      transition: { duration: 1, delay: 2.7, ease: [0.65, 0, 0.35, 1] },
+      transition: {
+        duration: 1,
+        delay: loader ? 2.7 : 0,
+        ease: [0.65, 0, 0.35, 1],
+      },
     },
   };
 
@@ -26,9 +30,9 @@ export default function Navbar() {
 
 function Logo() {
   return (
-    <a href={"/"} className="LogoContainer">
+    <Link to={"/"} className="LogoContainer">
       <img src={LogoCheyssoi} alt="LogoCheyssoi" />
-    </a>
+    </Link>
   );
 }
 
@@ -43,7 +47,7 @@ function Menu() {
   return (
     <>
       <div className="menu">
-        <Link to="/espacepro">Espace Pro</Link>
+        <Link to="espacepro">espace pro</Link>
         {links.map((link, i) => {
           return (
             <a key={i} className={"link"} href={link.to}>
