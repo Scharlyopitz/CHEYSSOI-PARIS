@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import LogoCheyssoi from "/2.png";
 
 import { motion as m } from "framer-motion";
@@ -42,6 +43,7 @@ function Menu() {
   return (
     <>
       <div className="menu">
+        <Link to="/espacepro">Espace Pro</Link>
         {links.map((link, i) => {
           return (
             <a key={i} className={"link"} href={link.to}>

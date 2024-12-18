@@ -252,10 +252,10 @@ nav .menu {
   font-size: 14px;
   font-weight: 300;
 }
-nav .menu .link {
+nav .menu a {
   position: relative;
 }
-nav .menu .link::after {
+nav .menu a::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -268,10 +268,10 @@ nav .menu .link::after {
   transition: transform 0.5s ease;
   will-change: transform;
 }
-nav .menu .link:hover {
+nav .menu a:hover {
   cursor: pointer;
 }
-nav .menu .link:hover::after {
+nav .menu a:hover::after {
   transform: scaleX(1);
   transform-origin: left;
 }
