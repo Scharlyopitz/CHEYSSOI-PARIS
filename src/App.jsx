@@ -49,7 +49,7 @@ function App() {
 
   return (
     <>
-      <Navbar loader={loader} />
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home loader={loader} />} />
         <Route path="/espacepro" element={<EspacePro />} />

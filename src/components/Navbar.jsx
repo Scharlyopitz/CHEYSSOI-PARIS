@@ -3,7 +3,7 @@ import LogoCheyssoi from "/2.png";
 
 import { motion as m } from "framer-motion";
 
-export default function Navbar({ loader }) {
+export default function Navbar() {
   const revealNav = {
     initial: {
       transform: "translate(-50%,-105%) ",
@@ -14,7 +14,7 @@ export default function Navbar({ loader }) {
       transform: "translate(-50%,0%) ",
       transition: {
         duration: 1,
-        delay: loader ? 2.7 : 0,
+        delay: 2.7,
         ease: [0.65, 0, 0.35, 1],
       },
     },
