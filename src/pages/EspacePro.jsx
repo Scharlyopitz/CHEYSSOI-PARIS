@@ -1,6 +1,6 @@
 import BackgroundImage from "../components/BackgroundImage";
 import ProgressBar from "../components/ProgressBar";
-import ImageEspacePro from "/Vosges.webp";
+import ImageEspacePro from "/Haussman.webp";
 
 export default function EspacePro() {
   return (

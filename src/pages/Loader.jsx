@@ -10,7 +10,7 @@ import { useLocation } from "react-router-dom";
 export default function Loader({ setLoader }) {
   const { pathname } = useLocation();
 
-  const rightImage = { "/": ImageAccueil, "/espacepro": Vosges };
+  const rightImage = { "/": ImageAccueil, "/espacepro": Haussman };
 
   const loaderImages1 = [
     { src: Vendome },
