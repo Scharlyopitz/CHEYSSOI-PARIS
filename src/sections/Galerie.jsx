@@ -22,43 +22,18 @@ function Projects({ setProjectName }) {
 
   return (
     <div className="projectsContainer">
-      <div className="left">
-        <div className="imageProjetContainer">
-          {GalerieData.map(({ image, name }, i) => {
-            return (
-              <img
-                style={{
-                  opacity: currentProject === i ? 1 : 0,
-                  transform: currentProject === i ? "scale(1.05)" : "scale(1)",
-                }}
-                key={i}
-                src={image}
-                alt={name}
-              />
-            );
-          })}
-        </div>
-      </div>
-      <div className="right">
-        <div className="projectsNamesContainer">
-          {GalerieData.map((galerie, i) => {
-            return (
-              <div
-                key={i}
-                onClick={() => setProjectName(galerie.name)}
-                onMouseEnter={() => setCurrentProject(i)}
-                className="projectName"
-              >
-                <div className="hiddenContent">
-                  <span>
-                    <FontAwesomeIcon icon={faArrowRight} /> {galerie.name}
-                  </span>
-                </div>
-              </div>
-            );
-          })}
-        </div>
-      </div>
+      {GalerieData.map(({ name, image }, i) => {
+        return (
+          <div key={i} onClick={() => setProjectName(name)} className="projet">
+            <div className="number">{i + 1 >= 10 ? i + 1 : `0${i + 1}`}</div>
+            <div className="name">{name}</div>
+            <div className="imageContainer">
+              <img src={image} alt={name} />
+            </div>
+            <div className="line" />
+          </div>
+        );
+      })}
     </div>
   );
 }

@@ -681,7 +681,7 @@ nav .menu .link:hover::after {
 }
 
 #galerie {
-  padding: 100px 2vw 0;
+  padding: 100px 0 0;
   display: flex;
   flex-direction: column;
 }
@@ -691,76 +691,85 @@ nav .menu .link:hover::after {
   align-items: center;
   max-width: 1440px;
   margin: 0 auto;
-  flex-grow: 1;
   width: 100%;
 }
 #galerie .content p {
   margin-top: 50px;
 }
 #galerie .content .projectsContainer {
-  margin-top: 100px;
-  display: flex;
-  gap: 30px;
-  flex-grow: 1;
-  width: 85%;
-}
-#galerie .content .projectsContainer .left,
-#galerie .content .projectsContainer .right {
-  width: 50%;
-}
-#galerie .content .projectsContainer .left .imageProjetContainer {
-  position: relative;
   width: 100%;
-  height: 100%;
-  flex-grow: 1;
-  overflow: hidden;
-  border-radius: 5px;
+  margin-top: 100px;
 }
-#galerie .content .projectsContainer .left .imageProjetContainer img {
+#galerie .content .projectsContainer .projet {
+  position: relative;
+  display: flex;
+  gap: 10px;
+  font-family: "Cormorant Garamond", serif;
+  padding: 60px 5%;
+  overflow: hidden;
+}
+#galerie .content .projectsContainer .projet:first-child::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1.5px;
+  background: #1a1a1a;
+}
+#galerie .content .projectsContainer .projet:hover {
+  cursor: pointer;
+}
+#galerie .content .projectsContainer .projet:hover .imageContainer {
+  transform: scale(1);
+}
+#galerie .content .projectsContainer .projet:hover .imageContainer img {
+  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+}
+#galerie .content .projectsContainer .projet:hover .number,
+#galerie .content .projectsContainer .projet:hover .name {
+  color: #f6f6f6;
+}
+#galerie .content .projectsContainer .projet img,
+#galerie .content .projectsContainer .projet .name,
+#galerie .content .projectsContainer .projet .number {
+  transition: 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+}
+#galerie .content .projectsContainer .projet .number {
+  font-size: 30px;
+}
+#galerie .content .projectsContainer .projet .name {
+  font-size: 70px;
+}
+#galerie .content .projectsContainer .projet .imageContainer {
   position: absolute;
   left: 0;
   top: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  transform: scale(1.05);
+  transition: 0.7s cubic-bezier(0.45, 0, 0.55, 1);
+  will-change: transform;
+}
+#galerie .content .projectsContainer .projet .imageContainer img {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  transition: 0.7s;
-  will-change: opacity;
+  filter: brightness(0.7);
+  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+  will-change: clip-path;
 }
-#galerie .content .projectsContainer .right {
-  display: flex;
-  align-items: center;
-}
-#galerie .content .projectsContainer .right .projectsNamesContainer {
-  display: flex;
-  flex-direction: column;
+#galerie .content .projectsContainer .projet .line {
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 100%;
-  overflow: hidden;
-}
-#galerie .content .projectsContainer .right .projectsNamesContainer .projectName {
-  border-top: 1px solid #191a19;
-  font-size: 24px;
-  padding: 24px 0;
-}
-#galerie .content .projectsContainer .right .projectsNamesContainer .projectName:first-child {
-  border-top: none;
-}
-#galerie .content .projectsContainer .right .projectsNamesContainer .projectName:hover span {
-  transform: translateX(0);
-}
-#galerie .content .projectsContainer .right .projectsNamesContainer .projectName span {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  transform: translateX(-25px);
-  transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
-  will-change: transform;
-}
-#galerie .content .projectsContainer .right .projectsNamesContainer .projectName span svg {
-  font-size: 20px;
-}
-#galerie .content .projectsContainer .right .projectsNamesContainer .projectName:hover {
-  cursor: pointer;
+  height: 2px;
+  background: #1a1a1a;
 }
 
 #homeSection .parentContainer {

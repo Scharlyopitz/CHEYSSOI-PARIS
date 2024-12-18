@@ -1,5 +1,5 @@
 #galerie {
-  padding: 100px 2vw 0;
+  padding: 100px 0 0;
   display: flex;
   flex-direction: column;
 
@@ -9,7 +9,6 @@
     align-items: center;
     max-width: 1440px;
     margin: 0 auto;
-    flex-grow: 1;
     width: 100%;
 
     p {
@@ -17,81 +16,84 @@
     }
 
     .projectsContainer {
+      width: 100%;
       margin-top: 100px;
-      display: flex;
-      gap: 30px;
-      flex-grow: 1;
-      width: 85%;
 
-      .left,
-      .right {
-        width: 50%;
-      }
+      .projet {
+        position: relative;
+        display: flex;
+        gap: 10px;
+        font-family: "Cormorant Garamond", serif;
+        padding: 60px 5%;
+        overflow: hidden;
 
-      .left {
-        .imageProjetContainer {
-          position: relative;
+        &:first-child::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 1.5px;
+          background: $LightBlack;
+        }
+
+        &:hover {
+          cursor: pointer;
+
+          .imageContainer {
+            transform: scale(1);
+            img {
+              clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+            }
+          }
+
+          .number,
+          .name {
+            color: $White;
+          }
+        }
+
+        img,
+        .name,
+        .number {
+          transition: 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+        }
+
+        .number {
+          font-size: 30px;
+        }
+
+        .name {
+          font-size: 70px;
+        }
+        .imageContainer {
+          position: absolute;
+          left: 0;
+          top: 0;
+          z-index: -1;
           width: 100%;
           height: 100%;
-          flex-grow: 1;
-          overflow: hidden;
-          border-radius: 5px;
+          transform: scale(1.05);
+          transition: 0.7s cubic-bezier(0.45, 0, 0.55, 1);
+          will-change: transform;
 
           img {
-            position: absolute;
-            left: 0;
-            top: 0;
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: 0.7s;
-            will-change: opacity;
+            filter: brightness(0.7);
+            clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
+            will-change: clip-path;
           }
         }
-      }
 
-      .right {
-        display: flex;
-        align-items: center;
-
-        .projectsNamesContainer {
-          display: flex;
-          flex-direction: column;
+        .line {
+          position: absolute;
+          bottom: 0;
+          left: 0;
           width: 100%;
-          overflow: hidden;
-
-          .projectName {
-            border-top: 1px solid $Black;
-            font-size: 24px;
-            padding: 24px 0;
-
-            &:first-child {
-              border-top: none;
-            }
-
-            &:hover {
-              span {
-                transform: translateX(0);
-              }
-            }
-
-            span {
-              display: flex;
-              align-items: center;
-              gap: 10px;
-              transform: translateX(-25px);
-              transition: transform 0.3s cubic-bezier(0.65, 0, 0.35, 1);
-              will-change: transform;
-
-              svg {
-                font-size: 20px;
-              }
-            }
-
-            &:hover {
-              cursor: pointer;
-            }
-          }
+          height: 2px;
+          background: $LightBlack;
         }
       }
     }
