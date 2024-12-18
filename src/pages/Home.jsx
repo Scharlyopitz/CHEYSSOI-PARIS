@@ -21,6 +21,7 @@ import {
   useTransform,
 } from "framer-motion";
 import Projet from "./Projet";
+import BackgroundImage from "../components/BackgroundImage";
 
 export default function Home({ loader }) {
   const [projectName, setProjectName] = useState("");
@@ -48,7 +49,7 @@ export default function Home({ loader }) {
       <main id="Home">
         <ProgressBar />
         <GotoTopButton />
-        <BackgroundImage />
+        <BackgroundImage image={Image1} />
         <HomeSection loader={loader} />
         <ConnectSection />
         <Apropos />
@@ -65,25 +66,6 @@ export default function Home({ loader }) {
       </main>
       <Footer />
     </>
-  );
-}
-
-function BackgroundImage() {
-  const containerRef = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start start", "end end"],
-  });
-
-  const y = useTransform(scrollYProgress, [0, 1], ["0", "30%"]);
-
-  return (
-    <div ref={containerRef} className="backgroundImage">
-      <div className="image">
-        <m.img style={{ y }} src={Image1} alt="Image1" />
-      </div>
-    </div>
   );
 }
 
