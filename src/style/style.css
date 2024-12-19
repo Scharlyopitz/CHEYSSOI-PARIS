@@ -242,11 +242,6 @@ footer .socials svg:hover {
   color: #c49d39;
 }
 
-.Text {
-  -webkit-background-clip: text !important;
-  color: transparent;
-}
-
 nav {
   position: absolute;
   z-index: 99997;
