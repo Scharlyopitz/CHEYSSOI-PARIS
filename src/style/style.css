@@ -444,6 +444,7 @@ nav .menu a:hover::after {
   gap: 20px;
 }
 #apropos .aproposSection .content .txt .titleContainer h2 {
+  white-space: nowrap;
   text-align: start;
   line-height: 50px;
 }
