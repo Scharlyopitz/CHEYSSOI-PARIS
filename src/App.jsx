@@ -6,6 +6,7 @@ import Loader from "./pages/Loader";
 import { useEffect, useState } from "react";
 import Lenis from "lenis";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -55,6 +56,8 @@ function App() {
         <Route path="/espacepro" element={<EspacePro loader={loader} />} />
       </Routes>
       {loader && <Loader setLoader={setLoader} />}
+
+      <Footer />
     </>
   );
 }

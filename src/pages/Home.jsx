@@ -6,13 +6,12 @@ import Apropos from "../sections/Apropos";
 import DemarrerProjet from "../sections/DemarrerProjet";
 import Team from "../sections/Team";
 
-import Footer from "../components/Footer";
 import Formules from "../sections/Formules";
 import Galerie from "../sections/Galerie";
 import GotoTopButton from "../components/GotoTopButton";
 import ProgressBar from "../components/ProgressBar";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { AnimatePresence } from "framer-motion";
 import Projet from "./Projet";
@@ -64,7 +63,6 @@ export default function Home({ loader }) {
         <DemarrerProjet />
         <Ebook />
       </main>
-      <Footer />
     </>
   );
 }
