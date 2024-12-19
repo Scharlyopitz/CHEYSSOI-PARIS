@@ -4,17 +4,17 @@ import { motion as m } from "framer-motion";
 export default function ImageReveal({ src, alt }) {
   const imageReveal = {
     initial: {
-      opacity: 0,
+      scale: 1.2,
     },
     animate: {
-      opacity: 1,
-      transition: { duration: 0.7, ease: [0.65, 0, 0.35, 1] },
+      scale: 1,
+      transition: { duration: 0.8, ease: [0.25, 1, 0.5, 1] },
     },
   };
 
   return (
     <InView>
-      <div className="image" style={{ background: "#c49d83" }}>
+      <div style={{ overflow: "hidden" }} className="image">
         <m.img variants={imageReveal} src={src} alt={alt} />
       </div>
     </InView>
