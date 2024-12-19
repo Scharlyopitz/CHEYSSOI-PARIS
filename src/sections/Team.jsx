@@ -1,4 +1,5 @@
 import Persons from "../assets/Persons.json";
+import ImageReveal from "../components/ImageReveal";
 import TextReveal from "../components/TextReveal";
 import TitleReveal from "../components/TitleReveal";
 
@@ -29,9 +30,7 @@ function Members() {
           return (
             <div key={i} className="card">
               <div className="filter" />
-              <div className="image">
-                <img src={member.image} alt={member.name} />
-              </div>
+              <ImageReveal src={member.image} alt={member.name} />
               <div className="textContainer">
                 <div className="hiddenContent">
                   <p>{member.name}</p>
