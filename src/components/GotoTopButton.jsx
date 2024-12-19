@@ -8,7 +8,7 @@ export default function GotoTopButton() {
   const [reveal, setReveal] = useState(false);
 
   function handleClick() {
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    window.scrollTo({ top: 0 });
   }
 
   const revealButton = {
