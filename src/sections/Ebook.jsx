@@ -1,3 +1,4 @@
+import ImageReveal from "../components/ImageReveal";
 import TextReveal from "../components/TextReveal";
 import TitleReveal from "../components/TitleReveal";
 import EbookImage from "/Ebook.webp";
@@ -30,9 +31,7 @@ cqx1wG_-3ywsVy2W5DKAo3ZXhTyPTe47YF9gnxfkqJg5oyp4EkpPHEq9Q2HccGUYdV2yu5oU4kazHDdD
             Commander mon Ebook
           </Link>
         </div>
-        <div className="ebookImage">
-          <img src={EbookImage} alt="image Ebook" />
-        </div>
+        <ImageReveal src={EbookImage} alt="image Ebook" />
       </div>
     </section>
   );
