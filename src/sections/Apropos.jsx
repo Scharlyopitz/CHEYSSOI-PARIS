@@ -34,11 +34,7 @@ function AproposSection({ wordsTitle, text, image, index }) {
             <TextReveal text={text} />
           </div>
         </div>
-        <ImageReveal
-          src={image}
-          alt={`image projet ${index + 1}`}
-          color="#2e1006"
-        />
+        <ImageReveal src={image} alt={`image projet ${index + 1}`} />
       </div>
     </section>
   );

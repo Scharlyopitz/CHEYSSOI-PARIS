@@ -8,7 +8,7 @@ export default function TextReveal({ text }) {
     },
     animate: {
       background: "linear-gradient(90deg, #191a19 100%, #191a1929 100%)",
-      transition: { duration: 1, ease: [0.65, 0, 0.35, 1] },
+      transition: { duration: 0.7, ease: [0.65, 0, 0.35, 1] },
     },
   };
   return (
