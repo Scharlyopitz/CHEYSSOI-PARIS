@@ -37,36 +37,48 @@ function Logo() {
 }
 
 function Menu() {
-  const links = [
-    { name: "à propos", to: "#apropos" },
-    { name: "galerie", to: "#galerie" },
-    { name: "demarrer mon projet", to: "#demarrerprojet" },
-    { name: "Ebook", to: "#ebook" },
-  ];
-
   const { pathname } = useLocation();
 
   return (
     <>
       <div className="menu">
-        <Link to="espacepro">espace pro</Link>
-        {links.map((link, i) => {
-          return (
-            <a
-              key={i}
-              style={{
-                pointerEvents: pathname !== "/" && "none",
-              }}
-              className={"link"}
-              href={link.to}
-            >
-              <span
-                className={`line-through ${pathname !== "/" && "active"}`}
-              />
-              {link.name}
-            </a>
-          );
-        })}
+        <a
+          style={{
+            pointerEvents: pathname !== "/" && "none",
+          }}
+          href="#apropos"
+        >
+          <span className={`line-through ${pathname !== "/" && "active"}`} />à
+          propos
+        </a>
+        <a
+          style={{
+            pointerEvents: pathname !== "/" && "none",
+          }}
+          href="#galerie"
+        >
+          <span className={`line-through ${pathname !== "/" && "active"}`} />
+          Galerie
+        </a>
+        <a
+          style={{
+            pointerEvents: pathname !== "/" && "none",
+          }}
+          href="#demarrerprojet"
+        >
+          <span className={`line-through ${pathname !== "/" && "active"}`} />
+          demarrer mon projet
+        </a>
+        <Link to="espacepro">Club Cheyssoi</Link>
+        <a
+          style={{
+            pointerEvents: pathname !== "/" && "none",
+          }}
+          href="#ebook"
+        >
+          <span className={`line-through ${pathname !== "/" && "active"}`} />
+          Ebook
+        </a>
       </div>
     </>
   );
