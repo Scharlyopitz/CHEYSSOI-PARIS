@@ -2,7 +2,7 @@ import ImageAccueil from "/PREZ.webp";
 import Haussman from "/Haussman.webp";
 import Vendome from "/Vendome.webp";
 import Vosges from "/Vosges.webp";
-// import Montaigne from "/Montaigne.jpg";
+import PagePro from "/PAGEPRO.webp";
 
 import { motion as m } from "framer-motion";
 import { useLocation } from "react-router-dom";
@@ -10,7 +10,7 @@ import { useLocation } from "react-router-dom";
 export default function Loader({ setLoader }) {
   const { pathname } = useLocation();
 
-  const rightImage = { "/": ImageAccueil, "/espacepro": Haussman };
+  const rightImage = { "/": ImageAccueil, "/espacepro": PagePro };
 
   const loaderImages1 = [
     { src: Vendome },

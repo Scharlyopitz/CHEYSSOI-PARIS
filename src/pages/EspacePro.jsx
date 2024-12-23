@@ -3,7 +3,7 @@ import BackgroundImage from "../components/BackgroundImage";
 import BigTitle from "../components/BigTitle";
 import PageTransition from "../components/PageTransition";
 import ProgressBar from "../components/ProgressBar";
-import ImageEspacePro from "/Haussman.webp";
+import ImageEspacePro from "/PAGEPRO.webp";
 import Footer from "../components/Footer";
 
 export default function EspacePro({ loader }) {
