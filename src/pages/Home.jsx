@@ -17,6 +17,8 @@ import { AnimatePresence } from "framer-motion";
 import Projet from "./Projet";
 import BackgroundImage from "../components/BackgroundImage";
 import BigTitle from "../components/BigTitle";
+import PageTransition from "../components/PageTransition";
+import Footer from "../components/Footer";
 
 export default function Home({ loader }) {
   const [projectName, setProjectName] = useState("");
@@ -34,6 +36,8 @@ export default function Home({ loader }) {
   }, [projectName]);
 
   useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" });
+
     // RESET DE L'HISTORIQUE DE L'URL ET SCROLLRESTORATION POUR SCROLL TO TOP
 
     window.history.replaceState({}, "", "/");
@@ -41,7 +45,7 @@ export default function Home({ loader }) {
 
   return (
     <>
-      <main id="Home">
+      <PageTransition id="Home">
         <ProgressBar />
         <GotoTopButton />
         <BackgroundImage image={Image1} />
@@ -62,7 +66,8 @@ export default function Home({ loader }) {
         <Formules />
         <DemarrerProjet />
         <Ebook />
-      </main>
+        <Footer />
+      </PageTransition>
     </>
   );
 }

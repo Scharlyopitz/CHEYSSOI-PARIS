@@ -6,7 +6,7 @@ import Loader from "./pages/Loader";
 import { useEffect, useState } from "react";
 import Lenis from "lenis";
 import Navbar from "./components/Navbar";
-import Footer from "./components/Footer";
+import { AnimatePresence } from "framer-motion";
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -39,7 +39,6 @@ function App() {
   }, []);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "instant" });
     const lenis = new Lenis();
 
     lenis.stop();
@@ -51,13 +50,13 @@ function App() {
   return (
     <>
       <Navbar />
-      <Routes>
-        <Route path="/" element={<Home loader={loader} />} />
-        <Route path="/espacepro" element={<EspacePro loader={loader} />} />
-      </Routes>
+      <AnimatePresence mode="wait">
+        <Routes location={pathname} key={pathname}>
+          <Route path="/" element={<Home loader={loader} />} />
+          <Route path="/espacepro" element={<EspacePro loader={loader} />} />
+        </Routes>
+      </AnimatePresence>
       {loader && <Loader setLoader={setLoader} />}
-
-      <Footer />
     </>
   );
 }
