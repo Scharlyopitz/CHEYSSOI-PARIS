@@ -20,7 +20,7 @@ export default function PageTransition({ children, id }) {
       initial="initial"
       animate="animate"
       exit="exit"
-      variants={pageFade}
+      // variants={pageFade}
       id={`#${id}`}
     >
       {children}

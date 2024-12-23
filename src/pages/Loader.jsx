@@ -45,7 +45,7 @@ export default function Loader({ setLoader }) {
     animate: {
       transition: {
         staggerChildren: 0.2,
-        ease: [0.87, 0, 0.13, 1],
+        ease: [0.65, 0, 0.35, 1],
       },
     },
   };
