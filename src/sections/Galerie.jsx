@@ -25,7 +25,6 @@ function Projects({ setProjectName }) {
       {GalerieData.map(({ name, image }, i) => {
         return (
           <div key={i} onClick={() => setProjectName(name)} className="projet">
-            <div className="number">{i + 1 >= 10 ? i + 1 : `0${i + 1}`}</div>
             <div className="name">{name}</div>
             <div className="imageContainer">
               <img src={image} alt={name} />

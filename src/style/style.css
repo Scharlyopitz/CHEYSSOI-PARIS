@@ -755,6 +755,10 @@ nav .menu a:hover::after {
   font-family: "Cormorant Garamond", serif;
   padding: 60px 5%;
   overflow: hidden;
+  color: #f6f6f6;
+}
+#galerie .content .projectsContainer .projet:nth-child(even) .name {
+  text-align: end;
 }
 #galerie .content .projectsContainer .projet:first-child::before {
   content: "";
@@ -763,29 +767,17 @@ nav .menu a:hover::after {
   left: 0;
   width: 100%;
   height: 1.5px;
-  background: #1a1a1a;
+  background: #f6f6f6;
 }
 #galerie .content .projectsContainer .projet:hover {
   cursor: pointer;
 }
-#galerie .content .projectsContainer .projet:hover .imageContainer img {
-  -webkit-clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-          clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
-}
-#galerie .content .projectsContainer .projet:hover .number,
-#galerie .content .projectsContainer .projet:hover .name {
-  color: #f6f6f6;
-}
-#galerie .content .projectsContainer .projet img,
-#galerie .content .projectsContainer .projet .name,
-#galerie .content .projectsContainer .projet .number {
-  transition: 0.5s cubic-bezier(0.65, 0, 0.35, 1);
-}
-#galerie .content .projectsContainer .projet .number {
-  font-size: 30px;
+#galerie .content .projectsContainer .projet:hover img {
+  transform: scale(1.1);
 }
 #galerie .content .projectsContainer .projet .name {
   font-size: 70px;
+  width: 100%;
 }
 #galerie .content .projectsContainer .projet .imageContainer {
   position: absolute;
@@ -801,9 +793,8 @@ nav .menu a:hover::after {
   -o-object-fit: cover;
      object-fit: cover;
   filter: brightness(0.7);
-  -webkit-clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-          clip-path: polygon(0 100%, 100% 100%, 100% 100%, 0% 100%);
-  will-change: clip-path;
+  transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  will-change: transform;
 }
 #galerie .content .projectsContainer .projet .line {
   position: absolute;
@@ -811,7 +802,7 @@ nav .menu a:hover::after {
   left: 0;
   width: 100%;
   height: 2px;
-  background: #1a1a1a;
+  background: #f6f6f6;
 }
 
 #team {
