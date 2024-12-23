@@ -846,12 +846,15 @@ nav .menu a:hover::after {
 }
 #team .content .membersContainer .members .card {
   position: relative;
+  filter: grayscale(1);
+  transition: filter 0.5s;
+  will-change: filter;
+}
+#team .content .membersContainer .members .card:hover {
+  filter: grayscale(0);
 }
 #team .content .membersContainer .members .card:hover .filter {
   opacity: 1;
-}
-#team .content .membersContainer .members .card:hover .image img {
-  filter: grayscale(0);
 }
 #team .content .membersContainer .members .card:hover .textContainer p,
 #team .content .membersContainer .members .card:hover .textContainer span {
@@ -881,9 +884,6 @@ nav .menu a:hover::after {
      object-fit: cover;
   -o-object-position: center;
      object-position: center;
-  filter: grayscale(1);
-  transition: filter 0.5s;
-  will-change: filter;
 }
 #team .content .membersContainer .members .card .hiddenContent {
   overflow: hidden;

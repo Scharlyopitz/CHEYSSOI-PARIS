@@ -34,17 +34,17 @@
 
         .card {
           position: relative;
+          filter: grayscale(1);
+          transition: filter 0.5s;
+          will-change: filter;
 
           &:hover {
+            filter: grayscale(0);
+
             .filter {
               opacity: 1;
             }
 
-            .image {
-              img {
-                filter: grayscale(0);
-              }
-            }
             .textContainer {
               p,
               span {
@@ -80,9 +80,6 @@
               height: 100%;
               object-fit: cover;
               object-position: center;
-              filter: grayscale(1);
-              transition: filter 0.5s;
-              will-change: filter;
             }
           }
 
