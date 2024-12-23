@@ -1,4 +1,4 @@
-import Image1 from "/PREZ.jpg";
+import Image1 from "/PREZ.webp";
 
 import ConnectSection from "../sections/ConnectSection";
 import Ebook from "../sections/Ebook";
