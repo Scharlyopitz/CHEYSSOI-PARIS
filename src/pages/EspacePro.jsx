@@ -17,8 +17,8 @@ export default function EspacePro({ loader }) {
       <BackgroundImage image={ImageEspacePro} />
       <BigTitle
         loader={loader}
-        text="PAGE RESERVEE"
-        undertitle="AUX PROFESSIONNELS"
+        text="club cheyssoi"
+        undertitle="page reservee AUX PROFESSIONNELS"
       />
       <Footer />
     </PageTransition>
