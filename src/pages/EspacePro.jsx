@@ -12,7 +12,7 @@ export default function EspacePro({ loader }) {
   }, []);
 
   return (
-    <PageTransition id="EspacePro">
+    <main id="EspacePro">
       <ProgressBar />
       <BackgroundImage image={ImageEspacePro} />
       <BigTitle
@@ -21,6 +21,7 @@ export default function EspacePro({ loader }) {
         undertitle="page reservee AUX PROFESSIONNELS"
       />
       <Footer />
-    </PageTransition>
+      <PageTransition loader={loader} />
+    </main>
   );
 }

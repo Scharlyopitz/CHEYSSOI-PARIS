@@ -44,30 +44,29 @@ export default function Home({ loader }) {
   }, []);
 
   return (
-    <>
-      <PageTransition id="Home">
-        <ProgressBar />
-        <GotoTopButton />
-        <BackgroundImage image={Image1} />
-        <BigTitle
-          loader={loader}
-          text="Cheyssoi Paris"
-          undertitle="Designers d’intérieurs éthiques"
-        />
-        <ConnectSection />
-        <Apropos />
-        <Team />
-        <Galerie setProjectName={setProjectName} />
-        <AnimatePresence>
-          {projectName && (
-            <Projet projectName={projectName} setProjectName={setProjectName} />
-          )}
-        </AnimatePresence>
-        <Formules />
-        <DemarrerProjet />
-        <Ebook />
-        <Footer />
-      </PageTransition>
-    </>
+    <main id="Home">
+      <ProgressBar />
+      <GotoTopButton />
+      <BackgroundImage image={Image1} />
+      <BigTitle
+        loader={loader}
+        text="Cheyssoi Paris"
+        undertitle="Designers d’intérieurs éthiques"
+      />
+      <ConnectSection />
+      <Apropos />
+      <Team />
+      <Galerie setProjectName={setProjectName} />
+      <AnimatePresence>
+        {projectName && (
+          <Projet projectName={projectName} setProjectName={setProjectName} />
+        )}
+      </AnimatePresence>
+      <Formules />
+      <DemarrerProjet />
+      <Ebook />
+      <Footer />
+      <PageTransition loader={loader} />
+    </main>
   );
 }
