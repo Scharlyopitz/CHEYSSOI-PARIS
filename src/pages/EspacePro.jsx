@@ -6,7 +6,7 @@ import ProgressBar from "../components/ProgressBar";
 import ImageEspacePro from "/PAGEPRO.webp";
 import Footer from "../components/Footer";
 import Section from "../components/EspacePRO/Section";
-import ContactButton from "../components/EspacePRO/ContactButton";
+import ContactButon from "../components/EspacePRO/ContactButon";
 
 export default function EspacePro({ loader }) {
   useEffect(() => {
@@ -55,7 +55,8 @@ function TopSection() {
           Nous croyons au pouvoir du partenariat durable et gagnant-gagnant.
         </p>
       </div>
-      <ContactButton />
+
+      <ContactButon />
     </div>
   );
 }

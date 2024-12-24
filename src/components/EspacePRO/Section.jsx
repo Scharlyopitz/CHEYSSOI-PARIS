@@ -1,5 +1,5 @@
 import React from "react";
-import ContactButton from "./ContactButton";
+import ContactButon from "./ContactButon";
 
 export default function Section() {
   const title = `VOUS SOUHAITEZ PROPOSER NOS SERVICES À VOTRE CLIENT ?`;
@@ -12,7 +12,7 @@ Rejoignez le Club Cheyssoi et bénéficiez de votre commission! `;
       <div className="textContainer">
         <h2>{title}</h2>
         <p>{text}</p>
-        <ContactButton />
+        <ContactButon />
       </div>
     </div>
   );
