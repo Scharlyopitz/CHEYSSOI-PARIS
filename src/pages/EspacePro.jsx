@@ -23,7 +23,13 @@ export default function EspacePro({ loader }) {
         undertitle="page reservee AUX PROFESSIONNELS"
       />
       <TopSection />
-      <Section />
+      <Section
+        title="VOUS SOUHAITEZ PROPOSER NOS SERVICES À VOTRE CLIENT ?"
+        text="Vous êtes professionnel de l'immobilier artisans, sociétés de rénovation, vendeurs de décoration ou designers d'objets, vous avez un projet à nous proposer? 
+Rejoignez le Club Cheyssoi et bénéficiez de votre commission!"
+      />
+      <Section text="Le Club Cheyssoi est le premier club d'affaires gratuit et qui vous rémunère!" />
+
       <Footer />
       <PageTransition loader={loader} />
     </main>
