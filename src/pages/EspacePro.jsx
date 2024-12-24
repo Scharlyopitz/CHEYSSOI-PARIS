@@ -32,8 +32,8 @@ export default function EspacePro({ loader }) {
 
 function TopSection() {
   return (
-    <div className="espaceProSection">
-      <p>
+    <div className="topSection espaceProSection max-w">
+      <p className="center">
         Cheyssoi Paris collectif de designers d’intérieurs éthiques collabore
         étroitement avec les professionnels de l'immobilier, artisans, sociétés
         de rénovation, vendeurs de décoration et designers d’objet.{" "}
@@ -48,7 +48,10 @@ function TopSection() {
             élégant et rentable!
           </li>
         </ul>
-        <p>
+        <p
+          className="center
+        "
+        >
           Nous croyons au pouvoir du partenariat durable et gagnant-gagnant.
         </p>
       </div>

@@ -1,0 +1,30 @@
+.espaceProSection {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 100px 2vw;
+}
+
+.center {
+  text-align: center;
+}
+
+.max-w {
+  max-width: 1000px;
+}
+
+.topSection {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+
+  ul {
+    margin: 10px 0 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    li {
+      list-style-type: circle;
+      transform: translateX(18px);
+    }
+  }
+}
