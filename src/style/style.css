@@ -816,78 +816,101 @@ nav .menu a:hover::after {
 }
 
 #galerie {
-  padding: 100px 0 0;
+  padding: 100px 2vw 2vh;
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 #galerie .content {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
-}
-#galerie .content p {
-  margin-top: 50px;
 }
 #galerie .content .projectsContainer {
+  margin-top: 50px;
+  position: relative;
   width: 100%;
-  margin-top: 100px;
+  height: 600px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+#galerie .content .projectsContainer .arrowLeft,
+#galerie .content .projectsContainer .arrowRight {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5%;
+  font-size: 40px;
+}
+#galerie .content .projectsContainer .arrowLeft:hover,
+#galerie .content .projectsContainer .arrowRight:hover {
+  cursor: pointer;
+}
+#galerie .content .projectsContainer .arrowLeft {
+  left: 0;
+}
+#galerie .content .projectsContainer .arrowRight {
+  right: 0;
 }
 #galerie .content .projectsContainer .projet {
-  position: relative;
-  display: flex;
-  gap: 10px;
-  font-family: "Cormorant Garamond", serif;
-  padding: 60px 5%;
-  overflow: hidden;
-  color: #f6f6f6;
-}
-#galerie .content .projectsContainer .projet:nth-child(even) .name {
-  text-align: end;
-}
-#galerie .content .projectsContainer .projet:first-child::before {
-  content: "";
   position: absolute;
+  width: 100%;
+  height: 100%;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 1.5px;
-  background: #f6f6f6;
+  overflow: hidden;
+  color: #f6f6f6;
 }
 #galerie .content .projectsContainer .projet:hover {
   cursor: pointer;
 }
-#galerie .content .projectsContainer .projet:hover img {
-  transform: scale(1.1);
+#galerie .content .projectsContainer .projet .name,
+#galerie .content .projectsContainer .projet img {
+  transition: opacity 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+  will-change: opacity;
 }
 #galerie .content .projectsContainer .projet .name {
-  font-size: 70px;
-  width: 100%;
-}
-#galerie .content .projectsContainer .projet .imageContainer {
+  pointer-events: none;
   position: absolute;
-  left: 0;
-  top: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 50px;
 }
-#galerie .content .projectsContainer .projet .imageContainer img {
-  width: 100%;
-  height: 100%;
+#galerie .content .projectsContainer .projet img {
   -o-object-fit: cover;
      object-fit: cover;
-  filter: brightness(0.7);
+  -o-object-position: center;
+     object-position: center;
+  width: 100%;
+  height: 100%;
+  filter: brightness(0.5);
+}
+#galerie .content .projectsContainer .projet .carrouselNumber {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  height: 25px;
+  transform: translateX(-50%);
+  overflow: hidden;
+  display: flex;
+  font-size: 20px;
+  font-weight: 100;
+  z-index: 1;
+}
+#galerie .content .projectsContainer .projet .carrouselNumber .numberContainer {
+  margin-right: 5px;
+}
+#galerie .content .projectsContainer .projet .carrouselNumber .numberContainer .number {
   transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
   will-change: transform;
-}
-#galerie .content .projectsContainer .projet .line {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  width: 100%;
-  height: 2px;
-  background: #f6f6f6;
 }
 
 #team {

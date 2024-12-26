@@ -1,86 +1,105 @@
 #galerie {
-  padding: 100px 0 0;
+  padding: 100px 2vw 2vh;
   display: flex;
   flex-direction: column;
+  max-width: 1440px;
+  margin: 0 auto;
 
   .content {
     display: flex;
     flex-direction: column;
     align-items: center;
 
-    width: 100%;
-
-    p {
-      margin-top: 50px;
-    }
-
     .projectsContainer {
+      margin-top: 50px;
+      position: relative;
       width: 100%;
-      margin-top: 100px;
+      height: 600px;
+      border-radius: 10px;
+      overflow: hidden;
 
-      .projet {
-        position: relative;
+      .arrowLeft,
+      .arrowRight {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 1;
+        height: 100%;
         display: flex;
-        gap: 10px;
-        font-family: "Cormorant Garamond", serif;
-        padding: 60px 5%;
-        overflow: hidden;
-        color: $White;
-
-        &:nth-child(even) {
-          .name {
-            text-align: end;
-          }
-        }
-
-        &:first-child::before {
-          content: "";
-          position: absolute;
-          top: 0;
-          left: 0;
-          width: 100%;
-          height: 1.5px;
-          background: $White;
-        }
+        align-items: center;
+        justify-content: center;
+        width: 5%;
+        font-size: 40px;
 
         &:hover {
           cursor: pointer;
+        }
+      }
 
-          img {
-            transform: scale(1.1);
-          }
+      .arrowLeft {
+        left: 0;
+      }
+      .arrowRight {
+        right: 0;
+      }
+
+      .projet {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        overflow: hidden;
+        color: $White;
+
+        &:hover {
+          cursor: pointer;
+        }
+
+        .name,
+        img {
+          transition: opacity 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+          will-change: opacity;
         }
 
         .name {
-          font-size: 70px;
-          width: 100%;
+          pointer-events: none;
+          position: absolute;
+          z-index: 1;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+
+          font-size: 50px;
         }
 
-        .imageContainer {
-          position: absolute;
-          left: 0;
-          top: 0;
-          z-index: -1;
+        img {
+          object-fit: cover;
+          object-position: center;
           width: 100%;
           height: 100%;
-
-          img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            filter: brightness(0.7);
-            transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
-            will-change: transform;
-          }
+          filter: brightness(0.5);
         }
 
-        .line {
+        .carrouselNumber {
           position: absolute;
-          bottom: 0;
-          left: 0;
-          width: 100%;
-          height: 2px;
-          background: $White;
+          bottom: 20px;
+          left: 50%;
+          height: 25px;
+          transform: translateX(-50%);
+          overflow: hidden;
+          display: flex;
+          font-size: 20px;
+          font-weight: 100;
+          z-index: 1;
+
+          .numberContainer {
+            margin-right: 5px;
+            .number {
+              transition: transform 0.5s cubic-bezier(0.65, 0, 0.35, 1);
+              will-change: transform;
+            }
+          }
         }
       }
     }
