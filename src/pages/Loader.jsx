@@ -1,8 +1,15 @@
 import ImageAccueil from "/PREZ.webp";
+import PagePro from "/PAGEPRO.webp";
 import Haussman from "/Haussman.webp";
 import Vendome from "/Vendome.webp";
 import Vosges from "/Vosges.webp";
-import PagePro from "/PAGEPRO.webp";
+
+// import Vignet1 from "/1.1.png";
+// import Vignet2 from "/2.2.png";
+// import Vignet3 from "/3.png";
+// import Vignet4 from "/4.png";
+// import Vignet5 from "/5.png";
+import Vignet6 from "/6.png";
 
 import { motion as m } from "framer-motion";
 import { useLocation } from "react-router-dom";
@@ -12,18 +19,25 @@ export default function Loader({ setLoader }) {
 
   const rightImage = { "/": ImageAccueil, "/espacepro": PagePro };
 
-  const loaderImages1 = [
-    { src: Vendome },
+  const column2 = [
     { src: Haussman },
+    { src: Vendome },
     { src: rightImage[pathname] },
-    { src: Vosges },
+    { src: Vignet6 },
     { src: "" },
   ];
 
-  const loaderImages2 = [
-    { src: Vosges },
-    { src: ImageAccueil },
+  const column1 = [
+    { src: Vignet6 },
     { src: Haussman },
+    { src: Vosges },
+    { src: Vendome },
+  ];
+
+  const column3 = [
+    { src: Vosges },
+    { src: Haussman },
+    { src: Vignet6 },
     { src: Vendome },
   ];
 
@@ -95,17 +109,17 @@ export default function Loader({ setLoader }) {
       id="loaderContainer"
     >
       <Column
-        loaderImages={loaderImages2}
+        loaderImages={column1}
         staggerColumn={staggerColumnBottom}
         imageReveal={imageRevealBottom}
       />
       <Column
-        loaderImages={loaderImages1}
+        loaderImages={column2}
         staggerColumn={staggerColumnTop}
         imageReveal={imageRevealTop}
       />
       <Column
-        loaderImages={loaderImages2}
+        loaderImages={column3}
         staggerColumn={staggerColumnBottom}
         imageReveal={imageRevealBottom}
       />
