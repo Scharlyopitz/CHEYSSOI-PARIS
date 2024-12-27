@@ -4,12 +4,11 @@ import Haussman from "/Haussman.webp";
 import Vendome from "/Vendome.webp";
 import Vosges from "/Vosges.webp";
 
-// import Vignet1 from "/1.1.png";
-// import Vignet2 from "/2.2.png";
-// import Vignet3 from "/3.png";
-// import Vignet4 from "/4.png";
-// import Vignet5 from "/5.png";
-// import Vignet6 from "/6.png";
+import Vignet1 from "/E1.jpg";
+import Vignet2 from "/E2.jpg";
+import Vignet3 from "/E3.jpg";
+import Vignet4 from "/E4.jpg";
+import Vignet5 from "/E5.jpg";
 
 import { motion as m } from "framer-motion";
 import { useLocation } from "react-router-dom";
@@ -20,25 +19,25 @@ export default function Loader({ setLoader }) {
   const rightImage = { "/": ImageAccueil, "/espacepro": PagePro };
 
   const column2 = [
-    { src: Haussman },
-    { src: Vendome },
+    { src: Vignet1 },
+    { src: Vignet3 },
     { src: rightImage[pathname] },
-    { src: ImageAccueil },
+    { src: Vignet2 },
     { src: "" },
   ];
 
   const column1 = [
-    { src: ImageAccueil },
-    { src: Haussman },
-    { src: Vosges },
-    { src: Vendome },
+    { src: Vignet2 },
+    { src: Vignet1 },
+    { src: Vignet5 },
+    { src: Vignet3 },
   ];
 
   const column3 = [
-    { src: Vosges },
-    { src: Haussman },
-    { src: ImageAccueil },
-    { src: Vendome },
+    { src: Vignet5 },
+    { src: Vignet1 },
+    { src: Vignet2 },
+    { src: Vignet3 },
   ];
 
   const imageScaling = {
