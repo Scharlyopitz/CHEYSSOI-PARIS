@@ -891,6 +891,8 @@ nav .menu a:hover::after {
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 50px;
+  font-family: "Cormorant Garamond", serif;
+  text-transform: uppercase;
 }
 #galerie .content .projectsContainer .projet img {
   -o-object-fit: cover;
