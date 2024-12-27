@@ -7,6 +7,8 @@ import ImageEspacePro from "/PAGEPRO.webp";
 import Footer from "../components/Footer";
 import Section from "../components/EspacePRO/Section";
 import ContactButon from "../components/EspacePRO/ContactButon";
+import ClubCheyssoi1 from "/CC1.webp";
+import ClubCheyssoi2 from "/CC2.webp";
 
 export default function EspacePro({ loader }) {
   useEffect(() => {
@@ -27,8 +29,14 @@ export default function EspacePro({ loader }) {
         title="VOUS SOUHAITEZ PROPOSER NOS SERVICES À VOTRE CLIENT ?"
         text="Vous êtes professionnel de l'immobilier artisans, sociétés de rénovation, vendeurs de décoration ou designers d'objets, vous avez un projet à nous proposer? 
 Rejoignez le Club Cheyssoi et bénéficiez de votre commission!"
+        src={ClubCheyssoi1}
+        alt="image club cheyssoi 1"
       />
-      <Section text="Le Club Cheyssoi est le premier club d'affaires gratuit et qui vous rémunère!" />
+      <Section
+        text="Le Club Cheyssoi est le premier club d'affaires gratuit et qui vous rémunère!"
+        src={ClubCheyssoi2}
+        alt="image club cheyssoi 2"
+      />
 
       <Footer />
       <PageTransition loader={loader} />
