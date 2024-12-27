@@ -54,14 +54,21 @@
   flex-direction: column;
   gap: 50px;
 
-  ul {
-    margin: 10px 0 50px;
+  .listContainer {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    li {
-      list-style-type: circle;
-      transform: translateX(18px);
+    align-items: center;
+    text-align: center;
+    ul {
+      margin: 10px 0 50px;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+
+      li {
+        font-size: 20px;
+        font-weight: 300;
+      }
     }
   }
 }

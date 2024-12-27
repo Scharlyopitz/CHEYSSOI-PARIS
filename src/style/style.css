@@ -132,15 +132,21 @@ a {
   flex-direction: column;
   gap: 50px;
 }
-.topSection ul {
+.topSection .listContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.topSection .listContainer ul {
   margin: 10px 0 50px;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-.topSection ul li {
-  list-style-type: circle;
-  transform: translateX(18px);
+.topSection .listContainer ul li {
+  font-size: 20px;
+  font-weight: 300;
 }
 
 #BigTitle {

@@ -52,7 +52,7 @@ function TopSection() {
         étroitement avec les professionnels de l'immobilier, artisans, sociétés
         de rénovation, vendeurs de décoration et designers d’objet.{" "}
       </p>
-      <div>
+      <div className="listContainer">
         <p>Rejoindre le Club Cheyssoi c'est :</p>
         <ul>
           <li>Une commission sur chaque projet signé grâce à vous</li>
