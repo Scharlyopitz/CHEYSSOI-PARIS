@@ -33,6 +33,7 @@ Rejoignez le Club Cheyssoi et bénéficiez de votre commission!"
         alt="image club cheyssoi 1"
       />
       <Section
+        title="Rejoignez un club qui vous rémunère!"
         text="Le Club Cheyssoi est le premier club d'affaires gratuit et qui vous rémunère!"
         src={ClubCheyssoi2}
         alt="image club cheyssoi 2"
