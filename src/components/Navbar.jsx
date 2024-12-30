@@ -69,7 +69,7 @@ function Menu() {
           <span className={`line-through ${pathname !== "/" && "active"}`} />
           demarrer mon projet
         </a>
-        <Link to="espacepro">Club Cheyssoi</Link>
+        <Link to="clubcheyssoi">Club Cheyssoi</Link>
         <a
           style={{
             pointerEvents: pathname !== "/" && "none",

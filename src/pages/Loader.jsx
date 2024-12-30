@@ -16,7 +16,7 @@ import { useLocation } from "react-router-dom";
 export default function Loader({ setLoader }) {
   const { pathname } = useLocation();
 
-  const rightImage = { "/": ImageAccueil, "/espacepro": PagePro };
+  const rightImage = { "/": ImageAccueil, "/clubcheyssoi": PagePro };
 
   const column2 = [
     { src: Vignet1 },

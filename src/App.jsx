@@ -53,7 +53,7 @@ function App() {
       <AnimatePresence mode="wait">
         <Routes location={pathname} key={pathname}>
           <Route path="/" element={<Home loader={loader} />} />
-          <Route path="/espacepro" element={<EspacePro loader={loader} />} />
+          <Route path="/clubcheyssoi" element={<EspacePro loader={loader} />} />
         </Routes>
       </AnimatePresence>
       {loader && <Loader setLoader={setLoader} />}
