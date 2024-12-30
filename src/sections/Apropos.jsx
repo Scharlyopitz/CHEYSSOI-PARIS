@@ -23,19 +23,9 @@ export default function Apropos() {
 
 function AproposSection({ wordsTitle, text, image, index }) {
   return (
-    <section className="aproposSection">
-      <div className="lineContainer">
-        <div className="line" />
-      </div>
-      <div className="content">
-        <div className="txt">
-          <TitleReveal words={wordsTitle} />
-          <div className="paragraphe">
-            <TextReveal text={text} />
-          </div>
-        </div>
-        <ImageReveal src={image} alt={`image projet ${index + 1}`} />
-      </div>
-    </section>
+    <div className="aproposSection">
+      <TitleReveal words={wordsTitle} />
+      <TextReveal text={text} />
+    </div>
   );
 }

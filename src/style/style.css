@@ -309,9 +309,6 @@ footer .socials svg:hover {
   display: flex;
   gap: 15px;
 }
-.titleContainer .wordContainer {
-  overflow: hidden;
-}
 .titleContainer .wordContainer:last-child {
   color: #c49d39;
 }
@@ -539,68 +536,32 @@ nav .menu a:hover::after {
   height: 100vh;
 }
 
+#apropos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  text-align: center;
+  padding: 0 2vw;
+}
 #apropos .aproposSection {
-  padding: 100px 2vw 0vh;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding-bottom: 50px;
+}
+#apropos .aproposSection,
+#apropos .aproposSection .Text {
   max-width: 1440px;
   margin: 0 auto;
 }
-#apropos .aproposSection:nth-child(2) .content .image img {
-  -o-object-position: center;
-     object-position: center;
-}
-#apropos .aproposSection:nth-child(odd) .content {
-  flex-direction: row-reverse;
-}
-#apropos .aproposSection .lineContainer {
-  width: 100%;
-}
-#apropos .aproposSection .lineContainer .line {
-  width: 100%;
-  transform-origin: left;
-  height: 1.5px;
-  background: #191a19;
-}
-#apropos .aproposSection .content {
-  padding-top: 100px;
+#apropos .aproposSection .titleContainer {
   display: flex;
-  gap: 4vw;
+  justify-content: center;
+  flex-wrap: wrap;
+  line-height: 32px;
 }
-#apropos .aproposSection .content .txt {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  height: 700px;
-  width: 60%;
-  flex-grow: 1;
-}
-#apropos .aproposSection .content .txt .titleContainer {
-  flex-direction: column;
-  gap: 20px;
-}
-#apropos .aproposSection .content .txt .titleContainer h2 {
-  white-space: nowrap;
-  text-align: start;
-  line-height: 50px;
-}
-#apropos .aproposSection .content .txt .paragraphe {
-  display: flex;
-  align-items: center;
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  text-align: justify;
-}
-#apropos .aproposSection .content .image {
-  width: 490px;
-  height: 650px;
-}
-#apropos .aproposSection .content .image img {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-  -o-object-position: left;
-     object-position: left;
+#apropos .aproposSection .Text {
+  width: 80vw;
 }
 
 .backgroundImage {
