@@ -21,7 +21,7 @@ export default function EspacePro({ loader }) {
       <BackgroundImage image={ImageEspacePro} />
       <BigTitle
         loader={loader}
-        text="club cheyssoi"
+        text="Le club cheyssoi"
         undertitle="page reservee AUX PROFESSIONNELS"
       />
       <TopSection />
