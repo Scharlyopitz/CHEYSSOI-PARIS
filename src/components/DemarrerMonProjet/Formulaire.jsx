@@ -104,7 +104,6 @@ export default function Formulaire() {
   return (
     <div className="formulaire">
       <form onSubmit={(e) => sendEmail(e)}>
-        <span className="miniText">Travaillons ensemble.</span>
         <span
           className="message"
           style={{

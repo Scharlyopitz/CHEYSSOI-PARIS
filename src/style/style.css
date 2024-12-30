@@ -628,10 +628,6 @@ nav .menu a:hover::after {
   justify-content: center;
   margin-top: 100px;
 }
-#demarrerprojet .content .formulaire .miniText {
-  text-align: center;
-  font-weight: 300;
-}
 #demarrerprojet .content .formulaire .message {
   padding: 10px 0 10px 5px;
   font-size: 13px;
@@ -693,7 +689,7 @@ nav .menu a:hover::after {
   will-change: transform;
 }
 #demarrerprojet .content .formulaire button .container p {
-  font-size: 15px;
+  font-size: 18px;
   font-weight: 300;
 }
 #demarrerprojet .content .formulaire button .container svg {
