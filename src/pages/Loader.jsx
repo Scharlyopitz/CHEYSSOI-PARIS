@@ -1,14 +1,15 @@
 import ImageAccueil from "/PREZ.webp";
 import PagePro from "/PAGEPRO.webp";
-import Haussman from "/Haussman.webp";
-import Vendome from "/Vendome.webp";
-import Vosges from "/Vosges.webp";
-
-import Vignet1 from "/E1.jpg";
-import Vignet2 from "/E2.jpg";
-import Vignet3 from "/E3.jpg";
-import Vignet4 from "/E4.jpg";
-import Vignet5 from "/E5.jpg";
+import Label1 from "/Etiquet1.webp";
+import Label2 from "/Etiquet2.webp";
+import Label3 from "/Etiquet3.webp";
+import Label4 from "/Etiquet4.webp";
+import Label5 from "/Etiquet5.webp";
+import Label6 from "/Etiquet6.webp";
+import Label7 from "/Etiquet7.webp";
+import Label8 from "/Etiquet8.webp";
+import Label9 from "/Etiquet9.webp";
+import Label10 from "/Etiquet10.webp";
 
 import { motion as m } from "framer-motion";
 import { useLocation } from "react-router-dom";
@@ -19,25 +20,25 @@ export default function Loader({ setLoader }) {
   const rightImage = { "/": ImageAccueil, "/clubcheyssoi": PagePro };
 
   const column2 = [
-    { src: Vignet1 },
-    { src: Vignet3 },
+    { src: Label1 },
+    { src: Label6 },
     { src: rightImage[pathname] },
-    { src: Vignet2 },
+    { src: Label2 },
     { src: "" },
   ];
 
   const column1 = [
-    { src: Vignet2 },
-    { src: Vignet1 },
-    { src: Vignet5 },
-    { src: Vignet3 },
+    { src: Label10 },
+    { src: Label2 },
+    { src: Label8 },
+    { src: Label4 },
   ];
 
   const column3 = [
-    { src: Vignet5 },
-    { src: Vignet1 },
-    { src: Vignet2 },
-    { src: Vignet3 },
+    { src: Label3 },
+    { src: Label7 },
+    { src: Label5 },
+    { src: Label9 },
   ];
 
   const imageScaling = {

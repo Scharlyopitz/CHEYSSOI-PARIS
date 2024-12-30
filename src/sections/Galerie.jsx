@@ -78,7 +78,6 @@ function Projects({ setProjectName }) {
 }
 
 function CarousselNumber({ currentProject, maxLength }) {
-  console.log(currentProject * 100);
   return (
     <div className="carrouselNumber">
       <div className="numberContainer">
