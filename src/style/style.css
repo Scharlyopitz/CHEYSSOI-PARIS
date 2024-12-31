@@ -461,8 +461,7 @@ nav .menu a:hover::after {
   width: 100%;
   height: 100vh;
   z-index: 6;
-  background: #1a1a1a;
-  color: #f6f6f6;
+  background: #f6f6f6;
   display: flex;
 }
 #Projet .image {
@@ -473,6 +472,7 @@ nav .menu a:hover::after {
   background-size: cover;
   background-repeat: no-repeat;
   overflow: hidden;
+  color: #f6f6f6;
 }
 #Projet .image img {
   width: 100%;

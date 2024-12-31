@@ -5,8 +5,7 @@
   width: 100%;
   height: 100vh;
   z-index: 6;
-  background: $LightBlack;
-  color: $White;
+  background: $White;
   display: flex;
 
   .image {
@@ -17,6 +16,7 @@
     background-size: cover;
     background-repeat: no-repeat;
     overflow: hidden;
+    color: $White;
 
     img {
       width: 100%;
