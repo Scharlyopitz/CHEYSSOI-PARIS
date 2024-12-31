@@ -20,7 +20,7 @@ export default function Projet({ projectName, setProjectName }) {
     },
     animate: {
       clipPath: basicPath,
-      transition: { duration: 1.3, ease: easeInOutQuart },
+      transition: { duration: 0.75, ease: easeInOutQuart },
     },
     exit: {
       clipPath: bottomPath,
@@ -34,7 +34,7 @@ export default function Projet({ projectName, setProjectName }) {
     },
     animate: {
       transform: "translateY(0%)",
-      transition: { duration: 1.3, ease: easeInOutQuart },
+      transition: { duration: 0.75, ease: easeInOutQuart },
     },
     exit: {
       transform: "translateY(0%)",
@@ -49,7 +49,7 @@ export default function Projet({ projectName, setProjectName }) {
     animate: {
       opacity: 1,
       transform: "translateY(0px)",
-      transition: { duration: 0.8, delay: 0.8, ease: easeInOutCubic },
+      transition: { duration: 0.8, delay: 0.5, ease: easeInOutCubic },
     },
     exit: {
       opacity: 1,
@@ -64,7 +64,7 @@ export default function Projet({ projectName, setProjectName }) {
     },
     animate: {
       transform: "translateY(0)",
-      transition: { duration: 1.3, ease: easeInOutCubic },
+      transition: { duration: 0.75, ease: easeInOutCubic },
     },
     exit: {
       transform: "translateY(60px)",
@@ -78,7 +78,7 @@ export default function Projet({ projectName, setProjectName }) {
     },
     animate: {
       background: "#050505a1",
-      transition: { duration: 1.3, ease: [0.76, 0, 0.24, 1] },
+      transition: { duration: 0.75, ease: [0.76, 0, 0.24, 1] },
     },
     exit: {
       background: "#05050500",
