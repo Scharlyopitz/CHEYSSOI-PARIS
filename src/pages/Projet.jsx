@@ -107,11 +107,13 @@ export default function Projet({ projectName, setProjectName }) {
             <m.span onClick={() => Goback()}>Back</m.span>
           </m.div>
 
-          <m.div>
-            <m.p variants={animeOpacity} className="projetTxt">
-              {projet?.description}
-            </m.p>
+          <m.div variants={animeOpacity} className="imageMoodboard">
+            <img src={projet.moodBoard} alt="image moodboard" />
           </m.div>
+
+          <m.p variants={animeOpacity} className="projetTxt">
+            {projet?.description}
+          </m.p>
         </div>
       </m.section>
     </m.div>
