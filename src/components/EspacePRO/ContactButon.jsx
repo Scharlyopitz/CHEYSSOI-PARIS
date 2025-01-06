@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function ContactButon() {
   return (
     <Link
-      to="https://atelier-22b.com/pages/e-shop-pro"
+      to="https://share-eu1.hsforms.com/1B-pPYY7KSimbVr4tMbJx_Q2e9275"
       target="_blank"
       className="Button"
     >
