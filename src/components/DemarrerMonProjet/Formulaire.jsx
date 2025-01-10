@@ -16,17 +16,23 @@ export default function Formulaire() {
     postalCode: "",
   });
 
+  const [successMessage, setSuccessMessage] = useState(""); // Pour afficher un message de confirmation
   const [error, setError] = useState(false);
-  const [messageOff, setMessageOff] = useState(false);
-  const form = useRef(); // Référence pour le formulaire
+  const form = useRef();
 
-  const SuccesMsg = `Email envoyé`;
-  const ErrorMsg = "Veuillez remplir tous les champs";
+  // Informations EmailJS
+  const serviceId = "service_dh5nqhr"; // Remplacez par votre Service ID
+  const templateIdFormulaire = "template_igtxnhb"; // Template ID pour recevoir les formulaires
+  const templateIdRemerciement = "template_6ajp3yl"; // Template ID pour le remerciement
+  const publicKey = "Lk2BmntWXLBiDTYpp"; // Clé publique
 
-  const serviceId = "service_tjalamp"; // Votre Service ID
-  const templateId = "template_mmgax0o"; // Votre Template ID
-  const publicKey = "1D3G6tTYZEn1Zjd5H"; // Votre Public Key
+  // Validation de l'adresse email
+  const isValidEmail = (email) => {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    return emailRegex.test(email);
+  };
 
+  // Efface les champs après soumission
   const clearFields = () => {
     setInformations({
       formule: "Chey",
@@ -40,14 +46,35 @@ export default function Formulaire() {
     });
   };
 
-  const refreshMessage = () => {
-    setTimeout(() => {
-      setMessageOff(false);
-    }, 1500);
+  // Envoie de l'email de remerciement au client
+  const sendThankYouEmail = (clientEmail) => {
+    emailjs
+      .send(
+        serviceId,
+        templateIdRemerciement,
+        {
+          client_email: clientEmail, // Adresse email du client
+        },
+        publicKey
+      )
+      .then((response) => {
+        console.log("Email de remerciement envoyé :", response.text);
+      })
+      .catch((error) => {
+        console.error("Erreur lors de l'envoi de l'email de remerciement :", error);
+      });
   };
 
+  // Envoie du formulaire
   const sendEmail = (e) => {
     e.preventDefault();
+
+    if (!isValidEmail(informations.email)) {
+      setSuccessMessage("Veuillez entrer une adresse email valide.");
+      setError(true);
+      setTimeout(() => setSuccessMessage(""), 3000);
+      return;
+    }
 
     if (
       informations.surface !== "" &&
@@ -59,22 +86,28 @@ export default function Formulaire() {
       informations.postalCode !== ""
     ) {
       emailjs
-        .sendForm(serviceId, templateId, form.current, publicKey)
+        .sendForm(serviceId, templateIdFormulaire, form.current, publicKey)
         .then((response) => {
-          console.log("E-mail envoyé avec succès :", response.text);
-          clearFields();
+          console.log("Formulaire envoyé :", response.text);
+
+          // Envoie l'email de remerciement
+          sendThankYouEmail(informations.email);
+
+          setSuccessMessage("Votre formulaire a bien été soumis !");
           setError(false);
-          refreshMessage();
-          setMessageOff(true);
+          clearFields();
+          setTimeout(() => setSuccessMessage(""), 3000);
         })
         .catch((error) => {
-          console.error("Erreur lors de l'envoi :", error);
+          console.error("Erreur lors de l'envoi du formulaire :", error);
+          setSuccessMessage("Une erreur s'est produite lors de l'envoi. Veuillez réessayer.");
           setError(true);
-          setMessageOff(true);
+          setTimeout(() => setSuccessMessage(""), 3000);
         });
     } else {
+      setSuccessMessage("Veuillez remplir tous les champs.");
       setError(true);
-      setMessageOff(true);
+      setTimeout(() => setSuccessMessage(""), 3000);
     }
   };
 
@@ -97,33 +130,39 @@ export default function Formulaire() {
             <FontAwesomeIcon icon={faChevronRight} />
           </div>
         </button>
-        {/* Message de confirmation placé ici sous le bouton */}
-        <span
-          className="message"
-          style={{
-            opacity: messageOff ? 1 : 0,
-            color: error ? "#e90505" : "#07a726",
-          }}
-        >
-          {error ? ErrorMsg : SuccesMsg}
-        </span>
+
+        {successMessage && (
+          <p
+            style={{
+              color: error ? "red" : "green",
+              fontWeight: "bold",
+              marginTop: "20px",
+              textAlign: "center",
+            }}
+          >
+            {successMessage}
+          </p>
+        )}
       </form>
     </div>
   );
 }
 
+// Composants des champs
 function Formules({ informations, setInformations }) {
   return (
     <div>
-      <label htmlFor="formule">Choisir une <a href="#formules">formule</a></label>
+      <label htmlFor="formule">Formule</label>
       <select
-        name="formule" // Ajout du name
+        name="formule"
         value={informations.formule}
         onChange={(e) => setInformations((prec) => ({ ...prec, formule: e.target.value }))}
         id="formule"
       >
         {FormulesData.map((formule, i) => (
-          <option key={i} value={formule.name}>{formule.name}</option>
+          <option key={i} value={formule.name}>
+            {formule.name}
+          </option>
         ))}
       </select>
     </div>
@@ -135,9 +174,8 @@ function Nom({ informations, setInformations }) {
     <div>
       <label htmlFor="name">Nom</label>
       <input
-        name="nom" // Ajout du name
+        name="nom"
         placeholder="Votre Nom"
-        autoComplete="off"
         value={informations.name}
         onChange={(e) => setInformations((prec) => ({ ...prec, name: e.target.value }))}
         type="text"
@@ -152,9 +190,8 @@ function Prenom({ informations, setInformations }) {
     <div>
       <label htmlFor="firstName">Prénom</label>
       <input
-        name="prenom" // Ajout du name
+        name="prenom"
         placeholder="Votre Prénom"
-        autoComplete="off"
         value={informations.firstname}
         onChange={(e) => setInformations((prec) => ({ ...prec, firstname: e.target.value }))}
         type="text"
@@ -169,9 +206,8 @@ function Surface({ informations, setInformations }) {
     <div>
       <label htmlFor="surface">Surface</label>
       <input
-        name="surface" // Ajout du name
-        placeholder="La Surface en m²"
-        autoComplete="off"
+        name="surface"
+        placeholder="Surface en m²"
         value={informations.surface}
         onChange={(e) => setInformations((prec) => ({ ...prec, surface: e.target.value }))}
         type="text"
@@ -186,10 +222,8 @@ function Telephone({ informations, setInformations }) {
     <div>
       <label htmlFor="tel">Tel.</label>
       <input
-        name="telephone" // Ajout du name
+        name="telephone"
         placeholder="Votre Téléphone"
-        maxLength={10}
-        autoComplete="off"
         value={informations.tel}
         onChange={(e) => setInformations((prec) => ({ ...prec, tel: e.target.value }))}
         type="tel"
@@ -202,15 +236,14 @@ function Telephone({ informations, setInformations }) {
 function Mail({ informations, setInformations }) {
   return (
     <div>
-      <label htmlFor="mail">Email</label>
+      <label htmlFor="email">Email</label>
       <input
-        name="email" // Ajout du name
+        name="email"
         placeholder="Votre Email"
-        autoComplete="off"
         value={informations.email}
         onChange={(e) => setInformations((prec) => ({ ...prec, email: e.target.value }))}
         type="email"
-        id="mail"
+        id="email"
       />
     </div>
   );
@@ -221,10 +254,8 @@ function CodePostal({ informations, setInformations }) {
     <div>
       <label htmlFor="postalCode">Code Postal</label>
       <input
-        name="code_postal" // Ajout du name
+        name="code_postal"
         placeholder="Votre Code Postal"
-        maxLength={5}
-        autoComplete="off"
         value={informations.postalCode}
         onChange={(e) => setInformations((prec) => ({ ...prec, postalCode: e.target.value }))}
         type="text"
@@ -237,14 +268,13 @@ function CodePostal({ informations, setInformations }) {
 function Message({ informations, setInformations }) {
   return (
     <div>
-      <label htmlFor="msg">Message</label>
+      <label htmlFor="message">Message</label>
       <textarea
-        name="message" // Ajout du name
-        autoComplete="off"
+        name="message"
         placeholder="Décrivez votre projet"
         value={informations.message}
         onChange={(e) => setInformations((prec) => ({ ...prec, message: e.target.value }))}
-        id="msg"
+        id="message"
       ></textarea>
     </div>
   );
