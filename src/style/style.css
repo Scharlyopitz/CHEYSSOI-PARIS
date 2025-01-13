@@ -993,3 +993,26 @@ nav .menu a:hover::after {
   display: block;
   font-weight: 200;
 }/*# sourceMappingURL=style.css.map */
+
+.menu a.disabled {
+  pointer-events: none;
+  text-decoration: line-through;
+  opacity: 0.5;
+}
+
+.menu a.active {
+  pointer-events: auto;
+  text-decoration: none;
+  opacity: 1;
+  font-weight: bold;
+  color: #000; /* Couleur pour le lien actif */
+}
+
+.line-through {
+  text-decoration: none;
+}
+
+.line-through.active {
+  text-decoration: line-through;
+  opacity: 0.3;
+}

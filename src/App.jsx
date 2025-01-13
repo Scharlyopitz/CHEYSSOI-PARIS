@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import Lenis from "lenis";
 import Navbar from "./components/Navbar";
 import { AnimatePresence } from "framer-motion";
+import Histoire from "./pages/Histoire"; 
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -54,6 +55,11 @@ function App() {
         <Routes location={pathname} key={pathname}>
           <Route path="/" element={<Home loader={loader} />} />
           <Route path="/clubcheyssoi" element={<EspacePro loader={loader} />} />
+          <Route path="/histoire" element={<Histoire />} /> 
+          
+          
+
+
         </Routes>
       </AnimatePresence>
       {loader && <Loader setLoader={setLoader} />}

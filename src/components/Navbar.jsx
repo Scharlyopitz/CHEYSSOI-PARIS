@@ -39,47 +39,80 @@ function Logo() {
 function Menu() {
   const { pathname } = useLocation();
 
+  // Vérifie si les autres onglets doivent être barrés
+  const isBarred = pathname === "/histoire" || pathname === "/clubcheyssoi";
+
   return (
-    <>
-      <div className="menu">
-        <a
-          style={{
-            pointerEvents: pathname !== "/" && "none",
-          }}
-          href="#apropos"
-        >
-          <span className={`line-through ${pathname !== "/" && "active"}`} />à
-          propos
-        </a>
-        <a
-          style={{
-            pointerEvents: pathname !== "/" && "none",
-          }}
-          href="#galerie"
-        >
-          <span className={`line-through ${pathname !== "/" && "active"}`} />
-          Galerie
-        </a>
-        <a
-          style={{
-            pointerEvents: pathname !== "/" && "none",
-          }}
-          href="#demarrerprojet"
-        >
-          <span className={`line-through ${pathname !== "/" && "active"}`} />
-          demarrer mon projet
-        </a>
-        <Link to="clubcheyssoi">Le Club Cheyssoi</Link>
-        <a
-          style={{
-            pointerEvents: pathname !== "/" && "none",
-          }}
-          href="#ebook"
-        >
-          <span className={`line-through ${pathname !== "/" && "active"}`} />
-          Ebook
-        </a>
-      </div>
-    </>
+    <div className="menu">
+      {/* À propos */}
+      <a
+        style={{
+          pointerEvents: isBarred ? "none" : "auto", // Désactive si isBarred
+          textDecoration: isBarred ? "line-through" : "none", // Barre si isBarred
+        }}
+        href="#apropos"
+      >
+        à propos
+      </a>
+
+      {/* Galerie */}
+      <a
+        style={{
+          pointerEvents: isBarred ? "none" : "auto",
+          textDecoration: isBarred ? "line-through" : "none",
+        }}
+        href="#galerie"
+      >
+        Galerie
+      </a>
+
+      {/* Démarrer mon projet */}
+      <a
+        style={{
+          pointerEvents: isBarred ? "none" : "auto",
+          textDecoration: isBarred ? "line-through" : "none",
+        }}
+        href="#demarrerprojet"
+      >
+        démarrer mon projet
+      </a>
+
+      {/* Le Club Cheyssoi */}
+      <Link
+        to="/clubcheyssoi"
+        style={{
+          textDecoration: pathname === "/clubcheyssoi" ? "none" : isBarred ? "line-through" : "none", // Actif si sur la page clubcheyssoi
+          pointerEvents: pathname === "/clubcheyssoi" ? "auto" : isBarred ? "none" : "auto", // Actif uniquement pour clubcheyssoi
+        }}
+      >
+        Le Club Cheyssoi
+      </Link>
+
+      {/* Histoire */}
+      <Link
+        to="/histoire"
+        style={{
+          textDecoration: pathname === "/histoire" ? "none" : isBarred ? "line-through" : "none", // Actif si sur la page histoire
+          pointerEvents: pathname === "/histoire" ? "auto" : isBarred ? "none" : "auto", // Actif uniquement pour histoire
+        }}
+      >
+        Histoire
+      </Link>
+
+      <Link to="notre-engagement" style={{ textDecoration: "none" }}>Notre Engagement</Link>
+
+
+
+      {/* Ebook */}
+      <a
+        style={{
+          pointerEvents: isBarred ? "none" : "auto",
+          textDecoration: isBarred ? "line-through" : "none",
+        }}
+        href="#ebook"
+      >
+        Ebook
+      </a>
+    </div>
   );
 }

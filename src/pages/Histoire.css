@@ -1,0 +1,94 @@
+.histoire-page {
+    font-family: "Arial", sans-serif;
+  }
+  
+  .page-histoire {
+    text-align: center;
+    background: url('/6.png') no-repeat center center fixed;
+    background-size: cover;
+    padding: 100px 0;
+    color: white;
+  }
+  
+  .histoire-section {
+    padding: 50px 20px;
+  }
+  
+  .histoire-section.centered {
+    text-align: center;
+  }
+  
+  .histoire-section.with-image {
+    display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 40px; /* Espacement entre l'image et le texte */
+  margin: 50px 0; /* Espacement vertical entre les sections */
+}
+  
+  .histoire-image-left {
+    width: 45%; /* L'image occupe environ 45% de la largeur */
+  height: auto; /* Garde les proportions */
+  border-radius: 10px; /* Bords arrondis */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre douce */
+}
+  
+  
+.histoire-text-right {
+    width: 55%; /* Le texte occupe le reste de l'espace */
+    font-family: "Times New Roman", serif;
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: #333;
+    text-align: justify; /* Justifie le texte */
+  }
+  
+  .histoire-text-right p {
+    margin-bottom: 20px; /* Ajoute un espacement entre les paragraphes */
+  }
+  .histoire-header {
+    background-image: url("/6.png"); /* Remplacez par l'image appropriée */
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  }
+  
+  .histoire-section {
+    margin-bottom: 20px; /* Réduction des marges */
+    padding: 10px 0; /* Un léger espacement pour l'esthétique */
+  }
+  
+  .histoire-text-title {
+    font-family: "Times New Roman", serif;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #000;
+    text-align: center;
+  }
+  .histoire-title {
+    font-family: 'Times New Roman', serif; /* Assurez-vous que c'est la bonne police */
+    font-size: 6rem; /* Vérifiez la taille exacte */
+    font-weight: bold;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Appliquez une ombre subtile */
+    margin: 0;
+  }
+  
+  .subtitle {
+    font-family: 'Times New Roman', serif; /* Assurez-vous que c'est la bonne police */
+  font-size: 1.5; /* Vérifiez la taille exacte */
+  font-weight: normal;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Appliquez une ombre subtile */
+  margin-top: 0.5rem;
+}
+
+  
