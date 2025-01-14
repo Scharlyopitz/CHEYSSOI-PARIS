@@ -1,6 +1,5 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import LogoCheyssoi from "/2.png";
-
 import { motion as m } from "framer-motion";
 
 export default function Navbar() {
@@ -36,23 +35,72 @@ function Logo() {
   );
 }
 
+const handleScrollToEngagement = (e, navigate) => {
+  e.preventDefault(); // Empêche le comportement par défaut du lien
+
+  const currentPath = window.location.pathname; // Chemin actuel de la page
+
+  if (currentPath === "/histoire") {
+    // Si déjà sur la page "Histoire", scroller directement
+    const engagementSection = document.getElementById("notre-engagement");
+    if (engagementSection) {
+      engagementSection.scrollIntoView({ behavior: "smooth" });
+      // Nettoyez l'URL pour éviter l'ajout du hash
+      window.history.replaceState(null, "", "/histoire");
+    }
+  } else {
+    // Si sur une autre page, redirigez vers "Histoire" avec le hash
+    navigate("/histoire");
+  }
+};
+
+const handleScrollToTeam = (e, navigate) => {
+  e.preventDefault(); // Empêche le comportement par défaut du lien
+
+  const currentPath = window.location.pathname; // Chemin actuel de la page
+
+  if (currentPath === "/histoire") {
+    // Si déjà sur la page "Histoire", scroller directement
+    const teamSection = document.getElementById("team-section");
+    if (teamSection) {
+      teamSection.scrollIntoView({ behavior: "smooth" });
+      window.history.replaceState(null, "", "/histoire"); // Nettoyez l'URL pour éviter le hash
+    }
+  } else if (currentPath === "/") {
+    // Si sur la page Homepage, redirigez avec hash
+    navigate("/histoire#team-section");
+  } else {
+    // Si sur une autre page quelconque, redirigez vers "Histoire" avec hash
+    navigate("/histoire#team-section");
+  }
+};
+
+
+
 function Menu() {
   const { pathname } = useLocation();
+  const navigate = useNavigate()
 
-  // Vérifie si les autres onglets doivent être barrés
-  const isBarred = pathname === "/histoire" || pathname === "/clubcheyssoi";
+  const isBarred =
+  pathname === "/clubcheyssoi" ||
+  pathname === "/histoire" ||
+  pathname === "/notre-engagement" ||
+  pathname === "/equipe";
+
+
+
 
   return (
     <div className="menu">
       {/* À propos */}
       <a
         style={{
-          pointerEvents: isBarred ? "none" : "auto", // Désactive si isBarred
-          textDecoration: isBarred ? "line-through" : "none", // Barre si isBarred
+          pointerEvents: isBarred ? "none" : "auto",
+          textDecoration: isBarred ? "line-through" : "none",
         }}
         href="#apropos"
       >
-        à propos
+        Pour vous
       </a>
 
       {/* Galerie */}
@@ -81,8 +129,8 @@ function Menu() {
       <Link
         to="/clubcheyssoi"
         style={{
-          textDecoration: pathname === "/clubcheyssoi" ? "none" : isBarred ? "line-through" : "none", // Actif si sur la page clubcheyssoi
-          pointerEvents: pathname === "/clubcheyssoi" ? "auto" : isBarred ? "none" : "auto", // Actif uniquement pour clubcheyssoi
+          textDecoration: pathname === "/clubcheyssoi" ? "none" : isBarred ? "line-through" : "none",
+          pointerEvents: pathname === "/clubcheyssoi" ? "auto" : isBarred ? "none" : "auto",
         }}
       >
         Le Club Cheyssoi
@@ -92,14 +140,26 @@ function Menu() {
       <Link
         to="/histoire"
         style={{
-          textDecoration: pathname === "/histoire" ? "none" : isBarred ? "line-through" : "none", // Actif si sur la page histoire
-          pointerEvents: pathname === "/histoire" ? "auto" : isBarred ? "none" : "auto", // Actif uniquement pour histoire
+          textDecoration: pathname === "/histoire" ? "none" : isBarred ? "line-through" : "none",
+          pointerEvents: pathname === "/histoire" ? "auto" : isBarred ? "none" : "auto",
         }}
       >
         Histoire
       </Link>
 
-      <Link to="notre-engagement" style={{ textDecoration: "none" }}>Notre Engagement</Link>
+      <Link
+  to="/histoire"
+  onClick={(e) => handleScrollToEngagement(e, navigate)}
+>
+  Notre Engagement
+
+  
+     </Link>
+     <Link
+    to="histoire"
+    onClick={(e) => handleScrollToTeam(e, navigate)}
+     className="menu-item"
+    >Equipe</Link>
 
 
 
@@ -111,7 +171,7 @@ function Menu() {
         }}
         href="#ebook"
       >
-        Ebook
+        Notre Ebook
       </a>
     </div>
   );

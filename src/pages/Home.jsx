@@ -4,7 +4,7 @@ import ConnectSection from "../sections/ConnectSection";
 import Ebook from "../sections/Ebook";
 import Apropos from "../sections/Apropos";
 import DemarrerProjet from "../sections/DemarrerProjet";
-import Team from "../sections/Team";
+
 
 import Formules from "../sections/Formules";
 import Galerie from "../sections/Galerie";
@@ -55,7 +55,6 @@ export default function Home({ loader }) {
       />
       <ConnectSection />
       <Apropos />
-      <Team />
       <Galerie setProjectName={setProjectName} />
       <AnimatePresence>
         {projectName && (

@@ -1,53 +1,11 @@
+/* Section commune pour la page */
 .histoire-page {
-    font-family: "Arial", sans-serif;
-  }
-  
-  .page-histoire {
-    text-align: center;
-    background: url('/6.png') no-repeat center center fixed;
-    background-size: cover;
-    padding: 100px 0;
-    color: white;
-  }
-  
-  .histoire-section {
-    padding: 50px 20px;
-  }
-  
-  .histoire-section.centered {
-    text-align: center;
-  }
-  
-  .histoire-section.with-image {
-    display: flex;
-  align-items: flex-start;
-  justify-content: center;
-  gap: 40px; /* Espacement entre l'image et le texte */
-  margin: 50px 0; /* Espacement vertical entre les sections */
+  font-family: "Arial", sans-serif;
 }
-  
-  .histoire-image-left {
-    width: 45%; /* L'image occupe environ 45% de la largeur */
-  height: auto; /* Garde les proportions */
-  border-radius: 10px; /* Bords arrondis */
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Ombre douce */
-}
-  
-  
-.histoire-text-right {
-    width: 55%; /* Le texte occupe le reste de l'espace */
-    font-family: "Times New Roman", serif;
-    font-size: 1.3rem;
-    line-height: 1.8;
-    color: #333;
-    text-align: justify; /* Justifie le texte */
-  }
-  
-  .histoire-text-right p {
-    margin-bottom: 20px; /* Ajoute un espacement entre les paragraphes */
-  }
-  .histoire-header {
-    background-image: url("/6.png"); /* Remplacez par l'image appropriée */
+
+/* Section d'en-tête Histoire */
+.histoire-header {
+  background-image: url("/6.png");
   background-size: cover;
   background-position: center;
   height: 100vh;
@@ -57,38 +15,181 @@
   justify-content: center;
   color: white;
   text-align: center;
-  }
-  
-  .histoire-section {
-    margin-bottom: 20px; /* Réduction des marges */
-    padding: 10px 0; /* Un léger espacement pour l'esthétique */
-  }
-  
-  .histoire-text-title {
-    font-family: "Times New Roman", serif;
-    font-size: 2rem;
-    font-weight: bold;
-    text-transform: uppercase;
-    color: #000;
-    text-align: center;
-  }
-  .histoire-title {
-    font-family: 'Times New Roman', serif; /* Assurez-vous que c'est la bonne police */
-    font-size: 6rem; /* Vérifiez la taille exacte */
-    font-weight: bold;
-    text-transform: uppercase;
-    color: white;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Appliquez une ombre subtile */
-    margin: 0;
-  }
-  
-  .subtitle {
-    font-family: 'Times New Roman', serif; /* Assurez-vous que c'est la bonne police */
-  font-size: 1.5; /* Vérifiez la taille exacte */
-  font-weight: normal;
-  color: white;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6); /* Appliquez une ombre subtile */
-  margin-top: 0.5rem;
 }
 
+/* Titre principal */
+.histoire-title {
+  font-family: 'Times New Roman', serif;
+  font-size:5rem;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1rem 0;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
+}
+.engagement-title {
+  font-family: 'Times New Roman', serif;
+  font-size:3srem;
   
+  text-transform: uppercase;
+  text-align: center;
+  margin: 1rem 0;
+  color: #191818;
+  
+}
+
+/* Sous-titre */
+.subtitle,
+.engagement-subtitle {
+  font-family: 'Times New Roman', serif;
+  font-size: 2.2rem;
+  font-weight: normal;
+  text-align: center;
+  color: #ffffff;
+  margin-top: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Contenu texte */
+.histoire-content,
+.engagement-section {
+  padding: 2rem;
+  max-width: 1200px; /* Largeur maximale légèrement augmentée */
+  margin: 0 auto; /* Centrage horizontal */
+  padding: 1rem; /* Réduction de l'espacement interne */
+}
+
+/* Texte avec image */
+.histoire-section.with-image,
+.engagement-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px; /* Réduction de l'espacement entre image et texte */
+  margin: 20px 0; /* Réduction des marges verticales */
+}
+
+.histoire-section.with-image.reverse,
+.engagement-row.reverse {
+  flex-direction: row-reverse; /* Texte à gauche, image à droite */
+}
+
+/* Images */
+.histoire-image-left,
+.engagement-image-left,
+.histoire-image-right,
+.engagement-image-right {
+  width: 50%; /* Images plus grandes */
+  height: auto;
+  border-radius: 0x;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Texte */
+.histoire-text-right,
+.histoire-text-left,
+.engagement-text-right,
+.engagement-text-left {
+  width: 50%; /* Texte occupe la moitié */
+  font-family: "Times New Roman", serif;
+  font-size: 1.1rem;
+  line-height: 1.7;
+  color: #333;
+  text-align: justify;
+}
+
+.histoire-text-right p,
+.histoire-text-left p,
+.engagement-text-right p,
+.engagement-text-left p {
+  margin-bottom: 15px; /* Espacement réduit entre les paragraphes */
+}
+
+/* Ligne décorative sous les titres */
+.histoire-title::after,
+.engagement-title::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #c0a062;
+  margin: 0.5rem auto;
+}
+
+/* Alignement centré pour les sections */
+.histoire-section.centered,
+.engagement-section.centered {
+  text-align: center;
+}
+
+.engagement-row,
+.team-section .membersContainer {
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.engagement-row img,
+.team-section .members img {
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.engagement-text-right,
+.engagement-text-left {
+  flex: 1;
+  margin: auto 0;
+}
+#team-section {
+  max-width: 1200px; /* Limite la largeur pour aligner avec les autres sections */
+  margin: 0 auto; /* Centre horizontalement la section */
+  padding: 50px 20px; /* Ajoute un padding pour un espace confortable */
+  text-align: center; /* Centre le contenu */
+}
+
+.team-section .membersContainer {
+  display: flex;
+  flex-wrap: wrap; /* Permet de gérer plusieurs membres */
+  justify-content: center; /* Centre les éléments horizontalement */
+  gap: 20px; /* Espace entre les cartes de membres */
+}
+
+.team-section .card {
+  flex: 1 1 calc(33.333% - 20px); /* Ajuste la taille des cartes */
+  max-width: 300px; /* Limite la taille maximale des cartes */
+  margin: 0 auto; /* Centre les cartes */
+}
+
+.main-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  text-align: left; /* Garde un alignement de texte naturel */
+}
+
+
+.team-section-container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px; /* Ajoute un espacement si nécessaire */
+  box-sizing: border-box;
+}
+
+.histoire-page {
+  width: 100%;
+  overflow-x: hidden; /* Empêche le défilement horizontal */
+}
+
+
+.team-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Assure que la section utilise toute la largeur */
+  margin: 0 auto; /* Centre la section horizontalement */
+}
+
+

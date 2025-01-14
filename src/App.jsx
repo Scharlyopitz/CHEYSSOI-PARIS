@@ -1,4 +1,4 @@
-import { Route, Routes, useLocation } from "react-router-dom";
+import { Route, Routes, useLocation, useNavigate } from "react-router-dom";
 import "./style/style.css";
 import Home from "./pages/Home";
 import EspacePro from "./pages/EspacePro";
@@ -7,28 +7,42 @@ import { useEffect, useState } from "react";
 import Lenis from "lenis";
 import Navbar from "./components/Navbar";
 import { AnimatePresence } from "framer-motion";
-import Histoire from "./pages/Histoire"; 
+import Histoire from "./pages/Histoire";
 
 function App() {
   const [loader, setLoader] = useState(true);
+  const { pathname } = useLocation();
+  const navigate = useNavigate();
 
-  // FONCTION POUR ELEVER LE SCROLL ET LE REMTTRE SI LA MODAL EST OUVERTE OU NON AVEC LENIS
+  // Gestion du scroll vers une ancre spécifique après navigation
+  useEffect(() => {
+    const handleHashNavigation = () => {
+      const hash = window.location.hash; // Récupère l'ancre (ex : #notre-engagement)
+      if (hash) {
+        const element = document.querySelector(hash);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }
+    };
+
+    handleHashNavigation(); // Appelle la fonction lors du premier chargement
+  }, [pathname]); // Réagit à chaque changement de route
+
+  // Gestion du loader
   useEffect(() => {
     if (loader) {
-      document.body.style.overflow = "hidden"; // standard no-scroll implementation
-      document.body.setAttribute("data-lenis-prevent", "true"); // Make sure you pass true as string
+      document.body.style.overflow = "hidden";
+      document.body.setAttribute("data-lenis-prevent", "true");
     } else {
       document.body.style.overflow = "auto";
       document.body.removeAttribute("data-lenis-prevent", "true");
     }
   }, [loader]);
 
-  const { pathname } = useLocation();
-
+  // Scroll restoration et Lenis
   useEffect(() => {
-    // RESET DE L'HISTORIQUE DE L'URL ET SCROLLRESTORATION POUR SCROLL TO TOP
     history.scrollRestoration = "manual";
-
     const lenis = new Lenis();
 
     function raf(time) {
@@ -41,12 +55,27 @@ function App() {
 
   useEffect(() => {
     const lenis = new Lenis();
-
     lenis.stop();
     setTimeout(() => {
       lenis.start();
     }, 10);
   }, [pathname]);
+
+
+  useEffect(() => {
+    const hash = window.location.hash; // Récupère l'ancre (ex: #notre-engagement)
+    if (hash) {
+      const element = document.querySelector(hash); // Trouve l'élément correspondant
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 300); // Ajoute un délai pour assurer le scroll après le chargement
+      }
+    }
+  }, [pathname]);
+
+  
+  
 
   return (
     <>
@@ -55,11 +84,7 @@ function App() {
         <Routes location={pathname} key={pathname}>
           <Route path="/" element={<Home loader={loader} />} />
           <Route path="/clubcheyssoi" element={<EspacePro loader={loader} />} />
-          <Route path="/histoire" element={<Histoire />} /> 
-          
-          
-
-
+          <Route path="/histoire" element={<Histoire />} />
         </Routes>
       </AnimatePresence>
       {loader && <Loader setLoader={setLoader} />}
