@@ -35,45 +35,6 @@ function Logo() {
   );
 }
 
-const handleScrollToEngagement = (e, navigate) => {
-  e.preventDefault(); // Empêche le comportement par défaut du lien
-
-  const currentPath = window.location.pathname; // Chemin actuel de la page
-
-  if (currentPath === "/histoire") {
-    // Si déjà sur la page "Histoire", scroller directement
-    const engagementSection = document.getElementById("notre-engagement");
-    if (engagementSection) {
-      engagementSection.scrollIntoView({ behavior: "smooth" });
-      // Nettoyez l'URL pour éviter l'ajout du hash
-      window.history.replaceState(null, "", "/histoire");
-    }
-  } else {
-    // Si sur une autre page, redirigez vers "Histoire" avec le hash
-    navigate("/histoire");
-  }
-};
-
-const handleScrollToTeam = (e, navigate) => {
-  e.preventDefault(); // Empêche le comportement par défaut du lien
-
-  const currentPath = window.location.pathname; // Chemin actuel de la page
-
-  if (currentPath === "/histoire") {
-    // Si déjà sur la page "Histoire", scroller directement
-    const teamSection = document.getElementById("team-section");
-    if (teamSection) {
-      teamSection.scrollIntoView({ behavior: "smooth" });
-      window.history.replaceState(null, "", "/histoire"); // Nettoyez l'URL pour éviter le hash
-    }
-  } else if (currentPath === "/") {
-    // Si sur la page Homepage, redirigez avec hash
-    navigate("/histoire#team-section");
-  } else {
-    // Si sur une autre page quelconque, redirigez vers "Histoire" avec hash
-    navigate("/histoire#team-section");
-  }
-};
 
 
 
@@ -92,38 +53,72 @@ function Menu() {
 
   return (
     <div className="menu">
-      {/* À propos */}
-      <a
-        style={{
-          pointerEvents: isBarred ? "none" : "auto",
-          textDecoration: isBarred ? "line-through" : "none",
-        }}
-        href="#apropos"
-      >
-        Pour vous
-      </a>
 
-      {/* Galerie */}
-      <a
+      {/* Notre histoire */}
+      <Link
+        to="/histoire"
         style={{
-          pointerEvents: isBarred ? "none" : "auto",
-          textDecoration: isBarred ? "line-through" : "none",
+          textDecoration: pathname === "/histoire" ? "none" : isBarred ? "line-through" : "none",
+          pointerEvents: pathname === "/histoire" ? "auto" : isBarred ? "none" : "auto",
         }}
-        href="#galerie"
       >
-        Galerie
-      </a>
+        Notre histoire
+      </Link>
 
-      {/* Démarrer mon projet */}
-      <a
+      {/* Notre Engagement */}
+      <Link
+        to="/notre-engagement"
         style={{
-          pointerEvents: isBarred ? "none" : "auto",
-          textDecoration: isBarred ? "line-through" : "none",
+          textDecoration: pathname === "/notre-engagement" ? "none" : isBarred ? "line-through" : "none",
+          pointerEvents: pathname === "/notre-engagement" ? "auto" : isBarred ? "none" : "auto",
         }}
-        href="#demarrerprojet"
       >
-        démarrer mon projet
-      </a>
+        Notre Engagement
+      </Link>
+
+      {/* Equipe */}
+<Link
+        to="/team-section"
+        style={{
+          textDecoration: pathname === "/team-section" ? "none" : isBarred ? "line-through" : "none",
+          pointerEvents: pathname === "/team-section" ? "auto" : isBarred ? "none" : "auto",
+        }}
+      >
+        Equipe
+      </Link>
+
+
+      <Link
+  to="/pourvous"
+  style={{
+    textDecoration: pathname === "/pourvous" ? "none" : isBarred ? "line-through" : "none", // Barre si désactivé
+    pointerEvents: pathname === "/pourvous" ? "auto" : isBarred ? "none" : "auto", // Gère les clics
+  }}
+>
+  Pour Vous
+</Link>
+
+
+<Link
+  to="/galerie"
+  style={{
+    textDecoration: pathname === "/galerie" ? "none" : isBarred ? "line-through" : "none", // Barre si désactivé
+    pointerEvents: pathname === "/galerie" ? "auto" : isBarred ? "none" : "auto", // Gère les clics
+  }}
+>
+  Galerie
+</Link>
+
+
+<Link
+  to="/demarrer-mon-projet"
+  style={{
+    textDecoration: pathname === "/demarrer-mon-projet" ? "none" : isBarred ? "line-through" : "none",
+    pointerEvents: pathname === "/demarrer-mon-projet" ? "auto" : isBarred ? "none" : "auto",
+  }}
+>
+  Démarrer Mon Projet
+</Link>
 
       {/* Le Club Cheyssoi */}
       <Link
@@ -136,43 +131,16 @@ function Menu() {
         Le Club Cheyssoi
       </Link>
 
-      {/* Histoire */}
       <Link
-        to="/histoire"
-        style={{
-          textDecoration: pathname === "/histoire" ? "none" : isBarred ? "line-through" : "none",
-          pointerEvents: pathname === "/histoire" ? "auto" : isBarred ? "none" : "auto",
-        }}
-      >
-        Histoire
-      </Link>
-
-      <Link
-  to="/histoire"
-  onClick={(e) => handleScrollToEngagement(e, navigate)}
+  to="/ebook"
+  style={{
+    textDecoration: pathname === "/ebook" ? "none" : isBarred ? "line-through" : "none",
+    pointerEvents: pathname === "/ebook" ? "auto" : isBarred ? "none" : "auto",
+  }}
 >
-  Notre Engagement
+  Notre Ebook
+</Link>
 
-  
-     </Link>
-     <Link
-    to="histoire"
-    onClick={(e) => handleScrollToTeam(e, navigate)}
-     className="menu-item"
-    >Equipe</Link>
-
-
-
-      {/* Ebook */}
-      <a
-        style={{
-          pointerEvents: isBarred ? "none" : "auto",
-          textDecoration: isBarred ? "line-through" : "none",
-        }}
-        href="#ebook"
-      >
-        Notre Ebook
-      </a>
     </div>
   );
 }

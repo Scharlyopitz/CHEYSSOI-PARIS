@@ -8,6 +8,13 @@ import Lenis from "lenis";
 import Navbar from "./components/Navbar";
 import { AnimatePresence } from "framer-motion";
 import Histoire from "./pages/Histoire";
+import NotreEngagement from "./pages/NotreEngagement";
+import Team from "./pages/Team";
+import PourVous from "./pages/PourVous"; 
+import GaleriePage from "./pages/GaleriePage"; 
+import DemarrerMonProjet from "./pages/DemarrerMonProjet";
+import EbookPage from "./pages/EbookPage";
+
 
 function App() {
   const [loader, setLoader] = useState(true);
@@ -85,6 +92,13 @@ function App() {
           <Route path="/" element={<Home loader={loader} />} />
           <Route path="/clubcheyssoi" element={<EspacePro loader={loader} />} />
           <Route path="/histoire" element={<Histoire />} />
+          <Route path="/notre-engagement" element={<NotreEngagement />} />
+          <Route path="/team-section" element={<Team />} /> {/* Nouvelle route */}
+          <Route path="/pourvous" element={<PourVous />} />
+          <Route path="/galerie" element={<GaleriePage />} />
+          <Route path="/demarrer-mon-projet" element={<DemarrerMonProjet />} />
+          <Route path="/ebook" element={<EbookPage />} />
+          
         </Routes>
       </AnimatePresence>
       {loader && <Loader setLoader={setLoader} />}

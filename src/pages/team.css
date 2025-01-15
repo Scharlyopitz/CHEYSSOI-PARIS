@@ -1,0 +1,64 @@
+#team-section {
+    max-width: 1200px; /* Limite la largeur pour aligner avec les autres sections */
+    margin: 0 auto; /* Centre horizontalement la section */
+    padding: 50px 20px; /* Ajoute un padding pour un espace confortable */
+    text-align: center; /* Centre le contenu */
+  }
+  
+  .team-section .membersContainer {
+    display: flex;
+    flex-wrap: wrap; /* Permet de gérer plusieurs membres */
+    justify-content: center; /* Centre les éléments horizontalement */
+    gap: 20px; /* Espace entre les cartes de membres */
+  }
+  
+  .team-section .card {
+    flex: 1 1 calc(33.333% - 20px); /* Ajuste la taille des cartes */
+    max-width: 300px; /* Limite la taille maximale des cartes */
+    margin: 0 auto; /* Centre les cartes */
+  }
+  
+  .main-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: left; /* Garde un alignement de texte naturel */
+  }
+  
+  
+  .team-section-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px; /* Ajoute un espacement si nécessaire */
+    box-sizing: border-box;
+  }
+  
+  .histoire-page {
+    width: 100%;
+    overflow-x: hidden; /* Empêche le défilement horizontal */
+  }
+  
+  
+  .team-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%; /* Assure que la section utilise toute la largeur */
+    margin: 0 auto; /* Centre la section horizontalement */
+  }
+  
+  
+  .team-section .membersContainer {
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  
+  .team-section .members img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }  

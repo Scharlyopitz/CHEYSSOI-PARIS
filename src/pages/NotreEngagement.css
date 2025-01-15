@@ -1,0 +1,102 @@
+.engagement-title {
+    font-family: 'Cormorant sc', serif;
+    font-size:3srem;
+    
+    text-transform: uppercase;
+    text-align: center;
+    margin: 1rem 0;
+    color: #191818;
+    
+  }
+  
+  /* Sous-titre */
+  .subtitle,
+  .engagement-subtitle {
+    font-family: 'Arial', serif;
+    font-size: 2.2rem;
+    font-weight: normal;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Contenu texte */
+  
+  .engagement-section {
+    padding: 2rem;
+    max-width: 1200px; /* Largeur maximale légèrement augmentée */
+    margin: 0 auto; /* Centrage horizontal */
+    padding: 1rem; /* Réduction de l'espacement interne */
+  }
+  
+  /* Texte avec image */
+  .engagement-row {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px; /* Réduction de l'espacement entre image et texte */
+    margin: 20px 0; /* Réduction des marges verticales */
+  }
+  
+  .engagement-row.reverse {
+    flex-direction: row-reverse; /* Texte à gauche, image à droite */
+  }
+  
+  /* Images */
+  .engagement-image-left,
+  .engagement-image-right {
+    width: 50%; /* Images plus grandes */
+    height: auto;
+    border-radius: 0x;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Texte */
+  .engagement-text-right,
+  .engagement-text-left {
+    width: 50%; /* Texte occupe la moitié */
+    font-family: "Arial", serif;
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #333;
+    text-align: justify;
+  }
+  
+  .engagement-text-right p,
+  .engagement-text-left p {
+    margin-bottom: 15px; /* Espacement réduit entre les paragraphes */
+  }
+  
+  /* Ligne décorative sous les titres */
+  
+  .engagement-title::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 3px;
+    background-color: #c0a062;
+    margin: 0.5rem auto;
+  }
+  
+  /* Alignement centré pour les sections */
+  .engagement-section.centered {
+    text-align: center;
+  }
+  
+  .engagement-rows{
+    display: flex;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+  
+  .engagement-row img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+  }
+  
+  .engagement-text-right,
+  .engagement-text-left {
+    flex: 1;
+    margin: auto 0;
+  }
