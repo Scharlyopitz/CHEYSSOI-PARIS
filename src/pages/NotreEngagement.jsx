@@ -7,6 +7,7 @@ export default function NotreEngagement() {
       {/* Titre Notre Engagement */}
       <div id="notre-engagement" className="engagement-header">
         <h2 className="engagement-title">NOTRE ENGAGEMENT</h2>
+        
       </div>
 
       {/* Section Notre Engagement */}

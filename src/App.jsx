@@ -11,8 +11,7 @@ import Histoire from "./pages/Histoire";
 import NotreEngagement from "./pages/NotreEngagement";
 import Team from "./pages/Team";
 import PourVous from "./pages/PourVous"; 
-import GaleriePage from "./pages/GaleriePage"; 
-import DemarrerMonProjet from "./pages/DemarrerMonProjet";
+
 import EbookPage from "./pages/EbookPage";
 
 
@@ -95,8 +94,6 @@ function App() {
           <Route path="/notre-engagement" element={<NotreEngagement />} />
           <Route path="/team-section" element={<Team />} /> {/* Nouvelle route */}
           <Route path="/pourvous" element={<PourVous />} />
-          <Route path="/galerie" element={<GaleriePage />} />
-          <Route path="/demarrer-mon-projet" element={<DemarrerMonProjet />} />
           <Route path="/ebook" element={<EbookPage />} />
           
         </Routes>

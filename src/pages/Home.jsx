@@ -7,7 +7,10 @@ import Projet from "./Projet";
 import BackgroundImage from "../components/BackgroundImage";
 import BigTitle from "../components/BigTitle";
 import PageTransition from "../components/PageTransition";
-//import Footer from "../components/Footer";
+import Footer from "../components/Footer";
+import Formules from "../sections/Formules"; // Importez Formules
+import Galerie from "../sections/Galerie";
+import DemarrerProjet from "../sections/DemarrerProjet"; 
 
 export default function Home({ loader }) {
   const [projectName, setProjectName] = useState("");
@@ -42,7 +45,8 @@ export default function Home({ loader }) {
         text="Cheyssoi Paris"
         undertitle="Designers d’intérieurs éthiques"
       />
-      
+       <Galerie setProjectName={setProjectName} />
+       
       
       
       <AnimatePresence>
@@ -50,7 +54,9 @@ export default function Home({ loader }) {
           <Projet projectName={projectName} setProjectName={setProjectName} />
         )}
       </AnimatePresence>
-      
+      <Formules />
+      <DemarrerProjet />
+      <Footer />
       <PageTransition loader={loader} />
     </main>
   );

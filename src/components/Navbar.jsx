@@ -99,26 +99,27 @@ function Menu() {
 </Link>
 
 
-<Link
-  to="/galerie"
-  style={{
-    textDecoration: pathname === "/galerie" ? "none" : isBarred ? "line-through" : "none", // Barre si désactivé
-    pointerEvents: pathname === "/galerie" ? "auto" : isBarred ? "none" : "auto", // Gère les clics
-  }}
->
-  Galerie
-</Link>
+{/* Galerie */}
+<a
+        style={{
+          pointerEvents: isBarred ? "none" : "auto",
+          textDecoration: isBarred ? "line-through" : "none",
+        }}
+        href="#galerie"
+      >
+        Galerie
+      </a>
 
-
-<Link
-  to="/demarrer-mon-projet"
-  style={{
-    textDecoration: pathname === "/demarrer-mon-projet" ? "none" : isBarred ? "line-through" : "none",
-    pointerEvents: pathname === "/demarrer-mon-projet" ? "auto" : isBarred ? "none" : "auto",
-  }}
->
-  Démarrer Mon Projet
-</Link>
+{/* Demarrer mon projet*/}
+<a
+        style={{
+          pointerEvents: isBarred ? "none" : "auto",
+          textDecoration: isBarred ? "line-through" : "none",
+        }}
+        href="#demarrerprojet"
+      >
+        Démarrer mon projet
+      </a>
 
       {/* Le Club Cheyssoi */}
       <Link

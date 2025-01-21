@@ -3,6 +3,12 @@
   font-family: "Arial", sans-serif;
 }
 
+.histoire-page h1, 
+.histoire-page h2, 
+.histoire-page h3 {
+  font-family: 'Cormorant SC', serif; /* Titres en Cormorant SC */
+}
+
 /* Section d'en-tête Histoire */
 .histoire-header {
   background-image: url("/6.png");
@@ -20,7 +26,7 @@
 /* Titre principal */
 .histoire-title {
   font-family: 'Cormorant sc', serif;
-  font-size:5rem;
+  font-size:3rem;
   text-transform: uppercase;
   text-align: center;
   margin: 1rem 0;
@@ -30,7 +36,7 @@
 
 .histoire-subtitle {
   font-family: 'Cormorant sc', serif;
-  font-size:2rem;
+  font-size:0.5rem;
   text-transform: uppercase;
   text-align: center;
   margin: 1rem 0;
@@ -43,10 +49,12 @@
 
 /* Contenu texte */
 .histoire-content {
+  font-family: Arial, sans-serif;
   padding: 2rem;
   max-width: 1200px; /* Largeur maximale légèrement augmentée */
   margin: 0 auto; /* Centrage horizontal */
   padding: 1rem; /* Réduction de l'espacement interne */
+ 
 }
 
 /* Texte avec image */
@@ -74,10 +82,10 @@
 .histoire-text-right,
 .histoire-text-left {
   width: 50%; /* Texte occupe la moitié */
-  font-family: "Arial", serif;
-  font-size: 1.1rem;
+  font-family: Arial, sans-serif;
+  font-size: 0.1rem;
   line-height: 1.7;
-  color: #333;
+  color: #323131;
   text-align: justify;
 }
 
@@ -117,5 +125,20 @@
   overflow-x: hidden; /* Empêche le défilement horizontal */
 }
 
+
+
+
+
+
+
+.histoire-page {
+  font-family: Arial, sans-serif; /* Texte par défaut en Arial */
+}
+
+.histoire-page h1, 
+.histoire-page h2, 
+.histoire-page h3 {
+  font-family: 'Cormorant SC', serif; /* Titres en Cormorant SC */
+}
 
 
