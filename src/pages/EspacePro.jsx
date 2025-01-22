@@ -28,14 +28,14 @@ export default function EspacePro({ loader }) {
       <TopSection />
       <Section
         title="VOUS SOUHAITEZ PROPOSER NOS SERVICES À VOTRE CLIENT ?"
-        text="Vous êtes professionnel de l'immobilier artisans, sociétés de rénovation, vendeurs de décoration ou designers d'objets, vous avez un projet à nous proposer? 
-Rejoignez le Club Cheyssoi et bénéficiez de votre commission!"
+        text="VOUS ÊTES PROFESSIONNEL DE L'IMMOBILIER, ARTISAN, SOCIÉTÉ DE RÉNOVATION, VENDEUR DE DÉCORATION OU DESIGNER D'OBJETS ? VOUS AVEZ UN PROJET À NOUS PROPOSER ?
+REJOIGNEZ LE CLUB CHEYSSOI ET BÉNÉFICIEZ DE VOTRE COMMISSION !"
         src={ClubCheyssoi1}
         alt="image club cheyssoi 1"
       />
       <Section
         title="Rejoignez un club qui vous rémunère!"
-        text="Le Club Cheyssoi est le premier club d'affaires gratuit et qui vous rémunère!"
+        text="LE CLUB CHEYSSOI EST LE PREMIER CLUB D'AFFAIRES GRATUIT ET QUI VOUS RÉMUNÈRE !"
         src={ClubCheyssoi2}
         alt="image club cheyssoi 2"
       />
@@ -50,25 +50,21 @@ function TopSection() {
   return (
     <div className="topSection espaceProSection max-w">
       <p className="center">
-        Cheyssoi Paris collectif de designers d’intérieurs éthiques collabore
-        étroitement avec les professionnels de l'immobilier, artisans, sociétés
-        de rénovation, vendeurs de décoration et designers d’objet.{" "}
+      CHEYSSOI PARIS, COLLECTIF DE DESIGNERS D’INTÉRIEURS ÉTHIQUES, COLLABORE ÉTROITEMENT AVEC LES PROFESSIONNELS DE L'IMMOBILIER, ARTISANS, SOCIÉTÉS DE RÉNOVATION, VENDEURS DE DÉCORATION ET DESIGNERS D’OBJET.{" "}
       </p>
       <div className="listContainer">
-        <p>Rejoindre le Club Cheyssoi c'est :</p>
+        <p>REJOINDRE LE CLUB CHEYSSOI C'EST :</p>
         <ul>
-          <li>Une commission sur chaque projet signé grâce à vous</li>
+          <li>UNE COMISSION SUR CHAQUE PROJET SIGNÉ GRÂCE À VOUS</li>
           <li>
-            Une collaboration valorisante : mettre en lumière votre expertise et
-            accéder à plus de clientèle! Faire partie d’un réseau innovant,
-            élégant et rentable!
+          UNE COLLABORATION VALORISANTE : METTRE EN LUMIÈRE VOTRE EXPERTISE ET ACCÉDER À PLUS DE CLIENTÈLE ! FAIRE PARTIE D’UN RÉSEAU INNOVANT, ÉLÉGANT ET RENTABLE !
           </li>
         </ul>
         <p
           className="center
         "
         >
-          Nous croyons au pouvoir du partenariat durable et gagnant-gagnant.
+          NOUS CROYONS AU POUVOIR DU PARTENARIAT DURABLE ET GAGNANT-GAGNANT.
         </p>
       </div>
 

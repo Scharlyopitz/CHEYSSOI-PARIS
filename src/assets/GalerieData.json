@@ -1,26 +1,26 @@
 [
   {
     "image": "/Haussman.webp",
-    "name": "Projet Haussman",
-    "description": "Ce projet propose la création d'une suite résidentielle luxueuse et durable, inspirée par l'élégance intemporelle du quartier Place Vendôme. Chaque espace, de la chambre au salon, allie design raffiné et matériaux naturels tels que bois certifié et textiles biologiques. L'éclairage optimal associe lumière naturelle et LED basse consommation, créant une ambiance apaisante. Les choix de design écoresponsables, documentés avec soin, garantissent un équilibre parfait entre luxe et durabilité. Plans détaillés, modélisations 3D et sélection de matériaux durables forment une expérience haut de gamme engagée.texte de paragraphe",
+    "name": "PROJET HAUSSMAN",
+    "description": "CE PROJET PROPOSE LA CRÉATION D'UNE SUITE RÉSIDENTIELLE LUXUEUSE ET DURABLE, INSPIRÉE PAR L'ÉLÉGANCE INTEMPORELLE DU QUARTIER PLACE VENDÔME. CHAQUE ESPACE, DE LA CHAMBRE AU SALON, ALLIE DESIGN RAFFINÉ ET MATÉRIAUX NATURELS TELS QUE BOIS CERTIFIÉ ET TEXTILES BIOLOGIQUES. L'ÉCLAIRAGE OPTIMAL ASSOCIE LUMIÈRE NATURELLE ET LED BASSE CONSOMMATION, CRÉANT UNE AMBIANCE APAISANTE. LES CHOIX DE DESIGN ÉCORESPONSABLES, DOCUMENTÉS AVEC SOIN, GARANTISSENT UN ÉQUILIBRE PARFAIT ENTRE LUXE ET DURABILITÉ. PLANS DÉTAILLÉS, MODÉLISATIONS 3D ET SÉLECTION DE MATÉRIAUX DURABLES FORMENT UNE EXPÉRIENCE HAUT DE GAMME ENGAGÉE.",
     "moodBoard": "/HAUSSMANNMOODBOARD.webp"
   },
   {
     "image": "/Vosges.webp",
-    "name": "Projet Vosges",
-    "description": "Ce projet vise à concevoir un salon de co-living élégant et durable, inspiré par le charme historique de la Place des Vosges. L’espace modulable inclut des zones dédiées à la lecture, au travail, et à la détente, favorisant la convivialité et le confort. Matériaux recyclés et naturels tels que le bois, le rotin, et les fibres recyclées sont au cœur du design. L’ambiance est enrichie par des plantes purifiantes et une luminosité optimale grâce à un éclairage LED écoénergétique et une ventilation naturelle. Modélisations 3D et plans détaillés illustrent cette vision écoresponsable et chic.",
+    "name": "PROJET VOSGES",
+    "description": "CE PROJET VISE À CONCEVOIR UN SALON DE CO-LIVING ÉLÉGANT ET DURABLE, INSPIRÉ PAR LE CHARME HISTORIQUE DE LA PLACE DES VOSGES. L’ESPACE MODULABLE INCLUT DES ZONES DÉDIÉES À LA LECTURE, AU TRAVAIL, ET À LA DÉTENTE, FAVORISANT LA CONVIVIALITÉ ET LE CONFORT. MATÉRIAUX RECYCLÉS ET NATURELS TELS QUE LE BOIS, LE ROTIN, ET LES FIBRES RECYCLÉES SONT AU CŒUR DU DESIGN. L’AMBIANCE EST ENRICHIE PAR DES PLANTES PURIFIANTES ET UNE LUMINOSITÉ OPTIMALE GRÂCE À UN ÉCLAIRAGE LED ÉCOÉNERGÉTIQUE ET UNE VENTILATION NATURELLE. MODÉLISATIONS 3D ET PLANS DÉTAILLÉS ILLUSTRENT CETTE VISION ÉCORESPONSABLE ET CHIC.",
     "moodBoard": "/VOSGESMOODBOARD.webp"
   },
   {
     "image": "/Montaigne.webp",
-    "name": "Projet Montaigne",
-    "description": "Création d’un showroom de haute couture éco-responsable, au cœur de l’Avenue Montaigne. Conçu pour refléter l’élégance et l’engagement d’une marque éthique, le showroom combine matériaux recyclés et biosourcés avec un aménagement sophistiqué. Une vitrine captivante valorise l’image durable de la marque, tandis que des luminaires éco-responsables et des plantes dépolluantes enrichissent l’expérience sensorielle. Plans détaillés, moodboards et maquettes 3D traduisent un espace à la croisée du luxe et de la durabilité.",
+    "name": "PROJET MONTAIGNE",
+    "description": "CRÉATION D’UN SHOWROOM DE HAUTE COUTURE ÉCO-RESPONSABLE, AU CŒUR DE L’AVENUE MONTAIGNE. CONÇU POUR REFLÉTER L’ÉLÉGANCE ET L’ENGAGEMENT D’UNE MARQUE ÉTHIQUE, LE SHOWROOM COMBINE MATÉRIAUX RECYCLÉS ET BIOSOURCÉS AVEC UN AMÉNAGEMENT SOPHISTIQUÉ. UNE VITRINE CAPTIVANTE VALORISE L’IMAGE DURABLE DE LA MARQUE, TANDIS QUE DES LUMINAIRES ÉCO-RESPONSABLES ET DES PLANTES DÉPOLLUANTES ENRICHISSENT L’EXPÉRIENCE SENSORIELLE. PLANS DÉTAILLÉS, MOODBOARDS ET MAQUETTES 3D TRADUISENT UN ESPACE À LA CROISÉE DU LUXE ET DE LA DURABILITÉ.",
     "moodBoard": "/MONTAIGNEMOODBOARD.webp"
   },
   {
     "image": "/Vendome.webp",
-    "name": "Projet Vendome",
-    "description": "Conception d’un espace de travail prestigieux dans un immeuble haussmannien emblématique de la Place Vendôme. Alliant élégance et durabilité, le design inclut des bureaux individuels et open-spaces, réalisés avec des matériaux éco-responsables comme le bois massif certifié et le marbre écologique. Un éclairage naturel optimisé et des luminaires LED basse consommation complètent l’aménagement. Plans détaillés, visualisations 3D et moodboards traduisent cette vision luxueuse et durable.",
+    "name": "PROJET VENDOME",
+    "description": "CONCEPTION D’UN ESPACE DE TRAVAIL PRESTIGIEUX DANS UN IMMEUBLE HAUSSMANNIEN EMBLÉMATIQUE DE LA PLACE VENDÔME. ALLIANT ÉLÉGANCE ET DURABILITÉ, LE DESIGN INCLUT DES BUREAUX INDIVIDUELS ET OPEN-SPACES, RÉALISÉS AVEC DES MATÉRIAUX ÉCO-RESPONSABLES COMME LE BOIS MASSIF CERTIFIÉ ET LE MARBRE ÉCOLOGIQUE. UN ÉCLAIRAGE NATUREL OPTIMISÉ ET DES LUMINAIRES LED BASSE CONSOMMATION COMPLÈTENT L’AMÉNAGEMENT. PLANS DÉTAILLÉS, VISUALISATIONS 3D ET MOODBOARDS TRADUISENT CETTE VISION LUXUEUSE ET DURABLE.",
     "moodBoard": "/VENDOMEMOODBOARD.webp"
   }
 ]

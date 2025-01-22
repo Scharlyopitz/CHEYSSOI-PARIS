@@ -6,7 +6,7 @@ export default function ConnectSection() {
   return (
     <section id="ConnextSection">
       <TitleReveal words={["Une", "experience", "unique"]} />
-      <TextReveal text="Cheyssoi est votre studio de design spécialisé dans les intérieurs éthiques et durables. Nous vous accompagnons dans la création de lieux uniques, où esthétisme et respect de l’environnement s’entrelacent harmonieusement. Cheyssoi Paris, c’est avant tout une expérience sur-mesure : inspirez-vous de nos idées et laissez-vous guider à chaque étape, jusqu’à la réalisation d’un espace en parfaite adéquation avec vos valeurs et vos envies. Nous mettons un point d’honneur à collaborer avec des artisans locaux, valorisant savoir-faire, circularité et matériaux durables, pour des créations qui font sens et durent dans le temps." />
+      <TextReveal text="CHEYSSOI EST VOTRE STUDIO DE DESIGN SPÉCIALISÉ DANS LES INTÉRIEURS ÉTHIQUES ET DURABLES. NOUS VOUS ACCOMPAGNONS DANS LA CRÉATION DE LIEUX UNIQUES, OÙ ESTHÉTISME ET RESPECT DE L’ENVIRONNEMENT S’ENTRELACENT HARMONIEUSEMENT. CHEYSSOI PARIS, C’EST AVANT TOUT UNE EXPÉRIENCE SUR-MESURE : INSPIREZ-VOUS DE NOS IDÉES ET LAISSEZ-VOUS GUIDER À CHAQUE ÉTAPE, JUSQU’À LA RÉALISATION D’UN ESPACE EN PARFAITE ADÉQUATION AVEC VOS VALEURS ET VOS ENVIES. NOUS METTONS UN POINT D’HONNEUR À COLLABORER AVEC DES ARTISANS LOCAUX, VALORISANT SAVOIR-FAIRE, CIRCULARITÉ ET MATÉRIAUX DURABLES, POUR DES CRÉATIONS QUI FONT SENS ET DURENT DANS LE TEMPS." />
       <div className="buttonsContainer">
         <Button href="#apropos" txt="En savoir plus ?" />
         <Button href="#demarrerprojet" txt="Démarrer mon projet !" />

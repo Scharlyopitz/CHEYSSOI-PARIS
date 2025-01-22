@@ -24,11 +24,11 @@ cqx1wG_-3ywsVy2W5DKAo3ZXhTyPTe47YF9gnxfkqJg5oyp4EkpPHEq9Q2HccGUYdV2yu5oU4kazHDdD
       <div className="container">
         <div className="paragraph">
           <TextReveal
-            text={`"Créer un intérieur éco-responsable élégant" est un guide pour transformer votre espace de vie en un sanctuaire chic et respectueux de l'environnement.`}
+            text={`CRÉER UN INTÉRIEUR ÉCO-RESPONSABLE ÉLÉGANT" EST UN GUIDE POUR TRANSFORMER VOTRE ESPACE DE VIE EN UN SANCTUAIRE CHIC ET RESPECTUEUX DE L'ENVIRONNEMENT.`}
           />
 
           <Link to={href} className="Button" target="_blank">
-            Commander mon Ebook
+            COMMANDER MON EBOOK
           </Link>
         </div>
         <ImageReveal src={EbookImage} alt="image Ebook" />

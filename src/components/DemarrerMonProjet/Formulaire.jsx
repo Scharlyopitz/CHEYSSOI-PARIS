@@ -126,7 +126,7 @@ export default function Formulaire() {
         </div>
         <button type="submit">
           <div className="container">
-            <p>Envoyer</p>
+            <p>ENVOYER</p>
             <FontAwesomeIcon icon={faChevronRight} />
           </div>
         </button>
@@ -175,7 +175,7 @@ function Nom({ informations, setInformations }) {
       <label htmlFor="name">Nom</label>
       <input
         name="nom"
-        placeholder="Votre Nom"
+        placeholder="VOTRE NOM"
         value={informations.name}
         onChange={(e) => setInformations((prec) => ({ ...prec, name: e.target.value }))}
         type="text"
@@ -191,7 +191,7 @@ function Prenom({ informations, setInformations }) {
       <label htmlFor="firstName">Prénom</label>
       <input
         name="prenom"
-        placeholder="Votre Prénom"
+        placeholder="VOTRE PRÉNOM"
         value={informations.firstname}
         onChange={(e) => setInformations((prec) => ({ ...prec, firstname: e.target.value }))}
         type="text"
@@ -207,7 +207,7 @@ function Surface({ informations, setInformations }) {
       <label htmlFor="surface">Surface</label>
       <input
         name="surface"
-        placeholder="Surface en m²"
+        placeholder="SURFACE EN m²"
         value={informations.surface}
         onChange={(e) => setInformations((prec) => ({ ...prec, surface: e.target.value }))}
         type="text"
@@ -223,7 +223,7 @@ function Telephone({ informations, setInformations }) {
       <label htmlFor="tel">Tel.</label>
       <input
         name="telephone"
-        placeholder="Votre Téléphone"
+        placeholder="VOTRE NUMÉRO DE TÉLÉPHONE"
         value={informations.tel}
         onChange={(e) => setInformations((prec) => ({ ...prec, tel: e.target.value }))}
         type="tel"
@@ -239,7 +239,7 @@ function Mail({ informations, setInformations }) {
       <label htmlFor="email">Email</label>
       <input
         name="email"
-        placeholder="Votre Email"
+        placeholder="VOTRE ADRESSE COURRIEL"
         value={informations.email}
         onChange={(e) => setInformations((prec) => ({ ...prec, email: e.target.value }))}
         type="email"
@@ -255,7 +255,7 @@ function CodePostal({ informations, setInformations }) {
       <label htmlFor="postalCode">Code Postal</label>
       <input
         name="code_postal"
-        placeholder="Votre Code Postal"
+        placeholder="VOTRE CODE POSTAL"
         value={informations.postalCode}
         onChange={(e) => setInformations((prec) => ({ ...prec, postalCode: e.target.value }))}
         type="text"
@@ -271,7 +271,7 @@ function Message({ informations, setInformations }) {
       <label htmlFor="message">Message</label>
       <textarea
         name="message"
-        placeholder="Décrivez votre projet"
+        placeholder="DÉCRIVEZ VOTRE PROJET"
         value={informations.message}
         onChange={(e) => setInformations((prec) => ({ ...prec, message: e.target.value }))}
         id="message"

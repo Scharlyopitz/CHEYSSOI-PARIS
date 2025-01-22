@@ -10,9 +10,7 @@ export default function Team() {
         <header>
           <TitleReveal words={["l'eq", "uipe"]} />
           <TextReveal
-            text=" La quête de l'excellence anime chaque membre de l'équipe. Chacun,
-              en apportant son expertise, sa créativité et son sens du détail
-              contribue à la création de projets uniques."
+            text=" LA QUÊTE DE L'EXCELLENCE ANIME CHAQUE MEMBRE DE L'ÉQUIPE. CHACUN, EN APPORTANT SON EXPERTISE, SA CRÉATIVITÉ ET SON SENS DU DÉTAIL, CONTRIBUE À LA CRÉATION DE PROJETS UNIQUES."
           />
         </header>
 
