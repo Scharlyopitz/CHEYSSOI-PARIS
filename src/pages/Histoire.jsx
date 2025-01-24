@@ -9,7 +9,7 @@ export default function Histoire() {
       {/* Section de l'image principale */}
       <div className="histoire-header">
         <h1 className="histoire-title">HISTOIRE</h1>
-        <p className="subtitle">PAGE DÉDIÉE À NOTRE HISTOIRE</p>
+        <h2 className="subtitle">PAGE DÉDIÉE À NOTRE HISTOIRE</h2>
       </div>
 
       {/* Contenu défilable */}

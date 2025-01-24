@@ -62,7 +62,7 @@ function Menu() {
           pointerEvents: pathname === "/histoire" ? "auto" : isBarred ? "none" : "auto",
         }}
       >
-        Notre histoire
+        NOTRE HISTOIRE
       </Link>
 
       {/* Notre Engagement */}
@@ -73,7 +73,7 @@ function Menu() {
           pointerEvents: pathname === "/notre-engagement" ? "auto" : isBarred ? "none" : "auto",
         }}
       >
-        Notre Engagement
+        NOTRE ENGAGEMENT
       </Link>
 
       {/* Equipe */}
@@ -84,7 +84,7 @@ function Menu() {
           pointerEvents: pathname === "/team-section" ? "auto" : isBarred ? "none" : "auto",
         }}
       >
-        Equipe
+        EQUIPE
       </Link>
 
 
@@ -95,7 +95,7 @@ function Menu() {
     pointerEvents: pathname === "/pourvous" ? "auto" : isBarred ? "none" : "auto", // Gère les clics
   }}
 >
-  Pour Vous
+  POUR VOUS
 </Link>
 
 
@@ -107,7 +107,7 @@ function Menu() {
         }}
         href="#galerie"
       >
-        Galerie
+        GALERIE
       </a>
 
 {/* Demarrer mon projet*/}
@@ -118,7 +118,7 @@ function Menu() {
         }}
         href="#demarrerprojet"
       >
-        Démarrer mon projet
+        DEMARRER MON PROJET
       </a>
 
       {/* Le Club Cheyssoi */}
@@ -129,7 +129,7 @@ function Menu() {
           pointerEvents: pathname === "/clubcheyssoi" ? "auto" : isBarred ? "none" : "auto",
         }}
       >
-        Le Club Cheyssoi
+        LE CLUB CHEYSSOI
       </Link>
 
       <Link
@@ -139,9 +139,11 @@ function Menu() {
     pointerEvents: pathname === "/ebook" ? "auto" : isBarred ? "none" : "auto",
   }}
 >
-  Notre Ebook
+  NOTRE EBOOK
 </Link>
 
     </div>
   );
 }
+
+

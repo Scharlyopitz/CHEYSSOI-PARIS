@@ -1,0 +1,55 @@
+.politique-page {
+  font-family: Arial, sans-serif;
+  margin: 1.5rem;
+  color: #333;
+  line-height: 1.8;
+}
+
+.politique-header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.politique-header h1 {
+  font-family: "Cormorant SC", serif;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #333;
+  text-transform: uppercase;
+  
+}
+
+.politique-header p {
+  margin-bottom: 2rem;
+  font-size: 1rem;
+  color: #666;
+}
+
+.politique-content {
+  font-size: 1rem;
+  text-align: justify;
+}
+
+.politique-content strong {
+  font-weight: bold;
+}
+.politique-container {
+  margin: 0 auto; /* Centre le contenu horizontalement */
+  padding: 0 0.01%; /* Ajoute un espace de 5% à gauche et à droite */
+  max-width: 1200px; /* Limite la largeur maximale pour les grands écrans */
+  box-sizing: border-box; /* Assure que le padding est inclus dans la largeur totale */
+}
+
+.politique-container h1 {
+  text-align: center; /* Centre le titre */
+  margin-bottom: 1rem; /* Espacement sous le titre */
+}
+
+.politique-container h2 {
+  margin-top: 1rem; /* Ajoute un espace au-dessus des titres secondaires */
+}
+
+.politique-container p {
+  text-align: justify; /* Justifie le texte */
+  margin-bottom: 1.5rem; /* Ajoute un espace entre les paragraphes */
+}

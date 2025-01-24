@@ -50,39 +50,28 @@ html.lenis body {
 /* Titre principal */
 .histoire-title {
   font-family: "Cormorant Garamond", serif;
-  font-size:3rem;
+  font-size:2.5rem;
   text-transform: uppercase;
   text-align: center;
   margin: 1rem 0;
   color: #ffffff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-}
-
-.histoire-subtitle {
-  font-family: 'Cormorant sc', serif;
-  font-size:0.5rem;
-  text-transform: uppercase;
-  text-align: center;
-  margin: 1rem 0;
-  color: #ffffff;
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.6);
-
   
 }
 
 
 
 
+
 /* Contenu texte */
 .histoire-content {
-  color: #1a1a1a;
+  color: #333;
   background: #ffffff ;
   font-family: Arial, sans-serif;
   padding: 1rem;
   max-width: 1200px; /* Largeur maximale légèrement augmentée */
   margin: 0 auto; /* Centrage horizontal */
   padding: 0.1rem; /* Réduction de l'espacement interne */
-  font-size: 0.1rem;
+  font-size:11px;
 }
 
 /* Texte avec image */
@@ -112,11 +101,11 @@ html.lenis body {
 .histoire-text-right,
 .histoire-text-left {
   font-size: 30px;
-  color: #1a1a1a;
+  color: #333;
   background: #ffffff ;
   width: 50%; /* Texte occupe la moitié */
   font-family: Arial, sans-serif;
-  font-size: 0rem;
+  font-size: 11px;
   line-height: 1.7;
   text-align: justify;
 }
@@ -165,6 +154,7 @@ html.lenis body {
 
 .histoire-page {
   font-family: Arial, sans-serif; /* Texte par défaut en Arial */
+  font-size:11px;
 }
 
 .histoire-page h1, 

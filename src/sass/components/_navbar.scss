@@ -11,7 +11,7 @@ nav {
   height: 100px;
 
   a {
-    color: $White;
+    color: $Black;
 
     .line-through {
       position: absolute;
@@ -56,7 +56,7 @@ nav {
     display: flex;
     gap: 5vw;
     text-transform: capitalize;
-    font-size: 14px;
+    font-size: 10px;
     font-weight: 300;
 
     a {

@@ -13,6 +13,15 @@ import Team from "./pages/Team";
 import PourVous from "./pages/PourVous"; 
 
 import EbookPage from "./pages/EbookPage";
+import ConditionsGenerales from "./pages/ConditionsGenerales";
+
+import MentionsLegales from "./pages/MentionsLegales";
+import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
+
+// Dans vos routes :
+
+
+
 
 
 function App() {
@@ -95,12 +104,15 @@ function App() {
           <Route path="/team-section" element={<Team />} /> {/* Nouvelle route */}
           <Route path="/pourvous" element={<PourVous />} />
           <Route path="/ebook" element={<EbookPage />} />
-          
+          <Route path="/conditions-generales" element={<ConditionsGenerales />} />
+          <Route path="/mentions-legales" element={<MentionsLegales />} />
+          <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
+
         </Routes>
       </AnimatePresence>
       {loader && <Loader setLoader={setLoader} />}
     </>
-  );
+  )
 }
 
 export default App;
