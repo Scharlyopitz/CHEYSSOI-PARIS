@@ -60,22 +60,37 @@ export default function Home({ loader }) {
       {/* Section Formules */}
       <Formules />
 
-      <div className="video-fullscreen-container">
-  <video
-    className="video-fullscreen"
-    src="/video-derniere-page.mp4" // Remplacez par le nouveau nom
-    autoPlay
-    muted
-    loop
-    playsInline
-  />
-</div>
-
-
 
 
       {/* Section Démarrer Mon Projet */}
       <DemarrerProjet />
+      
+      <div className="video-fullscreen-container">
+  <video
+    className="video-fullscreen"
+    src="/videodernierepage.mp4" // Remplacez par le nouveau nom
+    autoPlay
+  loop
+  muted
+  playsInline
+    
+    
+  />
+</div>
+
+<button
+  className="video-button"
+  onClick={() => {
+    document.getElementById("demarrerprojet").scrollIntoView({
+      behavior: "smooth",
+    });
+  }}
+>
+  DÉMARRER MON PROJET
+</button>
+
+
+
 
       <div class="links-container">
 
