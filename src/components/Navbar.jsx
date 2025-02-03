@@ -1,8 +1,26 @@
-import { Link, useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import LogoCheyssoi from "/2.png";
 import { motion as m } from "framer-motion";
 
 export default function Navbar() {
+  const location = useLocation();
+  
+  // Liste des pages où la navbar doit être cachée
+  const hideNavbar = [
+    "/histoire", 
+    "/notre-engagement", 
+    "/team-section", 
+    "/clubcheyssoi",
+    "/conditions-generales", 
+    "/mentions-legales", 
+    "/politique-confidentialite",
+    "/ebook"
+  ];
+
+  if (hideNavbar.includes(location.pathname)) {
+    return null; // Ne rien afficher sur ces pages
+  }
+
   const revealNav = {
     initial: {
       transform: "translate(-50%,-105%) ",
@@ -35,115 +53,46 @@ function Logo() {
   );
 }
 
-
-
-
 function Menu() {
   const { pathname } = useLocation();
-  const navigate = useNavigate()
-
-  const isBarred =
-  pathname === "/clubcheyssoi" ||
-  pathname === "/histoire" ||
-  pathname === "/notre-engagement" ||
-  pathname === "/equipe";
-
-
-
 
   return (
     <div className="menu">
-
-      {/* Notre histoire */}
-      <Link
-        to="/histoire"
-        style={{
-          textDecoration: pathname === "/histoire" ? "none" : isBarred ? "line-through" : "none",
-          pointerEvents: pathname === "/histoire" ? "auto" : isBarred ? "none" : "auto",
-        }}
-      >
+      {/* Notre Histoire */}
+      <Link to="/histoire" style={{ textDecoration: pathname === "/histoire" ? "none" : "none" }}>
         NOTRE HISTOIRE
       </Link>
 
       {/* Notre Engagement */}
-      <Link
-        to="/notre-engagement"
-        style={{
-          textDecoration: pathname === "/notre-engagement" ? "none" : isBarred ? "line-through" : "none",
-          pointerEvents: pathname === "/notre-engagement" ? "auto" : isBarred ? "none" : "auto",
-        }}
-      >
+      <Link to="/notre-engagement" style={{ textDecoration: pathname === "/notre-engagement" ? "none" : "none" }}>
         NOTRE ENGAGEMENT
       </Link>
 
-      {/* Equipe */}
-<Link
-        to="/team-section"
-        style={{
-          textDecoration: pathname === "/team-section" ? "none" : isBarred ? "line-through" : "none",
-          pointerEvents: pathname === "/team-section" ? "auto" : isBarred ? "none" : "auto",
-        }}
-      >
+      {/* Équipe */}
+      <Link to="/team-section" style={{ textDecoration: pathname === "/team-section" ? "none" : "none" }}>
         EQUIPE
       </Link>
 
+      {/* Pour Vous */}
+      <Link to="/pourvous" style={{ textDecoration: pathname === "/pourvous" ? "none" : "none" }}>
+        POUR VOUS
+      </Link>
 
-      <Link
-  to="/pourvous"
-  style={{
-    textDecoration: pathname === "/pourvous" ? "none" : isBarred ? "line-through" : "none", // Barre si désactivé
-    pointerEvents: pathname === "/pourvous" ? "auto" : isBarred ? "none" : "auto", // Gère les clics
-  }}
->
-  POUR VOUS
-</Link>
+      {/* Galerie (resté inchangé) */}
+      <a href="#galerie">GALERIE</a>
 
-
-{/* Galerie */}
-<a
-        style={{
-          pointerEvents: isBarred ? "none" : "auto",
-          textDecoration: isBarred ? "line-through" : "none",
-        }}
-        href="#galerie"
-      >
-        GALERIE
-      </a>
-
-{/* Demarrer mon projet*/}
-<a
-        style={{
-          pointerEvents: isBarred ? "none" : "auto",
-          textDecoration: isBarred ? "line-through" : "none",
-        }}
-        href="#demarrerprojet"
-      >
-        DEMARRER MON PROJET
-      </a>
+      {/* Démarrer mon projet (resté inchangé) */}
+      <a href="#demarrerprojet">DEMARRER MON PROJET</a>
 
       {/* Le Club Cheyssoi */}
-      <Link
-        to="/clubcheyssoi"
-        style={{
-          textDecoration: pathname === "/clubcheyssoi" ? "none" : isBarred ? "line-through" : "none",
-          pointerEvents: pathname === "/clubcheyssoi" ? "auto" : isBarred ? "none" : "auto",
-        }}
-      >
+      <Link to="/clubcheyssoi" style={{ textDecoration: pathname === "/clubcheyssoi" ? "none" : "none" }}>
         LE CLUB CHEYSSOI
       </Link>
 
-      <Link
-  to="/ebook"
-  style={{
-    textDecoration: pathname === "/ebook" ? "none" : isBarred ? "line-through" : "none",
-    pointerEvents: pathname === "/ebook" ? "auto" : isBarred ? "none" : "auto",
-  }}
->
-  NOTRE EBOOK
-</Link>
-
+      {/* Ebook */}
+      <Link to="/ebook" style={{ textDecoration: pathname === "/ebook" ? "none" : "none" }}>
+        NOTRE EBOOK
+      </Link>
     </div>
   );
 }
-
-

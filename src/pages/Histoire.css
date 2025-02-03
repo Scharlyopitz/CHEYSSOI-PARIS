@@ -100,8 +100,8 @@ html.lenis body {
 /* Texte */
 .histoire-text-right,
 .histoire-text-left {
-  font-size: 30px;
-  color: #333;
+  font-size: 24px;
+  color: #000000;
   background: #ffffff ;
   width: 50%; /* Texte occupe la moitié */
   font-family: Arial, sans-serif;

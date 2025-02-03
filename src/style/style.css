@@ -38,7 +38,7 @@ html {
 }
 
 body {
-  color: #1a1a1a;
+  color: #000000;
   background: #ffffff ;
 }
 body,
@@ -225,7 +225,7 @@ a {
 }
 
 footer {
-  color: #191a19;
+  color: #000000;
   background: #e4e1dc;
   display: flex;
   flex-direction: row;
@@ -483,7 +483,7 @@ nav .menu a:hover::after {
      object-position: center;
 }
 #Projet .image .filter {
-  background: linear-gradient(0deg, #191a19 0%, rgba(0, 0, 0, 0) 50%);
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 50%);
   position: absolute;
   top: 0;
   left: 0;
@@ -703,7 +703,7 @@ nav .menu a:hover::after {
   font-weight: 300;
 }
 #demarrerprojet .content .formulaire button .container svg {
-  color: #191a19;
+  color: #000000;
 }
 #demarrerprojet .content .formulaire button .container:hover {
   cursor: pointer;
@@ -1027,7 +1027,7 @@ nav .menu a:hover::after {
   display: inline-block;
   padding: 10px 20px;
   
-  color: #161515;
+  color: #000000;
   text-decoration: none;
   font-size: 16px;
   border-radius: 5px;
@@ -1042,7 +1042,7 @@ nav .menu a:hover::after {
 .témoignages-link {
   display: inline-block; /* Affichage en ligne tout en respectant le bloc */
   padding: 30px 20px; /* Espacement interne pour le bouton */
-  color: #161515; /* Couleur du texte */
+  color: #000000; /* Couleur du texte */
   text-decoration: none; /* Supprime le soulignement */
   font-size: 16px; /* Taille de police */
   border-radius: 5px; /* Coins arrondis */
