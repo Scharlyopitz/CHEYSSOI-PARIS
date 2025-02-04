@@ -150,28 +150,35 @@ a {
 }
 
 #BigTitle {
-  position: relative;
-  color: #f6f6f6;
-}
-#BigTitle .hidden {
-  overflow: hidden;
-}
-#BigTitle .titleContainer {
+  position: absolute; /* Plutôt que relative pour s'assurer qu'il suit la vidéo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Prend toute la hauteur */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #080808; /* Vérifie que la couleur est bien visible */
+  z-index: 99999; /* Assure-toi qu'il est au-dessus de la vidéo */
   pointer-events: none;
+}
+
+#BigTitle .titleContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: absolute;
-  z-index: 99997;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Cormorant Garamond", serif;
   text-transform: uppercase;
-  pointer-events: none;
   gap: 0;
   white-space: nowrap;
+  z-index: 99999; /* S'assurer qu'il est bien au-dessus */
 }
+
 #BigTitle .titleContainer h1 {
   line-height: 80px;
   font-weight: 300;
@@ -179,13 +186,17 @@ a {
   letter-spacing: 1vw;
   white-space: nowrap;
   will-change: transform;
+  color: rgb(0, 0, 0); /* Assure-toi qu'il est visible sur la vidéo */
 }
+
 #BigTitle .titleContainer span {
   display: block;
   letter-spacing: 0.4vw;
   font-size: 25px;
   font-weight: 500;
+  color: rgb(0, 0, 0); /* Idem */
 }
+
 
 .Button {
   overflow: hidden;
@@ -326,7 +337,7 @@ nav {
   height: 100px;
 }
 nav a {
-  color: #f6f6f6;
+  color: #000000;
 }
 nav a .line-through {
   position: absolute;
@@ -1090,4 +1101,32 @@ nav .menu a:hover::after {
   background: none;
   border: none;
   font-family: "Cormorant SC", serif;
+}
+
+
+.video-background-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.video-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Assurez-vous que la vidéo est en arrière-plan */
+}
+
+.big-title-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* S'assure que le texte est au-dessus de la vidéo */
+  color: rgb(13, 12, 12); /* Assurez-vous que le texte est visible */
+  text-align: center;
+  font-size: 1rem;
 }

@@ -3,7 +3,6 @@ import { useEffect, useState, useRef } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image1 from "/PREZ.webp";
 import GotoTopButton from "../components/GotoTopButton";
 import ProgressBar from "../components/ProgressBar";
 import Projet from "./Projet";
@@ -14,6 +13,8 @@ import Footer from "../components/Footer";
 import Formules from "../sections/Formules";
 import Galerie from "../sections/Galerie";
 import DemarrerProjet from "../sections/DemarrerProjet";
+
+import VideoPrez from "/VIDEOPREZ.mp4"; // Ajout de la vidéo
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -39,7 +40,6 @@ export default function Home({ loader }) {
   }, []);
 
   useEffect(() => {
-    // Transition de la vidéo après le formulaire
     gsap.to(videoContainerRef.current, {
       scrollTrigger: {
         trigger: formRef.current,
@@ -52,26 +52,36 @@ export default function Home({ loader }) {
       y: 0,
     });
 
-    // Transition des liens après la vidéo
     gsap.to(linksContainerRef.current, {
       scrollTrigger: {
-        trigger: videoContainerRef.current,
-        start: "bottom center",
-        end: "+=100%",
+        trigger: formRef.current,
+        start: "bottom bottom",
+        end: "bottom top",
         scrub: true,
-        pin: true,
+        pin: false,
       },
       opacity: 1,
       y: 0,
     });
-
   }, []);
+
+  const handleVideoButtonClick = () => {
+    const formElement = document.getElementById("demarrerprojet");
+    if (formElement) {
+      formElement.scrollIntoView({ behavior: "smooth" });
+      setTimeout(() => {
+        formElement.querySelector("input, select, textarea").focus();
+      }, 500);
+    }
+  };
 
   return (
     <main id="Home">
       <ProgressBar />
       <GotoTopButton />
-      <BackgroundImage image={Image1} />
+      <div className="video-background-container">
+        <video className="video-background" src={VideoPrez} autoPlay loop muted playsInline style={{ width: "100%", height: "100vh", objectFit: "cover" }} />
+      </div>
       <BigTitle loader={loader} text="Cheyssoi Paris" undertitle="Designers d’intérieurs éthiques" />
 
       <Galerie setProjectName={setProjectName} />
@@ -82,35 +92,32 @@ export default function Home({ loader }) {
 
       <Formules />
       
-      {/* Formulaire interactif */}
-      <div ref={formRef} id="demarrerprojet" style={{ position: "relative", zIndex: 5 }}>
+      <div ref={formRef} id="demarrerprojet" style={{ position: "relative", zIndex: 5, pointerEvents: "auto" }}>
         <DemarrerProjet />
       </div>
 
-      {/* Section vidéo après le formulaire */}
       <motion.div
         ref={videoContainerRef}
         className="video-fullscreen-container"
-        style={{ opacity: 0, position: "fixed", top: 0, left: 0, width: "100%", height: "100vh", zIndex: 10 }}
+        style={{ opacity: 0, position: "fixed", top: 0, left: 0, width: "100%", height: "100vh", zIndex: 10, pointerEvents: "none" }}
       >
         <video className="video-fullscreen" src="/videodernierepage.mp4" autoPlay loop muted playsInline style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-        <button className="video-button" onClick={() => document.getElementById("demarrerprojet").scrollIntoView({ behavior: "smooth" })}>
+        <button className="video-button" onClick={handleVideoButtonClick}>
           DÉMARRER MON PROJET
         </button>
       </motion.div>
 
-      {/* Section des liens après la vidéo */}
-      <motion.div ref={linksContainerRef} className="links-container" style={{ opacity: 0, position: "relative", zIndex: 6 }}>
+      <motion.div ref={linksContainerRef} className="links-container" style={{ position: "relative", zIndex: 10000, opacity: 1, marginTop: "50px" }}>
         <div className="témoignage-link-container">
-          <Link to="/témoignages-clients" className="témoignages-link">TEMOIGNAGES CLIENTS</Link>
+          <Link to="/témoignages-clients">TEMOIGNAGES CLIENTS</Link>
         </div>
         <div className="conditions-link-container">
-          <Link to="/conditions-generales" className="conditions-link">CONDITIONS GENERALES DE VENTE</Link>
+          <Link to="/conditions-generales">CONDITIONS GENERALES DE VENTE</Link>
         </div>
-        <Link to="/mentions-legales" className="footer-link">MENTIONS LEGALES</Link>
-        <Link to="/politique-confidentialite" className="footer-link">POLITIQUE DE CONFIDENTIALITE</Link>
-        <Link to="/newletters" className="footer-link">S'INSCRIRE A LA NEWSLETTER</Link>
-        <Link to="/contact" className="footer-link">CONTACT</Link>
+        <Link to="/mentions-legales">MENTIONS LEGALES</Link>
+        <Link to="/politique-confidentialite">POLITIQUE DE CONFIDENTIALITE</Link>
+        <Link to="/newletters">S'INSCRIRE A LA NEWSLETTER</Link>
+        <Link to="/contact">CONTACT</Link>
       </motion.div>
 
       <Footer />
