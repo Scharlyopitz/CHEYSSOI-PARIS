@@ -17,8 +17,8 @@ import ConditionsGenerales from "./pages/ConditionsGenerales";
 
 import MentionsLegales from "./pages/MentionsLegales";
 import PolitiqueConfidentialite from "./pages/PolitiqueConfidentialite";
-
-// Dans vos routes :
+import Contact from "./pages/Contact";
+// Dans vos routes :s
 
 
 
@@ -107,7 +107,7 @@ function App() {
           <Route path="/conditions-generales" element={<ConditionsGenerales />} />
           <Route path="/mentions-legales" element={<MentionsLegales />} />
           <Route path="/politique-confidentialite" element={<PolitiqueConfidentialite />} />
-
+          <Route path="/contact" element={<Contact />} />
         </Routes>
       </AnimatePresence>
       {loader && <Loader setLoader={setLoader} />}

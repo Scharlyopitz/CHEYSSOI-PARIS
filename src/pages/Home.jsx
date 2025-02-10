@@ -14,7 +14,7 @@ import Formules from "../sections/Formules";
 import Galerie from "../sections/Galerie";
 import DemarrerProjet from "../sections/DemarrerProjet";
 
-import VideoPrez from "/VIDEOPREZ.mp4"; // Ajout de la vidéo
+import VideoPrez from "/VIDEOPREZ.mp4";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -22,6 +22,7 @@ export default function Home({ loader }) {
   const [projectName, setProjectName] = useState("");
   const formRef = useRef(null);
   const videoContainerRef = useRef(null);
+  const postsContainerRef = useRef(null);
   const linksContainerRef = useRef(null);
 
   useEffect(() => {
@@ -40,38 +41,56 @@ export default function Home({ loader }) {
   }, []);
 
   useEffect(() => {
-    gsap.to(videoContainerRef.current, {
-      scrollTrigger: {
-        trigger: formRef.current,
-        start: "bottom center",
-        end: "+=100%",
-        scrub: true,
-        pin: true,
-      },
-      opacity: 1,
-      y: 0,
-    });
+    if (videoContainerRef.current && formRef.current) {
+      gsap.to(videoContainerRef.current, {
+        scrollTrigger: {
+          trigger: formRef.current,
+          start: "bottom center",
+          end: "bottom top",
+          scrub: true,
+          pin: true,
+          onEnter: () => {
+            if (videoContainerRef.current) {
+              videoContainerRef.current.style.pointerEvents = "auto";
+            }
+          },
+          onLeaveBack: () => {
+            if (videoContainerRef.current) {
+              videoContainerRef.current.style.pointerEvents = "none";
+            }
+          },
+        },
+        opacity: 1,
+        y: 0,
+      });
+    }
+  }, []);
 
-    gsap.to(linksContainerRef.current, {
-      scrollTrigger: {
-        trigger: formRef.current,
-        start: "bottom bottom",
-        end: "bottom top",
-        scrub: true,
-        pin: false,
-      },
-      opacity: 1,
-      y: 0,
-    });
+  useEffect(() => {
+    if (postsContainerRef.current) {
+      let sections = gsap.utils.toArray(".post-item");
+
+      gsap.to(sections, {
+        yPercent: -100 * (sections.length - 1),
+        ease: "none",
+        scrollTrigger: {
+          trigger: postsContainerRef.current,
+          start: "top top",
+          end: `+=${window.innerHeight * 0.5}`,
+          scrub: true,
+          pin: true,
+          snap: 1 / (sections.length - 1),
+        },
+      });
+    }
   }, []);
 
   const handleVideoButtonClick = () => {
-    const formElement = document.getElementById("demarrerprojet");
-    if (formElement) {
-      formElement.scrollIntoView({ behavior: "smooth" });
-      setTimeout(() => {
-        formElement.querySelector("input, select, textarea").focus();
-      }, 500);
+    const demarrerProjetSection = document.getElementById("demarrerprojet");
+    if (demarrerProjetSection) {
+      demarrerProjetSection.scrollIntoView({ behavior: "smooth" });
+    } else {
+      console.log("Section 'DÉMARRER MON PROJET' introuvable !");
     }
   };
 
@@ -91,7 +110,7 @@ export default function Home({ loader }) {
       </AnimatePresence>
 
       <Formules />
-      
+
       <div ref={formRef} id="demarrerprojet" style={{ position: "relative", zIndex: 5, pointerEvents: "auto" }}>
         <DemarrerProjet />
       </div>
@@ -101,13 +120,39 @@ export default function Home({ loader }) {
         className="video-fullscreen-container"
         style={{ opacity: 0, position: "fixed", top: 0, left: 0, width: "100%", height: "100vh", zIndex: 10, pointerEvents: "none" }}
       >
+        <nav className="video-nav" style={{ position: "absolute", top: 0, width: "100%", display: "flex", justifyContent: "space-around", padding: "20px", backgroundColor: "transparent" }}>
+          <Link to="/histoire">NOTRE HISTOIRE</Link>
+          <Link to="/notre-engagement">NOTRE ENGAGEMENT</Link>
+          <Link to="/team-section">EQUIPE</Link>
+          <Link to="/pourvous">POUR VOUS</Link>
+          
+          <Link to="/clubcheyssoi">LE CLUB CHEYSSOI</Link>
+          <Link to="/ebook">NOTRE EBOOK</Link>
+        </nav>
         <video className="video-fullscreen" src="/videodernierepage.mp4" autoPlay loop muted playsInline style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-        <button className="video-button" onClick={handleVideoButtonClick}>
+        <button className="video-button" onClick={handleVideoButtonClick} style={{ pointerEvents: "auto" }}>
           DÉMARRER MON PROJET
         </button>
       </motion.div>
 
-      <motion.div ref={linksContainerRef} className="links-container" style={{ position: "relative", zIndex: 10000, opacity: 1, marginTop: "50px" }}>
+      <div ref={postsContainerRef} id="posts-container" className="scroll-posts-container">
+        {[...Array(3)].map((_, index) => (
+          <div key={index} className="post-item">
+            <h2>Section {index + 1}</h2>
+          </div>
+        ))}
+      </div>
+
+      <motion.div ref={linksContainerRef} className="links-container" style={{ position: "relative", zIndex: 10000, opacity: 1, marginTop: "50px",  pointerEvents: "auto"}}> <nav className="video-nav" style={{ position: "absolute", top: 0, width: "100%", display: "flex", justifyContent: "space-around", padding: "20px", backgroundColor: "rgba(255, 255, 255, 0.5)" }}>
+          <Link to="/histoire">NOTRE HISTOIRE</Link>
+          <Link to="/notre-engagement">NOTRE ENGAGEMENT</Link>
+          <Link to="/team-section">EQUIPE</Link>
+          <Link to="/pourvous">POUR VOUS</Link>
+          
+          <Link to="/clubcheyssoi">LE CLUB CHEYSSOI</Link>
+          <Link to="/ebook">NOTRE EBOOK</Link>
+        </nav>
+        
         <div className="témoignage-link-container">
           <Link to="/témoignages-clients">TEMOIGNAGES CLIENTS</Link>
         </div>
@@ -118,10 +163,13 @@ export default function Home({ loader }) {
         <Link to="/politique-confidentialite">POLITIQUE DE CONFIDENTIALITE</Link>
         <Link to="/newletters">S'INSCRIRE A LA NEWSLETTER</Link>
         <Link to="/contact">CONTACT</Link>
+        
+        
+        
       </motion.div>
 
       <Footer />
       <PageTransition loader={loader} />
     </main>
   );
-}
+} 

@@ -14,7 +14,9 @@ export default function Navbar() {
     "/conditions-generales", 
     "/mentions-legales", 
     "/politique-confidentialite",
-    "/ebook"
+    "/ebook",
+    "/pourvous",
+    "/contact"
   ];
 
   if (hideNavbar.includes(location.pathname)) {
@@ -88,6 +90,8 @@ function Menu() {
       <Link to="/clubcheyssoi" style={{ textDecoration: pathname === "/clubcheyssoi" ? "none" : "none" }}>
         LE CLUB CHEYSSOI
       </Link>
+
+      
 
       {/* Ebook */}
       <Link to="/ebook" style={{ textDecoration: pathname === "/ebook" ? "none" : "none" }}>
