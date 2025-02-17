@@ -5,23 +5,7 @@ import { motion as m } from "framer-motion";
 export default function Navbar() {
   const location = useLocation();
   
-  // Liste des pages où la navbar doit être cachée
-  const hideNavbar = [
-    "/histoire", 
-    "/notre-engagement", 
-    "/team-section", 
-    "/clubcheyssoi",
-    "/conditions-generales", 
-    "/mentions-legales", 
-    "/politique-confidentialite",
-    "/ebook",
-    "/pourvous",
-    "/contact"
-  ];
-
-  if (hideNavbar.includes(location.pathname)) {
-    return null; // Ne rien afficher sur ces pages
-  }
+  
 
   const revealNav = {
     initial: {
@@ -92,7 +76,6 @@ function Menu() {
       </Link>
 
       
-
       {/* Ebook */}
       <Link to="/ebook" style={{ textDecoration: pathname === "/ebook" ? "none" : "none" }}>
         NOTRE EBOOK

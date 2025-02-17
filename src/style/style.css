@@ -658,7 +658,7 @@ nav .menu a:hover::after {
 
 #demarrerprojet {
   display: flex;
-  padding: 100px 2vw;
+  padding: 10px 2vw;
 }
 #demarrerprojet .content {
   max-width: 1440px;
@@ -667,11 +667,15 @@ nav .menu a:hover::after {
 }
 #demarrerprojet .content .titleContainer {
   justify-content: center;
-}
+ 
+  
+  }
+  
+
 #demarrerprojet .content .formulaire {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 1px;
 }
 #demarrerprojet .content .formulaire .message {
   padding: 10px 0 10px 5px;
@@ -680,7 +684,7 @@ nav .menu a:hover::after {
 }
 #demarrerprojet .content .formulaire label {
   padding-left: 5px;
-  font-size: 12px;
+  font-size: 11px;
 }
 #demarrerprojet .content .formulaire label a {
   text-decoration: underline;
@@ -694,7 +698,7 @@ nav .menu a:hover::after {
   border-bottom: 2px solid #d0d0d0;
   outline: none;
   resize: none;
-  font-size: 15px;
+  font-size: 10px;
   padding: 5px;
   transition: 0.2s;
 }
@@ -720,7 +724,7 @@ nav .menu a:hover::after {
   flex-direction: column;
 }
 #demarrerprojet .content .formulaire button {
-  margin: 50px auto 0;
+  margin: 10px auto 0;
   background: transparent;
   border: none;
   overflow: hidden;
@@ -734,7 +738,7 @@ nav .menu a:hover::after {
   will-change: transform;
 }
 #demarrerprojet .content .formulaire button .container p {
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 300;
 }
 #demarrerprojet .content .formulaire button .container svg {
@@ -753,6 +757,8 @@ nav .menu a:hover::after {
 }
 #ebook .titleContainer {
   justify-content: center;
+  margin-top: 100px; /* Ajuste cette valeur si nécessaire */
+  text-align: center;
 }
 #ebook .container {
   max-width: 1440px;
@@ -1217,4 +1223,49 @@ nav .menu a:hover::after {
   height: 100%;
   object-fit: cover;
 }
+
+.footer-links {
+  position: absolute;
+  bottom: 50px; /* Toujours bien en bas */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%; /* Largeur optimisée */
+  text-align: center;
+  flex-wrap: nowrap; /* Empêche le retour à la ligne */
+}
+.footer-links a {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease-in-out;
+}
+
+
+.video-button {
+  position: absolute;
+  bottom: 50px; /* Ajuste pour être visible */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  z-index: 5; /* Assure qu'il passe au-dessus de la vidéo */
+  opacity: 1;
+  transition: background 0.3s ease-in-out;
+}
+
+
+.engagement-header {
+  margin-top: 100px; /* Ajuste cette valeur si nécessaire */
+  text-align: center; /* Pour centrer le titre */
+}
+
 

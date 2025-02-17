@@ -168,9 +168,3 @@ function Column({ loaderImages, staggerColumn, imageReveal }) {
   );
 }
 
-// Ajoute ceci dans ton CSS pour que la vidéo et les images aient la même taille :
-// .mediaElement {
-//   width: 100%;
-//   height: 100%;
-//   object-fit: cover;
-// }

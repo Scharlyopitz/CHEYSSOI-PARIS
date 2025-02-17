@@ -1,175 +1,171 @@
+import { useEffect, useRef, useState } from "react";
 import { Link } from "react-router-dom";
-import { useEffect, useState, useRef } from "react";
-import { AnimatePresence, motion } from "framer-motion";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import GotoTopButton from "../components/GotoTopButton";
-import ProgressBar from "../components/ProgressBar";
-import Projet from "./Projet";
-import BackgroundImage from "../components/BackgroundImage";
-import BigTitle from "../components/BigTitle";
-import PageTransition from "../components/PageTransition";
-import Footer from "../components/Footer";
-import Formules from "../sections/Formules";
 import Galerie from "../sections/Galerie";
+import BigTitle from "../components/BigTitle";
+import Projet from "./Projet";
+import Formules from "../sections/Formules";
 import DemarrerProjet from "../sections/DemarrerProjet";
+import Footer from "../components/Footer";
 
-import VideoPrez from "/VIDEOPREZ.mp4";
-
-gsap.registerPlugin(ScrollTrigger);
-
-export default function Home({ loader }) {
-  const [projectName, setProjectName] = useState("");
-  const formRef = useRef(null);
-  const videoContainerRef = useRef(null);
-  const postsContainerRef = useRef(null);
-  const linksContainerRef = useRef(null);
+export default function Home() {
+  const sections = ["video", "gallery", "formules", "demarrerProjet", "videoFinale", "footerSection"];
+  const sectionRefs = useRef([]);
+  const [currentSection, setCurrentSection] = useState(0);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const isScrolling = useRef(false);
 
   useEffect(() => {
-    if (projectName) {
-      document.body.style.overflow = "hidden";
-      document.body.setAttribute("data-lenis-prevent", "true");
-    } else {
-      document.body.style.overflow = "auto";
-      document.body.removeAttribute("data-lenis-prevent");
-    }
-  }, [projectName]);
+    const handleScroll = (event) => {
+      if (isScrolling.current) return;
+      event.preventDefault();
+      isScrolling.current = true;
+
+      if (event.deltaY > 0 && currentSection < sections.length - 1) {
+        setCurrentSection((prev) => prev + 1);
+      } else if (event.deltaY < 0 && currentSection > 0) {
+        setCurrentSection((prev) => prev - 1);
+      }
+
+      setTimeout(() => {
+        isScrolling.current = false;
+      }, 800);
+    };
+
+    window.addEventListener("wheel", handleScroll, { passive: false });
+    return () => {
+      window.removeEventListener("wheel", handleScroll);
+    };
+  }, [currentSection]);
 
   useEffect(() => {
-    window.scrollTo({ top: 0, behavior: "instant" });
-    window.history.replaceState({}, "", "/");
-  }, []);
-
-  useEffect(() => {
-    if (videoContainerRef.current && formRef.current) {
-      gsap.to(videoContainerRef.current, {
-        scrollTrigger: {
-          trigger: formRef.current,
-          start: "bottom center",
-          end: "bottom top",
-          scrub: true,
-          pin: true,
-          onEnter: () => {
-            if (videoContainerRef.current) {
-              videoContainerRef.current.style.pointerEvents = "auto";
-            }
-          },
-          onLeaveBack: () => {
-            if (videoContainerRef.current) {
-              videoContainerRef.current.style.pointerEvents = "none";
-            }
-          },
-        },
-        opacity: 1,
-        y: 0,
-      });
-    }
-  }, []);
-
-  useEffect(() => {
-    if (postsContainerRef.current) {
-      let sections = gsap.utils.toArray(".post-item");
-
-      gsap.to(sections, {
-        yPercent: -100 * (sections.length - 1),
-        ease: "none",
-        scrollTrigger: {
-          trigger: postsContainerRef.current,
-          start: "top top",
-          end: `+=${window.innerHeight * 0.5}`,
-          scrub: true,
-          pin: true,
-          snap: 1 / (sections.length - 1),
-        },
-      });
-    }
-  }, []);
-
-  const handleVideoButtonClick = () => {
-    const demarrerProjetSection = document.getElementById("demarrerprojet");
-    if (demarrerProjetSection) {
-      demarrerProjetSection.scrollIntoView({ behavior: "smooth" });
-    } else {
-      console.log("Section 'DÉMARRER MON PROJET' introuvable !");
-    }
-  };
+    console.log("Current Section:", currentSection);
+    sectionRefs.current.forEach((ref, index) => {
+      if (ref) {
+        ref.style.zIndex = index === currentSection ? "3" : "1";
+        ref.style.opacity = index === currentSection ? "1" : "0";
+        ref.style.pointerEvents = index === currentSection ? "auto" : "none";
+      }
+    });
+  }, [currentSection]);
 
   return (
-    <main id="Home">
-      <ProgressBar />
-      <GotoTopButton />
-      <div className="video-background-container">
-        <video className="video-background" src={VideoPrez} autoPlay loop muted playsInline style={{ width: "100%", height: "100vh", objectFit: "cover" }} />
-      </div>
-      <BigTitle loader={loader} text="Cheyssoi Paris" undertitle="Designers d’intérieurs éthiques" />
+    
+    <main id="Home" style={{ position: "relative", width: "100%", minHeight: "100vh", overflow: "hidden" }}>
+      
+      {selectedProject ? (
+        <Projet projectName={selectedProject} setProjectName={setSelectedProject} />
+      ) : (
+        <>
+          {/* Section Vidéo */}
+          <section
+            ref={(el) => (sectionRefs.current[0] = el)}
+            className="section fullpage-section"
+            id="videoSection"
+            style={{
+              position: "absolute", top: 0, left: 0, width: "100%", minHeight: "100vh",
+              transition: "opacity 0.8s ease-in-out", opacity: currentSection === 0 ? "1" : "0", zIndex: currentSection === 0 ? 3 : 1,
+            }}
+          >
+            <video
+              className="video-background"
+              src="/VIDEOPREZ.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{ width: "100%", height: "100vh", objectFit: "cover" }}
+            />
+            <BigTitle text="Cheyssoi Paris" undertitle="Designers d’intérieurs éthiques" />
+          </section>
 
-      <Galerie setProjectName={setProjectName} />
+          {/* Section Galerie */}
+          <section
+            ref={(el) => (sectionRefs.current[1] = el)}
+            className="section fullpage-section"
+            id="gallerySection"
+            style={{
+              position: "absolute", top: 0, left: 0, width: "100%", minHeight: "100vh",
+              transition: "opacity 0.8s ease-in-out", opacity: currentSection === 1 ? "1" : "0", zIndex: currentSection === 1 ? 3 : 1,
+            }}
+          >
+            <Galerie setProjectName={setSelectedProject} hideNavbar={true} hideLogo={true} />
+          </section>
 
-      <AnimatePresence>
-        {projectName && <Projet projectName={projectName} setProjectName={setProjectName} />}
-      </AnimatePresence>
+          {/* Section Formules */}
+          <section
+            ref={(el) => (sectionRefs.current[2] = el)}
+            className="section fullpage-section"
+            id="formulesSection"
+            style={{
+              position: "absolute", top: 0, left: 0, width: "100%", minHeight: "100vh",
+              transition: "opacity 0.8s ease-in-out", opacity: currentSection === 2 ? "1" : "0", zIndex: currentSection === 2 ? 3 : 1,
+            }}
+          >
+            <Formules />
+          </section>
 
-      <Formules />
+          {/* Section Démarrer mon projet */}
+          <section
+            ref={(el) => (sectionRefs.current[3] = el)}
+            className="section fullpage-section"
+            id="demarrerProjetSection"
+            style={{
+              position: "absolute", top: 0, left: 0, width: "100%", minHeight: "100vh",
+              transition: "opacity 0.8s ease-in-out", opacity: currentSection === 3 ? "1" : "0", zIndex: currentSection === 3 ? 3 : 1,
+              display: "flex", justifyContent: "center", alignItems: "center", padding: "50px 0", overflowY: "auto"
+            }}
+          >
+            <DemarrerProjet />
+          </section>
 
-      <div ref={formRef} id="demarrerprojet" style={{ position: "relative", zIndex: 5, pointerEvents: "auto" }}>
-        <DemarrerProjet />
-      </div>
+          {/* Section Vidéo Finale */}
+          <section
+            ref={(el) => (sectionRefs.current[4] = el)}
+            className="section fullpage-section"
+            id="videoFinaleSection"
+            style={{
+              position: "absolute", top: 0, left: 0, width: "100%", minHeight: "100vh",
+              transition: "opacity 0.8s ease-in-out", opacity: currentSection === 4 ? "1" : "0", zIndex: currentSection === 4 ? 3 : 1,
+            }}
+          >
+            <video
+              className="video-background"
+              src="/videodernierepage.mp4"
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{ width: "100%", height: "100vh", objectFit: "cover" }}
+            />
+            <button className="video-button" onClick={() => setCurrentSection(3)} style={{ position: "absolute", bottom: "20px", left: "50%", transform: "translateX(-50%)" }}>
+              DÉMARRER MON PROJET
+            </button>
+          </section>
 
-      <motion.div
-        ref={videoContainerRef}
-        className="video-fullscreen-container"
-        style={{ opacity: 0, position: "fixed", top: 0, left: 0, width: "100%", height: "100vh", zIndex: 10, pointerEvents: "none" }}
-      >
-        <nav className="video-nav" style={{ position: "absolute", top: 0, width: "100%", display: "flex", justifyContent: "space-around", padding: "20px", backgroundColor: "transparent" }}>
-          <Link to="/histoire">NOTRE HISTOIRE</Link>
-          <Link to="/notre-engagement">NOTRE ENGAGEMENT</Link>
-          <Link to="/team-section">EQUIPE</Link>
-          <Link to="/pourvous">POUR VOUS</Link>
-          
-          <Link to="/clubcheyssoi">LE CLUB CHEYSSOI</Link>
-          <Link to="/ebook">NOTRE EBOOK</Link>
-        </nav>
-        <video className="video-fullscreen" src="/videodernierepage.mp4" autoPlay loop muted playsInline style={{ width: "100%", height: "100%", objectFit: "cover" }} />
-        <button className="video-button" onClick={handleVideoButtonClick} style={{ pointerEvents: "auto" }}>
-          DÉMARRER MON PROJET
-        </button>
-      </motion.div>
+          {/* Section Footer avec les rubriques du bas */}
+          {/* Section Footer avec les rubriques du bas */}
+<section
+  ref={(el) => (sectionRefs.current[5] = el)}
+  className="section fullpage-section"
+  id="footerSection"
+  style={{
+    position: "absolute", top: 0, left: 0, width: "100%", minHeight: "100vh",
+    transition: "opacity 0.8s ease-in-out", opacity: currentSection === 5 ? "1" : "0", 
+    zIndex: currentSection === 5 ? 3 : 1, display: "flex", justifyContent: "center", alignItems: "center"
+  }}
+>
+  <div className="footer-links">
+    <Link to="/témoignages-clients">TEMOIGNAGES CLIENTS</Link>
+    <Link to="/conditions-generales">CONDITIONS GENERALES DE VENTE</Link>
+    <Link to="/mentions-legales">MENTIONS LEGALES</Link>
+    <Link to="/politique-confidentialite">POLITIQUE DE CONFIDENTIALITE</Link>
+    <Link to="/newletters">S'INSCRIRE A LA NEWSLETTER</Link>
+    <Link to="/contact">CONTACT</Link>
+  </div>
+</section>
 
-      <div ref={postsContainerRef} id="posts-container" className="scroll-posts-container">
-        {[...Array(3)].map((_, index) => (
-          <div key={index} className="post-item">
-            <h2>Section {index + 1}</h2>
-          </div>
-        ))}
-      </div>
-
-      <motion.div ref={linksContainerRef} className="links-container" style={{ position: "relative", zIndex: 10000, opacity: 1, marginTop: "50px",  pointerEvents: "auto"}}> <nav className="video-nav" style={{ position: "absolute", top: 0, width: "100%", display: "flex", justifyContent: "space-around", padding: "20px", backgroundColor: "rgba(255, 255, 255, 0.5)" }}>
-          <Link to="/histoire">NOTRE HISTOIRE</Link>
-          <Link to="/notre-engagement">NOTRE ENGAGEMENT</Link>
-          <Link to="/team-section">EQUIPE</Link>
-          <Link to="/pourvous">POUR VOUS</Link>
-          
-          <Link to="/clubcheyssoi">LE CLUB CHEYSSOI</Link>
-          <Link to="/ebook">NOTRE EBOOK</Link>
-        </nav>
-        
-        <div className="témoignage-link-container">
-          <Link to="/témoignages-clients">TEMOIGNAGES CLIENTS</Link>
-        </div>
-        <div className="conditions-link-container">
-          <Link to="/conditions-generales">CONDITIONS GENERALES DE VENTE</Link>
-        </div>
-        <Link to="/mentions-legales">MENTIONS LEGALES</Link>
-        <Link to="/politique-confidentialite">POLITIQUE DE CONFIDENTIALITE</Link>
-        <Link to="/newletters">S'INSCRIRE A LA NEWSLETTER</Link>
-        <Link to="/contact">CONTACT</Link>
-        
-        
-        
-      </motion.div>
-
-      <Footer />
-      <PageTransition loader={loader} />
+        </>
+      )}
     </main>
   );
-} 
+}
