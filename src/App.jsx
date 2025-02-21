@@ -89,6 +89,17 @@ function App() {
     }
   }, [pathname]);
 
+  const handleHashNavigation = () => {
+    const hash = window.location.hash.replace("#", ""); // Supprime le "#"
+    if (hash) {
+      const element = document.getElementById(`section-${hash}`); // Ajoute le préfixe
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 300); // Délai pour assurer le scroll après le chargement
+      }
+    }
+  };
   
   
 

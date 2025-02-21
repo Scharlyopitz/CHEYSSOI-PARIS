@@ -1,85 +1,75 @@
-import { Link, useLocation } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 import LogoCheyssoi from "/2.png";
 import { motion as m } from "framer-motion";
+import { useEffect } from "react";
 
-export default function Navbar() {
+export default function Navbar({ setCurrentSection }) {
   const location = useLocation();
-  
-  
+  const navigate = useNavigate();
 
-  const revealNav = {
-    initial: {
-      transform: "translate(-50%,-105%) ",
-      pointerEvents: "none",
-    },
-    animate: {
-      pointerEvents: "all",
-      transform: "translate(-50%,0%) ",
-      transition: {
-        duration: 1,
-        delay: 2.7,
-        ease: [0.65, 0, 0.35, 1],
-      },
-    },
+  const handleNavigation = (sectionIndex) => {
+    if (location.pathname !== "/") {
+      // On navigue vers la page Home et on stocke l'index de la section à atteindre
+      localStorage.setItem("scrollToSection", sectionIndex);
+      navigate("/", { replace: true });
+    } else {
+      // Si on est déjà sur Home, on scrolle directement
+      setCurrentSection(sectionIndex);
+    }
   };
 
+  // Après le retour à la Home, récupérer l'index de la section stocké et scroller
+  useEffect(() => {
+    const sectionToScroll = localStorage.getItem("scrollToSection");
+    if (sectionToScroll !== null) {
+      setCurrentSection(parseInt(sectionToScroll, 10));
+      localStorage.removeItem("scrollToSection");
+    }
+  }, []);
+
   return (
-    <m.nav initial="initial" animate="animate" variants={revealNav}>
+    <m.nav>
       <Logo />
-      <Menu />
+      <Menu handleNavigation={handleNavigation} />
     </m.nav>
   );
 }
 
+// ✅ Ajout de la fonction Logo
 function Logo() {
   return (
-    <Link to={"/"} className="LogoContainer">
+    <Link to="/" className="LogoContainer">
       <img src={LogoCheyssoi} alt="LogoCheyssoi" />
     </Link>
   );
 }
 
-function Menu() {
-  const { pathname } = useLocation();
-
+// ✅ Correction du menu
+function Menu({ handleNavigation }) {
   return (
     <div className="menu">
-      {/* Notre Histoire */}
-      <Link to="/histoire" style={{ textDecoration: pathname === "/histoire" ? "none" : "none" }}>
-        NOTRE HISTOIRE
-      </Link>
+      <Link to="/histoire">NOTRE HISTOIRE</Link>
+      <Link to="/notre-engagement">NOTRE ENGAGEMENT</Link>
+      <Link to="/team-section">EQUIPE</Link>
+      <Link to="/pourvous">POUR VOUS</Link>
 
-      {/* Notre Engagement */}
-      <Link to="/notre-engagement" style={{ textDecoration: pathname === "/notre-engagement" ? "none" : "none" }}>
-        NOTRE ENGAGEMENT
-      </Link>
+      <Link to="/" className="nav-link" onClick={(e) => { 
+    e.preventDefault(); 
+    handleNavigation(1); 
+}}>
+  GALERIE
+</Link>
 
-      {/* Équipe */}
-      <Link to="/team-section" style={{ textDecoration: pathname === "/team-section" ? "none" : "none" }}>
-        EQUIPE
-      </Link>
+<Link to="/" className="nav-link" onClick={(e) => { 
+    e.preventDefault(); 
+    handleNavigation(3); 
+}}>
+  DÉMARRER MON PROJET
+</Link>
 
-      {/* Pour Vous */}
-      <Link to="/pourvous" style={{ textDecoration: pathname === "/pourvous" ? "none" : "none" }}>
-        POUR VOUS
-      </Link>
 
-      {/* Galerie (resté inchangé) */}
-      <a href="#galerie">GALERIE</a>
-
-      {/* Démarrer mon projet (resté inchangé) */}
-      <a href="#demarrerprojet">DEMARRER MON PROJET</a>
-
-      {/* Le Club Cheyssoi */}
-      <Link to="/clubcheyssoi" style={{ textDecoration: pathname === "/clubcheyssoi" ? "none" : "none" }}>
-        LE CLUB CHEYSSOI
-      </Link>
-
-      
-      {/* Ebook */}
-      <Link to="/ebook" style={{ textDecoration: pathname === "/ebook" ? "none" : "none" }}>
-        NOTRE EBOOK
-      </Link>
+      <Link to="/clubcheyssoi">LE CLUB CHEYSSOI</Link>
+      <Link to="/ebook">NOTRE EBOOK</Link>
     </div>
   );
 }
