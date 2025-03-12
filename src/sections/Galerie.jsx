@@ -13,7 +13,7 @@ export default function Galerie({ setProjectName }) {
     <section id="galerie">
       <div className="content">
         <TitleReveal words={["l'art", "du", "detail"]} />
-        <TextReveal text="Plongez dans notre collection de projets d’intérieurs inspirants, où design et durabilité se rencontrent." />
+        <TextReveal text="PLONGEZ DANS NOTRE COLLECTION DE PROJETS D’INTÉRIEURS INSPIRANTS, OÙ DESIGN ET DURABILITÉ SE RENCONTRENT." />
         <Projects setProjectName={setProjectName} />
       </div>
     </section>

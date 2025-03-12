@@ -39,7 +39,7 @@ function FormuleCard({ name, price, descriptions }) {
         </ul>
       </div>
 
-      <Button href="#demarrerprojet" txt="Démarrer mon projet" />
+      <Button href="#demarrerprojet" txt="DÉMARRER MON PROJET" />
     </div>
   );
 }

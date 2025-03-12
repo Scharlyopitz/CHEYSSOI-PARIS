@@ -38,7 +38,7 @@ html {
 }
 
 body {
-  color: #1a1a1a;
+  color: #000000;
   background: #ffffff ;
 }
 body,
@@ -82,10 +82,12 @@ a {
   padding: 100px 2vw;
   display: flex;
   align-items: center;
+  font-size: 40px;
 }
 .espaceProSection h2 {
   font-size: 40px;
-}
+  }
+
 .espaceProSection .image {
   width: 50%;
   height: 500px;
@@ -107,6 +109,7 @@ a {
   align-items: center;
   width: 50%;
 }
+
 
 .sectionContainer {
   padding: 0 2vw;
@@ -150,28 +153,39 @@ a {
 }
 
 #BigTitle {
-  position: relative;
-  color: #f6f6f6;
-}
-#BigTitle .hidden {
-  overflow: hidden;
-}
-#BigTitle .titleContainer {
+  position: absolute; /* Plutôt que relative pour s'assurer qu'il suit la vidéo */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Prend toute la hauteur */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #080808; /* Vérifie que la couleur est bien visible */
+  z-index: 99999; /* Assure-toi qu'il est au-dessus de la vidéo */
   pointer-events: none;
+}
+
+
+
+#BigTitle .titleContainer {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: absolute;
-  z-index: 99997;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-family: "Cormorant Garamond", serif;
   text-transform: uppercase;
-  pointer-events: none;
   gap: 0;
   white-space: nowrap;
+  z-index: 99999; /* S'assurer qu'il est bien au-dessus */
+  max-width: 80vw; /* Limite pour ne pas dépasser */
+  text-align: center;
 }
+
 #BigTitle .titleContainer h1 {
   line-height: 80px;
   font-weight: 300;
@@ -179,13 +193,33 @@ a {
   letter-spacing: 1vw;
   white-space: nowrap;
   will-change: transform;
+  color: rgb(0, 0, 0); /* Assure-toi qu'il est visible sur la vidéo */
 }
+
 #BigTitle .titleContainer span {
   display: block;
   letter-spacing: 0.4vw;
-  font-size: 25px;
+  font-size: 30px;
   font-weight: 500;
+  color: rgb(0, 0, 0); /* Idem */
 }
+#EspacePro #BigTitle {
+  position: relative; /* Change de absolute à relative */
+  height: auto; /* Évite qu'il prenne toute la hauteur de l'écran */
+  top: initial;
+  left: initial;
+  transform: none; /* Supprime le centrage forcé */
+}
+
+#EspacePro #BigTitle .titleContainer {
+  position: relative; /* Ajuste par rapport à son parent */
+  top: auto;
+  left: auto;
+  transform: none;
+  text-align: center; /* Pour garder le centrage horizontal si nécessaire */
+}
+
+
 
 .Button {
   overflow: hidden;
@@ -225,7 +259,7 @@ a {
 }
 
 footer {
-  color: #191a19;
+  color: #000000;
   background: #e4e1dc;
   display: flex;
   flex-direction: row;
@@ -326,7 +360,8 @@ nav {
   height: 100px;
 }
 nav a {
-  color: #f6f6f6;
+  color: #000000;
+  font-weight: bold;
 }
 nav a .line-through {
   position: absolute;
@@ -368,7 +403,7 @@ nav .menu {
   display: flex;
   gap: 5vw;
   text-transform: capitalize;
-  font-size: 14px;
+  font-size: 12px;
   font-weight: 300;
 }
 nav .menu a {
@@ -483,7 +518,7 @@ nav .menu a:hover::after {
      object-position: center;
 }
 #Projet .image .filter {
-  background: linear-gradient(0deg, #191a19 0%, rgba(0, 0, 0, 0) 50%);
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0) 50%);
   position: absolute;
   top: 0;
   left: 0;
@@ -623,7 +658,7 @@ nav .menu a:hover::after {
 
 #demarrerprojet {
   display: flex;
-  padding: 100px 2vw;
+  padding: 10px 2vw;
 }
 #demarrerprojet .content {
   max-width: 1440px;
@@ -632,11 +667,15 @@ nav .menu a:hover::after {
 }
 #demarrerprojet .content .titleContainer {
   justify-content: center;
-}
+ 
+  
+  }
+  
+
 #demarrerprojet .content .formulaire {
   display: flex;
   justify-content: center;
-  margin-top: 100px;
+  margin-top: 1px;
 }
 #demarrerprojet .content .formulaire .message {
   padding: 10px 0 10px 5px;
@@ -645,7 +684,7 @@ nav .menu a:hover::after {
 }
 #demarrerprojet .content .formulaire label {
   padding-left: 5px;
-  font-size: 12px;
+  font-size: 11px;
 }
 #demarrerprojet .content .formulaire label a {
   text-decoration: underline;
@@ -659,7 +698,7 @@ nav .menu a:hover::after {
   border-bottom: 2px solid #d0d0d0;
   outline: none;
   resize: none;
-  font-size: 15px;
+  font-size: 10px;
   padding: 5px;
   transition: 0.2s;
 }
@@ -685,7 +724,7 @@ nav .menu a:hover::after {
   flex-direction: column;
 }
 #demarrerprojet .content .formulaire button {
-  margin: 50px auto 0;
+  margin: 10px auto 0;
   background: transparent;
   border: none;
   overflow: hidden;
@@ -699,11 +738,11 @@ nav .menu a:hover::after {
   will-change: transform;
 }
 #demarrerprojet .content .formulaire button .container p {
-  font-size: 18px;
+  font-size: 12px;
   font-weight: 300;
 }
 #demarrerprojet .content .formulaire button .container svg {
-  color: #191a19;
+  color: #000000;
 }
 #demarrerprojet .content .formulaire button .container:hover {
   cursor: pointer;
@@ -718,6 +757,8 @@ nav .menu a:hover::after {
 }
 #ebook .titleContainer {
   justify-content: center;
+  margin-top: 100px; /* Ajuste cette valeur si nécessaire */
+  text-align: center;
 }
 #ebook .container {
   max-width: 1440px;
@@ -1015,4 +1056,361 @@ nav .menu a:hover::after {
 .line-through.active {
   text-decoration: line-through;
   opacity: 0.3;
+}
+
+
+.conditions-link-container {
+  text-align: center;
+  margin: 40px 0;
+}
+
+.conditions-link {
+  display: inline-block;
+  padding: 10px 20px;
+  
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.temoignages-link-container {
+  text-align: center; /* Aligne le texte au centre */
+  margin: 40px 0; /* Espacement au-dessus et en dessous */
+}
+
+.témoignages-link {
+  display: inline-block; /* Affichage en ligne tout en respectant le bloc */
+  padding: 30px 20px; /* Espacement interne pour le bouton */
+  color: #000000; /* Couleur du texte */
+  text-decoration: none; /* Supprime le soulignement */
+  font-size: 16px; /* Taille de police */
+  border-radius: 5px; /* Coins arrondis */
+  transition: background-color 0.3s ease; /* Transition fluide sur hover */
+  text-transform: uppercase; /* Met le texte en majuscule */
+  font-family: Arial, sans-serif; /* Police Arial */
+}
+
+.links-container {
+  display: flex; /* Alignement en ligne des éléments enfants */
+  justify-content: space-between; /* Espace égal entre les éléments */
+  align-items: center; /* Centre verticalement */
+  margin: 40px 0; /* Espacement au-dessus et en dessous */
+  text-align: center;
+}
+
+.video-fullscreen-container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.video-fullscreen {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+
+
+
+.video-button {
+  position: absolute;
+  bottom: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 20px;
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-family: "Cormorant SC", serif;
+}
+
+
+.video-background-container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.video-background {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1; /* Assurez-vous que la vidéo est en arrière-plan */
+  
+}
+
+.big-title-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2; /* S'assure que le texte est au-dessus de la vidéo */
+  color: rgb(13, 12, 12); /* Assurez-vous que le texte est visible */
+  text-align: center;
+  font-size: 1rem;
+}
+
+
+
+.scroll-posts-container {
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+}
+
+.post-item {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background: white;
+  border-bottom: 1px solid #ccc;
+}
+
+.video-fullscreen-container {
+  background: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.video-button {
+  position: absolute;
+  bottom: 20px;
+  padding: 10px 20px;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.links-container {
+  padding: 50px;
+  background: white;
+}
+
+
+.links-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 180vh;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 20;
+  opacity: 0;
+  pointer-events: none;
+}
+
+
+.mediaElement {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.footer-links {
+  position: absolute;
+  bottom: 50px; /* Toujours bien en bas */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%; /* Largeur optimisée */
+  text-align: center;
+  flex-wrap: nowrap; /* Empêche le retour à la ligne */
+}
+.footer-links a {
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  color: black;
+  transition: color 0.3s ease-in-out;
+}
+
+
+.video-button {
+  position: absolute;
+  bottom: 50px; /* Ajuste pour être visible */
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 15px 30px;
+  
+  color: black;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  z-index: 5; /* Assure qu'il passe au-dessus de la vidéo */
+  opacity: 1;
+  transition: background 0.3s ease-in-out;
+}
+
+
+.engagement-header {
+  margin-top: 100px; /* Ajuste cette valeur si nécessaire */
+  text-align: center; /* Pour centrer le titre */
+}
+
+
+.chatbot-wrapper {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 1000;
+}
+
+.chatbot-button {
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.chatbot-container {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  width: 300px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  z-index: 1001;
+  display: flex;
+  flex-direction: column;
+}
+
+.chatbot-header {
+  background: #000000;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+
+.user-message {
+  background-color: #000000;
+  color: white;
+  padding: 8px;
+  border-radius: 5px;
+  align-self: flex-end;
+  margin: 5px 0;
+}
+
+.bot-message {
+  background-color: #e1e1e1;
+  padding: 8px;
+  border-radius: 5px;
+  align-self: flex-start;
+  margin: 5px 0;
+}
+
+.chatbot-footer {
+  display: flex;
+  border-top: 1px solid #ccc;
+  padding: 5px;
+}
+
+.chatbot-footer input {
+  flex-grow: 1;
+  padding: 5px;
+  border: none;
+  outline: none;
+}
+
+.chatbot-footer button {
+  background: #000000;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+
+
+.chatbot-body {
+  padding: 10px;
+  flex-grow: 1;
+  overflow-y: auto; /* 🟢 Permet de scroller */
+  max-height: 250px;
+  display: flex;
+  flex-direction: column;
+  max-height: 300px;
+}
+
+
+.chatbot-messages {
+  flex: 1;
+  overflow-y: auto; /* Active le scroll vertical */
+  padding: 10px;
+  max-height: 320px; /* Définit une hauteur max pour les messages */
+}
+
+.chatbot-messages::-webkit-scrollbar {
+  width: 5px; /* Largeur de la scrollbar */
+}
+
+.chatbot-messages::-webkit-scrollbar-thumb {
+  background-color: #ccc; /* Couleur du curseur */
+  border-radius: 5px;
+}
+
+.chatbot-body {
+  flex: 1;
+  overflow-y: auto; /* Permet le scroll vertical */
+  max-height: 300px; /* Ajuste en fonction de la taille du chatbot */
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  scrollbar-width: thin; /* Rendre la scrollbar fine (Firefox) */
+  scrollbar-color: #000000 #f0f0f0; /* Couleur de la barre et du fond (Firefox) */
+}
+
+/* Personnalisation de la scrollbar pour Chrome, Edge et Safari */
+.chatbot-body::-webkit-scrollbar {
+  width: 8px; /* Largeur de la scrollbar */
+}
+
+.chatbot-body::-webkit-scrollbar-track {
+  background: #f0f0f0; /* Couleur du fond */
+  border-radius: 10px;
+}
+
+.chatbot-body::-webkit-scrollbar-thumb {
+  background-color: #000000; /* Couleur de la barre */
+  border-radius: 10px;
+  border: 2px solid #f0f0f0; /* Espacement */
+}
+
+.chatbot-body::-webkit-scrollbar-thumb:hover {
+  background-color: #000000; /* Assombrir au survol */
 }

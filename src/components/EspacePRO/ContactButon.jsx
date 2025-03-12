@@ -7,7 +7,7 @@ export default function ContactButon() {
       target="_blank"
       className="Button"
     >
-      Contactez-nous
+      CONTACTEZ-NOUS
     </Link>
   );
 }

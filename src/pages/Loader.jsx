@@ -1,4 +1,4 @@
-import ImageAccueil from "/PREZ.webp";
+import VideoAccueil from "/VIDEOPREZ.mp4";
 import PagePro from "/PAGEPRO.webp";
 import Label1 from "/Etiquet1.webp";
 import Label2 from "/Etiquet2.webp";
@@ -17,12 +17,12 @@ import { useLocation } from "react-router-dom";
 export default function Loader({ setLoader }) {
   const { pathname } = useLocation();
 
-  const rightImage = { "/": ImageAccueil, "/clubcheyssoi": PagePro };
+  const rightMedia = { "/": VideoAccueil, "/clubcheyssoi": PagePro };
 
   const column2 = [
     { src: Label1 },
     { src: Label6 },
-    { src: rightImage[pathname] },
+    { src: rightMedia[pathname], isVideo: pathname === "/" },
     { src: Label2 },
     { src: "" },
   ];
@@ -140,13 +140,31 @@ function Column({ loaderImages, staggerColumn, imageReveal }) {
 
   return (
     <m.div variants={staggerColumn} className="imagesContainer">
-      {loaderImages.map(({ src }, i) => {
+      {loaderImages.map(({ src, isVideo }, i) => {
         return (
           <m.div variants={imageReveal} key={i} className="image">
-            <m.img variants={filterImage} src={src} alt={`image ${i + 1}`} />
+            {isVideo ? (
+              <m.video
+                variants={filterImage}
+                src={src}
+                autoPlay
+                muted
+                loop
+                playsInline
+                className="mediaElement"
+              />
+            ) : (
+              <m.img
+                variants={filterImage}
+                src={src}
+                alt={`image ${i + 1}`}
+                className="mediaElement"
+              />
+            )}
           </m.div>
         );
       })}
     </m.div>
   );
 }
+

@@ -1,146 +1,75 @@
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import LogoCheyssoi from "/2.png";
 import { motion as m } from "framer-motion";
+import { useEffect } from "react";
 
-export default function Navbar() {
-  const revealNav = {
-    initial: {
-      transform: "translate(-50%,-105%) ",
-      pointerEvents: "none",
-    },
-    animate: {
-      pointerEvents: "all",
-      transform: "translate(-50%,0%) ",
-      transition: {
-        duration: 1,
-        delay: 2.7,
-        ease: [0.65, 0, 0.35, 1],
-      },
-    },
+export default function Navbar({ setCurrentSection }) {
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleNavigation = (sectionIndex) => {
+    if (location.pathname !== "/") {
+      // On navigue vers la page Home et on stocke l'index de la section à atteindre
+      localStorage.setItem("scrollToSection", sectionIndex);
+      navigate("/", { replace: true });
+    } else {
+      // Si on est déjà sur Home, on scrolle directement
+      setCurrentSection(sectionIndex);
+    }
   };
 
+  // Après le retour à la Home, récupérer l'index de la section stocké et scroller
+  useEffect(() => {
+    const sectionToScroll = localStorage.getItem("scrollToSection");
+    if (sectionToScroll !== null) {
+      setCurrentSection(parseInt(sectionToScroll, 10));
+      localStorage.removeItem("scrollToSection");
+    }
+  }, []);
+
   return (
-    <m.nav initial="initial" animate="animate" variants={revealNav}>
+    <m.nav>
       <Logo />
-      <Menu />
+      <Menu handleNavigation={handleNavigation} />
     </m.nav>
   );
 }
 
+// ✅ Ajout de la fonction Logo
 function Logo() {
   return (
-    <Link to={"/"} className="LogoContainer">
+    <Link to="/" className="LogoContainer">
       <img src={LogoCheyssoi} alt="LogoCheyssoi" />
     </Link>
   );
 }
 
-
-
-
-function Menu() {
-  const { pathname } = useLocation();
-  const navigate = useNavigate()
-
-  const isBarred =
-  pathname === "/clubcheyssoi" ||
-  pathname === "/histoire" ||
-  pathname === "/notre-engagement" ||
-  pathname === "/equipe";
-
-
-
-
+// ✅ Correction du menu
+function Menu({ handleNavigation }) {
   return (
     <div className="menu">
+      <Link to="/histoire">NOTRE HISTOIRE</Link>
+      <Link to="/notre-engagement">NOTRE ENGAGEMENT</Link>
+      <Link to="/team-section">EQUIPE</Link>
+      <Link to="/pourvous">POUR VOUS</Link>
 
-      {/* Notre histoire */}
-      <Link
-        to="/histoire"
-        style={{
-          textDecoration: pathname === "/histoire" ? "none" : isBarred ? "line-through" : "none",
-          pointerEvents: pathname === "/histoire" ? "auto" : isBarred ? "none" : "auto",
-        }}
-      >
-        Notre histoire
-      </Link>
+      <Link to="/" className="nav-link" onClick={(e) => { 
+    e.preventDefault(); 
+    handleNavigation(1); 
+}}>
+  GALERIE
+</Link>
 
-      {/* Notre Engagement */}
-      <Link
-        to="/notre-engagement"
-        style={{
-          textDecoration: pathname === "/notre-engagement" ? "none" : isBarred ? "line-through" : "none",
-          pointerEvents: pathname === "/notre-engagement" ? "auto" : isBarred ? "none" : "auto",
-        }}
-      >
-        Notre Engagement
-      </Link>
-
-      {/* Equipe */}
-<Link
-        to="/team-section"
-        style={{
-          textDecoration: pathname === "/team-section" ? "none" : isBarred ? "line-through" : "none",
-          pointerEvents: pathname === "/team-section" ? "auto" : isBarred ? "none" : "auto",
-        }}
-      >
-        Equipe
-      </Link>
-
-
-      <Link
-  to="/pourvous"
-  style={{
-    textDecoration: pathname === "/pourvous" ? "none" : isBarred ? "line-through" : "none", // Barre si désactivé
-    pointerEvents: pathname === "/pourvous" ? "auto" : isBarred ? "none" : "auto", // Gère les clics
-  }}
->
-  Pour Vous
+<Link to="/" className="nav-link" onClick={(e) => { 
+    e.preventDefault(); 
+    handleNavigation(3); 
+}}>
+  DÉMARRER MON PROJET
 </Link>
 
 
-<Link
-  to="/galerie"
-  style={{
-    textDecoration: pathname === "/galerie" ? "none" : isBarred ? "line-through" : "none", // Barre si désactivé
-    pointerEvents: pathname === "/galerie" ? "auto" : isBarred ? "none" : "auto", // Gère les clics
-  }}
->
-  Galerie
-</Link>
-
-
-<Link
-  to="/demarrer-mon-projet"
-  style={{
-    textDecoration: pathname === "/demarrer-mon-projet" ? "none" : isBarred ? "line-through" : "none",
-    pointerEvents: pathname === "/demarrer-mon-projet" ? "auto" : isBarred ? "none" : "auto",
-  }}
->
-  Démarrer Mon Projet
-</Link>
-
-      {/* Le Club Cheyssoi */}
-      <Link
-        to="/clubcheyssoi"
-        style={{
-          textDecoration: pathname === "/clubcheyssoi" ? "none" : isBarred ? "line-through" : "none",
-          pointerEvents: pathname === "/clubcheyssoi" ? "auto" : isBarred ? "none" : "auto",
-        }}
-      >
-        Le Club Cheyssoi
-      </Link>
-
-      <Link
-  to="/ebook"
-  style={{
-    textDecoration: pathname === "/ebook" ? "none" : isBarred ? "line-through" : "none",
-    pointerEvents: pathname === "/ebook" ? "auto" : isBarred ? "none" : "auto",
-  }}
->
-  Notre Ebook
-</Link>
-
+      <Link to="/clubcheyssoi">LE CLUB CHEYSSOI</Link>
+      <Link to="/ebook">NOTRE EBOOK</Link>
     </div>
   );
 }

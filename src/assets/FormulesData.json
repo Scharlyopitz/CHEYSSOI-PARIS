@@ -1,33 +1,35 @@
 [
   {
-    "name": "Chey",
+    "name": "CHEY",
     "price": "49",
     "descriptions": [
-      "Conseils",
-      "Etude personnalisée",
-      "Accompagnement personnalisé",
-      "Planche d'ambiances",
-      "Plans 2D et Visuels 3D",
-      "Présentation des matériaux à utiliser",
-      "Shopping list",
-      "Coffret livré à domicile",
-      "Mise en lien avec artisans"
+      "CONSEILS",
+"ETUDE PERSONNALISÉE",
+"ACCOMPAGNEMENT PERSONNALISÉ",
+"PLANCHE D'AMBIANCES",
+"PLANS 2D ET VISUELS 3D",
+"PRÉSENTATION DES MATÉRIAUX À UTILISER",
+"SHOPPING LIST",
+"COFFRET LIVRÉ À DOMICILE",
+"MISE EN LIEN AVEC ARTISANS"
+
     ]
   },
   {
-    "name": "Ssoi",
+    "name": "SSOI",
     "price": "69",
     "descriptions": [
-      "Conseils",
-      "Etude personnalisée",
-      "Accompagnement personnalisé",
-      "Planche d'ambiances",
-      "Plans 2D et Visuels 3D",
-      "Présentation des matériaux à utiliser",
-      "Shopping list",
-      "Coffret livré à domicile",
-      "Mise en lien avec artisans",
-      "Gestion du chantier"
+      "CONSEILS",
+"ETUDE PERSONNALISÉE",
+"ACCOMPAGNEMENT PERSONNALISÉ",
+"PLANCHE D'AMBIANCES",
+"PLANS 2D ET VISUELS 3D",
+"PRÉSENTATION DES MATÉRIAUX À UTILISER",
+"SHOPPING LIST",
+"COFFRET LIVRÉ À DOMICILE",
+"MISE EN LIEN AVEC ARTISANS",
+"GESTION DU CHANTIER"
+
     ]
   }
 ]

@@ -9,7 +9,7 @@ export default function Histoire() {
       {/* Section de l'image principale */}
       <div className="histoire-header">
         <h1 className="histoire-title">HISTOIRE</h1>
-        <p className="subtitle">PAGE DÉDIÉE À NOTRE HISTOIRE</p>
+        <h2 className="subtitle">PAGE DÉDIÉE À NOTRE HISTOIRE</h2>
       </div>
 
       {/* Contenu défilable */}
@@ -19,22 +19,22 @@ export default function Histoire() {
           <img src="/5.png" alt="Image à gauche" className="histoire-image-left" />
           <div className="histoire-text-right">
             <p>
-              Je suis Tania Vingadassalon. Jeune, je dessinais des robes, lisais énormément, collectionnais des figurines, des bouteilles de parfums miniatures, des Pierrot de la Lune en porcelaine, des affiches publicitaires d'icônes de mode, j'aimais la créativité et l’esthétique !
+            JE SUIS TANIA VINGADASSALON. JEUNE, JE DESSINAIS DES ROBES, LISAIS ÉNORMÉMENT, COLLECTIONNAIS DES FIGURINES, DES BOUTEILLES DE PARFUMS MINIATURES, DES PIERROT DE LA LUNE EN PORCELAINE, DES AFFICHES PUBLICITAIRES D'ICÔNES DE MODE. J'AIMAIS LA CRÉATIVITÉ ET L’ESTHÉTIQUE !
             </p>
             <p>
-              Au sein d’une compagnie aérienne durant 20 ans je côtoie l’excellence de service, et lors de mes voyages, à la quête du beau, des artisans, du savoir-faire local, quelle richesse ! Mais je vole de mes propres ailes en 2021 pour vivre et partager ma passion première !
+            AU SEIN D’UNE COMPAGNIE AÉRIENNE DURANT 20 ANS, JE CÔTOIE L’EXCELLENCE DE SERVICE, ET LORS DE MES VOYAGES, À LA QUÊTE DU BEAU, DES ARTISANS, DU SAVOIR-FAIRE LOCAL, QUELLE RICHESSE ! MAIS JE VOLE DE MES PROPRES AILES EN 2021 POUR VIVRE ET PARTAGER MA PASSION PREMIÈRE !
             </p>
             <p>
-              Je garde mon amour pour la planète, mon amour pour la matière, les couleurs, le beau. Je me forme en design d’intérieur dans des écoles parisiennes réputées, je crée Cheyssoi Paris en 2021. Cheyssoi pour un orthographe plus chic, Paris car c'est là que prennent forme mes inspirations et aspirations !!!
+            JE GARDE MON AMOUR POUR LA PLANÈTE, MON AMOUR POUR LA MATIÈRE, LES COULEURS, LE BEAU. JE ME FORME EN DESIGN D’INTÉRIEUR DANS DES ÉCOLES PARISIENNES RÉPUTÉES, JE CRÉE CHEYSSOI PARIS EN 2021. CHEYSSOI POUR UN ORTHOGRAPHE PLUS CHIC, PARIS CAR C’EST LÀ QUE PRENNENT FORME MES INSPIRATIONS ET ASPIRATIONS !!!
             </p>
             <p>
-              Fortement engagée envers des valeurs telles que l'éco-responsabilité et la durabilité, le slow design est une révélation et je crée mon studio concepteur d’intérieurs utilisant des matériaux sains pour l’environnement et pour les individus.
+            FORTEMENT ENGAGÉE ENVERS DES VALEURS TELLES QUE L'ÉCO-RESPONSABILITÉ ET LA DURABILITÉ, LE SLOW DESIGN EST UNE RÉVÉLATION ET JE CRÉE MON STUDIO CONCEPTEUR D’INTÉRIEURS UTILISANT DES MATÉRIAUX SAINS POUR L’ENVIRONNEMENT ET POUR LES INDIVIDUS.
             </p>
             <p>
-              Depuis 4 ans, l’équipe de Cheyssoi Paris vous accompagne avec plaisir à concevoir des intérieurs durables et élégants en collaboration avec un réseau d’artisans locaux et éthiques, favorisant les circuits courts et un impact carbone réduit.
+            DEPUIS 4 ANS, L’ÉQUIPE DE CHEYSSOI PARIS VOUS ACCOMPAGNE AVEC PLAISIR À CONCEVOIR DES INTÉRIEURS DURABLES ET ÉLÉGANTS EN COLLABORATION AVEC UN RÉSEAU D’ARTISANS LOCAUX ET ÉTHIQUES, FAVORISANT LES CIRCUITS COURTS ET UN IMPACT CARBONE RÉDUIT.
             </p>
             <p>
-              Nous privilégions des matériaux écologiques, tout en créant des environnements sains pour votre santé et celle de la planète. Que vous soyez particulier ou professionnel, en France ou à l’étranger, nous vous aidons à imaginer et concrétiser un intérieur en harmonie avec vos valeurs, vos envies et votre environnement !
+            NOUS PRIVILÉGIONS DES MATÉRIAUX ÉCOLOGIQUES, TOUT EN CRÉANT DES ENVIRONNEMENTS SAINS POUR VOTRE SANTÉ ET CELLE DE LA PLANÈTE. QUE VOUS SOYEZ PARTICULIER OU PROFESSIONNEL, EN FRANCE OU À L’ÉTRANGER, NOUS VOUS AIDONS À IMAGINER ET CONCRÉTISER UN INTÉRIEUR EN HARMONIE AVEC VOS VALEURS, VOS ENVIES ET VOTRE ENVIRONNEMENT !
             </p>
           </div>
         </div>
